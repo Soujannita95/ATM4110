@@ -12,19 +12,13 @@
     
     
     <item>
-      <title>Installation</title>
-      <link>https://hajsong.github.io/ATM4110/linux/installation/</link>
+      <title>Shell</title>
+      <link>https://hajsong.github.io/ATM4110/linux/shell/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://hajsong.github.io/ATM4110/linux/installation/</guid>
-      <description>&lt;div class=&#34;alert 
-alert-warning&#34;
- 
-role=&#34;alert&#34;&gt;HUGO &lt;strong&gt;v0.32&lt;/strong&gt; minimum required to use this theme&lt;/div&gt;
-
-
-&lt;p&gt;The following steps are here to help you initialize your new website. If you don’t know Hugo at all, we strongly suggest you to train by following this &lt;a href=&#34;https://gohugo.io/overview/quickstart/&#34;&gt;great documentation for beginners&lt;/a&gt;.
-&lt;/p&gt;</description>
+      <guid>https://hajsong.github.io/ATM4110/linux/shell/</guid>
+      <description>To get the most out of Linux, you should become proficient in using the shell. It might initially be more difficult than icons and menus, but once you&amp;rsquo;re used to it, the shell is quite easy to use and very powerful.
+How to run a shell If you have Linux, running a shell is just opening Terminal or something similar to it. However, if you are running Windows (I think this is the most case), then you can experience Linux with the third-party program like MobaXterm.</description>
     </item>
     
     <item>

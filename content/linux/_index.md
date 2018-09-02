@@ -14,16 +14,24 @@ The computing/programming in the atmospheric sciences means you create/read/proc
 Also, according to [Biocomputing Bootcamp](https://bioboot.github.io/web-2016/day1/),
 "The real strength of learning Unix is that most of these commands can be combined in an almost unlimited fashion. So if you can learn just five Unix commands, you will be able to do a lot more than just five things. Our objective here is to learn a subset of Unix and to become a productive Unix user without knowing or using every program and feature."
 
-#### History (and family) of Unix
-Unix/Linux operating system Unix-like operating system
-![](../images/Unix_timeline.png?classes=border,shadow)
-Simplified history of Unix-like operating systems. Linux shares similar architecture and concepts (as part of the POSIX standard) but does not share non-free source code with the original Unix or MINIX. (From Wikipedia)
+I refered to [*Linux, pocket guide*](https://www.amazon.com/Linux-Pocket-Guide-Daniel-Barrett/dp/1449316697) by *Daniel J. Barrett* in introducing Linux system.
 
+#### History (and family) of Unix
+A varied operating systems, including macOS, have branched out from Unix.
+![](../images/Unix_timeline.png?classes=border,shadow)
+*Simplified history of Unix-like operating systems (Wikipedia).*
+
+Linux is one of the operating system that stems from UNIX and naturally shares similar architecture and concepts. It is an open-source software!
 
 #### Programing on Linux
-A common feature of Unix-like systems, Linux includes traditional specific-purpose programming languages targeted at scripting, text processing and system configuration and management in general. Linux distributions support shell scripts, awk, sed and make. Many programs also have an embedded programming language to support configuring or programming themselves. For example, regular expressions are supported in programs like grep and locate, the traditional Unix MTA Sendmail contains its own Turing complete scripting system, and the advanced text editor GNU Emacs is built around a general purpose Lisp interpreter.
+"A common feature of Unix-like systems, Linux includes traditional specific-purpose programming languages targeted at scripting, text processing and system configuration and management in general. Linux distributions support shell scripts, awk, sed and make. Many programs also have an embedded programming language to support configuring or programming themselves. For example, regular expressions are supported in programs like grep and locate, the traditional Unix MTA Sendmail contains its own Turing complete scripting system, and the advanced text editor GNU Emacs is built around a general purpose Lisp interpreter." (From Wikipedia)
 
-Most distributions also include support for PHP, Perl, Ruby, Python and other dynamic languages. While not as common, Linux also supports C# (via Mono), Vala, and Scheme. Guile Scheme acts as an extension language targeting the GNU system utilities, seeking to make the conventionally small, static, compiled C programs of Unix design rapidly and dynamically extensible via an elegant, functional high-level scripting system; many GNU programs can be compiled with optional Guile bindings to this end. A number of Java Virtual Machines and development kits run on Linux, including the original Sun Microsystems JVM (HotSpot), and IBM's J2SE RE, as well as many open-source projects like Kaffe and JikesRVM.
-
-GNOME and KDE are popular desktop environments and provide a framework for developing applications. These projects are based on the GTK+ and Qt widget toolkits, respectively, which can also be used independently of the larger framework. Both support a wide variety of languages. There are a number of Integrated development environments available including Anjuta, Code::Blocks, CodeLite, Eclipse, Geany, ActiveState Komodo, KDevelop, Lazarus, MonoDevelop, NetBeans, and Qt Creator, while the long-established editors Vim, nano and Emacs remain popular.[74]
-
+#### Four major parts in Linux
+##### The kernel
+The low-level operation system, handling files, disks, networking and other necessities we take for granted.
+##### Supplied program
+Thousands of programs for file manipulation, text editing, mathematics, typesetting, audio, video, computer programming, website creation, encryption... you name it.
+##### The shell
+A user interface for typing commands, executing them, and displaying results. There are various shells in existence: the Bourne shell, Korn shell, C shell, and others. We will focus on *bash*, the Bourne Shell, which is often the default for user accounts. However, all these shells have similar basic functions.
+##### X
+A graphical system that provides windows, menus, icons, mouse support, and other familiar GUI elements. More complex graphical environments are built on X; the most popular are KDE and GNOME. 

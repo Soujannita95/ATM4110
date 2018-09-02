@@ -69,10 +69,10 @@
             <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/ATM4110/linux/installation/" class="dd-item">
+      <li data-nav-id="/ATM4110/linux/shell/" class="dd-item">
         <div>
-          <a href="/ATM4110/linux/installation/">
-            Installation
+          <a href="/ATM4110/linux/shell/">
+            Shell
           </a>
         </div>
     </li>
@@ -125,7 +125,7 @@
    Syllabus</option>
     <option value="/ATM4110/linux/"  selected>
    Unix/Linux system</option> 
-      <option value="/ATM4110/linux/installation/" >- Installation</option>
+      <option value="/ATM4110/linux/shell/" >- Shell</option>
       <option value="/ATM4110/linux/configuration/" >- Configuration</option>
   
     <option value="/ATM4110/python/" >
@@ -170,19 +170,37 @@ I do not have the exact answer for why, but there must be a reason for people pr
 <p>Also, according to <a href="https://bioboot.github.io/web-2016/day1/">Biocomputing Bootcamp</a>,
 &ldquo;The real strength of learning Unix is that most of these commands can be combined in an almost unlimited fashion. So if you can learn just five Unix commands, you will be able to do a lot more than just five things. Our objective here is to learn a subset of Unix and to become a productive Unix user without knowing or using every program and feature.&rdquo;</p>
 
+<p>I refered to <a href="https://www.amazon.com/Linux-Pocket-Guide-Daniel-Barrett/dp/1449316697"><em>Linux, pocket guide</em></a> by <em>Daniel J. Barrett</em> in introducing Linux system.</p>
+
 <h4 id="history-and-family-of-unix">History (and family) of Unix</h4>
 
-<p>Unix/Linux operating system Unix-like operating system
+<p>A varied operating systems, including macOS, have branched out from Unix.
 <img src="../images/Unix_timeline.png?classes=border,shadow" alt="" />
-Simplified history of Unix-like operating systems. Linux shares similar architecture and concepts (as part of the POSIX standard) but does not share non-free source code with the original Unix or MINIX. (From Wikipedia)</p>
+<em>Simplified history of Unix-like operating systems (Wikipedia).</em></p>
+
+<p>Linux is one of the operating system that stems from UNIX and naturally shares similar architecture and concepts. It is an open-source software!</p>
 
 <h4 id="programing-on-linux">Programing on Linux</h4>
 
-<p>A common feature of Unix-like systems, Linux includes traditional specific-purpose programming languages targeted at scripting, text processing and system configuration and management in general. Linux distributions support shell scripts, awk, sed and make. Many programs also have an embedded programming language to support configuring or programming themselves. For example, regular expressions are supported in programs like grep and locate, the traditional Unix MTA Sendmail contains its own Turing complete scripting system, and the advanced text editor GNU Emacs is built around a general purpose Lisp interpreter.</p>
+<p>&ldquo;A common feature of Unix-like systems, Linux includes traditional specific-purpose programming languages targeted at scripting, text processing and system configuration and management in general. Linux distributions support shell scripts, awk, sed and make. Many programs also have an embedded programming language to support configuring or programming themselves. For example, regular expressions are supported in programs like grep and locate, the traditional Unix MTA Sendmail contains its own Turing complete scripting system, and the advanced text editor GNU Emacs is built around a general purpose Lisp interpreter.&rdquo; (From Wikipedia)</p>
 
-<p>Most distributions also include support for PHP, Perl, Ruby, Python and other dynamic languages. While not as common, Linux also supports C# (via Mono), Vala, and Scheme. Guile Scheme acts as an extension language targeting the GNU system utilities, seeking to make the conventionally small, static, compiled C programs of Unix design rapidly and dynamically extensible via an elegant, functional high-level scripting system; many GNU programs can be compiled with optional Guile bindings to this end. A number of Java Virtual Machines and development kits run on Linux, including the original Sun Microsystems JVM (HotSpot), and IBM&rsquo;s J2SE RE, as well as many open-source projects like Kaffe and JikesRVM.</p>
+<h4 id="four-major-parts-in-linux">Four major parts in Linux</h4>
 
-<p>GNOME and KDE are popular desktop environments and provide a framework for developing applications. These projects are based on the GTK+ and Qt widget toolkits, respectively, which can also be used independently of the larger framework. Both support a wide variety of languages. There are a number of Integrated development environments available including Anjuta, Code::Blocks, CodeLite, Eclipse, Geany, ActiveState Komodo, KDevelop, Lazarus, MonoDevelop, NetBeans, and Qt Creator, while the long-established editors Vim, nano and Emacs remain popular.[74]</p>
+<h5 id="the-kernel">The kernel</h5>
+
+<p>The low-level operation system, handling files, disks, networking and other necessities we take for granted.</p>
+
+<h5 id="supplied-program">Supplied program</h5>
+
+<p>Thousands of programs for file manipulation, text editing, mathematics, typesetting, audio, video, computer programming, website creation, encryption&hellip; you name it.</p>
+
+<h5 id="the-shell">The shell</h5>
+
+<p>A user interface for typing commands, executing them, and displaying results. There are various shells in existence: the Bourne shell, Korn shell, C shell, and others. We will focus on <em>bash</em>, the Bourne Shell, which is often the default for user accounts. However, all these shells have similar basic functions.</p>
+
+<h5 id="x">X</h5>
+
+<p>A graphical system that provides windows, menus, icons, mouse support, and other familiar GUI elements. More complex graphical environments are built on X; the most popular are KDE and GNOME.</p>
 
 
 
@@ -191,7 +209,7 @@ Simplified history of Unix-like operating systems. Linux shares similar architec
         <div class="chevrons">
     <div id="navigation">
 <a class="nav nav-prev" href="/ATM4110/syllabus/" title="Syllabus"> <i class="fa fa-chevron-left"></i><label>Syllabus</label></a>
-    <a class="nav nav-next" href="/ATM4110/linux/installation/" title="Installation" style="margin-right: 0px;"><label>Installation</label><i class="fa fa-chevron-right"></i></a></div>
+    <a class="nav nav-next" href="/ATM4110/linux/shell/" title="Shell" style="margin-right: 0px;"><label>Shell</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>

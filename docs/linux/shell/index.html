@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="generator" content="Hugo 0.37.1" />
-<title>Categories :: ATM4110</title>
+<title>Shell :: ATM4110</title>
 <link rel="shortcut icon" href="/ATM4110/images/favicon.png" type="image/x-icon" />
 <link href="/ATM4110/css/font-awesome.min.css" rel="stylesheet">
 <link href="/ATM4110/css/nucleus.css" rel="stylesheet">
@@ -23,7 +23,7 @@
 
     
   </head>
-  <body data-url="/ATM4110/categories/">
+  <body data-url="/ATM4110/linux/shell/">
     
       <header>
   <div class="logo">
@@ -62,13 +62,14 @@
       <a href="/ATM4110/syllabus/">Syllabus</a>
       </div>
     </li>
-    <li data-nav-id="/ATM4110/linux/" class="dd-item haschildren
+    <li data-nav-id="/ATM4110/linux/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ATM4110/linux/">Unix/Linux system</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ATM4110/linux/">Unix/Linux system</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/ATM4110/linux/shell/" class="dd-item">
+      <li data-nav-id="/ATM4110/linux/shell/" class="dd-item active">
         <div>
           <a href="/ATM4110/linux/shell/">
             Shell
@@ -123,7 +124,10 @@
     <option value="/ATM4110/syllabus/" >
    Syllabus</option>
     <option value="/ATM4110/linux/" >
-   Unix/Linux system</option>
+   Unix/Linux system</option> 
+      <option value="/ATM4110/linux/shell/"  selected>- Shell</option>
+      <option value="/ATM4110/linux/configuration/" >- Configuration</option>
+  
     <option value="/ATM4110/python/" >
    Python</option>
 
@@ -148,41 +152,103 @@
       </div>
     
 
-    <h1>Categories</h1>
+    <h1>Shell</h1>
 
     
     
     
+    
 
+<p>To get the most out of Linux, you should become proficient in using the shell. It might initially be more difficult than icons and menus, but once you&rsquo;re used to it, the shell is quite easy to use and very powerful.</p>
 
+<h4 id="how-to-run-a-shell">How to run a shell</h4>
 
-<div class="extra-pagination inner">
-<nav class="pagination" role="navigation">
-	
-	<span class="page-number">Page 1 of 0</span>
-	
-</nav>
+<p>If you have Linux, running a shell is just opening <em>Terminal</em> or something similar to it. However, if you are running Windows (I think this is the most case), then you can experience Linux with the third-party program like <a href="https://mobaxterm.mobatek.net">MobaXterm</a>.</p>
 
-</div>
+<p><img src="/images/feature-terminal.png?classes=border,shadow" alt="" /></p>
 
+<p>Before start real work:</p>
 
+<ol>
+<li>Initialize Hugo</li>
+<li>Install DocDock theme</li>
+<li>Configure DocDock and Hugo</li>
+</ol>
 
-<div style="margin-bottom:2rem"></div>
+<h3 id="prepare-empty-hugo-site">Prepare empty Hugo site</h3>
 
-<nav class="pagination" role="navigation">
-	
-	<span class="page-number">Page 1 of 0</span>
-	
-</nav>
+<p>Create empty directory, which will be root of your Hugo project. Navigate there and let Hugo to create minimal required directory structure:</p>
 
+<pre><code>$ hugo new site .
+</code></pre>
 
+<p>AFTER that, initialize this as git directory where to track further changes</p>
+
+<pre><code>$ git init
+</code></pre>
+
+<p>Next, there are at least three ways to install DocDock (first recommended):</p>
+
+<ol>
+<li><strong>As git submodule</strong></li>
+<li>As git clone</li>
+<li>As direct copy (from ZIP)</li>
+</ol>
+
+<p>Navigate to your themes folder in your Hugo site and use perform one of following scenarios.</p>
+
+<h3 id="1-install-docdock-as-git-submodule">1. Install DocDock as git submodule</h3>
+
+<p>DocDock will be added like a dependency repo to original project. When using CI tools like Netlify, Jenkins etc., submodule method is required, or you will get <code>theme not found</code> issues. Same applies when building site on remote server trough SSH.</p>
+
+<p>If submodule is no-go, use 3rd option.</p>
+
+<p>On your root of Hugo execute:</p>
+
+<pre><code>$ git submodule add https://github.com/vjeantet/hugo-theme-docdock.git themes/docdock
+</code></pre>
+
+<p>Next initialize submodule for parent git repo:</p>
+
+<pre><code>$ git submodule init
+$ git submodule update
+</code></pre>
+
+<p>Now you are ready to add content and customize looks. Do not change any file inside theme directory.</p>
+
+<p>If you want to freeze changes to DocDock theme itself and use still submodules, fork private copy of DocDock and use that as submodule. When you are ready to update theme, just pull changes from origin to your private fork.</p>
+
+<h3 id="2-install-docdock-simply-as-git-clone">2. Install DocDock simply as git clone</h3>
+
+<p>This method results that files are checked out locally, but won&rsquo;t be visible from parent git repo. Probably you will build site locally with <code>hugo</code> command and use result from <code>public/</code> on your own.</p>
+
+<pre><code>$ git clone https://github.com/vjeantet/hugo-theme-docdock.git themes/docdock
+</code></pre>
+
+<h3 id="3-install-docdock-from-zip">3. Install DocDock from ZIP</h3>
+
+<p>All files from theme will be tracked inside parent repo, to update it, have to override files in theme. <a href="https://github.com/vjeantet/hugo-theme-docdock/archive/master.zip">
+
+<span class="glyphicon glyphicon-download" aria-hidden="true"></span>
+
+ download following zip</a> and extract inside <code>themes/</code>.</p>
+
+<pre><code>https://github.com/vjeantet/hugo-theme-docdock/archive/master.zip
+</code></pre>
+
+<p>Name of theme in next step will be <code>hugo-theme-docdock-master</code>, can rename as you wish.</p>
+
+<h2 id="configuration">Configuration</h2>
+
+<p><a href="/ATM4110/linux/configuration/">Follow instructions here</a></p>
 
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-next" href="/ATM4110/syllabus/" title="Syllabus" style="margin-right: 0px;"><label>Syllabus</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/ATM4110/linux/" title="Unix/Linux system"> <i class="fa fa-chevron-left"></i><label>Unix/Linux system</label></a>
+    <a class="nav nav-next" href="/ATM4110/linux/configuration/" title="Configuration" style="margin-right: 0px;"><label>Configuration</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>
@@ -198,7 +264,7 @@
   
 
     <div class="github-link">
-      <a href="https://github.com/vjeantet/hugo-theme-docdock/edit/master/exampleSite/content/" target="blank"><i class="fa fa-code-fork"></i>
+      <a href="https://github.com/vjeantet/hugo-theme-docdock/edit/master/exampleSite/content/linux/shell.md" target="blank"><i class="fa fa-code-fork"></i>
         Improve this page</a>
     </div>
   </div>
