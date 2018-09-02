@@ -1,0 +1,92 @@
+[
+{
+	"uri": "https://hajsong.github.io/ATM4110/linux/installation/",
+	"title": "Installation",
+	"tags": [],
+	"description": "",
+	"content": "HUGO v0.32 minimum required to use this theme The following steps are here to help you initialize your new website. If you don’t know Hugo at all, we strongly suggest you to train by following this great documentation for beginners. Installation We assume that all changes to Hugo content and customizations are going to be tracked by git (GitHub, Bitbucket etc.). Develop locally, build on remote system.\nBefore start real work:\n Initialize Hugo Install DocDock theme Configure DocDock and Hugo  Prepare empty Hugo site Create empty directory, which will be root of your Hugo project. Navigate there and let Hugo to create minimal required directory structure:\n$ hugo new site .  AFTER that, initialize this as git directory where to track further changes\n$ git init  Next, there are at least three ways to install DocDock (first recommended):\n As git submodule As git clone As direct copy (from ZIP)  Navigate to your themes folder in your Hugo site and use perform one of following scenarios.\n1. Install DocDock as git submodule DocDock will be added like a dependency repo to original project. When using CI tools like Netlify, Jenkins etc., submodule method is required, or you will get theme not found issues. Same applies when building site on remote server trough SSH.\nIf submodule is no-go, use 3rd option.\nOn your root of Hugo execute:\n$ git submodule add https://github.com/vjeantet/hugo-theme-docdock.git themes/docdock  Next initialize submodule for parent git repo:\n$ git submodule init $ git submodule update  Now you are ready to add content and customize looks. Do not change any file inside theme directory.\nIf you want to freeze changes to DocDock theme itself and use still submodules, fork private copy of DocDock and use that as submodule. When you are ready to update theme, just pull changes from origin to your private fork.\n2. Install DocDock simply as git clone This method results that files are checked out locally, but won\u0026rsquo;t be visible from parent git repo. Probably you will build site locally with hugo command and use result from public/ on your own.\n$ git clone https://github.com/vjeantet/hugo-theme-docdock.git themes/docdock  3. Install DocDock from ZIP All files from theme will be tracked inside parent repo, to update it, have to override files in theme.  download following zip and extract inside themes/.\nhttps://github.com/vjeantet/hugo-theme-docdock/archive/master.zip  Name of theme in next step will be hugo-theme-docdock-master, can rename as you wish.\nConfiguration Follow instructions here\n"
+},
+{
+	"uri": "https://hajsong.github.io/ATM4110/syllabus/",
+	"title": "Syllabus",
+	"tags": [],
+	"description": "",
+	"content": "   Week Date Content Note     1 2018-09-01\u0026ndash;2018-09-07 A short introduction to the linux operating system 개강   2 2018-09-08\u0026ndash;2018-09-14 A short introduction to the working environments 수강신청 확인 및 변경   3 2018-09-15\u0026ndash;2018-09-21 Python: Basic data and control structures I    4 2018-09-22\u0026ndash;2018-09-28 Python: Basic data and control structures II 추석연휴   5 2018-09-29\u0026ndash;2018-10-05 Python: Array operations I 수강철회, 개천절   6 2018-10-06\u0026ndash;2018-10-12 Python: Array operation II 한글날   7 2018-10-13\u0026ndash;2018-10-19 Midterm    8 2018-10-20\u0026ndash;2018-10-26 Atmospheric data structure: File input and output    9 2018-10-27\u0026ndash;2018-11-02 Visualization I : Plotting methods    10 2018-11-03\u0026ndash;2018-11-09 Visualization II : Make plots on maps    11 2018-11-10\u0026ndash;2018-11-16 Data processing I : statistical analysis    12 2018-11-17\u0026ndash;2018-11-23 Data processing II : temporal analysis    13 2018-11-24\u0026ndash;2018-11-30 Data processing III : spatial analysis    14 2018-12-01\u0026ndash;2018-12-07 Data processing IV : spectral analysis    15 2018-12-08\u0026ndash;2018-12-14 Final presentation 자율학습 및 기말시험   16 2018-12-15\u0026ndash;2018-12-21 Final exam week 자율학습 및 기말시험    "
+},
+{
+	"uri": "https://hajsong.github.io/ATM4110/linux/configuration/",
+	"title": "Configuration",
+	"tags": [],
+	"description": "",
+	"content": "When building the website, you can set a theme by using --theme option. We suggest you to edit your configuration file and set the theme by default. Example with config.toml format. Import sample config from sample site to Hugo root:\n$ cp themes/docdock/exampleSite/config.toml .  Change following config.toml line as needed, depending on method above:\ntheme = \u0026quot;\u0026lt;hugo-theme-docdock-dir-name\u0026gt;\u0026quot;  Comment out following line, so default themes/ will be used:\n# themesdir = \u0026quot;../..\u0026quot;  Activate search If not already present, add the follow lines to the config.toml file.\n[outputs] home = [ \u0026quot;HTML\u0026quot;, \u0026quot;RSS\u0026quot;, \u0026quot;JSON\u0026quot;]  LUNRJS search index file will be generated on content changes.\n(Bonus) Create empty file .gitkeep inside public/ and add following to .gitignore. This way it will keep repo smaller and won\u0026rsquo;t bring build result files and errors to remote checkout places:\n/public/* !/public/.gitkeep  Preview site $ hugo server  to browse site on http://localhost:1313\nYour website\u0026rsquo;s content Find out how to create and organize your content quickly and intuitively.\n"
+},
+{
+	"uri": "https://hajsong.github.io/ATM4110/linux/",
+	"title": "Unix/Linux system",
+	"tags": [],
+	"description": "",
+	"content": " Unix/Linux? Most computing/programming in both atmospheric and oceanic sciences happens on Unix/Linux operating system, instead of Windows. What are the advantages of using Unix/Linux? I do not have the exact answer for why, but there must be a reason for people preferring typing and executing programs instead of clicking on windows (although Linux also provides graphical user interfaces).\nThe computing/programming in the atmospheric sciences means you create/read/process/write atmospheric data. All these jobs involve the design of the workflow from you, and it is important to be powerful, efficient and flexible in doing those. Unix is particularly suited to working in such an environment and has many powerful (and flexible) commands that can help you.\nAlso, according to Biocomputing Bootcamp, \u0026ldquo;The real strength of learning Unix is that most of these commands can be combined in an almost unlimited fashion. So if you can learn just five Unix commands, you will be able to do a lot more than just five things. Our objective here is to learn a subset of Unix and to become a productive Unix user without knowing or using every program and feature.\u0026rdquo;\nHistory (and family) of Unix Unix/Linux operating system Unix-like operating system Simplified history of Unix-like operating systems. Linux shares similar architecture and concepts (as part of the POSIX standard) but does not share non-free source code with the original Unix or MINIX. (From Wikipedia)\nPrograming on Linux A common feature of Unix-like systems, Linux includes traditional specific-purpose programming languages targeted at scripting, text processing and system configuration and management in general. Linux distributions support shell scripts, awk, sed and make. Many programs also have an embedded programming language to support configuring or programming themselves. For example, regular expressions are supported in programs like grep and locate, the traditional Unix MTA Sendmail contains its own Turing complete scripting system, and the advanced text editor GNU Emacs is built around a general purpose Lisp interpreter.\nMost distributions also include support for PHP, Perl, Ruby, Python and other dynamic languages. While not as common, Linux also supports C# (via Mono), Vala, and Scheme. Guile Scheme acts as an extension language targeting the GNU system utilities, seeking to make the conventionally small, static, compiled C programs of Unix design rapidly and dynamically extensible via an elegant, functional high-level scripting system; many GNU programs can be compiled with optional Guile bindings to this end. A number of Java Virtual Machines and development kits run on Linux, including the original Sun Microsystems JVM (HotSpot), and IBM\u0026rsquo;s J2SE RE, as well as many open-source projects like Kaffe and JikesRVM.\nGNOME and KDE are popular desktop environments and provide a framework for developing applications. These projects are based on the GTK+ and Qt widget toolkits, respectively, which can also be used independently of the larger framework. Both support a wide variety of languages. There are a number of Integrated development environments available including Anjuta, Code::Blocks, CodeLite, Eclipse, Geany, ActiveState Komodo, KDevelop, Lazarus, MonoDevelop, NetBeans, and Qt Creator, while the long-established editors Vim, nano and Emacs remain popular.[74]\n"
+},
+{
+	"uri": "https://hajsong.github.io/ATM4110/python/",
+	"title": "Python",
+	"tags": ["tag1", "tag2"],
+	"description": "",
+	"content": " Hugo-theme-docdock defines two types of pages. Default and Slide.\n Default is the common page like the current one you are reading. HomePage is a special content that will be displayed as home page content.  Hugo-theme-docdock provides archetypes to help you create this kind of pages.\nFront Matter Each Hugo page has to define a Front Matter in yaml, toml or json.\nHugo-theme-docdock uses the following parameters on top of the existing ones :\n+++ # Type of content, set \u0026quot;slide\u0026quot; to display it fullscreen with reveal.js type=\u0026quot;page\u0026quot; # Creator's Display name creatordisplayname = \u0026quot;Valere JEANTET\u0026quot; # Creator's Email creatoremail = \u0026quot;valere.jeantet@gmail.com\u0026quot; # LastModifier's Display name lastmodifierdisplayname = \u0026quot;Valere JEANTET\u0026quot; # LastModifier's Email lastmodifieremail = \u0026quot;valere.jeantet@gmail.com\u0026quot; +++  Ordering Hugo provides a flexible way to handle order for your pages.\nThe simplest way is to use weight parameter in the front matter of your page.\n Read more on content organization\n"
+},
+{
+	"uri": "https://hajsong.github.io/ATM4110/python/homepage/",
+	"title": "Home page",
+	"tags": ["tag1", "tag2"],
+	"description": "",
+	"content": "To tell Hugo-theme-docdock to consider a page as homepage\u0026rsquo;s content, just create a content file named _index.md in content folder.\n"
+},
+{
+	"uri": "https://hajsong.github.io/ATM4110/python/page-images/",
+	"title": "About images",
+	"tags": [],
+	"description": "",
+	"content": " Images have a similar syntax to links but include a preceding exclamation point.\n![agence](https://github.com/vjeantet/vjeantet.fr/raw/master/static/images/sgthon/C.jpg)  Resizing image Add HTTP parameters width and/or height to the link image to resize the image. Values are CSS values (default is auto).\n![Hackathon](https://github.com/vjeantet/vjeantet.fr/raw/master/static/images/sgthon/C.jpg?height=80px)  Add CSS classes Add a HTTP classes parameter to the link image to add CSS classes. shadow and border are available but you could define other ones.\n![s](https://github.com/vjeantet/vjeantet.fr/raw/master/static/images/sgthon/C.jpg?classes=border,shadow)  "
+},
+{
+	"uri": "https://hajsong.github.io/ATM4110/python/myslide/",
+	"title": "My Slide ! fullscreen",
+	"tags": [],
+	"description": "",
+	"content": " In the morning Getting up  Turn off alarm Get out of bed  Breakfast  Eat eggs Drink coffee  In the evening Dinner  Eat spaghetti Drink wine  Going to sleep  Get in bed Count sheep  "
+},
+{
+	"uri": "https://hajsong.github.io/ATM4110/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://hajsong.github.io/ATM4110/",
+	"title": "Programming in Meteorology",
+	"tags": [],
+	"description": "",
+	"content": " Programming in Meteorology This webpage is designed to serve the students enrolled for ATM4110, Programming in Meteorology.\nThis course will provide the programming foundation to perform the analysis and diagnostics of the big dataset in the atmospheric sciences. Upon the completion of this course, the students will be capable of analyzing the atmospheric data and extracting meaningful information from it.\nThis webpage is not in the final version but keeps evolving. I encourage students to visit this page frequently and be up to date.  \nInstructor  Hajoon Song Office : Science Hall 544 Email : hajsong@yonsei.ac.kr Telephone : 02-2123-2579  Class  Tuesday 12-2 in Science Hall 523 Thursday 12-2 in Science Hall 603  Grading  Homework : 30% Midterm : 30% Final project : 30% Attendance and participation : 10%  Textbook A Hands-On Introduction to Using Python in the Atmospheric and Oceanic Sciences (online version) If you have an issue with Python, you may find this online material be helpful.\n"
+},
+{
+	"uri": "https://hajsong.github.io/ATM4110/tags/tag1/",
+	"title": "Tag1",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://hajsong.github.io/ATM4110/tags/tag2/",
+	"title": "Tag2",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://hajsong.github.io/ATM4110/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
