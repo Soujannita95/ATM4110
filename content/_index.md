@@ -13,6 +13,13 @@ Upon the completion of this course, the students will be capable of analyzing th
 {{%panel%}}This webpage is not in the final version but keeps evolving. I encourage students to visit this page frequently and be up to date.{{%/panel%}}
 
 <br>
+
+#### Objective of this course
++ **Introduce the programming environment for meteorology**
++ **Handle the atmospheric data using programming language such as python**
++ **Learn temporal/spatial/spectral analysis skills**
++ **Solve problems using acquired skills in programming and produce meaningful results** 
+
 #### Instructor
 
 * [**Hajoon Song**](http://airsea.yonsei.ac.kr/group/hajoonsong/#anchor)
@@ -26,8 +33,8 @@ Upon the completion of this course, the students will be capable of analyzing th
 
 #### Grading
 + Homework : 30%
-+ Midterm : 30%
-+ Final project : 30%
++ Midterm : 20%
++ Final project : 40%
 + Attendance and participation : 10%
 
 #### Textbook
