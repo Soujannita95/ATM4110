@@ -12,13 +12,23 @@
     
     
     <item>
-      <title>Shell</title>
+      <title>Installation</title>
       <link>https://hajsong.github.io/ATM4110/linux/shell/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hajsong.github.io/ATM4110/linux/shell/</guid>
       <description>To get the most out of Linux, you should become proficient in using the shell. It might initially be more difficult than icons and menus, but once you&amp;rsquo;re used to it, the shell is quite easy to use and very powerful.
 How to run a shell If you have Linux, running a shell is just opening Terminal or something similar to it. However, if you are running Windows (I think this is the most case), then you can experience Linux with the third-party program like MobaXterm.</description>
+    </item>
+    
+    <item>
+      <title>Filesystem</title>
+      <link>https://hajsong.github.io/ATM4110/linux/filesystem/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hajsong.github.io/ATM4110/linux/filesystem/</guid>
+      <description>Every Linux file is contained in a collection called a directory. Directories are like folders on Windows and Mac systems. Directories form a hierarchy, or tree: one directory may contain other directories, called subdirectories, which may themselves contain other files and subdirectories, and so on, into infinity. The topmost directory is called the root directory and is denoted by a slash (/).
+We refer to files and directories using a &amp;ldquo;names and slashes&amp;rdquo; syntax called a path.</description>
     </item>
     
     <item>

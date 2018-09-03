@@ -18,22 +18,10 @@ Please get this (free) and set up in your computer.
 
 #### Quick start
 
-This method results that files are checked out locally, but won't be visible from parent git repo. Probably you will build site locally with `hugo` command and use result from `public/` on your own.
-
+Once you install MobaXterm, go to "Session" and select "Shell". 
+This will open the terminal in bash shell environment.  
+You can check your shell environment by typing the follow command.
 ```
-$ git clone https://github.com/vjeantet/hugo-theme-docdock.git themes/docdock
+$ echo $SHELL
 ```
-
-
-### 3. Install DocDock from ZIP
-
-All files from theme will be tracked inside parent repo, to update it, have to override files in theme. [{{%icon download%}} download following zip](https://github.com/vjeantet/hugo-theme-docdock/archive/master.zip) and extract inside `themes/`.
-
-```
-https://github.com/vjeantet/hugo-theme-docdock/archive/master.zip
-```
-Name of theme in next step will be `hugo-theme-docdock-master`, can rename as you wish.
-
-## Configuration
-
-[Follow instructions here]({{%relref "configuration.md"%}})
+This will give you ```/bin/bash.exe```.

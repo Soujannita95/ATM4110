@@ -1,7 +1,7 @@
 +++
 title = "Configuration"
 description = ""
-weight = 2
+weight = 3
 +++
 
 When building the website, you can set a theme by using `--theme` option. We suggest you to edit your configuration file and set the theme by default. Example with `config.toml` format.
