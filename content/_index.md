@@ -20,6 +20,14 @@ Upon the completion of this course, the students will be capable of analyzing th
 + **Learn temporal/spatial/spectral analysis skills**
 + **Solve problems using acquired skills in programming and produce meaningful results** 
 
+#### A few examples that you can do after this course
++ Draw figures using atmospheric data on the map (*[source](https://www.ncdc.noaa.gov/data-access/model-data/model-datasets/global-forcast-system-gfs)*):
+![](/ATM4110/images/gfs.gif?classes=border,shadow)
++ Do post-processing the data and plot the results (*[source](https://software.ecmwf.int/static/ERA-40_Atlas/images/full/D25_XS_YEA.gif)*):
+![](/ATM4110/images/zonalwind.gif)
++ Deal with global data for the climate-related research (*Figure from the 5th IPCC report*)
+![](/ATM4110/images/energy.jpg)
+
 #### Instructor
 
 * [**Hajoon Song**](http://airsea.yonsei.ac.kr/group/hajoonsong/#anchor)

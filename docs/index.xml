@@ -22,13 +22,25 @@ How to run a shell If you have Linux, running a shell is just opening Terminal o
     </item>
     
     <item>
-      <title>Filesystem</title>
-      <link>https://hajsong.github.io/ATM4110/linux/filesystem/</link>
+      <title>Directory operation</title>
+      <link>https://hajsong.github.io/ATM4110/linux/diroperation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://hajsong.github.io/ATM4110/linux/filesystem/</guid>
-      <description>Every Linux file is contained in a collection called a directory. Directories are like folders on Windows and Mac systems. Directories form a hierarchy, or tree: one directory may contain other directories, called subdirectories, which may themselves contain other files and subdirectories, and so on, into infinity. The topmost directory is called the root directory and is denoted by a slash (/).
-We refer to files and directories using a &amp;ldquo;names and slashes&amp;rdquo; syntax called a path.</description>
+      <guid>https://hajsong.github.io/ATM4110/linux/diroperation/</guid>
+      <description>Filesystem structure Every Linux file is contained in a collection called a directory. Directories are like folders on Windows and Mac systems. Directories form a hierarchy, or tree: one directory may contain other directories, called subdirectories, which may themselves contain other files and subdirectories, and so on, into infinity. The topmost directory is called the root directory and is denoted by a slash (/).
+Path We refer to files and directories using a &amp;ldquo;names and slashes&amp;rdquo; syntax called a path.</description>
+    </item>
+    
+    <item>
+      <title>File Operation</title>
+      <link>https://hajsong.github.io/ATM4110/linux/fileoperation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hajsong.github.io/ATM4110/linux/fileoperation/</guid>
+      <description>Once we arrive the working directory, the next thing we want to do might be manipulating files: copying, renaming, deleting and so forth. This page introduces a few things that can be useful in handling files in a Linux system.
+ls [options] [files] The ls command lists attributes of files and directories. You can list files in the current directory:
+$ ls  in a given directories:
+$ ls dir1 dir2 dir3  or individually:</description>
     </item>
     
     <item>

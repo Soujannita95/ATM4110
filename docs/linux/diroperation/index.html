@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="generator" content="Hugo 0.37.1" />
-<title>Installation :: ATM4110</title>
+<title>Directory operation :: ATM4110</title>
 <link rel="shortcut icon" href="/ATM4110/images/favicon.png" type="image/x-icon" />
 <link href="/ATM4110/css/font-awesome.min.css" rel="stylesheet">
 <link href="/ATM4110/css/nucleus.css" rel="stylesheet">
@@ -23,7 +23,7 @@
 
     
   </head>
-  <body data-url="/ATM4110/linux/shell/">
+  <body data-url="/ATM4110/linux/diroperation/">
     
       <header>
   <div class="logo">
@@ -69,14 +69,14 @@
             <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/ATM4110/linux/shell/" class="dd-item active">
+      <li data-nav-id="/ATM4110/linux/shell/" class="dd-item">
         <div>
           <a href="/ATM4110/linux/shell/">
             Installation
           </a>
         </div>
     </li>
-      <li data-nav-id="/ATM4110/linux/diroperation/" class="dd-item">
+      <li data-nav-id="/ATM4110/linux/diroperation/" class="dd-item active">
         <div>
           <a href="/ATM4110/linux/diroperation/">
             Directory operation
@@ -139,8 +139,8 @@
    Syllabus</option>
     <option value="/ATM4110/linux/" >
    Unix/Linux system</option> 
-      <option value="/ATM4110/linux/shell/"  selected>- Installation</option>
-      <option value="/ATM4110/linux/diroperation/" >- Directory operation</option>
+      <option value="/ATM4110/linux/shell/" >- Installation</option>
+      <option value="/ATM4110/linux/diroperation/"  selected>- Directory operation</option>
       <option value="/ATM4110/linux/fileoperation/" >- File Operation</option>
       <option value="/ATM4110/linux/configuration/" >- Configuration</option>
   
@@ -168,43 +168,101 @@
       </div>
     
 
-    <h1>Installation</h1>
+    <h1>Directory operation</h1>
 
     
     
     
     
 
-<p>To get the most out of Linux, you should become proficient in using the shell. It might initially be more difficult than icons and menus, but once you&rsquo;re used to it, the shell is quite easy to use and very powerful.</p>
+<h4 id="filesystem-structure">Filesystem structure</h4>
 
-<h4 id="how-to-run-a-shell">How to run a shell</h4>
+<p>Every Linux file is contained in a collection called a <em>directory</em>.
+Directories are like folders on Windows and Mac systems. Directories form a hierarchy, or <em>tree</em>: one directory may contain other directories, called <em>subdirectories</em>, which may themselves contain other files and subdirectories, and so on, into infinity.
+The topmost directory is called the <em>root directory</em> and is denoted by a slash (/).</p>
 
-<p>If you have Linux, running a shell is just opening <em>Terminal</em> or something similar to it. However, if you are running Windows (I think this is the most case), then you can experience Linux with the third-party program like <a href="https://mobaxterm.mobatek.net">MobaXterm</a>.</p>
+<h4 id="path">Path</h4>
 
-<p><img src="/ATM4110/images/feature-terminal.png?classes=border,shadow" alt="" /></p>
+<p>We refer to files and directories using a &ldquo;names and slashes&rdquo; syntax called a <em>path</em>.
+To find out the current path, try</p>
 
-<p>This program offers a shell environment and (I think) you can do most of the common tasks of Linux with it.</p>
-
-<p>Please get this (free) and set up in your computer.</p>
-
-<h4 id="quick-start">Quick start</h4>
-
-<p>Once you install MobaXterm, go to &ldquo;Session&rdquo; and select &ldquo;Shell&rdquo;.
-This will open the terminal in bash shell environment.<br />
-You can check your shell environment by typing the follow command.</p>
-
-<pre><code>$ echo $SHELL
+<pre><code>$ pwd
 </code></pre>
 
-<p>This will give you <code>/bin/bash.exe</code>.</p>
+<p>and you will get your current location in the filesystem.</p>
+
+<p>There are two types of path. The first one is an <em>absolute</em> path. The absolute path starts from the root directory and has all the names of directories in the upper level. The second type is a <em>relative</em> path. The relative path does not start with the root directory or contain all the names of directories in the upper levels.</p>
+
+<h5 id="cd-directory"><code>cd [directory]</code></h5>
+
+<p>To move your location in the shell environment, you can use the <code>cd</code> command:</p>
+
+<pre><code>$ cd /one/two/three
+</code></pre>
+
+<p>This command line moves you from your working directory (or current location) to <code>/one/two/three</code>. This example uses the absolute path to go to the new working directory. From here, you can use the relative path to go to <code>/one/two</code> with the following command:</p>
+
+<pre><code>$ cd ..
+</code></pre>
+
+<p>In the shell environment, <code>&quot;..&quot;</code> means the upper level. (<code>&quot;.&quot;</code> means the current level.) You can use <code>&quot;..&quot;</code> as many times as you want. For example, if you want to move to <code>/one</code> from <code>/one/two/three</code>, you can type:</p>
+
+<pre><code>$ cd ../..
+</code></pre>
+
+<p>Please note that you can achieve the same result with the absolute path:</p>
+
+<pre><code>$ cd /one
+</code></pre>
+
+<p>Each user has own <em>home directories</em> where users&rsquo; personal files are often found.
+In general, the path of the home directory starts with <code>/home</code>.
+To find out the absolute path for your home directory, try:</p>
+
+<pre><code>$ echo $HOME
+</code></pre>
+
+<p>Linux offers a command that brings you to your home directory from anywhere.
+All you can do is just type <code>cd</code> with no arguments.
+It also provides a simple way to write the absolute path of your home directory with a special character, <code>~</code>.
+Check this out.</p>
+
+<pre><code>$ echo ~
+</code></pre>
+
+<p>You will get the same result as above. This special character can be quite handy. Suppose you want to move to <code>Documents/Public</code> in your home directory from <code>/one/two/three</code>. Then you can just type:</p>
+
+<pre><code>$ cd ~/Documents/Public
+</code></pre>
+
+<p>If another username follows <code>~</code>, the shell expands this string to be the user&rsquo;s home directory:</p>
+
+<pre><code>$ cd ~smith
+$ pwd
+/home/smith
+</code></pre>
+
+<h5 id="mkdir-options-directory"><code>mkdir [options] directory</code></h5>
+
+<p><code>mkdir</code> creates one or more directories:</p>
+
+<pre><code>$ mkdir dirname
+</code></pre>
+
+<div class="panel panel-primary">
+	
+	<div class="panel-body"><code>rm -r dirname</code> will delete the directory called <code>dirname</code>.</div>
+	
+</div>
+
 
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/ATM4110/linux/" title="Unix/Linux system"> <i class="fa fa-chevron-left"></i><label>Unix/Linux system</label></a>
-    <a class="nav nav-next" href="/ATM4110/linux/diroperation/" title="Directory operation" style="margin-right: 0px;"><label>Directory operation</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/ATM4110/linux/shell/" title="Installation"> <i class="fa fa-chevron-left"></i><label>Installation</label></a>
+    <a class="nav nav-next" href="/ATM4110/linux/fileoperation/" title="File Operation" style="margin-right: 0px;"><label>File Operation</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>
@@ -220,7 +278,7 @@ You can check your shell environment by typing the follow command.</p>
   
 
     <div class="github-link">
-      <a href="https://github.com/vjeantet/hugo-theme-docdock/edit/master/exampleSite/content/linux/shell.md" target="blank"><i class="fa fa-code-fork"></i>
+      <a href="https://github.com/vjeantet/hugo-theme-docdock/edit/master/exampleSite/content/linux/diroperation.md" target="blank"><i class="fa fa-code-fork"></i>
         Improve this page</a>
     </div>
   </div>

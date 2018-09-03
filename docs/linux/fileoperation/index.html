@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="generator" content="Hugo 0.37.1" />
-<title>Categories :: ATM4110</title>
+<title>File Operation :: ATM4110</title>
 <link rel="shortcut icon" href="/ATM4110/images/favicon.png" type="image/x-icon" />
 <link href="/ATM4110/css/font-awesome.min.css" rel="stylesheet">
 <link href="/ATM4110/css/nucleus.css" rel="stylesheet">
@@ -23,7 +23,7 @@
 
     
   </head>
-  <body data-url="/ATM4110/categories/">
+  <body data-url="/ATM4110/linux/fileoperation/">
     
       <header>
   <div class="logo">
@@ -62,10 +62,11 @@
       <a href="/ATM4110/syllabus/">Syllabus</a>
       </div>
     </li>
-    <li data-nav-id="/ATM4110/linux/" class="dd-item haschildren
+    <li data-nav-id="/ATM4110/linux/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ATM4110/linux/">Unix/Linux system</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ATM4110/linux/">Unix/Linux system</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ATM4110/linux/shell/" class="dd-item">
@@ -82,7 +83,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/ATM4110/linux/fileoperation/" class="dd-item">
+      <li data-nav-id="/ATM4110/linux/fileoperation/" class="dd-item active">
         <div>
           <a href="/ATM4110/linux/fileoperation/">
             File Operation
@@ -104,31 +105,17 @@
       <a href="/ATM4110/python/">Python</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/ATM4110/linux/shell/" class="dd-item">
+      <li data-nav-id="/ATM4110/python/homepage/" class="dd-item">
         <div>
-          <a href="/ATM4110/linux/shell/">
-            Installation
+          <a href="/ATM4110/python/homepage/">
+            Home page
           </a>
         </div>
     </li>
-      <li data-nav-id="/ATM4110/linux/diroperation/" class="dd-item">
+      <li data-nav-id="/ATM4110/python/page-images/" class="dd-item">
         <div>
-          <a href="/ATM4110/linux/diroperation/">
-            Directory operation
-          </a>
-        </div>
-    </li>
-      <li data-nav-id="/ATM4110/linux/fileoperation/" class="dd-item">
-        <div>
-          <a href="/ATM4110/linux/fileoperation/">
-            File Operation
-          </a>
-        </div>
-    </li>
-      <li data-nav-id="/ATM4110/linux/configuration/" class="dd-item">
-        <div>
-          <a href="/ATM4110/linux/configuration/">
-            Configuration
+          <a href="/ATM4110/python/page-images/">
+            About images
           </a>
         </div>
     </li>
@@ -151,7 +138,12 @@
     <option value="/ATM4110/syllabus/" >
    Syllabus</option>
     <option value="/ATM4110/linux/" >
-   Unix/Linux system</option>
+   Unix/Linux system</option> 
+      <option value="/ATM4110/linux/shell/" >- Installation</option>
+      <option value="/ATM4110/linux/diroperation/" >- Directory operation</option>
+      <option value="/ATM4110/linux/fileoperation/"  selected>- File Operation</option>
+      <option value="/ATM4110/linux/configuration/" >- Configuration</option>
+  
     <option value="/ATM4110/python/" >
    Python</option>
 
@@ -176,41 +168,66 @@
       </div>
     
 
-    <h1>Categories</h1>
+    <h1>File Operation</h1>
 
     
     
     
+    
 
+<p>Once we arrive the working directory, the next thing we want to do might be manipulating files: copying, renaming, deleting and so forth. This page introduces a few things that can be useful in handling files in a Linux system.</p>
 
+<h5 id="ls-options-files"><code>ls [options] [files]</code></h5>
 
-<div class="extra-pagination inner">
-<nav class="pagination" role="navigation">
-	
-	<span class="page-number">Page 1 of 0</span>
-	
-</nav>
+<p>The <code>ls</code> command lists attributes of files and directories. You can list files in the current directory:</p>
 
-</div>
+<pre><code>$ ls
+</code></pre>
 
+<p>in a given directories:</p>
 
+<pre><code>$ ls dir1 dir2 dir3
+</code></pre>
 
-<div style="margin-bottom:2rem"></div>
+<p>or individually:</p>
 
-<nav class="pagination" role="navigation">
-	
-	<span class="page-number">Page 1 of 0</span>
-	
-</nav>
+<pre><code>$ ls file1 file2 file3
+</code></pre>
 
+<p>The most important options are <code>-a</code> and <code>-l</code>. By default, <code>ls</code> hides files whose names begin with a dot. The option <code>-a</code> displays all files including those starting with <code>.(dot)</code>.
+The <code>-l</code> option produces a long listing, for example:</p>
 
+<pre><code>-rw-r--r--  1 hajsong  staff  3376 Sep  3 08:18 _index.md
+-rw-r--r--  1 hajsong  staff  1340 Sep  3 12:53 configuration.md
+-rw-r--r--  1 hajsong  staff  3301 Sep  3 13:05 fileoperation.md
+-rw-r--r--  1 hajsong  staff  2707 Sep  3 12:52 filesystem.md
+-rw-r--r--  1 hajsong  staff  1066 Sep  3 11:23 shell.md
+</code></pre>
+
+<p>that includes, from left to right: the file&rsquo;s permissions, owner, group, size, last modification date and name.
+When using the <code>-l</code> option, the list is created in the alphabetical order of the file names. It is sometimes useful to find out the most recently modified file. In this case, you can change the order according to the modification times.</p>
+
+<pre><code>$ ls -ltr
+</code></pre>
+
+<p>The result looks like:</p>
+
+<pre><code>-rw-r--r--  1 hajsong  staff  3376 Sep  3 08:18 _index.md
+-rw-r--r--  1 hajsong  staff  1066 Sep  3 11:23 shell.md
+-rw-r--r--  1 hajsong  staff  2707 Sep  3 12:52 filesystem.md
+-rw-r--r--  1 hajsong  staff  1340 Sep  3 12:53 configuration.md
+-rw-r--r--  1 hajsong  staff  3787 Sep  3 13:08 fileoperation.md
+</code></pre>
+
+<p>Here, <code>-t</code> makes the order according to the modification time, and <code>-r</code> reverses the order so that the latest comes to the bottom of the list. You may already notice that you can combine options by just line them up.</p>
 
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-next" href="/ATM4110/syllabus/" title="Syllabus" style="margin-right: 0px;"><label>Syllabus</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/ATM4110/linux/diroperation/" title="Directory operation"> <i class="fa fa-chevron-left"></i><label>Directory operation</label></a>
+    <a class="nav nav-next" href="/ATM4110/linux/configuration/" title="Configuration" style="margin-right: 0px;"><label>Configuration</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>
@@ -226,7 +243,7 @@
   
 
     <div class="github-link">
-      <a href="https://github.com/vjeantet/hugo-theme-docdock/edit/master/exampleSite/content/" target="blank"><i class="fa fa-code-fork"></i>
+      <a href="https://github.com/vjeantet/hugo-theme-docdock/edit/master/exampleSite/content/linux/fileoperation.md" target="blank"><i class="fa fa-code-fork"></i>
         Improve this page</a>
     </div>
   </div>

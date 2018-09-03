@@ -1,13 +1,15 @@
 +++
-title = "Filesystem"
+title = "Directory operation"
 description = ""
 weight = 2
 +++
 
+#### Filesystem structure
 Every Linux file is contained in a collection called a *directory*. 
 Directories are like folders on Windows and Mac systems. Directories form a hierarchy, or *tree*: one directory may contain other directories, called *subdirectories*, which may themselves contain other files and subdirectories, and so on, into infinity.
 The topmost directory is called the *root directory* and is denoted by a slash (/).
 
+#### Path
 We refer to files and directories using a "names and slashes" syntax called a *path*.
 To find out the current path, try
 ```
@@ -17,6 +19,7 @@ and you will get your current location in the filesystem.
 
 There are two types of path. The first one is an *absolute* path. The absolute path starts from the root directory and has all the names of directories in the upper level. The second type is a *relative* path. The relative path does not start with the root directory or contain all the names of directories in the upper levels. 
 
+##### ```cd [directory]```
 To move your location in the shell environment, you can use the ```cd``` command:
 ```
 $ cd /one/two/three
@@ -58,5 +61,10 @@ $ cd ~smith
 $ pwd
 /home/smith
 ```
-
+##### ```mkdir [options] directory```
+```mkdir``` creates one or more directories:
+```
+$ mkdir dirname
+```
+{{% panel %}}```rm -r dirname``` will delete the directory called ```dirname```.{{% /panel %}}
 
