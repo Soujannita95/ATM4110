@@ -1,6 +1,12 @@
 +++
 title = "Unix/Linux system"
+date= 2018-09-04T07:45:45+09:00
 description = ""
+creatordisplayname = "Hajoon Song"
+creatoremail = "hajsong@yonsei.ac.kr"
+lastmodifierdisplayname = "Hajoon Song"
+lastmodifieremail = "hajsong@yonsei.ac.kr"
+tags = ["Unix","Linux"]
 weight = 2
 #alwaysopen = true
 +++
@@ -34,4 +40,4 @@ Thousands of programs for file manipulation, text editing, mathematics, typesett
 ##### The shell
 A user interface for typing commands, executing them, and displaying results. There are various shells in existence: the Bourne shell, Korn shell, C shell, and others. We will focus on *bash*, the Bourne Shell, which is often the default for user accounts. However, all these shells have similar basic functions.
 ##### X
-A graphical system that provides windows, menus, icons, mouse support, and other familiar GUI elements. More complex graphical environments are built on X; the most popular are KDE and GNOME. 
+A graphical system that provides windows, menus, icons, mouse support, and other familiar GUI elements. More complex graphical environments are built on X; the most popular are KDE and GNOME.

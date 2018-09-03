@@ -1,6 +1,11 @@
 +++
 title = "Installation"
+date= 2018-09-04T07:45:45+09:00
 description = ""
+creatordisplayname = "Hajoon Song"
+creatoremail = "hajsong@yonsei.ac.kr"
+lastmodifierdisplayname = "Hajoon Song"
+lastmodifieremail = "hajsong@yonsei.ac.kr"
 weight = 1
 +++
 
@@ -18,7 +23,7 @@ Please get this (free) and set up in your computer.
 
 #### Quick start
 
-Once you install MobaXterm, go to "Session" and select "Shell". 
+Once you install MobaXterm, go to "Session" and select "Shell".
 This will open the terminal in bash shell environment.  
 You can check your shell environment by typing the follow command.
 ```

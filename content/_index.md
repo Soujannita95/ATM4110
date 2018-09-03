@@ -18,12 +18,12 @@ Upon the completion of this course, the students will be capable of analyzing th
 + **Introduce the programming environment for meteorology**
 + **Handle the atmospheric data using programming language such as python**
 + **Learn temporal/spatial/spectral analysis skills**
-+ **Solve problems using acquired skills in programming and produce meaningful results** 
++ **Solve problems using acquired skills in programming and produce meaningful results**
 
 #### A few examples that you can do after this course
 + Draw figures using atmospheric data on the map (*[source](https://www.ncdc.noaa.gov/data-access/model-data/model-datasets/global-forcast-system-gfs)*):
 ![](/ATM4110/images/gfs.gif?classes=border,shadow)
-+ Do post-processing the data and plot the results (*[source](https://software.ecmwf.int/static/ERA-40_Atlas/images/full/D25_XS_YEA.gif)*):
++ Post-process the data and plot the results (*[source](https://software.ecmwf.int/static/ERA-40_Atlas/images/full/D25_XS_YEA.gif)*):
 ![](/ATM4110/images/zonalwind.gif)
 + Deal with global data for the climate-related research (*Figure from the 5th IPCC report*)
 ![](/ATM4110/images/energy.jpg)
@@ -39,6 +39,9 @@ Upon the completion of this course, the students will be capable of analyzing th
 + Tuesday 12-2 in Science Hall 523
 + Thursday 12-2 in Science Hall 603
 
+#### Office hour
++ Tuesday 2-3 in Science Hall 544
+
 #### Grading
 + Homework : 30%
 + Midterm : 20%
@@ -46,7 +49,8 @@ Upon the completion of this course, the students will be capable of analyzing th
 + Attendance and participation : 10%
 
 #### Textbook
-A Hands-On Introduction to Using Python in the Atmospheric and Oceanic Sciences ([online version](http://www.johnny-lin.com/pyintro/))
+When we go through python, I will follow the book,
+*A Hands-On Introduction to Using Python in the Atmospheric and Oceanic Sciences* ([online version](http://www.johnny-lin.com/pyintro/))
 ![](images/cover_web_with_title.jpg?classes=border,shadow)
 
 If you have an issue with Python, you may find [this online material](http://files.swaroopch.com/python/byte_of_python.pdf) be helpful.

@@ -1,11 +1,16 @@
 +++
 title = "Directory operation"
+date= 2018-09-04T07:45:45+09:00
 description = ""
+creatordisplayname = "Hajoon Song"
+creatoremail = "hajsong@yonsei.ac.kr"
+lastmodifierdisplayname = "Hajoon Song"
+lastmodifieremail = "hajsong@yonsei.ac.kr"
 weight = 2
 +++
 
 #### Filesystem structure
-Every Linux file is contained in a collection called a *directory*. 
+Every Linux file is contained in a collection called a *directory*.
 Directories are like folders on Windows and Mac systems. Directories form a hierarchy, or *tree*: one directory may contain other directories, called *subdirectories*, which may themselves contain other files and subdirectories, and so on, into infinity.
 The topmost directory is called the *root directory* and is denoted by a slash (/).
 
@@ -17,7 +22,7 @@ $ pwd
 ```
 and you will get your current location in the filesystem.
 
-There are two types of path. The first one is an *absolute* path. The absolute path starts from the root directory and has all the names of directories in the upper level. The second type is a *relative* path. The relative path does not start with the root directory or contain all the names of directories in the upper levels. 
+There are two types of path. The first one is an *absolute* path. The absolute path starts from the root directory and has all the names of directories in the upper level. The second type is a *relative* path. The relative path does not start with the root directory or contain all the names of directories in the upper levels.
 
 ##### ```cd [directory]```
 To move your location in the shell environment, you can use the ```cd``` command:
@@ -28,7 +33,7 @@ This command line moves you from your working directory (or current location) to
 ```
 $ cd ..
 ```
-In the shell environment, ``` ".." ``` means the upper level. (``` "." ``` means the current level.) You can use ```".."``` as many times as you want. For example, if you want to move to ```/one``` from ```/one/two/three```, you can type: 
+In the shell environment, ``` ".." ``` means the upper level. (``` "." ``` means the current level.) You can use ```".."``` as many times as you want. For example, if you want to move to ```/one``` from ```/one/two/three```, you can type:
 ```
 $ cd ../..
 ```
@@ -44,8 +49,8 @@ To find out the absolute path for your home directory, try:
 $ echo $HOME
 ```
 
-Linux offers a command that brings you to your home directory from anywhere. 
-All you can do is just type ```cd``` with no arguments. 
+Linux offers a command that brings you to your home directory from anywhere.
+All you can do is just type ```cd``` with no arguments.
 It also provides a simple way to write the absolute path of your home directory with a special character, ```~```.
 Check this out.
 ```
@@ -54,7 +59,7 @@ $ echo ~
 You will get the same result as above. This special character can be quite handy. Suppose you want to move to ```Documents/Public``` in your home directory from ```/one/two/three```. Then you can just type:
 ```
 $ cd ~/Documents/Public
-``` 
+```
 If another username follows ```~```, the shell expands this string to be the user's home directory:
 ```
 $ cd ~smith
@@ -67,4 +72,3 @@ $ pwd
 $ mkdir dirname
 ```
 {{% panel %}}```rm -r dirname``` will delete the directory called ```dirname```.{{% /panel %}}
-
