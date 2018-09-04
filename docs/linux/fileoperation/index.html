@@ -37,13 +37,8 @@
   <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
     <nav class="shortcuts">
             <li class="" role="">
-                <a href="https://github.com/vjeantet/hugo-theme-docdock" target="_blank" rel="noopener">
+                <a href="https://github.com/hajsong/ATM4110" target="_blank" rel="noopener">
                   <i class='fa fa-github'></i> <label>Github repo</label>
-                </a>
-            </li>
-            <li class="" role="">
-                <a href="https://github.com/vjeantet/hugo-theme-docdock/archive/master.zip" target="_blank" rel="noopener">
-                  <i class='fa fa-cloud-download'></i> <label>Download</label>
                 </a>
             </li>
     </nav>
@@ -90,32 +85,19 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/ATM4110/linux/configuration/" class="dd-item">
-        <div>
-          <a href="/ATM4110/linux/configuration/">
-            Configuration
-          </a>
-        </div>
-    </li>
         </ul>
     </li>
-    <li data-nav-id="/ATM4110/python/" class="dd-item haschildren
+    <li data-nav-id="/ATM4110/homework/" class="dd-item alwaysopen haschildren
         ">
       <div>
-      <a href="/ATM4110/python/">Python</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ATM4110/homework/"> Homework</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/ATM4110/python/homepage/" class="dd-item">
+      <li data-nav-id="/ATM4110/homework/homework1/" class="dd-item">
         <div>
-          <a href="/ATM4110/python/homepage/">
-            Home page
-          </a>
-        </div>
-    </li>
-      <li data-nav-id="/ATM4110/python/page-images/" class="dd-item">
-        <div>
-          <a href="/ATM4110/python/page-images/">
-            About images
+          <a href="/ATM4110/homework/homework1/">
+            Homework 1
           </a>
         </div>
     </li>
@@ -142,10 +124,11 @@
       <option value="/ATM4110/linux/shell/" >- Installation</option>
       <option value="/ATM4110/linux/diroperation/" >- Directory operation</option>
       <option value="/ATM4110/linux/fileoperation/"  selected>- File Operation</option>
-      <option value="/ATM4110/linux/configuration/" >- Configuration</option>
   
-    <option value="/ATM4110/python/" >
-   Python</option>
+    <option value="/ATM4110/homework/" >
+    Homework</option> 
+      <option value="/ATM4110/homework/homework1/" >- Homework 1</option>
+  
 
 
 
@@ -176,6 +159,15 @@
     
 
 <p>Once we arrive the working directory, the next thing we want to do might be manipulating files: copying, renaming, deleting and so forth. This page introduces a few things that can be useful in handling files in a Linux system.</p>
+
+<p><div class="alert 
+alert-info"
+ 
+role="alert">If you need a short guide for the command, try with <code>--help</code> option.</div>
+
+<div class="notices note" ><p>The content on this page mostly comes from <em>Linux pocket guide</em> by Daniel J. Barrett.</p>
+</div>
+</p>
 
 <h5 id="ls-options-files"><code>ls [options] [files]</code></h5>
 
@@ -221,13 +213,114 @@ When using the <code>-l</code> option, the list is created in the alphabetical o
 
 <p>Here, <code>-t</code> makes the order according to the modification time, and <code>-r</code> reverses the order so that the latest comes to the bottom of the list. You may already notice that you can combine options by just line them up.</p>
 
+<h5 id="cp-options-files-file-dir"><code>cp [options] [files] (file/dir)</code></h5>
+
+<p>The <code>cp</code> command copies a file:</p>
+
+<pre><code>$ cp file file2
+</code></pre>
+
+<p>Using the <code>-R</code> option, you can also recursively copy directories.</p>
+
+<pre><code>$ cp -R dir1 dir2
+</code></pre>
+
+<p>will create <code>dir2</code> which is the same as <code>dir1</code>.</p>
+
+<p><strong>Useful options</strong></p>
+
+<ul>
+<li><code>-f</code>: Force the copy. If a destination file exists, overwrite it unconditionally.</li>
+<li><code>-i</code>: Interactive mode. Ask before overwriting destination files.</li>
+</ul>
+
+<h5 id="ln-options-source-target"><code>ln [options] source target</code></h5>
+
+<p>A <em>link</em> is a reference to another file, created by the <code>ln</code> command. There are two kinds of links. A <em>symbolic link</em> refers to another file by its path, much like a Windows &ldquo;shortcut&rdquo; or a Mac &ldquo;alias&rdquo;.</p>
+
+<pre><code>$ ln -s myfile softlink
+</code></pre>
+
+<p>If you delete the original file, the now-dangling link will be invalid, pointing to a nonexistent file path. A <em>hard link</em>, on the other hand, is simply a second name for a physical file on disk. Deleting the original file does not invalidate the link.</p>
+
+<p>If you leave the <code>softlink</code> blank, then you get the link with the same name.</p>
+
+<pre><code>$ ln myfile hardlink
+</code></pre>
+
+<p>Symbolic link can cross disk partitions, since they are just references to file paths.
+Hard links cannot. Symbolic links can also point to directories, whereas hard links cannot.</p>
+
+<p>It is easy to find out where a symbolic link points with either of these command.</p>
+
+<pre><code>$ readlink softlink
+</code></pre>
+
+<p>or</p>
+
+<pre><code>$ ls -l softlink
+</code></pre>
+
+<p><strong>useful options</strong></p>
+
+<ul>
+<li><code>-s</code>: Make a symbolic link. The default is a hard link.</li>
+<li><code>-i</code>: Interactive mode. Ask before overwriting destination files.</li>
+<li><code>-f</code>: Force the link. If a destination file exists, overwrite it unconditionally.</li>
+</ul>
+
+<h5 id="mv-options-source-target"><code>mv [options] source target</code></h5>
+
+<p>The <code>mv</code> command can rename a file:</p>
+
+<pre><code>$ mv file1 file2
+</code></pre>
+
+<p>or move files and directories into a destination directory.</p>
+
+<pre><code>$ mv file1 destination_directory
+</code></pre>
+
+<p><strong>useful options</strong></p>
+
+<ul>
+<li><code>-i</code>: Interactive mode. Ask before overwriting destination files.</li>
+<li><code>-f</code>: Force the move. If a destination file exists, overwrite it unconditionally.</li>
+</ul>
+
+<h5 id="rm-options-files-directories"><code>rm [options] files/directories</code></h5>
+
+<p>The <code>rm</code> command can delete files:</p>
+
+<pre><code>$ rm file1 file2 file3
+</code></pre>
+
+<p>or recursively delete directories:</p>
+
+<pre><code>rm -r dir1 dir2
+</code></pre>
+
+<p><strong>useful options</strong></p>
+
+<ul>
+<li><code>-i</code>: Interactive mode. Ask before deleting each file.</li>
+<li><code>-f</code>: Force the deletion, ignoring any errors or warnings.</li>
+<li><code>-r</code>: recursively remove a directory and its contents. <strong>USE WITH CAUTION</strong>, especially if combined with the <code>-f</code> option.</li>
+</ul>
+
+<div class="alert 
+alert-danger"
+ 
+role="alert"><strong>Beware!</strong> Once you delete the files or directories with <code>rm</code>, it is impossible or very difficult to recover them.</div>
+
+
 
     
     
         <div class="chevrons">
     <div id="navigation">
 <a class="nav nav-prev" href="/ATM4110/linux/diroperation/" title="Directory operation"> <i class="fa fa-chevron-left"></i><label>Directory operation</label></a>
-    <a class="nav nav-next" href="/ATM4110/linux/configuration/" title="Configuration" style="margin-right: 0px;"><label>Configuration</label><i class="fa fa-chevron-right"></i></a></div>
+    <a class="nav nav-next" href="/ATM4110/homework/" title=" Homework" style="margin-right: 0px;"><label> Homework</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>
@@ -239,26 +332,24 @@ When using the <code>-l</code> option, the list is created in the alphabetical o
     
 
     
+    <div class="author">
+        <i class='fa fa-user'></i> <a href="mailto:hajsong@yonsei.ac.kr">Hajoon Song</a>
+    </div>
+    
 
   
+    <div class="date">
+        <i class='fa fa-calendar'></i> Last update on 04/09/2018
+    </div>
+    
 
     <div class="github-link">
-      <a href="https://github.com/vjeantet/hugo-theme-docdock/edit/master/exampleSite/content/linux/fileoperation.md" target="blank"><i class="fa fa-code-fork"></i>
+      <a href="https://github.com/hajsong/ATM4110/content/linux/fileoperation.md" target="blank"><i class="fa fa-code-fork"></i>
         Improve this page</a>
     </div>
   </div>
 
 
-	<div>
-
-
-  
-    Create a content/_footer.md file to customize the footer content
-  
-
-
-
-	</div>
 </footer>
 
 <script src="/ATM4110/js/clipboard.min.js"></script>
@@ -269,6 +360,7 @@ When using the <code>-l</code> option, the list is created in the alphabetical o
 
 
 <script src="/ATM4110/theme-flex/script.js"></script>
+
 
     
 

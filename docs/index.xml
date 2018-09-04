@@ -6,7 +6,7 @@
     <description>Recent content in Programming in Meteorology on ATM4110</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 Apr 2017 18:36:24 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 04 Sep 2018 07:45:45 +0900</lastBuildDate>
     
 	<atom:link href="https://hajsong.github.io/ATM4110/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Installation</title>
       <link>https://hajsong.github.io/ATM4110/linux/shell/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 04 Sep 2018 07:45:45 +0900</pubDate>
       
       <guid>https://hajsong.github.io/ATM4110/linux/shell/</guid>
       <description>To get the most out of Linux, you should become proficient in using the shell. It might initially be more difficult than icons and menus, but once you&amp;rsquo;re used to it, the shell is quite easy to use and very powerful.
@@ -24,7 +24,7 @@ How to run a shell If you have Linux, running a shell is just opening Terminal o
     <item>
       <title>Directory operation</title>
       <link>https://hajsong.github.io/ATM4110/linux/diroperation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 04 Sep 2018 07:45:45 +0900</pubDate>
       
       <guid>https://hajsong.github.io/ATM4110/linux/diroperation/</guid>
       <description>Filesystem structure Every Linux file is contained in a collection called a directory. Directories are like folders on Windows and Mac systems. Directories form a hierarchy, or tree: one directory may contain other directories, called subdirectories, which may themselves contain other files and subdirectories, and so on, into infinity. The topmost directory is called the root directory and is denoted by a slash (/).
@@ -34,53 +34,21 @@ Path We refer to files and directories using a &amp;ldquo;names and slashes&amp;
     <item>
       <title>File Operation</title>
       <link>https://hajsong.github.io/ATM4110/linux/fileoperation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 04 Sep 2018 07:45:45 +0900</pubDate>
       
       <guid>https://hajsong.github.io/ATM4110/linux/fileoperation/</guid>
       <description>Once we arrive the working directory, the next thing we want to do might be manipulating files: copying, renaming, deleting and so forth. This page introduces a few things that can be useful in handling files in a Linux system.
-ls [options] [files] The ls command lists attributes of files and directories. You can list files in the current directory:
-$ ls  in a given directories:
-$ ls dir1 dir2 dir3  or individually:</description>
+If you need a short guide for the command, try with --help option. The content on this page mostly comes from Linux pocket guide by Daniel J. Barrett.
+ ls [options] [files] The ls command lists attributes of files and directories.</description>
     </item>
     
     <item>
-      <title>Configuration</title>
-      <link>https://hajsong.github.io/ATM4110/linux/configuration/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>Homework 1</title>
+      <link>https://hajsong.github.io/ATM4110/homework/homework1/</link>
+      <pubDate>Tue, 04 Sep 2018 07:51:27 +0900</pubDate>
       
-      <guid>https://hajsong.github.io/ATM4110/linux/configuration/</guid>
-      <description>&lt;p&gt;When building the website, you can set a theme by using &lt;code&gt;--theme&lt;/code&gt; option. We suggest you to edit your configuration file and set the theme by default. Example with &lt;code&gt;config.toml&lt;/code&gt; format.
-&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Home page</title>
-      <link>https://hajsong.github.io/ATM4110/python/homepage/</link>
-      <pubDate>Fri, 28 Apr 2017 18:36:24 +0200</pubDate>
-      
-      <guid>https://hajsong.github.io/ATM4110/python/homepage/</guid>
-      <description>To tell Hugo-theme-docdock to consider a page as homepage&amp;rsquo;s content, just create a content file named _index.md in content folder.</description>
-    </item>
-    
-    <item>
-      <title>About images</title>
-      <link>https://hajsong.github.io/ATM4110/python/page-images/</link>
-      <pubDate>Mon, 24 Apr 2017 18:36:24 +0200</pubDate>
-      
-      <guid>https://hajsong.github.io/ATM4110/python/page-images/</guid>
-      <description> Images have a similar syntax to links but include a preceding exclamation point.
-![agence](https://github.com/vjeantet/vjeantet.fr/raw/master/static/images/sgthon/C.jpg)  Resizing image Add HTTP parameters width and/or height to the link image to resize the image. Values are CSS values (default is auto).
-![Hackathon](https://github.com/vjeantet/vjeantet.fr/raw/master/static/images/sgthon/C.jpg?height=80px)  Add CSS classes Add a HTTP classes parameter to the link image to add CSS classes. shadow and border are available but you could define other ones.
-![s](https://github.com/vjeantet/vjeantet.fr/raw/master/static/images/sgthon/C.jpg?classes=border,shadow)  </description>
-    </item>
-    
-    <item>
-      <title>My Slide ! fullscreen</title>
-      <link>https://hajsong.github.io/ATM4110/python/myslide/</link>
-      <pubDate>Mon, 24 Apr 2017 18:36:24 +0200</pubDate>
-      
-      <guid>https://hajsong.github.io/ATM4110/python/myslide/</guid>
-      <description> In the morning Getting up  Turn off alarm Get out of bed  Breakfast  Eat eggs Drink coffee  In the evening Dinner  Eat spaghetti Drink wine  Going to sleep  Get in bed Count sheep  </description>
+      <guid>https://hajsong.github.io/ATM4110/homework/homework1/</guid>
+      <description> Setup the linux environment. Create a folder for this class at your home directory. Copy something Change its name Create a symbolic link  </description>
     </item>
     
   </channel>
