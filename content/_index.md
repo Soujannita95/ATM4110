@@ -1,6 +1,11 @@
 +++
 title = "Programming in Meteorology"
+date= 2018-09-04T07:45:45+09:00
 description = ""
+reatordisplayname = "Hajoon Song"
+creatoremail = "hajsong@yonsei.ac.kr"
+lastmodifierdisplayname = "Hajoon Song"
+lastmodifieremail = "hajsong@yonsei.ac.kr"
 +++
 
 # Programming in Meteorology
