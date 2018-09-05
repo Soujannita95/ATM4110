@@ -30,3 +30,9 @@ You can check your shell environment by typing the follow command.
 $ echo $SHELL
 ```
 This will give you ```/bin/bash.exe```.
+
+#### To finish a shell
+You can come out of the shell by ```exit```.
+```
+$ exit
+```

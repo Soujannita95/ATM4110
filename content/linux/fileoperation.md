@@ -6,6 +6,7 @@ creatordisplayname = "Hajoon Song"
 creatoremail = "hajsong@yonsei.ac.kr"
 lastmodifierdisplayname = "Hajoon Song"
 lastmodifieremail = "hajsong@yonsei.ac.kr"
+tags = ["ls","cp","rm"]
 weight = 3
 +++
 

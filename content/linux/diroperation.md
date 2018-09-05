@@ -7,6 +7,7 @@ creatoremail = "hajsong@yonsei.ac.kr"
 lastmodifierdisplayname = "Hajoon Song"
 lastmodifieremail = "hajsong@yonsei.ac.kr"
 weight = 2
+tags = ["cd","mkdir"]
 +++
 
 #### Filesystem structure
