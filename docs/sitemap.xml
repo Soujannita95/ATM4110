@@ -27,6 +27,11 @@
   </url>
   
   <url>
+    <loc>https://hajsong.github.io/ATM4110/linux/filehandling/</loc>
+    <lastmod>2018-09-05T16:06:36+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://hajsong.github.io/ATM4110/homework/homework1/</loc>
     <lastmod>2018-09-04T07:51:27+09:00</lastmod>
   </url>
@@ -42,12 +47,54 @@
   </url>
   
   <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/cat/</loc>
+    <lastmod>2018-09-05T16:06:36+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://hajsong.github.io/ATM4110/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/cd/</loc>
+    <lastmod>2018-09-04T07:45:45+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/cp/</loc>
+    <lastmod>2018-09-04T07:45:45+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/grep/</loc>
+    <lastmod>2018-09-05T16:06:36+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://hajsong.github.io/ATM4110/tags/linux/</loc>
+    <lastmod>2018-09-04T07:45:45+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/ls/</loc>
+    <lastmod>2018-09-04T07:45:45+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/mkdir/</loc>
+    <lastmod>2018-09-04T07:45:45+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/rm/</loc>
     <lastmod>2018-09-04T07:45:45+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -66,7 +113,7 @@
   
   <url>
     <loc>https://hajsong.github.io/ATM4110/tags/</loc>
-    <lastmod>2018-09-04T07:45:45+09:00</lastmod>
+    <lastmod>2018-09-05T16:06:36+09:00</lastmod>
     <priority>0</priority>
   </url>
   

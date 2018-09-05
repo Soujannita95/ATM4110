@@ -4,7 +4,7 @@
 	"title": "Installation",
 	"tags": [],
 	"description": "",
-	"content": " To get the most out of Linux, you should become proficient in using the shell. It might initially be more difficult than icons and menus, but once you\u0026rsquo;re used to it, the shell is quite easy to use and very powerful.\nHow to run a shell If you have Linux, running a shell is just opening Terminal or something similar to it. However, if you are running Windows (I think this is the most case), then you can experience Linux with the third-party program like MobaXterm.\nThis program offers a shell environment and (I think) you can do most of the common tasks of Linux with it.\nPlease get this (free) and set up in your computer.\nQuick start Once you install MobaXterm, go to \u0026ldquo;Session\u0026rdquo; and select \u0026ldquo;Shell\u0026rdquo;. This will open the terminal in bash shell environment.\nYou can check your shell environment by typing the follow command.\n$ echo $SHELL  This will give you /bin/bash.exe.\n"
+	"content": " To get the most out of Linux, you should become proficient in using the shell. It might initially be more difficult than icons and menus, but once you\u0026rsquo;re used to it, the shell is quite easy to use and very powerful.\nHow to run a shell If you have Linux, running a shell is just opening Terminal or something similar to it. However, if you are running Windows (I think this is the most case), then you can experience Linux with the third-party program like MobaXterm.\nThis program offers a shell environment and (I think) you can do most of the common tasks of Linux with it.\nPlease get this (free) and set up in your computer.\nQuick start Once you install MobaXterm, go to \u0026ldquo;Session\u0026rdquo; and select \u0026ldquo;Shell\u0026rdquo;. This will open the terminal in bash shell environment.\nYou can check your shell environment by typing the follow command.\n$ echo $SHELL  This will give you /bin/bash.exe.\nTo finish a shell You can come out of the shell by exit.\n$ exit  "
 },
 {
 	"uri": "https://hajsong.github.io/ATM4110/syllabus/",
@@ -16,7 +16,7 @@
 {
 	"uri": "https://hajsong.github.io/ATM4110/linux/diroperation/",
 	"title": "Directory operation",
-	"tags": [],
+	"tags": ["cd", "mkdir"],
 	"description": "",
 	"content": " Filesystem structure Every Linux file is contained in a collection called a directory. Directories are like folders on Windows and Mac systems. Directories form a hierarchy, or tree: one directory may contain other directories, called subdirectories, which may themselves contain other files and subdirectories, and so on, into infinity. The topmost directory is called the root directory and is denoted by a slash (/).\nPath We refer to files and directories using a \u0026ldquo;names and slashes\u0026rdquo; syntax called a path. To find out the current path, try\n$ pwd  and you will get your current location in the filesystem.\nThere are two types of path. The first one is an absolute path. The absolute path starts from the root directory and has all the names of directories in the upper level. The second type is a relative path. The relative path does not start with the root directory or contain all the names of directories in the upper levels.\ncd [directory] To move your location in the shell environment, you can use the cd command:\n$ cd /one/two/three  This command line moves you from your working directory (or current location) to /one/two/three. This example uses the absolute path to go to the new working directory. From here, you can use the relative path to go to /one/two with the following command:\n$ cd ..  In the shell environment, \u0026quot;..\u0026quot; means the upper level. (\u0026quot;.\u0026quot; means the current level.) You can use \u0026quot;..\u0026quot; as many times as you want. For example, if you want to move to /one from /one/two/three, you can type:\n$ cd ../..  Please note that you can achieve the same result with the absolute path:\n$ cd /one  Each user has own home directories where users\u0026rsquo; personal files are often found. In general, the path of the home directory starts with /home. To find out the absolute path for your home directory, try:\n$ echo $HOME  Linux offers a command that brings you to your home directory from anywhere. All you can do is just type cd with no arguments. It also provides a simple way to write the absolute path of your home directory with a special character, ~. Check this out.\n$ echo ~  You will get the same result as above. This special character can be quite handy. Suppose you want to move to Documents/Public in your home directory from /one/two/three. Then you can just type:\n$ cd ~/Documents/Public  If another username follows ~, the shell expands this string to be the user\u0026rsquo;s home directory:\n$ cd ~smith $ pwd /home/smith  mkdir [options] directory mkdir creates one or more directories:\n$ mkdir dirname  rm -r dirname will delete the directory called dirname.  "
 },
@@ -30,9 +30,16 @@
 {
 	"uri": "https://hajsong.github.io/ATM4110/linux/fileoperation/",
 	"title": "File Operation",
-	"tags": [],
+	"tags": ["ls", "cp", "rm"],
 	"description": "",
 	"content": " Once we arrive the working directory, the next thing we want to do might be manipulating files: copying, renaming, deleting and so forth. This page introduces a few things that can be useful in handling files in a Linux system.\nIf you need a short guide for the command, try with --help option. The content on this page mostly comes from Linux pocket guide by Daniel J. Barrett.\n ls [options] [files] The ls command lists attributes of files and directories. You can list files in the current directory:\n$ ls  in a given directories:\n$ ls dir1 dir2 dir3  or individually:\n$ ls file1 file2 file3  The most important options are -a and -l. By default, ls hides files whose names begin with a dot. The option -a displays all files including those starting with .(dot). The -l option produces a long listing, for example:\n-rw-r--r-- 1 hajsong staff 3376 Sep 3 08:18 _index.md -rw-r--r-- 1 hajsong staff 1340 Sep 3 12:53 configuration.md -rw-r--r-- 1 hajsong staff 3301 Sep 3 13:05 fileoperation.md -rw-r--r-- 1 hajsong staff 2707 Sep 3 12:52 filesystem.md -rw-r--r-- 1 hajsong staff 1066 Sep 3 11:23 shell.md  that includes, from left to right: the file\u0026rsquo;s permissions, owner, group, size, last modification date and name. When using the -l option, the list is created in the alphabetical order of the file names. It is sometimes useful to find out the most recently modified file. In this case, you can change the order according to the modification times.\n$ ls -ltr  The result looks like:\n-rw-r--r-- 1 hajsong staff 3376 Sep 3 08:18 _index.md -rw-r--r-- 1 hajsong staff 1066 Sep 3 11:23 shell.md -rw-r--r-- 1 hajsong staff 2707 Sep 3 12:52 filesystem.md -rw-r--r-- 1 hajsong staff 1340 Sep 3 12:53 configuration.md -rw-r--r-- 1 hajsong staff 3787 Sep 3 13:08 fileoperation.md  Here, -t makes the order according to the modification time, and -r reverses the order so that the latest comes to the bottom of the list. You may already notice that you can combine options by just line them up.\ncp [options] [files] (file/dir) The cp command copies a file:\n$ cp file file2  Using the -R option, you can also recursively copy directories.\n$ cp -R dir1 dir2  will create dir2 which is the same as dir1.\nUseful options\n -f: Force the copy. If a destination file exists, overwrite it unconditionally. -i: Interactive mode. Ask before overwriting destination files.  ln [options] source target A link is a reference to another file, created by the ln command. There are two kinds of links. A symbolic link refers to another file by its path, much like a Windows \u0026ldquo;shortcut\u0026rdquo; or a Mac \u0026ldquo;alias\u0026rdquo;.\n$ ln -s myfile softlink  If you delete the original file, the now-dangling link will be invalid, pointing to a nonexistent file path. A hard link, on the other hand, is simply a second name for a physical file on disk. Deleting the original file does not invalidate the link.\nIf you leave the softlink blank, then you get the link with the same name.\n$ ln myfile hardlink  Symbolic link can cross disk partitions, since they are just references to file paths. Hard links cannot. Symbolic links can also point to directories, whereas hard links cannot.\nIt is easy to find out where a symbolic link points with either of these command.\n$ readlink softlink  or\n$ ls -l softlink  useful options\n -s: Make a symbolic link. The default is a hard link. -i: Interactive mode. Ask before overwriting destination files. -f: Force the link. If a destination file exists, overwrite it unconditionally.  mv [options] source target The mv command can rename a file:\n$ mv file1 file2  or move files and directories into a destination directory.\n$ mv file1 destination_directory  useful options\n -i: Interactive mode. Ask before overwriting destination files. -f: Force the move. If a destination file exists, overwrite it unconditionally.  rm [options] files/directories The rm command can delete files:\n$ rm file1 file2 file3  or recursively delete directories:\nrm -r dir1 dir2  useful options\n -i: Interactive mode. Ask before deleting each file. -f: Force the deletion, ignoring any errors or warnings. -r: recursively remove a directory and its contents. USE WITH CAUTION, especially if combined with the -f option.  Beware! Once you delete the files or directories with rm, it is impossible or very difficult to recover them. "
+},
+{
+	"uri": "https://hajsong.github.io/ATM4110/linux/filehandling/",
+	"title": "File Handling",
+	"tags": ["cat", "grep"],
+	"description": "",
+	"content": " 1. File viewing In Linux, you are going to handle files with lots of different types, and want to see what\u0026rsquo;s in there. On this page, we will explore how to view the file contents if they are in text in the Linux system.\ncat [options] [files] The simplest viewer is cat, which just copies its files to standard output, concatenating them.\n$ cat filename  This command dump all the contents on the screen, so large files will likely scroll off screen. If this is the case, you may consider using less command.\nuseful options\n -n: Prepend line numbers to every line  less [options] [files] Use less to view text one page at a time (or one window or screenful at a time). It\u0026rsquo;s great for text files.\nWhile running less, type h for a help message, but here are a few keystroke being used often.\n   Keystroke Meaning     h, H View a help page.   spacebar, f Move forward one screenful.   Enter Move forward one line.   b Move backward one screenful   / Enter search model. n goes to the next match, while N goes to the previous match.   q quite less.    useful options\n N: Prepend line numbers to the output.  Other useful commands head and tail are also useful in viewing files. To find out how to use them, you can refer to the manual after calling it.\n$ man head or $ man tail  The manual of these command will be printed on the screen using less command. That means that you can move around between pages using the keystrokes in the table above.\n2. File Creation and Editing Creating files is easy and can be done in many different ways in Linux. Instead of printing out the output on the screen, you can create a file containing the output by redirecting it.\n$ echo save text in the file \u0026gt; output $ ls -l \u0026gt; listdir  You can also quickly create an empty file using touch command,\n$ touch newfile  If you want to create and edit a file, you can try text editors. Two major text editors are emacs and vim in Linux, and new files can be created with the following commands.\n$ emacs newfile or $ vim newfile  There is a steep learning curve for these editors, but once you get familiar with them, you can do so many things very efficiently. Throughout the course, you need to create many text files to analyze the atmospheric data, and these text editors may boost your productivity.\nI use vim daily basis. So, I will introduce it briefly here with a few examples (There are tons of material about these text editors online. Of course, you do not have to use them.)\nvim [options] [files] You can open up the tutorial of vim withe command below.\n$ vimtutor  To exit from vimtutor, do :q.\n vim operates in two modes, insert and normal. Insert mode is for entering text in the usual manner, while normal mode is for running commands like \u0026ldquo;delete a line\u0026rdquo; or copy/paste.\nHere are basic keystrokes in normal mode.\n   Keystroke Meaning     $ vim run editor in current terminal.   i enter insert mode.   esc exit insert mode back to normal mode   :q quit vim when there is no modification   :q! quit vim without saving modification   :wq quit vim by overwriting the file with modification   :w save modification (overwrite)   :w filename save as filename   u undo   ^R redo   l or right arrow move forward   h or left arrow move backward   k or up arrow move up   j or down arrow move down   w move to next word   b move to previous word   e move to the end of the current word   0 move to beginning of line   $ move to end of line   ^f move down 1 screen   ^b move up 1 screen   gg move to beginning of buffer   G move to end of buffer i   x delete next character   X delete previous character   dd delete current line   de delete all characters to the end of the current word   dw delete all characters before the beginning of the next word   de delete all characters from the beginning of the current word   d0 delete all characters from the beginning of the current line   d$ delete all characters to the end of the current line   yy copy current line   ye copy all characters to the end of the current word   yw copy all characters before the beginning of the next word   ye copy all characters from the beginning of the current word   y0 copy all characters from the beginning of the current line   y$ copy all characters to the end of the current line   p paste   r and character replace with the character   R replace mode   o enter insert mode at the one line below   O enter insert mode at the one line up   . repeat the previous action   : switch to command mode    "
 },
 {
 	"uri": "https://hajsong.github.io/ATM4110/homework/homework1/",
@@ -56,6 +63,13 @@
 	"content": " Programming in Meteorology This webpage is designed to serve the students enrolled for ATM4110, Programming in Meteorology.\nThis course will provide the programming foundation to perform the analysis and diagnostics of the big dataset in the atmospheric sciences. Upon the completion of this course, the students will be capable of analyzing the atmospheric data and extracting meaningful information from it.\nThis webpage is not in the final version but keeps evolving. I encourage students to visit this page frequently and be up to date.  \nObjective of this course  Introduce the programming environment for meteorology Handle the atmospheric data using programming language such as python Learn temporal/spatial/spectral analysis skills Solve problems using acquired skills in programming and produce meaningful results  A few examples that you can do after this course  Draw figures using atmospheric data on the map (source):  Post-process the data and plot the results (source):  Deal with global data for the climate-related research (Figure from the 5th IPCC report)   Instructor  Hajoon Song Office : Science Hall 544 Email : hajsong@yonsei.ac.kr Telephone : 02-2123-2579  Class  Tuesday 12-2 in Science Hall 523 Thursday 12-2 in Science Hall 603  Office hour  Tuesday 2-3 in Science Hall 544  Grading  Homework : 30% Midterm : 20% Final project : 40% Attendance and participation : 10%  Textbook When we go through python, I will follow the book, A Hands-On Introduction to Using Python in the Atmospheric and Oceanic Sciences (online version) If you have an issue with Python, you may find this online material be helpful.\n"
 },
 {
+	"uri": "https://hajsong.github.io/ATM4110/tags/cat/",
+	"title": "Cat",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://hajsong.github.io/ATM4110/categories/",
 	"title": "Categories",
 	"tags": [],
@@ -63,8 +77,50 @@
 	"content": ""
 },
 {
+	"uri": "https://hajsong.github.io/ATM4110/tags/cd/",
+	"title": "Cd",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://hajsong.github.io/ATM4110/tags/cp/",
+	"title": "Cp",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://hajsong.github.io/ATM4110/tags/grep/",
+	"title": "Grep",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://hajsong.github.io/ATM4110/tags/linux/",
 	"title": "Linux",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://hajsong.github.io/ATM4110/tags/ls/",
+	"title": "Ls",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://hajsong.github.io/ATM4110/tags/mkdir/",
+	"title": "Mkdir",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://hajsong.github.io/ATM4110/tags/rm/",
+	"title": "Rm",
 	"tags": [],
 	"description": "",
 	"content": ""

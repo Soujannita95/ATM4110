@@ -43,6 +43,17 @@ If you need a short guide for the command, try with --help option. The content o
     </item>
     
     <item>
+      <title>File Handling</title>
+      <link>https://hajsong.github.io/ATM4110/linux/filehandling/</link>
+      <pubDate>Wed, 05 Sep 2018 16:06:36 +0900</pubDate>
+      
+      <guid>https://hajsong.github.io/ATM4110/linux/filehandling/</guid>
+      <description>1. File viewing In Linux, you are going to handle files with lots of different types, and want to see what&amp;rsquo;s in there. On this page, we will explore how to view the file contents if they are in text in the Linux system.
+cat [options] [files] The simplest viewer is cat, which just copies its files to standard output, concatenating them.
+$ cat filename  This command dump all the contents on the screen, so large files will likely scroll off screen.</description>
+    </item>
+    
+    <item>
       <title>Homework 1</title>
       <link>https://hajsong.github.io/ATM4110/homework/homework1/</link>
       <pubDate>Tue, 04 Sep 2018 07:51:27 +0900</pubDate>
