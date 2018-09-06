@@ -101,6 +101,13 @@
             <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
+      <li data-nav-id="/ATM4110/homework/homework2/" class="dd-item">
+        <div>
+          <a href="/ATM4110/homework/homework2/">
+            Homework 2
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/ATM4110/homework/homework1/" class="dd-item">
         <div>
           <a href="/ATM4110/homework/homework1/">
@@ -135,6 +142,7 @@
   
     <option value="/ATM4110/homework/" >
     Homework</option> 
+      <option value="/ATM4110/homework/homework2/" >- Homework 2</option>
       <option value="/ATM4110/homework/homework1/" >- Homework 1</option>
   
 
@@ -278,17 +286,14 @@ $ vim newfile
 
 <h5 id="vim-options-files">vim [options] [files]</h5>
 
-<div class="alert 
-alert-info"
- 
-role="alert"><p>You can open up the tutorial of vim withe command below.</p>
+<p>{{% alert theme=&ldquo;info&rdquo; %}}
+You can open up the tutorial of vim withe command below.</p>
 
 <pre><code>$ vimtutor
 </code></pre>
 
-<p>To exit from <code>vimtutor</code>, do <code>:q</code>.</p>
-</div>
-
+<p>To exit from <code>vimtutor</code>, do <code>:q</code>.
+{{% /alert %}}</p>
 
 <p><code>vim</code> operates in two modes, <em>insert</em> and <em>normal</em>. Insert mode is for entering text in the usual manner, while normal mode is for running commands like &ldquo;delete a line&rdquo; or copy/paste.</p>
 
@@ -524,6 +529,10 @@ role="alert"><p>You can open up the tutorial of vim withe command below.</p>
 </tr>
 </tbody>
 </table>
+
+<p>{{% note note %}}
+If you are in the intert mode, editing the text is quite similar to other programs like MS words.
+{{% /notice %}}</p>
 
 
     

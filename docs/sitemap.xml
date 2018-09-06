@@ -32,6 +32,11 @@
   </url>
   
   <url>
+    <loc>https://hajsong.github.io/ATM4110/homework/homework2/</loc>
+    <lastmod>2018-09-06T08:54:36+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://hajsong.github.io/ATM4110/homework/homework1/</loc>
     <lastmod>2018-09-04T07:51:27+09:00</lastmod>
   </url>
@@ -72,6 +77,12 @@
   <url>
     <loc>https://hajsong.github.io/ATM4110/tags/grep/</loc>
     <lastmod>2018-09-05T16:06:36+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/homework/</loc>
+    <lastmod>2018-09-06T08:54:36+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -120,6 +131,12 @@
   <url>
     <loc>https://hajsong.github.io/ATM4110/tags/unix/</loc>
     <lastmod>2018-09-04T07:45:45+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/vim/</loc>
+    <lastmod>2018-09-06T08:54:36+09:00</lastmod>
     <priority>0</priority>
   </url>
   
