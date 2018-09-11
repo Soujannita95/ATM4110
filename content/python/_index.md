@@ -1,6 +1,6 @@
 +++
 title= "Python"
-date= 2018-09-13T12:36:51+09:00
+date= 2018-09-07T12:36:51+09:00
 description = ""
 creatordisplayname = "Hajoon Song"
 creatoremail = "hajsong@yonsei.ac.kr"
@@ -11,4 +11,3 @@ weight = 100
 #pre ="<i class='fa fa-edit' ></i> "
 #alwaysopen = true
 +++
-

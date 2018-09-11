@@ -89,7 +89,8 @@ $ cat filename  This command dump all the contents on the screen, so large files
       
       <guid>https://hajsong.github.io/ATM4110/environment/jupyter/</guid>
       <description>The Jupyter Notebook supports over 40 different programming languages, and Python is just one of them. That means that once you know how to use the Jupyter Notebook, you can use it for other languages.
-Jupyter notebook makes easy</description>
+The Jupyter Notebook is making one of the most significant advances in the scientific computing. Here is what Nature says about the Jupyter Notebook in 2014
+  The free IPython notebook makes data analysis easier to record, understand and reproduce.</description>
     </item>
     
     <item>
@@ -98,7 +99,7 @@ Jupyter notebook makes easy</description>
       <pubDate>Tue, 11 Sep 2018 11:14:41 +0900</pubDate>
       
       <guid>https://hajsong.github.io/ATM4110/environment/setup/</guid>
-      <description>Lorem Ipsum. Notice draft is set to true.</description>
+      <description>My recommendation of working environment is mobaxterm and python powered by anaconda. I wrote the Jupyter Notebook about how to install Python and packages here</description>
     </item>
     
   </channel>

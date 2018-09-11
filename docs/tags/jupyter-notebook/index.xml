@@ -28,7 +28,17 @@ Why are we going to learn python in this course? The scope of this class is to r
       
       <guid>https://hajsong.github.io/ATM4110/environment/jupyter/</guid>
       <description>The Jupyter Notebook supports over 40 different programming languages, and Python is just one of them. That means that once you know how to use the Jupyter Notebook, you can use it for other languages.
-Jupyter notebook makes easy</description>
+The Jupyter Notebook is making one of the most significant advances in the scientific computing. Here is what Nature says about the Jupyter Notebook in 2014
+  The free IPython notebook makes data analysis easier to record, understand and reproduce.</description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://hajsong.github.io/ATM4110/python/</link>
+      <pubDate>Fri, 07 Sep 2018 12:36:51 +0900</pubDate>
+      
+      <guid>https://hajsong.github.io/ATM4110/python/</guid>
+      <description></description>
     </item>
     
   </channel>

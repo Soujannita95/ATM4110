@@ -59,3 +59,6 @@ When we go through python, I will follow the book,
 ![](images/cover_web_with_title.jpg?classes=border,shadow)
 
 If you have an issue with Python, you may find [this online material](http://files.swaroopch.com/python/byte_of_python.pdf) be helpful.
+
+#### The repository for the Jupyter Notebook files.
+I will upload the Jupyter Notebook files at [Azure Notebooks](https://notebooks.azure.com/hajsong/libraries/atm4110)

@@ -12,5 +12,5 @@ weight = 103
 alwaysopen = true
 +++
 
-Lorem Ipsum.
-Notice `draft` is set to true.
+My recommendation of working environment is mobaxterm and python powered by anaconda.
+I wrote the Jupyter Notebook about how to install Python and packages [here](https://atm4110-hajsong.notebooks.azure.com/j/notebooks/Install_python.ipynb)
