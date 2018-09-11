@@ -11,3 +11,8 @@ weight = 102
 #pre ="<i class='fa fa-edit' ></i> "
 #alwaysopen = true
 +++
+
+The Jupyter Notebook supports over 40 different programming languages, and Python is just one of them.
+That means that once you know how to use the Jupyter Notebook, you can use it for other languages.
+
+Jupyter notebook makes easy 

@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.37.1" />
+<meta name="generator" content="Hugo 0.48" />
 <title>File Handling :: ATM4110</title>
 <link rel="shortcut icon" href="/ATM4110/images/favicon.png" type="image/x-icon" />
 <link href="/ATM4110/css/font-awesome.min.css" rel="stylesheet">
@@ -94,6 +94,35 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ATM4110/environment/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ATM4110/environment/">Computing Environment</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ATM4110/environment/python/" class="dd-item">
+        <div>
+          <a href="/ATM4110/environment/python/">
+            Python
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/environment/jupyter/" class="dd-item">
+        <div>
+          <a href="/ATM4110/environment/jupyter/">
+            Jupyter
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/environment/setup/" class="dd-item">
+        <div>
+          <a href="/ATM4110/environment/setup/">
+            Set up
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
     <li data-nav-id="/ATM4110/homework/" class="dd-item alwaysopen haschildren
         ">
       <div>
@@ -140,6 +169,8 @@
       <option value="/ATM4110/linux/fileoperation/" >- File Operation</option>
       <option value="/ATM4110/linux/filehandling/"  selected>- File Handling</option>
   
+    <option value="/ATM4110/environment/" >
+   Computing Environment</option>
     <option value="/ATM4110/homework/" >
     Homework</option> 
       <option value="/ATM4110/homework/homework2/" >- Homework 2</option>
@@ -248,37 +279,37 @@
 
 <h5 id="other-useful-commands">Other useful commands</h5>
 
-<p><code>head</code> and <code>tail</code> are also useful in viewing files. To find out how to use them, you can refer to the manual after calling it.</p>
+<pre><code class="language-head```"></code></pre>
 
-<pre><code>$ man head
+<p>$ man head
 or
-$ man tail
+$ man tail</p>
+
+<pre><code>The manual of these command will be printed on the screen using ```less``` command.
+That means that you can move around between pages using the keystrokes in the table above.
+
+#### 2. File Creation and Editing
+Creating files is easy and can be done in many different ways in Linux.
+Instead of printing out the output on the screen, you can create a file containing the output by redirecting it.
 </code></pre>
 
-<p>The manual of these command will be printed on the screen using <code>less</code> command.
-That means that you can move around between pages using the keystrokes in the table above.</p>
+<p>$ echo save text in the file &gt; output
+$ ls -l &gt; listdir</p>
 
-<h4 id="2-file-creation-and-editing">2. File Creation and Editing</h4>
-
-<p>Creating files is easy and can be done in many different ways in Linux.
-Instead of printing out the output on the screen, you can create a file containing the output by redirecting it.</p>
-
-<pre><code>$ echo save text in the file &gt; output
-$ ls -l &gt; listdir
+<pre><code>You can also quickly create an empty file using ```touch``` command,
 </code></pre>
 
-<p>You can also quickly create an empty file using <code>touch</code> command,</p>
+<p>$ touch newfile</p>
 
-<pre><code>$ touch newfile
+<pre><code>
+If you want to create and edit a file, you can try text editors.
+Two major text editors are ```emacs``` and ```vim``` in Linux, and new files can be created with the following commands.
 </code></pre>
 
-<p>If you want to create and edit a file, you can try text editors.
-Two major text editors are <code>emacs</code> and <code>vim</code> in Linux, and new files can be created with the following commands.</p>
-
-<pre><code>$ emacs newfile
+<p>$ emacs newfile
 or
 $ vim newfile
-</code></pre>
+```</p>
 
 <p>There is a steep learning curve for these editors, but once you get familiar with them, you can do so many things very efficiently. Throughout the course, you need to create many text files to analyze the atmospheric data, and these text editors may boost your productivity.</p>
 
@@ -286,14 +317,17 @@ $ vim newfile
 
 <h5 id="vim-options-files">vim [options] [files]</h5>
 
-<p>{{% alert theme=&ldquo;info&rdquo; %}}
-You can open up the tutorial of vim withe command below.</p>
+<div class="alert 
+alert-info"
+ 
+role="alert"><p>You can open up the tutorial of vim withe command below.</p>
 
 <pre><code>$ vimtutor
 </code></pre>
 
-<p>To exit from <code>vimtutor</code>, do <code>:q</code>.
-{{% /alert %}}</p>
+<p>To exit from <code>vimtutor</code>, do <code>:q</code>.</p>
+</div>
+
 
 <p><code>vim</code> operates in two modes, <em>insert</em> and <em>normal</em>. Insert mode is for entering text in the usual manner, while normal mode is for running commands like &ldquo;delete a line&rdquo; or copy/paste.</p>
 
@@ -530,9 +564,9 @@ You can open up the tutorial of vim withe command below.</p>
 </tbody>
 </table>
 
-<p>{{% note note %}}
-If you are in the intert mode, editing the text is quite similar to other programs like MS words.
-{{% /notice %}}</p>
+<div class="notices note" ><p>If you are in the intert mode, editing the text is quite similar to other programs like MS words.</p>
+</div>
+
 
 
     
@@ -540,7 +574,7 @@ If you are in the intert mode, editing the text is quite similar to other progra
         <div class="chevrons">
     <div id="navigation">
 <a class="nav nav-prev" href="/ATM4110/linux/fileoperation/" title="File Operation"> <i class="fa fa-chevron-left"></i><label>File Operation</label></a>
-    <a class="nav nav-next" href="/ATM4110/homework/" title=" Homework" style="margin-right: 0px;"><label> Homework</label><i class="fa fa-chevron-right"></i></a></div>
+    <a class="nav nav-next" href="/ATM4110/environment/" title="Computing Environment" style="margin-right: 0px;"><label>Computing Environment</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Anaconda on ATM4110</title>
+    <link>https://hajsong.github.io/ATM4110/tags/anaconda/</link>
+    <description>Recent content in Anaconda on ATM4110</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 07 Sep 2018 12:36:51 +0900</lastBuildDate>
+    
+	<atom:link href="https://hajsong.github.io/ATM4110/tags/anaconda/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Computing Environment</title>
+      <link>https://hajsong.github.io/ATM4110/environment/</link>
+      <pubDate>Fri, 07 Sep 2018 12:36:51 +0900</pubDate>
+      
+      <guid>https://hajsong.github.io/ATM4110/environment/</guid>
+      <description>The main tools being used in this course is Python and Jupyter Notebook.
+Why are we going to learn python in this course? The scope of this class is to read atmospheric and oceanic datasets, do spatial, temporal and spectral analysis, and present the data graphically. Python provides an environment for us to fulfill those tasks seamlessly without asking too much time and effort to pay. Also, learning Python may open up other possibilities in your future because it is very popular computer languages these days.</description>
+    </item>
+    
+  </channel>
+</rss>

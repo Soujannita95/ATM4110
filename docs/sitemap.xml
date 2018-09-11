@@ -22,6 +22,11 @@
   </url>
   
   <url>
+    <loc>https://hajsong.github.io/ATM4110/environment/</loc>
+    <lastmod>2018-09-07T12:36:51+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://hajsong.github.io/ATM4110/linux/fileoperation/</loc>
     <lastmod>2018-09-04T07:45:45+09:00</lastmod>
   </url>
@@ -47,8 +52,29 @@
   </url>
   
   <url>
+    <loc>https://hajsong.github.io/ATM4110/environment/python/</loc>
+    <lastmod>2018-09-07T12:36:51+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/environment/jupyter/</loc>
+    <lastmod>2018-09-07T12:36:51+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/environment/setup/</loc>
+    <lastmod>2018-09-11T11:14:41+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://hajsong.github.io/ATM4110/</loc>
     <lastmod>2018-09-04T07:45:45+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/anaconda/</loc>
+    <lastmod>2018-09-07T12:36:51+09:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -87,6 +113,12 @@
   </url>
   
   <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/jupyter-notebook/</loc>
+    <lastmod>2018-09-07T12:36:51+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://hajsong.github.io/ATM4110/tags/linux/</loc>
     <lastmod>2018-09-04T07:45:45+09:00</lastmod>
     <priority>0</priority>
@@ -101,6 +133,12 @@
   <url>
     <loc>https://hajsong.github.io/ATM4110/tags/mkdir/</loc>
     <lastmod>2018-09-04T07:45:45+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/python/</loc>
+    <lastmod>2018-09-07T12:36:51+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -124,7 +162,7 @@
   
   <url>
     <loc>https://hajsong.github.io/ATM4110/tags/</loc>
-    <lastmod>2018-09-05T16:06:36+09:00</lastmod>
+    <lastmod>2018-09-07T12:36:51+09:00</lastmod>
     <priority>0</priority>
   </url>
   

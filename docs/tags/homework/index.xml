@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Homework on ATM4110</title>
+    <link>https://hajsong.github.io/ATM4110/tags/homework/</link>
+    <description>Recent content in Homework on ATM4110</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 06 Sep 2018 08:54:36 +0900</lastBuildDate>
+    
+	<atom:link href="https://hajsong.github.io/ATM4110/tags/homework/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Homework 2</title>
+      <link>https://hajsong.github.io/ATM4110/homework/homework2/</link>
+      <pubDate>Thu, 06 Sep 2018 08:54:36 +0900</pubDate>
+      
+      <guid>https://hajsong.github.io/ATM4110/homework/homework2/</guid>
+      <description>Give vim a try at least once to create/edit documents.
+ Create a text file by $ ls -l &amp;gt; dirlist Add the location of the dir at the top row Delete last three rows. Copy the first row (you added in 2) and paste at the end of the row Save file  </description>
+    </item>
+    
+  </channel>
+</rss>
