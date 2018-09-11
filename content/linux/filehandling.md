@@ -139,6 +139,6 @@ Here are basic keystrokes in normal mode.
 |```:```                    | switch to command mode                 |
 
 
-{{% note note %}}
+{{% notice note %}}
 If you are in the intert mode, editing the text is quite similar to other programs like MS words.
 {{% /notice %}}
