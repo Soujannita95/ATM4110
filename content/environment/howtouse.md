@@ -221,3 +221,17 @@ Once you are done, you can save the Jupyter Notebook file in the web browser.
 To finish Jupyter Notebook, you can come back to the terminal where you typed ```jupyter notebook``` and hit ```^C``` TWICE!
 
 In the class, we can explore what Jupyter Notebook offers extensively.
+
+##### Launch Jupyter Notebook remotely
+In some cases, you need to use a remote server for Jupyter Notebook.
+In the remote server,
+```
+$ jupyter notebook --no-browser --port=8889
+```
+This launches Jupyter Notebook without opening web browser.
+Then on your local machine,
+```
+$ ssh -N -f -L localhost:8899:localhost:8889 [accountname]@[servername]
+```
+and open the browser and go to http://localhost:8899
+The web browser ask for the key, and you can find it in the terminal where you launch Jupyter Notebook.

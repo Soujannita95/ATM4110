@@ -464,6 +464,23 @@ When you run the cell, you are asked to give temperature in Celsius as before.</
 
 <p>In the class, we can explore what Jupyter Notebook offers extensively.</p>
 
+<h5 id="launch-jupyter-notebook-remotely">Launch Jupyter Notebook remotely</h5>
+
+<p>In some cases, you need to use a remote server for Jupyter Notebook.
+In the remote server,</p>
+
+<pre><code>$ jupyter notebook --no-browser --port=8889
+</code></pre>
+
+<p>This launches Jupyter Notebook without opening web browser.
+Then on your local machine,</p>
+
+<pre><code>$ ssh -N -f -L localhost:8899:localhost:8889 [accountname]@[servername]
+</code></pre>
+
+<p>and open the browser and go to <a href="http://localhost:8899">http://localhost:8899</a>
+The web browser ask for the key, and you can find it in the terminal where you launch Jupyter Notebook.</p>
+
 
     
     
