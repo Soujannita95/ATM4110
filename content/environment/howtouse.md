@@ -23,7 +23,7 @@ From Celsius to Fahrenheit, the formula is:
 <a href="https://www.codecogs.com/eqnedit.php?latex=T(^{\circ}F)&space;=&space;(T[^{\circ}C]&space;\times&space;9/5)&space;&plus;&space;32" target="_blank"><img src="https://latex.codecogs.com/gif.latex?T(^{\circ}F)&space;=&space;(T[^{\circ}C]&space;\times&space;9/5)&space;&plus;&space;32" title="T(^{\circ}F) = (T[^{\circ}C] \times 9/5) + 32" /></a>
 
 #### Python
-To start Python, you can type ```python``` in the terminal
+To start Python, you can type ```python``` in the terminal.
 ```
 $ python
 ```
@@ -35,11 +35,11 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>>
 ```
 
-Ask for the input in Celius:
+Ask for the input in Celsius:
 ```
 >>> TinC = int(input("Enter a temperature in Celsius: "))
 ```
-Then you can see the next line asking a temperature in Celsius
+Then you can see the next line asking a temperature in Celsius.
 ```
 Enter a temperature in Celsius:
 ```
@@ -64,7 +64,7 @@ Once you are done, you can exit Python by typing ```quit()```
 {{% panel %}} Make the unit converter from Fahrenheit to Celsius by yourself. {{% /panel %}}
 
 #### IPython
-Interactive Python (IPython) gives you more functionality by providing wider range of commands.
+Interactive Python (IPython) gives you more functionality by providing a wider range of commands than python.
 To launch IPython, simply type
 ```
 $ ipython
@@ -77,7 +77,7 @@ IPython 6.1.0 -- An enhanced Interactive Python. Type '?' for help.
 
 In [1]:
 ```
-Here, you can follow the same procedure as in python to have the program of unit converter.
+Here, you can follow the same procedure as in python to have the program of the unit converter.
 ```
 In [1]: TinC = int(input("Enter a temperature in Celsius: "))
 Enter a temperature in Celsius: 30
@@ -114,7 +114,7 @@ To exit IPython, you can do either ```quit``` or ```exit```.
 #### Python script
 If the job requires more than a few lines of python codes, then typing commands can be overwhelming. Also, it is likely that you make mistakes. In this case, writing all python commands in a python script and running this script to get the result is the way to go.
 
-First thing to do is create a python script file using text editors.
+The first thing to do is create a python script file using text editors.
 If you use ```vim```, you can easily create a file by typing ```vim filename.py```.
 ```
 $ vim ctof.py
@@ -131,7 +131,7 @@ TinF = 9.0/5.0 * TinC + 32
 print("Temperature:", TinC, "degC = ", TinF, "degF")
 ```
 In this example, the first three lines start with ```#```.
-Whenever a line starts with ```#```, python just skips it. So it is useful to add explanation of your code in the script file.
+Whenever a line starts with ```#```, python just skips it. So it is useful to add an explanation of your code in the script file.
 
 
 You can execute this script in a few different ways.
@@ -141,12 +141,12 @@ After launching python, you can execute your python script as follows.
 ```
 >>> exec(open('ctof.py').read())
 ```
-If you input a temperature in Celsius when it asks temperature, you can get the result.
+If you input temperature in Celsius when it asks temperature, you can get the result.
 ```
 Enter a temperature in Celsius: 30
 Temperature: 30 degC =  86.0 degF
 ```
-If you think that this is not really convenient way to run the program, there are alternative ways.
+If you think that this is not a really convenient way to run the program, there are alternative ways.
 
 ##### 2. In IPython
 Running a python script in IPython is much easier than in Python.
@@ -168,14 +168,14 @@ In [3]: %paste
 ```
 Then IPython shows the copied lines below. This is particularly useful if you need to run a few lines of your python script.
 
-IPython allows you to open the text file with exclamation mark (!) while you are in IPython.
+IPython allows you to open the text file with an exclamation mark (!) while you are in IPython.
 ```
 In [5]: !vim ctof.py
 ```
 This makes ```%paste``` really useful because you can open your script and get the necessary lines without leaving IPython.
 
 ##### 3. Using Python in the terminal
-You do not launch python to execute python scripts. In terminal, you can run your script by
+You do not launch python to execute python scripts. In the terminal, you can run your script by
 ```
 $ python ctof.py
 ```
@@ -198,3 +198,22 @@ $ ./ctof.py
 
 
 #### Jupyter Notebook
+You can use Jupyter Notebook for running python commands or a script.
+First, launch Jupyter Notebook.
+```
+$ jupyter notebook
+```
+Then you get to have a new window in your web browser showing the file system in the working directory.
+To start python, click ```new``` in the upper right corner and select ```Python 3```.
+This will open a new tab that just looks like IPython.
+
+Jupyter Notebook consists of cells. It is your choice how to compose the cell with your commands.
+You can add all the lines in one cell, or a simple line for each cell.
+
+Let's first copy all the lines in a single cell.
+Jupyter Notebook provides a help page, and it says that you can hit ```control``` key and ```enter``` key together to run the cell.
+When you run the cell, you are asked to give temperature in Celsius as before.
+
+If we decide to use cells for each line, you will be asked to give temperature after run the cell with ```TinC = int(input("Enter a temperature in Celsius: "))```.
+
+In the class, we can explore what Jupyter Notebook offers extensively.

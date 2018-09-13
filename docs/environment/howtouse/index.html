@@ -232,7 +232,7 @@
 
 <h4 id="python">Python</h4>
 
-<p>To start Python, you can type <code>python</code> in the terminal</p>
+<p>To start Python, you can type <code>python</code> in the terminal.</p>
 
 <pre><code>$ python
 </code></pre>
@@ -245,12 +245,12 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 &gt;&gt;&gt;
 </code></pre>
 
-<p>Ask for the input in Celius:</p>
+<p>Ask for the input in Celsius:</p>
 
 <pre><code>&gt;&gt;&gt; TinC = int(input(&quot;Enter a temperature in Celsius: &quot;))
 </code></pre>
 
-<p>Then you can see the next line asking a temperature in Celsius</p>
+<p>Then you can see the next line asking a temperature in Celsius.</p>
 
 <pre><code>Enter a temperature in Celsius:
 </code></pre>
@@ -285,7 +285,7 @@ Next is to convert temperature from Celsius to Fahrenheit using the formula.</p>
 
 <h4 id="ipython">IPython</h4>
 
-<p>Interactive Python (IPython) gives you more functionality by providing wider range of commands.
+<p>Interactive Python (IPython) gives you more functionality by providing a wider range of commands than python.
 To launch IPython, simply type</p>
 
 <pre><code>$ ipython
@@ -300,7 +300,7 @@ IPython 6.1.0 -- An enhanced Interactive Python. Type '?' for help.
 In [1]:
 </code></pre>
 
-<p>Here, you can follow the same procedure as in python to have the program of unit converter.</p>
+<p>Here, you can follow the same procedure as in python to have the program of the unit converter.</p>
 
 <pre><code>In [1]: TinC = int(input(&quot;Enter a temperature in Celsius: &quot;))
 Enter a temperature in Celsius: 30
@@ -343,7 +343,7 @@ For more information about built-in magic commands, please refer to <a href="htt
 
 <p>If the job requires more than a few lines of python codes, then typing commands can be overwhelming. Also, it is likely that you make mistakes. In this case, writing all python commands in a python script and running this script to get the result is the way to go.</p>
 
-<p>First thing to do is create a python script file using text editors.
+<p>The first thing to do is create a python script file using text editors.
 If you use <code>vim</code>, you can easily create a file by typing <code>vim filename.py</code>.</p>
 
 <pre><code>$ vim ctof.py
@@ -362,7 +362,7 @@ print(&quot;Temperature:&quot;, TinC, &quot;degC = &quot;, TinF, &quot;degF&quot
 </code></pre>
 
 <p>In this example, the first three lines start with <code>#</code>.
-Whenever a line starts with <code>#</code>, python just skips it. So it is useful to add explanation of your code in the script file.</p>
+Whenever a line starts with <code>#</code>, python just skips it. So it is useful to add an explanation of your code in the script file.</p>
 
 <p>You can execute this script in a few different ways.</p>
 
@@ -373,13 +373,13 @@ Whenever a line starts with <code>#</code>, python just skips it. So it is usefu
 <pre><code>&gt;&gt;&gt; exec(open('ctof.py').read())
 </code></pre>
 
-<p>If you input a temperature in Celsius when it asks temperature, you can get the result.</p>
+<p>If you input temperature in Celsius when it asks temperature, you can get the result.</p>
 
 <pre><code>Enter a temperature in Celsius: 30
 Temperature: 30 degC =  86.0 degF
 </code></pre>
 
-<p>If you think that this is not really convenient way to run the program, there are alternative ways.</p>
+<p>If you think that this is not a really convenient way to run the program, there are alternative ways.</p>
 
 <h5 id="2-in-ipython">2. In IPython</h5>
 
@@ -405,7 +405,7 @@ To paste copied lines in IPython, you can use a magic function <code>%paste</cod
 
 <p>Then IPython shows the copied lines below. This is particularly useful if you need to run a few lines of your python script.</p>
 
-<p>IPython allows you to open the text file with exclamation mark (!) while you are in IPython.</p>
+<p>IPython allows you to open the text file with an exclamation mark (!) while you are in IPython.</p>
 
 <pre><code>In [5]: !vim ctof.py
 </code></pre>
@@ -414,7 +414,7 @@ To paste copied lines in IPython, you can use a magic function <code>%paste</cod
 
 <h5 id="3-using-python-in-the-terminal">3. Using Python in the terminal</h5>
 
-<p>You do not launch python to execute python scripts. In terminal, you can run your script by</p>
+<p>You do not launch python to execute python scripts. In the terminal, you can run your script by</p>
 
 <pre><code>$ python ctof.py
 </code></pre>
@@ -438,6 +438,27 @@ When you save the script, make sure to change file modes to be executable.</p>
 </code></pre>
 
 <h4 id="jupyter-notebook">Jupyter Notebook</h4>
+
+<p>You can use Jupyter Notebook for running python commands or a script.
+First, launch Jupyter Notebook.</p>
+
+<pre><code>$ jupyter notebook
+</code></pre>
+
+<p>Then you get to have a new window in your web browser showing the file system in the working directory.
+To start python, click <code>new</code> in the upper right corner and select <code>Python 3</code>.
+This will open a new tab that just looks like IPython.</p>
+
+<p>Jupyter Notebook consists of cells. It is your choice how to compose the cell with your commands.
+You can add all the lines in one cell, or a simple line for each cell.</p>
+
+<p>Let&rsquo;s first copy all the lines in a single cell.
+Jupyter Notebook provides a help page, and it says that you can hit <code>control</code> key and <code>enter</code> key together to run the cell.
+When you run the cell, you are asked to give temperature in Celsius as before.</p>
+
+<p>If we decide to use cells for each line, you will be asked to give temperature after run the cell with <code>TinC = int(input(&quot;Enter a temperature in Celsius: &quot;))</code>.</p>
+
+<p>In the class, we can explore what Jupyter Notebook offers extensively.</p>
 
 
     
