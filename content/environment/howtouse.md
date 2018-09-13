@@ -216,4 +216,8 @@ When you run the cell, you are asked to give temperature in Celsius as before.
 
 If we decide to use cells for each line, you will be asked to give temperature after run the cell with ```TinC = int(input("Enter a temperature in Celsius: "))```.
 
+Once you are done, you can save the Jupyter Notebook file in the web browser.
+
+To finish Jupyter Notebook, you can come back to the terminal where you typed ```jupyter notebook``` and hit ```^C``` TWICE!
+
 In the class, we can explore what Jupyter Notebook offers extensively.
