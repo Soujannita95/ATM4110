@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ATM4110</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.37.1" />
+<title>Start Python / Jupyter Notebook :: ATM4110</title>
+<link rel="shortcut icon" href="/ATM4110/images/favicon.png" type="image/x-icon" />
+<link href="/ATM4110/css/font-awesome.min.css" rel="stylesheet">
+<link href="/ATM4110/css/nucleus.css" rel="stylesheet">
+<link href="/ATM4110/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/ATM4110/css/bootstrap.min.css">
+<script src="/ATM4110/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/hajsong.github.io\/ATM4110\/";
+</script>
+<meta name="description" content="">
+
+
+
+    
+  </head>
+  <body data-url="/ATM4110/environment/howtouse/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <a class="baselink" href="https://hajsong.github.io/ATM4110/">ATM4110</a>
+  
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://github.com/hajsong/ATM4110" target="_blank" rel="noopener">
+                  <i class='fa fa-github'></i> <label>Github repo</label>
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/ATM4110/" class="dd-item">
+          <a href="/ATM4110/">
+            <i class="fa fa-fw fa-home"></i> Home
+          </a>
+          </li>
+    <li data-nav-id="/ATM4110/syllabus/" class="dd-item
+        ">
+      <div>
+      <a href="/ATM4110/syllabus/">Syllabus</a>
+      </div>
+    </li>
+    <li data-nav-id="/ATM4110/linux/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ATM4110/linux/">Unix/Linux system</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ATM4110/linux/shell/" class="dd-item">
+        <div>
+          <a href="/ATM4110/linux/shell/">
+            Installation
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/linux/diroperation/" class="dd-item">
+        <div>
+          <a href="/ATM4110/linux/diroperation/">
+            Directory operation
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/linux/fileoperation/" class="dd-item">
+        <div>
+          <a href="/ATM4110/linux/fileoperation/">
+            File Operation
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/linux/filehandling/" class="dd-item">
+        <div>
+          <a href="/ATM4110/linux/filehandling/">
+            File Handling
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ATM4110/environment/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/ATM4110/environment/">Computing Environment</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ATM4110/environment/python/" class="dd-item">
+        <div>
+          <a href="/ATM4110/environment/python/">
+            Python
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/environment/jupyter/" class="dd-item">
+        <div>
+          <a href="/ATM4110/environment/jupyter/">
+            Jupyter
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/environment/setup/" class="dd-item">
+        <div>
+          <a href="/ATM4110/environment/setup/">
+            Set up
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/environment/howtouse/" class="dd-item active">
+        <div>
+          <a href="/ATM4110/environment/howtouse/">
+            Start Python / Jupyter Notebook
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ATM4110/python/" class="dd-item
+        ">
+      <div>
+      <a href="/ATM4110/python/">Python</a>
+      </div>
+    </li>
+    <li data-nav-id="/ATM4110/homework/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="/ATM4110/homework/"> Homework</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ATM4110/homework/homework2/" class="dd-item">
+        <div>
+          <a href="/ATM4110/homework/homework2/">
+            Homework 2
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/homework/homework1/" class="dd-item">
+        <div>
+          <a href="/ATM4110/homework/homework1/">
+            Homework 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/ATM4110/syllabus/" >
+   Syllabus</option>
+    <option value="/ATM4110/linux/" >
+   Unix/Linux system</option>
+    <option value="/ATM4110/environment/" >
+   Computing Environment</option> 
+      <option value="/ATM4110/environment/python/" >- Python</option>
+      <option value="/ATM4110/environment/jupyter/" >- Jupyter</option>
+      <option value="/ATM4110/environment/setup/" >- Set up</option>
+      <option value="/ATM4110/environment/howtouse/"  selected>- Start Python / Jupyter Notebook</option>
+  
+    <option value="/ATM4110/python/" >
+   Python</option>
+    <option value="/ATM4110/homework/" >
+    Homework</option> 
+      <option value="/ATM4110/homework/homework2/" >- Homework 2</option>
+      <option value="/ATM4110/homework/homework1/" >- Homework 1</option>
+  
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Search...">
+        </div>
+        <script type="text/javascript" src="/ATM4110/js/lunr.min.js"></script>
+        <script type="text/javascript" src="/ATM4110/js/auto-complete.js"></script>
+        <link href="/ATM4110/css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "https:\/\/hajsong.github.io\/ATM4110\/";
+          
+        </script>
+        <script type="text/javascript" src="/ATM4110/js/search.js"></script>
+      </div>
+    
+
+    <h1>Start Python / Jupyter Notebook</h1>
+
+    
+    
+    
+    
+
+<p>This page guides you how to use Python and Jupyter Notebook using the example, Celsius and Fahrenheit converter.</p>
+
+<p>When you want to convert the unit from Fahrenheit to Celsius, the formula is:</p>
+
+<p><a href="https://www.codecogs.com/eqnedit.php?latex=T[^{\circ}C]&space;=&space;(T[^{\circ}F]&space;-&space;32)&space;\times&space;5/9" target="_blank"><img src="https://latex.codecogs.com/gif.latex?T[^{\circ}C]&space;=&space;(T[^{\circ}F]&space;-&space;32)&space;\times&space;5/9" title="T[^{\circ}C] = (T[^{\circ}F] - 32) \times 5/9" /></a></p>
+
+<p>From Celsius to Fahrenheit, the formula is:</p>
+
+<p><a href="https://www.codecogs.com/eqnedit.php?latex=T(^{\circ}F)&space;=&space;(T[^{\circ}C]&space;\times&space;9/5)&space;&plus;&space;32" target="_blank"><img src="https://latex.codecogs.com/gif.latex?T(^{\circ}F)&space;=&space;(T[^{\circ}C]&space;\times&space;9/5)&space;&plus;&space;32" title="T(^{\circ}F) = (T[^{\circ}C] \times 9/5) + 32" /></a></p>
+
+<h4 id="python">Python</h4>
+
+<p>To start Python, you can type <code>python</code> in the terminal</p>
+
+<pre><code>$ python
+</code></pre>
+
+<p>Then you may see that the prompt has been changed as</p>
+
+<pre><code>Python 3.6.3 |Anaconda, Inc.| (default, Oct  6 2017, 12:04:38)
+[GCC 4.2.1 Compatible Clang 4.0.1 (tags/RELEASE_401/final)] on darwin
+Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+&gt;&gt;&gt;
+</code></pre>
+
+<p>Ask for the input in Celius:</p>
+
+<pre><code>&gt;&gt;&gt; TinC = int(input(&quot;Enter a temperature in Celsius: &quot;))
+</code></pre>
+
+<p>Then you can see the next line asking a temperature in Celsius</p>
+
+<pre><code>Enter a temperature in Celsius:
+</code></pre>
+
+<p>We can say 30, although you can give any number. Then <code>TinC</code> carries <code>30</code>.
+Next is to convert temperature from Celsius to Fahrenheit using the formula.</p>
+
+<pre><code>&gt;&gt;&gt; TinF = 9.0/5.0 * TinC + 32
+</code></pre>
+
+<p>It is time to print out the answer.</p>
+
+<pre><code>&gt;&gt;&gt; print(&quot;Temperature:&quot;, TinC, &quot;degC = &quot;, TinF, &quot;degF&quot;)
+</code></pre>
+
+<p>This should give you</p>
+
+<pre><code>Temperature: 30 degC =  86.0 degF
+</code></pre>
+
+<p>Once you are done, you can exit Python by typing <code>quit()</code></p>
+
+<pre><code>&gt;&gt;&gt; quit()
+</code></pre>
+
+<div class="panel panel-primary">
+	
+	<div class="panel-body">Make the unit converter from Fahrenheit to Celsius by yourself.</div>
+	
+</div>
+
+
+<h4 id="ipython">IPython</h4>
+
+<p>Interactive Python (IPython) gives you more functionality by providing wider range of commands.
+To launch IPython, simply type</p>
+
+<pre><code>$ ipython
+</code></pre>
+
+<p>This will give you</p>
+
+<pre><code>Python 3.6.3 |Anaconda, Inc.| (default, Oct  6 2017, 12:04:38)
+Type 'copyright', 'credits' or 'license' for more information
+IPython 6.1.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]:
+</code></pre>
+
+<p>Here, you can follow the same procedure as in python to have the program of unit converter.</p>
+
+<pre><code>In [1]: TinC = int(input(&quot;Enter a temperature in Celsius: &quot;))
+Enter a temperature in Celsius: 30
+
+In [2]: TinF = 9.0/5.0 * TinC + 32
+
+In [3]: print(&quot;Temperature:&quot;, TinC, &quot;degC = &quot;, TinF, &quot;degF&quot;)
+Temperature: 30 degC =  86.0 degF
+</code></pre>
+
+<p>As already mentioned above, IPython provides useful functions.
+For example, if you want to know about the command <code>input</code>, you can type</p>
+
+<pre><code>In [4]: input?
+</code></pre>
+
+<p>If you want to know what variables are defined, type</p>
+
+<pre><code>In [5]: whos
+Variable   Type     Data/Info
+-----------------------------
+TinC       int      30
+TinF       float    86.0
+</code></pre>
+
+<p>IPython also provides many magic functions. The built-in magics include:</p>
+
+<ul>
+<li>Functions that work with code: %run, %edit, %save, %macro, %recall, etc.</li>
+<li>Functions which affect the shell: %colors, %xmode, %autoindent, %automagic, etc.</li>
+<li>Other functions such as %reset, %timeit, %%writefile, %load, or %paste.</li>
+</ul>
+
+<p>You can always call them using the <code>%</code> prefix, and if you’re calling a line magic on a line by itself, you can omit <code>%</code>.
+For more information about built-in magic commands, please refer to <a href="https://ipython.readthedocs.io/en/stable/interactive/magics.html?highlight=magic">IPython webpage</a></p>
+
+<p>To exit IPython, you can do either <code>quit</code> or <code>exit</code>.</p>
+
+<h4 id="python-script">Python script</h4>
+
+<p>If the job requires more than a few lines of python codes, then typing commands can be overwhelming. Also, it is likely that you make mistakes. In this case, writing all python commands in a python script and running this script to get the result is the way to go.</p>
+
+<p>First thing to do is create a python script file using text editors.
+If you use <code>vim</code>, you can easily create a file by typing <code>vim filename.py</code>.</p>
+
+<pre><code>$ vim ctof.py
+</code></pre>
+
+<p>Then write all python codes there.</p>
+
+<pre><code># This script converts temperature in Celsius to temperature in Fahrenheit.
+#
+# 2018.9.13
+
+TinC = int(input(&quot;Enter a temperature in Celsius: &quot;))
+
+TinF = 9.0/5.0 * TinC + 32
+print(&quot;Temperature:&quot;, TinC, &quot;degC = &quot;, TinF, &quot;degF&quot;)
+</code></pre>
+
+<p>In this example, the first three lines start with <code>#</code>.
+Whenever a line starts with <code>#</code>, python just skips it. So it is useful to add explanation of your code in the script file.</p>
+
+<p>You can execute this script in a few different ways.</p>
+
+<h5 id="1-in-python">1. In Python</h5>
+
+<p>After launching python, you can execute your python script as follows.</p>
+
+<pre><code>&gt;&gt;&gt; exec(open('ctof.py').read())
+</code></pre>
+
+<p>If you input a temperature in Celsius when it asks temperature, you can get the result.</p>
+
+<pre><code>Enter a temperature in Celsius: 30
+Temperature: 30 degC =  86.0 degF
+</code></pre>
+
+<p>If you think that this is not really convenient way to run the program, there are alternative ways.</p>
+
+<h5 id="2-in-ipython">2. In IPython</h5>
+
+<p>Running a python script in IPython is much easier than in Python.
+After launching IPython with <code>ipython</code>, you can just type</p>
+
+<pre><code>In [1]: %run ctof.py
+</code></pre>
+
+<p>to get the same result as in python.
+You can even drop the file extension.</p>
+
+<pre><code>In [2]: %run ctof
+</code></pre>
+
+<p>even just <code>run ctof.py</code> or <code>run ctof</code> will do the job!</p>
+
+<p>Another way to run the script, copy whole lines and paste them in IPython.
+To paste copied lines in IPython, you can use a magic function <code>%paste</code>.</p>
+
+<pre><code>In [3]: %paste
+</code></pre>
+
+<p>Then IPython shows the copied lines below. This is particularly useful if you need to run a few lines of your python script.</p>
+
+<p>IPython allows you to open the text file with exclamation mark (!) while you are in IPython.</p>
+
+<pre><code>In [5]: !vim ctof.py
+</code></pre>
+
+<p>This makes <code>%paste</code> really useful because you can open your script and get the necessary lines without leaving IPython.</p>
+
+<h5 id="3-using-python-in-the-terminal">3. Using Python in the terminal</h5>
+
+<p>You do not launch python to execute python scripts. In terminal, you can run your script by</p>
+
+<pre><code>$ python ctof.py
+</code></pre>
+
+<h5 id="4-as-stand-alone-in-the-terminal">4. As stand-alone in the terminal</h5>
+
+<p>If your script starts with</p>
+
+<pre><code>#!/usr/bin/env python3
+</code></pre>
+
+<p>you can run this script without typing <code>python</code> in the terminal.
+When you save the script, make sure to change file modes to be executable.</p>
+
+<pre><code>$ chmod 755 ctof.py
+</code></pre>
+
+<p>To run this executable file,</p>
+
+<pre><code>$ ./ctof.py
+</code></pre>
+
+<h4 id="jupyter-notebook">Jupyter Notebook</h4>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/ATM4110/environment/setup/" title="Set up"> <i class="fa fa-chevron-left"></i><label>Set up</label></a>
+    <a class="nav nav-next" href="/ATM4110/python/" title="Python" style="margin-right: 0px;"><label>Python</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+    <div class="tags"> 
+      
+        <a class="label label-default" href="https://hajsong.github.io/ATM4110/tags/python">python</a>
+      
+        <a class="label label-default" href="https://hajsong.github.io/ATM4110/tags/jupyter-notebook">jupyter notebook</a>
+      
+    </div>
+    
+
+    
+    <div class="author">
+        <i class='fa fa-user'></i> <a href="mailto:hajsong@yonsei.ac.kr">Hajoon Song</a>
+    </div>
+    
+
+  
+    <div class="date">
+        <i class='fa fa-calendar'></i> Last update on 13/09/2018
+    </div>
+    
+
+    <div class="github-link">
+      <a href="https://github.com/hajsong/ATM4110/content/environment/howtouse.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
+  </div>
+
+
+</footer>
+
+<script src="/ATM4110/js/clipboard.min.js"></script>
+
+<link href="/ATM4110/css/featherlight.min.css" rel="stylesheet">
+<script src="/ATM4110/js/featherlight.min.js"></script>
+
+
+
+<script src="/ATM4110/theme-flex/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

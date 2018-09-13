@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.48" />
+<meta name="generator" content="Hugo 0.37.1" />
 <title>File Handling :: ATM4110</title>
 <link rel="shortcut icon" href="/ATM4110/images/favicon.png" type="image/x-icon" />
 <link href="/ATM4110/css/font-awesome.min.css" rel="stylesheet">
@@ -118,6 +118,13 @@
         <div>
           <a href="/ATM4110/environment/setup/">
             Set up
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/environment/howtouse/" class="dd-item">
+        <div>
+          <a href="/ATM4110/environment/howtouse/">
+            Start Python / Jupyter Notebook
           </a>
         </div>
     </li>
@@ -287,37 +294,37 @@
 
 <h5 id="other-useful-commands">Other useful commands</h5>
 
-<pre><code class="language-head```"></code></pre>
+<p><code>head</code> and <code>tail</code> are also useful in viewing files. To find out how to use them, you can refer to the manual after calling it.</p>
 
-<p>$ man head
+<pre><code>$ man head
 or
-$ man tail</p>
-
-<pre><code>The manual of these command will be printed on the screen using ```less``` command.
-That means that you can move around between pages using the keystrokes in the table above.
-
-#### 2. File Creation and Editing
-Creating files is easy and can be done in many different ways in Linux.
-Instead of printing out the output on the screen, you can create a file containing the output by redirecting it.
+$ man tail
 </code></pre>
 
-<p>$ echo save text in the file &gt; output
-$ ls -l &gt; listdir</p>
+<p>The manual of these command will be printed on the screen using <code>less</code> command.
+That means that you can move around between pages using the keystrokes in the table above.</p>
 
-<pre><code>You can also quickly create an empty file using ```touch``` command,
+<h4 id="2-file-creation-and-editing">2. File Creation and Editing</h4>
+
+<p>Creating files is easy and can be done in many different ways in Linux.
+Instead of printing out the output on the screen, you can create a file containing the output by redirecting it.</p>
+
+<pre><code>$ echo save text in the file &gt; output
+$ ls -l &gt; listdir
 </code></pre>
 
-<p>$ touch newfile</p>
+<p>You can also quickly create an empty file using <code>touch</code> command,</p>
 
-<pre><code>
-If you want to create and edit a file, you can try text editors.
-Two major text editors are ```emacs``` and ```vim``` in Linux, and new files can be created with the following commands.
+<pre><code>$ touch newfile
 </code></pre>
 
-<p>$ emacs newfile
+<p>If you want to create and edit a file, you can try text editors.
+Two major text editors are <code>emacs</code> and <code>vim</code> in Linux, and new files can be created with the following commands.</p>
+
+<pre><code>$ emacs newfile
 or
 $ vim newfile
-```</p>
+</code></pre>
 
 <p>There is a steep learning curve for these editors, but once you get familiar with them, you can do so many things very efficiently. Throughout the course, you need to create many text files to analyze the atmospheric data, and these text editors may boost your productivity.</p>
 

@@ -102,5 +102,21 @@ The Jupyter Notebook is making one of the most significant advances in the scien
       <description>My recommendation of working environment is mobaxterm and python powered by anaconda. I wrote the Jupyter Notebook about how to install Python and packages here</description>
     </item>
     
+    <item>
+      <title>Start Python / Jupyter Notebook</title>
+      <link>https://hajsong.github.io/ATM4110/environment/howtouse/</link>
+      <pubDate>Thu, 13 Sep 2018 07:57:43 +0900</pubDate>
+      
+      <guid>https://hajsong.github.io/ATM4110/environment/howtouse/</guid>
+      <description>This page guides you how to use Python and Jupyter Notebook using the example, Celsius and Fahrenheit converter.
+When you want to convert the unit from Fahrenheit to Celsius, the formula is:
+
+From Celsius to Fahrenheit, the formula is:
+
+Python To start Python, you can type python in the terminal
+$ python  Then you may see that the prompt has been changed as
+Python 3.6.3 |Anaconda, Inc.</description>
+    </item>
+    
   </channel>
 </rss>
