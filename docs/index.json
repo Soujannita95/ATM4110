@@ -49,11 +49,25 @@
 	"content": " 1. File viewing In Linux, you are going to handle files with lots of different types, and want to see what\u0026rsquo;s in there. On this page, we will explore how to view the file contents if they are in text in the Linux system.\ncat [options] [files] The simplest viewer is cat, which just copies its files to standard output, concatenating them.\n$ cat filename  This command dump all the contents on the screen, so large files will likely scroll off screen. If this is the case, you may consider using less command.\nuseful options\n -n: Prepend line numbers to every line  less [options] [files] Use less to view text one page at a time (or one window or screenful at a time). It\u0026rsquo;s great for text files.\nWhile running less, type h for a help message, but here are a few keystroke being used often.\n   Keystroke Meaning     h, H View a help page.   spacebar, f Move forward one screenful.   Enter Move forward one line.   b Move backward one screenful   / Enter search model. n goes to the next match, while N goes to the previous match.   q quite less.    useful options\n N: Prepend line numbers to the output.  Other useful commands head and tail are also useful in viewing files. To find out how to use them, you can refer to the manual after calling it.\n$ man head or $ man tail  The manual of these command will be printed on the screen using less command. That means that you can move around between pages using the keystrokes in the table above.\n2. File Creation and Editing Creating files is easy and can be done in many different ways in Linux. Instead of printing out the output on the screen, you can create a file containing the output by redirecting it.\n$ echo save text in the file \u0026gt; output $ ls -l \u0026gt; listdir  You can also quickly create an empty file using touch command,\n$ touch newfile  If you want to create and edit a file, you can try text editors. Two major text editors are emacs and vim in Linux, and new files can be created with the following commands.\n$ emacs newfile or $ vim newfile  There is a steep learning curve for these editors, but once you get familiar with them, you can do so many things very efficiently. Throughout the course, you need to create many text files to analyze the atmospheric data, and these text editors may boost your productivity.\nI use vim daily basis. So, I will introduce it briefly here with a few examples (There are tons of material about these text editors online. Of course, you do not have to use them.)\nvim [options] [files] You can open up the tutorial of vim withe command below.\n$ vimtutor  To exit from vimtutor, do :q.\n vim operates in two modes, insert and normal. Insert mode is for entering text in the usual manner, while normal mode is for running commands like \u0026ldquo;delete a line\u0026rdquo; or copy/paste.\nHere are basic keystrokes in normal mode.\n   Keystroke Meaning     $ vim run editor in current terminal.   i enter insert mode.   esc exit insert mode back to normal mode   :q quit vim when there is no modification   :q! quit vim without saving modification   :wq quit vim by overwriting the file with modification   :w save modification (overwrite)   :w filename save as filename   u undo   ^R redo   l or right arrow move forward   h or left arrow move backward   k or up arrow move up   j or down arrow move down   w move to next word   b move to previous word   e move to the end of the current word   0 move to beginning of line   $ move to end of line   ^f move down 1 screen   ^b move up 1 screen   gg move to beginning of buffer   G move to end of buffer i   x delete next character   X delete previous character   dd delete current line   de delete all characters to the end of the current word   dw delete all characters before the beginning of the next word   de delete all characters from the beginning of the current word   d0 delete all characters from the beginning of the current line   d$ delete all characters to the end of the current line   yy copy current line   ye copy all characters to the end of the current word   yw copy all characters before the beginning of the next word   ye copy all characters from the beginning of the current word   y0 copy all characters from the beginning of the current line   y$ copy all characters to the end of the current line   p paste   r and character replace with the character   R replace mode   o enter insert mode at the one line below   O enter insert mode at the one line up   . repeat the previous action   : switch to command mode    If you are in the intert mode, editing the text is quite similar to other programs like MS words.\n "
 },
 {
+	"uri": "https://hajsong.github.io/ATM4110/python/python_more/",
+	"title": "Functions, logical constructs and loops ",
+	"tags": ["functions", "modules", "Loop"],
+	"description": "",
+	"content": " 1. Functions Functions in Python, in theory, work both like functions and subroutines in Fortran, in that (1) input comes via arguments and (2) output occurs through: a return variable (like Fortran functions) and/or arguments (like Fortran subroutines). In practice, functions in Python are written to act like Fortran functions, with a single output returned. (The return value is specified by the return statement.) If you want multiple returns, it’s easier to put them into a list or use objects.\nFunction definitions begin with a def statement, followed by the name of the function and the argument list in parenthesis. At the end of this line comes colon. The contents of the function are written with indents (usually 4 spaces). When there is no indentation, Python assumes that the definition of the function is finished.\nFor example, the function to compute the area of the circle can be written as\ndef area(radius): area = 3.14 * (radius**2) return area  If you define this function without indentation, Python gives you an error as this.\n\u0026gt;\u0026gt;\u0026gt; def area(radius): ... area = 3.14 * (radius**2) File \u0026quot;\u0026lt;stdin\u0026gt;\u0026quot;, line 2 area = 3.14*(radius**2) ^ IndentationError: expected an indented block  Once you define the function, you can use it with the syntax in the definition.\n\u0026gt;\u0026gt;\u0026gt; a = area(3) \u0026gt;\u0026gt;\u0026gt; print(a) 28.26  Python accepts both positional and keyword arguments in the argument list of a function. Positional arguments are usually for required input while keyword arguments are usually for optional input. Typically, keyword arguments are set to some default value. If you do not want to have a default value set for the keyword, a safe practice is to just set the keyword to None.\nWe may tweak the previous area function by placing a keyword argument.\ndef area(radius, pi=None): area = pi * (radius**2) return area  What would you expect to see with a = area(3)? How about a = area(3, pi=3.14)?\nA list and dictionary variable can be useful when passing positional and keyword arguments.\nargs = [3,] kwds = {'pi':3.14} a = area(*args, **kwds)  As you can see above, a list args and kwds can be passed to the function area. This is particularly useful when the function needs many positional and keyword arguments.\nThere are some rules for passing in function arguments by lists and dictionaries:\n In the function call, put an asterisk (*) before the list that contains the positional arguments and put two asterisks (**) before the dictionary that contains the keyword arguments. The list of positional arguments is a list where each element in the list is a positional argument to be passed in, and the list is ordered in the same order as the positional arguments. The dictionary of keyword arguments uses string keys corresponding to the name of the keyword and the value of the key:value pairs as the value set to the keyword parameter.  2. Logical constructs You may be already familiar with logical constructs. In Python, the syntax for if-statements is\nif \u0026lt;condition\u0026gt;:  followed by the block of code to execute if  is true. There is no need for an \u0026ldquo;endif\u0026rdquo; line because indentation defines the contents of the if block. a = 3 if a == 3: print('I am a ', a) elif a == 2: print('I am a 2') else: print('I am not a 3 or 2')  Don’t forget the colon at the end of if, elif, and else statements 3. Looping The loop is also popular part of the programming. In Python, the loop begins with for.\nfor \u0026lt;index\u0026gt; in \u0026lt;list\u0026gt;:  Do not forget the colon at the end of the syntax.\nAs the if statement, the contents of the loop is defines with indentation. That means that the loop does not require the line with enddo or something like that.\nThe for loop is little different compared to the Fortran do loops. In Fortran, you specify a beginning value and an ending value (often 1 and an integer n) for an index, and the loop runs through all integers from that beginning value to that ending value, setting the index to that value. In Python, the loop index runs through a list of items, and the index is assigned to each item in that list, one after the other, until the list of items is exhausted. For example,\nfor i in [2, -3.3, 'hello', 1, -12]: print(i)  prints out\n2 -3.3 hello 1 -12  As mentioned in the previous page, list variables can have any variable types as elements.\nIf the iteration through numbers is desirable like Fortran, you can use a function range.\nfor i in range(5): print(i)  In Python2, range creates a list. But in Python3, it creates a range type variable.\n\u0026gt;\u0026gt;\u0026gt; a = range(3) \u0026gt;\u0026gt;\u0026gt; a range(0, 3) \u0026gt;\u0026gt;\u0026gt; list(a) [0, 1, 2]  The advantage of the range type in Python3 over the list type in Python2 is the reduced usage of the memory. In Python3, you do not need to secure memories for, for example, range(100000000).\nThe range function takes the form of range(stop) or range(start, stop[, step]).  Another useful function is enumerate. Here is an example.\na = [2, -3.3, 'hello', 1, -12] for i, v in enumerate(a): print(i, ': ', v)  results in\n0 : 2 1 : -3.3 2 : hello 3 : 1 4 : -12  You may figure out how enumerate works already. While iterating the list, enumerate assigns the index and the value to i and v, respectively.\nThe following block of the code does the same thing as above.\na = [2, -3.3, 'hello', 1, -12] for i in range(len(a)): print(i, ': ', a[i])  Python also has a while loop. It\u0026rsquo;s like any other while loop and begins with the syntax:\nwhile \u0026lt;condition\u0026gt;:  The code block (indented) that follows the while line is executed while  evaluates as True.\n"
+},
+{
+	"uri": "https://hajsong.github.io/ATM4110/homework/homework3/",
+	"title": "Homework 3",
+	"tags": ["list", "tuple"],
+	"description": "",
+	"content": " Take street address of Yonsei University (50 Yonsei-ro, Seodaemun-gu, Seoul 03722, Republic of Korea) and create a dictionary myaddress. Create a variable full_address that is the concatenation of all the elements of the myaddress variable by placing commas and blank spaces as needed. Using iteration, print out the full address.  "
+},
+{
 	"uri": "https://hajsong.github.io/ATM4110/python/",
 	"title": "Python",
 	"tags": ["python", "jupyter notebook"],
 	"description": "",
-	"content": ""
+	"content": "The material here is based on the Chapter 3-5 in \u0026ldquo;A Hands-On Introduction to Using Python in the Atmospheric and Oceanic Sciences\u0026rdquo; by Johnny Wei-Bing Lin.  Python, like any other programming language, has variables and all the standard control structures. We will go though Python’s basic data and control structures that support procedural programming. Then we will explore how to use arrays, followed by file input and output.\n"
 },
 {
 	"uri": "https://hajsong.github.io/ATM4110/homework/homework2/",
@@ -75,6 +89,13 @@
 	"tags": ["tag1", "tag2"],
 	"description": "",
 	"content": ""
+},
+{
+	"uri": "https://hajsong.github.io/ATM4110/python/pythonbasic/",
+	"title": "Basic Data and Control Structures",
+	"tags": ["python", "data type"],
+	"description": "",
+	"content": " 1. Overview of basic variables and operators Unlike languages like Fortran, Python is dynamically typed, variables take on the type of whatever they are set to when they are assigned. Thus, a=5 makes the variable a an integer, but a=5.0 makes the variable a floating point number. Additionally, because assignment can happen anytime during the program, this means you can change the type of the variable without changing the variable name.\nThe built-in variable types include:\n integer and floating point strings booleans : True and False nonetype : None lists and tuples : variable v.s. fixed dictionaries : consists of keys and values  Python is case-sensitive, so \u0026ldquo;N\u0026rdquo; and \u0026ldquo;n\u0026rdquo; are different. 2. Integer and Float The easiest way to get the idea of integer and float is probably with an example. If we define variables as the following:\na = 3.5 b = -2.1 c = 3 d = 4  Then arithmetic operations below\na*b b+c a/c c/d  give us\n# a*b -7.3500000000000005 # b+c 0.8999999999999999 # a/c 1.1666666666666667 # c/d 0  We did not specify the data type, but Python automatically decides what type a variable based on the value/operation. For example, c/d returns integer because c and d are integers. Python will generally make the output type the type that retains the most information, so a/c returns float.\nHere’s a question: Why is the answer to a*b not exactly -7.35? Remember that floating point numbers on any binary computer are, in general, not represented exactly. The default formatting setting for the print command, will sometimes print out enough of the portion after the decimal point to show that.\n3. Strings String variables are created by setting text in either paired single or double quotes. For example,\na = 'hello' b = \u0026quot;hello\u0026quot;  both work as long as they are consistently paired.\nSome \u0026ldquo;special\u0026rdquo; strings include:\n \\n: newline character \\t: tab character \\\\: backslash  \u0026gt;\u0026gt;\u0026gt; a=\u0026quot;Hello \\nHello\u0026quot; \u0026gt;\u0026gt;\u0026gt; print(a) Hello Hello \u0026gt;\u0026gt;\u0026gt; a=\u0026quot;Hello \\tHello\u0026quot; \u0026gt;\u0026gt;\u0026gt; print(a) Hello Hello \u0026gt;\u0026gt;\u0026gt; a=\u0026quot;Hello \\\\Hello\u0026quot; \u0026gt;\u0026gt;\u0026gt; print(a) Hello \\Hello  Python uses the addition operator to join strings together.\n\u0026gt;\u0026gt;\u0026gt; a=\u0026quot;Hello\u0026quot; \u0026gt;\u0026gt;\u0026gt; b=\u0026quot; world\u0026quot; \u0026gt;\u0026gt;\u0026gt; print(a+b+'!') Hello world! \u0026gt;\u0026gt;\u0026gt; a+b 'Hello world'  4. Booleans Boolean variables are variables that can have only one of two values: True and False. In some languages, the integer value zero is considered false and the integer value one is considered true, which was the case in older versions of Python. Although this still seems to work in recent versions of Python, using True and False reduces ambiguity.\nNote the capitalization matters. \u0026gt;\u0026gt;\u0026gt; a=true Traceback (most recent call last): File \u0026quot;\u0026lt;stdin\u0026gt;\u0026quot;, line 1, in \u0026lt;module\u0026gt; NameError: name 'true' is not defined \u0026gt;\u0026gt;\u0026gt; a=True  Try this in a Python interpreter:\na = True b = False print(a and b) print(a or b) print(4 \u0026gt; 5)  What did you get?\n5. NoneType A variable of NoneType can have only a single value, the value None (N has to be capitalized). Try this in a Python interpreter:\na = None print(a is None) print(a == 4)  The first print statement will return True, while the second print statement will return False. The is operator compares \u0026ldquo;equality\u0026rdquo; not in the sense of value but in the sense of memory location. Although \u0026ldquo;a == None\u0026rdquo; also works, the better syntax for comparing to None is \u0026ldquo;a is None\u0026rdquo;.\nThis NoneType variables can be useful to safely initialize a parameter. After initialize a parameter with None, you need to assign a value before doing an operation. Otherwise, Python will give an error. This is a simple way to make sure that the variable is set to a real value.\n6. Lists and tuples Lists are ordered sequences. The items in the list do not have be of the same type. You can define a list with both numbers and strings, and even another list.\nTo define a list, you use square brackets and commas.\na = [2, 3.2, 'hello', [-1.2, 'there', 5.5]]  To access elements, you use addresses that starts with zero. For example, the first element of a is a[0], the second is a[1]. If the element of the list is also a list, you can access the element with, for example, a[3][1]. In Python, list elements can also be addressed starting from the end; thus, a[-1] is the last element in list a, a[-2] is the next to last element, etc.\n\u0026gt;\u0026gt;\u0026gt; a[3][1] 'there' \u0026gt;\u0026gt;\u0026gt; a[-1] [-1.2, 'there', 5.5] \u0026gt;\u0026gt;\u0026gt; a[-2] 'hello'  You can create new lists by slicing an existing list.\nThe lower limit of the range is inclusive, and the upper limit of the range is exclusive.\n \u0026gt;\u0026gt;\u0026gt; a[0:3] [2, 3.2, 'hello'] \u0026gt;\u0026gt;\u0026gt; a[1:3] [3.2, 'hello'] \u0026gt;\u0026gt;\u0026gt; a[2:3] ['hello'] \u0026gt;\u0026gt;\u0026gt; a[3:3] []  The length of a list can be obtained using the len function.\n\u0026gt;\u0026gt;\u0026gt; len(a) 4 \u0026gt;\u0026gt;\u0026gt; len(a[0]) Traceback (most recent call last): File \u0026quot;\u0026lt;stdin\u0026gt;\u0026quot;, line 1, in \u0026lt;module\u0026gt; TypeError: object of type 'int' has no len() \u0026gt;\u0026gt;\u0026gt; len(a[3]) 3  The element can be replaced with other types of item without any issues.\n\u0026gt;\u0026gt;\u0026gt; a[2] = 0.0 \u0026gt;\u0026gt;\u0026gt; a [2, 3.2, 0.0, [-1.2, 'there', 5.5]]  Python allows you to modify the list by providing build-in functions. When a = [2, 3.2, 'hello', [-1.2, 'there', 5.5]],\n\u0026gt;\u0026gt;\u0026gt; a.insert(2,'everyone') \u0026gt;\u0026gt;\u0026gt; print(a) [2, 3.2, 'everyone', 'hello', [-1.2, 'there', 5.5]] \u0026gt;\u0026gt;\u0026gt; a.remove(2) \u0026gt;\u0026gt;\u0026gt; print(a) [3.2, 'everyone', 'hello', [-1.2, 'there', 5.5]] \u0026gt;\u0026gt;\u0026gt; print(a) [3.2, 'everyone', 'hello', [-1.2, 'there', 5.5], 4.5]  Tuples are nearly identical to lists with the exception that tuples cannot be changed! To define tuples, you use parenthesis instead of square brackets.\n\u0026gt;\u0026gt;\u0026gt; b = (3.2, 'hello') \u0026gt;\u0026gt;\u0026gt; b[0] 3.2 \u0026gt;\u0026gt;\u0026gt; b[0]=1 Traceback (most recent call last): File \u0026quot;\u0026lt;stdin\u0026gt;\u0026quot;, line 1, in \u0026lt;module\u0026gt; TypeError: 'tuple' object does not support item assignment  You can, to an extent, treat strings as lists. Thus, if a = \u0026ldquo;hello\u0026rdquo;, then a[1:3] will return the substring \u0026ldquo;el\u0026rdquo;.  If the list contains lots of elements, you can break the list after the completion of an element and continue the list on the next line. Or you can put a backslash (\u0026rdquo;\\\u0026ldquo;) at the end of a line  7. Dictionaries Dictionaries are unordered lists whose elements are referenced by keys, not by position. Keys refer to Values that can be anything.\nWhen defining a dictionary, you use curly braces (\u0026ldquo;{}\u0026rdquo;). The elements of a dictionary are \u0026ldquo;Key:Value\u0026rdquo; pairs, separated by a colon. For example,\na = {'a':2, 'b':3.2, 'c':[-1.2, 'there', 5.5]}  It is similar to lists to access the elements, except you use the keys.\n\u0026gt;\u0026gt;\u0026gt; a['a'] 2 \u0026gt;\u0026gt;\u0026gt; a['c'] [-1.2, 'there', 5.5]  There are a few built-in functions for dictionaries.\n a.keys() : show all the keys a.values() : show all the values  "
 },
 {
 	"uri": "https://hajsong.github.io/ATM4110/environment/python/",
@@ -147,6 +168,20 @@
 	"content": ""
 },
 {
+	"uri": "https://hajsong.github.io/ATM4110/tags/data-type/",
+	"title": "Data Type",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://hajsong.github.io/ATM4110/tags/functions/",
+	"title": "Functions",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://hajsong.github.io/ATM4110/tags/grep/",
 	"title": "Grep",
 	"tags": [],
@@ -175,6 +210,20 @@
 	"content": ""
 },
 {
+	"uri": "https://hajsong.github.io/ATM4110/tags/list/",
+	"title": "List",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://hajsong.github.io/ATM4110/tags/loop/",
+	"title": "Loop",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://hajsong.github.io/ATM4110/tags/ls/",
 	"title": "Ls",
 	"tags": [],
@@ -184,6 +233,13 @@
 {
 	"uri": "https://hajsong.github.io/ATM4110/tags/mkdir/",
 	"title": "Mkdir",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://hajsong.github.io/ATM4110/tags/modules/",
+	"title": "Modules",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -219,6 +275,13 @@
 {
 	"uri": "https://hajsong.github.io/ATM4110/tags/",
 	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://hajsong.github.io/ATM4110/tags/tuple/",
+	"title": "Tuple",
 	"tags": [],
 	"description": "",
 	"content": ""

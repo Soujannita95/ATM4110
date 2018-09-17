@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ATM4110</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.37.1" />
+<title>Basic Data and Control Structures :: ATM4110</title>
+<link rel="shortcut icon" href="/ATM4110/images/favicon.png" type="image/x-icon" />
+<link href="/ATM4110/css/font-awesome.min.css" rel="stylesheet">
+<link href="/ATM4110/css/nucleus.css" rel="stylesheet">
+<link href="/ATM4110/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/ATM4110/css/bootstrap.min.css">
+<script src="/ATM4110/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/hajsong.github.io\/ATM4110\/";
+</script>
+<meta name="description" content="">
+
+
+
+    
+  </head>
+  <body data-url="/ATM4110/python/pythonbasic/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <a class="baselink" href="https://hajsong.github.io/ATM4110/">ATM4110</a>
+  
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://github.com/hajsong/ATM4110" target="_blank" rel="noopener">
+                  <i class='fa fa-github'></i> <label>Github repo</label>
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/ATM4110/" class="dd-item">
+          <a href="/ATM4110/">
+            <i class="fa fa-fw fa-home"></i> Home
+          </a>
+          </li>
+    <li data-nav-id="/ATM4110/syllabus/" class="dd-item
+        ">
+      <div>
+      <a href="/ATM4110/syllabus/">Syllabus</a>
+      </div>
+    </li>
+    <li data-nav-id="/ATM4110/linux/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ATM4110/linux/">Unix/Linux system</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ATM4110/linux/shell/" class="dd-item">
+        <div>
+          <a href="/ATM4110/linux/shell/">
+            Installation
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/linux/diroperation/" class="dd-item">
+        <div>
+          <a href="/ATM4110/linux/diroperation/">
+            Directory operation
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/linux/fileoperation/" class="dd-item">
+        <div>
+          <a href="/ATM4110/linux/fileoperation/">
+            File Operation
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/linux/filehandling/" class="dd-item">
+        <div>
+          <a href="/ATM4110/linux/filehandling/">
+            File Handling
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ATM4110/environment/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ATM4110/environment/">Computing Environment</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ATM4110/environment/python/" class="dd-item">
+        <div>
+          <a href="/ATM4110/environment/python/">
+            Python
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/environment/jupyter/" class="dd-item">
+        <div>
+          <a href="/ATM4110/environment/jupyter/">
+            Jupyter
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/environment/setup/" class="dd-item">
+        <div>
+          <a href="/ATM4110/environment/setup/">
+            Set up
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/environment/howtouse/" class="dd-item">
+        <div>
+          <a href="/ATM4110/environment/howtouse/">
+            Start Python / Jupyter Notebook
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ATM4110/python/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/ATM4110/python/">Python</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ATM4110/python/python_more/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/python_more/">
+            Functions, logical constructs and loops 
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/pythonbasic/" class="dd-item active">
+        <div>
+          <a href="/ATM4110/python/pythonbasic/">
+            Basic Data and Control Structures
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ATM4110/homework/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="/ATM4110/homework/"> Homework</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ATM4110/homework/homework3/" class="dd-item">
+        <div>
+          <a href="/ATM4110/homework/homework3/">
+            Homework 3
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/homework/homework2/" class="dd-item">
+        <div>
+          <a href="/ATM4110/homework/homework2/">
+            Homework 2
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/homework/homework1/" class="dd-item">
+        <div>
+          <a href="/ATM4110/homework/homework1/">
+            Homework 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/ATM4110/syllabus/" >
+   Syllabus</option>
+    <option value="/ATM4110/linux/" >
+   Unix/Linux system</option>
+    <option value="/ATM4110/environment/" >
+   Computing Environment</option>
+    <option value="/ATM4110/python/" >
+   Python</option> 
+      <option value="/ATM4110/python/python_more/" >- Functions, logical constructs and loops </option>
+      <option value="/ATM4110/python/pythonbasic/"  selected>- Basic Data and Control Structures</option>
+  
+    <option value="/ATM4110/homework/" >
+    Homework</option> 
+      <option value="/ATM4110/homework/homework3/" >- Homework 3</option>
+      <option value="/ATM4110/homework/homework2/" >- Homework 2</option>
+      <option value="/ATM4110/homework/homework1/" >- Homework 1</option>
+  
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Search...">
+        </div>
+        <script type="text/javascript" src="/ATM4110/js/lunr.min.js"></script>
+        <script type="text/javascript" src="/ATM4110/js/auto-complete.js"></script>
+        <link href="/ATM4110/css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "https:\/\/hajsong.github.io\/ATM4110\/";
+          
+        </script>
+        <script type="text/javascript" src="/ATM4110/js/search.js"></script>
+      </div>
+    
+
+    <h1>Basic Data and Control Structures</h1>
+
+    
+    
+    
+    
+
+<h4 id="1-overview-of-basic-variables-and-operators">1. Overview of basic variables and operators</h4>
+
+<p>Unlike languages like Fortran, Python is <strong>dynamically typed</strong>, variables take on the type of whatever they are set to when they are assigned.
+Thus, <code>a=5</code> makes the variable a an integer, but <code>a=5.0</code> makes the variable a floating point number.
+Additionally, because assignment can happen anytime during the program, this means you can change the type of the variable without changing the variable name.</p>
+
+<p>The built-in variable types include:</p>
+
+<ul>
+<li>integer and floating point</li>
+<li>strings</li>
+<li>booleans : <code>True</code> and <code>False</code></li>
+<li>nonetype : <code>None</code></li>
+<li>lists and tuples : variable v.s. fixed</li>
+<li>dictionaries : consists of keys and values</li>
+</ul>
+
+<div class="alert 
+alert-info"
+ 
+role="alert">Python is case-sensitive, so &ldquo;N&rdquo; and &ldquo;n&rdquo; are different.</div>
+
+
+<h4 id="2-integer-and-float">2. Integer and Float</h4>
+
+<p>The easiest way to get the idea of integer and float is probably with an example.
+If we define variables as the following:</p>
+
+<pre><code>a = 3.5
+b = -2.1
+c = 3
+d = 4
+</code></pre>
+
+<p>Then arithmetic operations below</p>
+
+<pre><code>a*b
+b+c
+a/c
+c/d
+</code></pre>
+
+<p>give us</p>
+
+<pre><code># a*b
+-7.3500000000000005
+# b+c
+0.8999999999999999
+# a/c
+1.1666666666666667
+# c/d
+0
+</code></pre>
+
+<p>We did not specify the data type, but Python automatically decides what type a variable based on the value/operation. For example, <code>c/d</code> returns integer because <code>c</code> and <code>d</code> are integers.
+Python will generally make the output type the type that retains the most information, so <code>a/c</code> returns float.</p>
+
+<p>Here’s a question: Why is the answer to <code>a*b</code> not exactly -7.35?
+Remember that floating point numbers on any binary computer are, in general, not represented exactly.
+The default formatting setting for the print command, will sometimes print out enough of the
+portion after the decimal point to show that.</p>
+
+<h4 id="3-strings">3. Strings</h4>
+
+<p>String variables are created by setting text in either paired single or double quotes. For example,</p>
+
+<pre><code>a = 'hello'
+b = &quot;hello&quot;
+</code></pre>
+
+<p>both work as long as they are consistently paired.</p>
+
+<p>Some &ldquo;special&rdquo; strings include:</p>
+
+<ul>
+<li><code>\n</code>: newline character</li>
+<li><code>\t</code>: tab character</li>
+<li><code>\\</code>: backslash</li>
+</ul>
+
+<pre><code>&gt;&gt;&gt; a=&quot;Hello \nHello&quot;
+&gt;&gt;&gt; print(a)
+Hello
+Hello
+&gt;&gt;&gt; a=&quot;Hello \tHello&quot;
+&gt;&gt;&gt; print(a)
+Hello 	Hello
+&gt;&gt;&gt; a=&quot;Hello \\Hello&quot;
+&gt;&gt;&gt; print(a)
+Hello \Hello
+</code></pre>
+
+<p>Python uses the addition operator to join strings together.</p>
+
+<pre><code>&gt;&gt;&gt; a=&quot;Hello&quot;
+&gt;&gt;&gt; b=&quot; world&quot;
+&gt;&gt;&gt; print(a+b+'!')
+Hello world!
+&gt;&gt;&gt; a+b
+'Hello world'
+</code></pre>
+
+<h4 id="4-booleans">4. Booleans</h4>
+
+<p>Boolean variables are variables that can have only one of two values: <code>True</code> and <code>False</code>.
+In some languages, the integer value zero is considered false and the integer value one is considered true, which was the case in older versions of Python.
+Although this still seems to work in recent versions of Python, using <code>True</code> and <code>False</code> reduces ambiguity.</p>
+
+<div class="alert 
+alert-info"
+ 
+role="alert">Note the capitalization matters.</div>
+
+
+<pre><code>&gt;&gt;&gt; a=true
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+NameError: name 'true' is not defined
+&gt;&gt;&gt; a=True
+</code></pre>
+
+<p>Try this in a Python interpreter:</p>
+
+<pre><code>a = True
+b = False
+print(a and b)
+print(a or b)
+print(4 &gt; 5)
+</code></pre>
+
+<p>What did you get?</p>
+
+<h4 id="5-nonetype">5. NoneType</h4>
+
+<p>A variable of NoneType can have only a single value, the value <code>None</code> (<code>N</code> has to be capitalized).
+Try this in a Python interpreter:</p>
+
+<pre><code>a = None
+print(a is None)
+print(a == 4)
+</code></pre>
+
+<p>The first <code>print</code> statement will return <code>True</code>, while the second <code>print</code> statement will return <code>False</code>.
+The <code>is</code> operator compares &ldquo;equality&rdquo; not in the sense of value but in the sense of memory location.
+Although &ldquo;<code>a == None</code>&rdquo; also works, the better syntax for comparing to <code>None</code> is &ldquo;<code>a is None</code>&rdquo;.</p>
+
+<p>This NoneType variables can be useful to safely initialize a parameter. After initialize a parameter with <code>None</code>, you need to assign a value before doing an operation. Otherwise, Python will give an error. This is a simple way to make sure that the variable is set to a real value.</p>
+
+<h4 id="6-lists-and-tuples">6. Lists and tuples</h4>
+
+<p>Lists are ordered sequences. The items in the list do not have be of the same type. You can define a list with both numbers and strings, and even another list.</p>
+
+<p>To define a list, you use square brackets and commas.</p>
+
+<pre><code>a = [2, 3.2, 'hello', [-1.2, 'there', 5.5]]
+</code></pre>
+
+<p>To access elements, you use addresses that starts with zero. For example, the first element of <code>a</code> is <code>a[0]</code>, the second is <code>a[1]</code>.
+If the element of the list is also a list, you can access the element with, for example, <code>a[3][1]</code>.
+In Python, list elements can also be addressed starting from the end; thus, <code>a[-1]</code> is the last element in list <code>a</code>, <code>a[-2]</code> is the next to last element, etc.</p>
+
+<pre><code>&gt;&gt;&gt; a[3][1]
+'there'
+&gt;&gt;&gt; a[-1]
+[-1.2, 'there', 5.5]
+&gt;&gt;&gt; a[-2]
+'hello'
+</code></pre>
+
+<p>You can create new lists by slicing an existing list.</p>
+
+<div class="alert 
+alert-warning"
+ 
+role="alert"><p>The lower limit of the range is <em>inclusive</em>, and the upper limit of the
+range is <em>exclusive</em>.</p>
+</div>
+
+
+<pre><code>&gt;&gt;&gt; a[0:3]
+[2, 3.2, 'hello']
+&gt;&gt;&gt; a[1:3]
+[3.2, 'hello']
+&gt;&gt;&gt; a[2:3]
+['hello']
+&gt;&gt;&gt; a[3:3]
+[]
+</code></pre>
+
+<p>The length of a list can be obtained using the <code>len</code> function.</p>
+
+<pre><code>&gt;&gt;&gt; len(a)
+4
+&gt;&gt;&gt; len(a[0])
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+TypeError: object of type 'int' has no len()
+&gt;&gt;&gt; len(a[3])
+3
+</code></pre>
+
+<p>The element can be replaced with other types of item without any issues.</p>
+
+<pre><code>&gt;&gt;&gt; a[2] = 0.0
+&gt;&gt;&gt; a
+[2, 3.2, 0.0, [-1.2, 'there', 5.5]]
+</code></pre>
+
+<p>Python allows you to modify the list by providing build-in functions. When <code>a = [2, 3.2, 'hello', [-1.2, 'there', 5.5]]</code>,</p>
+
+<pre><code>&gt;&gt;&gt; a.insert(2,'everyone')
+&gt;&gt;&gt; print(a)
+[2, 3.2, 'everyone', 'hello', [-1.2, 'there', 5.5]]
+&gt;&gt;&gt; a.remove(2)
+&gt;&gt;&gt; print(a)
+[3.2, 'everyone', 'hello', [-1.2, 'there', 5.5]]
+&gt;&gt;&gt; print(a)
+[3.2, 'everyone', 'hello', [-1.2, 'there', 5.5], 4.5]
+</code></pre>
+
+<p>Tuples are nearly identical to lists with the exception that tuples cannot be changed!
+To define tuples, you use parenthesis instead of square brackets.</p>
+
+<pre><code>&gt;&gt;&gt; b = (3.2, 'hello')
+&gt;&gt;&gt; b[0]
+3.2
+&gt;&gt;&gt; b[0]=1
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+TypeError: 'tuple' object does not support item assignment
+</code></pre>
+
+<div class="panel panel-primary">
+	
+	<div class="panel-body">You can, to an extent, treat strings as lists. Thus, if a = &ldquo;hello&rdquo;, then a[1:3] will return the substring &ldquo;el&rdquo;.</div>
+	
+</div>
+
+
+<div class="panel panel-primary">
+	
+	<div class="panel-body">If the list contains lots of elements, you can break the list after the completion of an element and continue the list on the next line. Or you can put a backslash (&rdquo;\&ldquo;) at the end of a line</div>
+	
+</div>
+
+
+<h4 id="7-dictionaries">7. Dictionaries</h4>
+
+<p>Dictionaries are unordered lists whose elements are referenced by <em>keys</em>, not by position.
+<em>Keys</em> refer to <em>Values</em> that can be anything.</p>
+
+<p>When defining a dictionary, you use curly braces (&ldquo;{}&rdquo;). The elements of a dictionary are &ldquo;Key:Value&rdquo; pairs, separated by a colon. For example,</p>
+
+<pre><code>a = {'a':2, 'b':3.2, 'c':[-1.2, 'there', 5.5]}
+</code></pre>
+
+<p>It is similar to <em>lists</em> to access the elements, except you use the keys.</p>
+
+<pre><code>&gt;&gt;&gt; a['a']
+2
+&gt;&gt;&gt; a['c']
+[-1.2, 'there', 5.5]
+</code></pre>
+
+<p>There are a few built-in functions for dictionaries.</p>
+
+<ul>
+<li>a.keys() : show all the keys</li>
+<li>a.values() : show all the values</li>
+</ul>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/ATM4110/python/python_more/" title="Functions, logical constructs and loops "> <i class="fa fa-chevron-left"></i><label>Functions, logical constructs and loops </label></a>
+    <a class="nav nav-next" href="/ATM4110/homework/" title=" Homework" style="margin-right: 0px;"><label> Homework</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+    <div class="tags"> 
+      
+        <a class="label label-default" href="https://hajsong.github.io/ATM4110/tags/python">python</a>
+      
+        <a class="label label-default" href="https://hajsong.github.io/ATM4110/tags/data-type">data type</a>
+      
+    </div>
+    
+
+    
+    <div class="author">
+        <i class='fa fa-user'></i> <a href="mailto:hajsong@yonsei.ac.kr">Hajoon Song</a>
+    </div>
+    
+
+  
+    <div class="date">
+        <i class='fa fa-calendar'></i> Last update on 17/09/2018
+    </div>
+    
+
+    <div class="github-link">
+      <a href="https://github.com/hajsong/ATM4110/content/python/pythonbasic.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
+  </div>
+
+
+</footer>
+
+<script src="/ATM4110/js/clipboard.min.js"></script>
+
+<link href="/ATM4110/css/featherlight.min.css" rel="stylesheet">
+<script src="/ATM4110/js/featherlight.min.js"></script>
+
+
+
+<script src="/ATM4110/theme-flex/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

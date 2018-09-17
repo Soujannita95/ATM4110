@@ -54,6 +54,24 @@ $ cat filename  This command dump all the contents on the screen, so large files
     </item>
     
     <item>
+      <title>Functions, logical constructs and loops </title>
+      <link>https://hajsong.github.io/ATM4110/python/python_more/</link>
+      <pubDate>Mon, 17 Sep 2018 13:34:26 +0900</pubDate>
+      
+      <guid>https://hajsong.github.io/ATM4110/python/python_more/</guid>
+      <description>1. Functions Functions in Python, in theory, work both like functions and subroutines in Fortran, in that (1) input comes via arguments and (2) output occurs through: a return variable (like Fortran functions) and/or arguments (like Fortran subroutines). In practice, functions in Python are written to act like Fortran functions, with a single output returned. (The return value is specified by the return statement.) If you want multiple returns, it’s easier to put them into a list or use objects.</description>
+    </item>
+    
+    <item>
+      <title>Homework 3</title>
+      <link>https://hajsong.github.io/ATM4110/homework/homework3/</link>
+      <pubDate>Mon, 17 Sep 2018 12:38:31 +0900</pubDate>
+      
+      <guid>https://hajsong.github.io/ATM4110/homework/homework3/</guid>
+      <description> Take street address of Yonsei University (50 Yonsei-ro, Seodaemun-gu, Seoul 03722, Republic of Korea) and create a dictionary myaddress. Create a variable full_address that is the concatenation of all the elements of the myaddress variable by placing commas and blank spaces as needed. Using iteration, print out the full address.  </description>
+    </item>
+    
+    <item>
       <title>Homework 2</title>
       <link>https://hajsong.github.io/ATM4110/homework/homework2/</link>
       <pubDate>Thu, 06 Sep 2018 08:54:36 +0900</pubDate>
@@ -70,6 +88,15 @@ $ cat filename  This command dump all the contents on the screen, so large files
       
       <guid>https://hajsong.github.io/ATM4110/homework/homework1/</guid>
       <description> Setup the linux environment. Create a folder for this class at your home directory. Copy something Change its name Create a symbolic link  </description>
+    </item>
+    
+    <item>
+      <title>Basic Data and Control Structures</title>
+      <link>https://hajsong.github.io/ATM4110/python/pythonbasic/</link>
+      <pubDate>Mon, 17 Sep 2018 10:08:38 +0900</pubDate>
+      
+      <guid>https://hajsong.github.io/ATM4110/python/pythonbasic/</guid>
+      <description>1. Overview of basic variables and operators Unlike languages like Fortran, Python is dynamically typed, variables take on the type of whatever they are set to when they are assigned. Thus, a=5 makes the variable a an integer, but a=5.0 makes the variable a floating point number. Additionally, because assignment can happen anytime during the program, this means you can change the type of the variable without changing the variable name.</description>
     </item>
     
     <item>

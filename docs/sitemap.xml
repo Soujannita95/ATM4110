@@ -37,6 +37,16 @@
   </url>
   
   <url>
+    <loc>https://hajsong.github.io/ATM4110/python/python_more/</loc>
+    <lastmod>2018-09-17T13:34:26+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/homework/homework3/</loc>
+    <lastmod>2018-09-17T12:38:31+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://hajsong.github.io/ATM4110/python/</loc>
     <lastmod>2018-09-07T12:36:51+09:00</lastmod>
   </url>
@@ -54,6 +64,11 @@
   <url>
     <loc>https://hajsong.github.io/ATM4110/homework/</loc>
     <lastmod>2018-09-04T07:45:45+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/python/pythonbasic/</loc>
+    <lastmod>2018-09-17T10:08:38+09:00</lastmod>
   </url>
   
   <url>
@@ -111,6 +126,18 @@
   </url>
   
   <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/data-type/</loc>
+    <lastmod>2018-09-17T10:08:38+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/functions/</loc>
+    <lastmod>2018-09-17T13:34:26+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://hajsong.github.io/ATM4110/tags/grep/</loc>
     <lastmod>2018-09-05T16:06:36+09:00</lastmod>
     <priority>0</priority>
@@ -135,6 +162,18 @@
   </url>
   
   <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/list/</loc>
+    <lastmod>2018-09-17T12:38:31+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/loop/</loc>
+    <lastmod>2018-09-17T13:34:26+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://hajsong.github.io/ATM4110/tags/ls/</loc>
     <lastmod>2018-09-04T07:45:45+09:00</lastmod>
     <priority>0</priority>
@@ -143,6 +182,12 @@
   <url>
     <loc>https://hajsong.github.io/ATM4110/tags/mkdir/</loc>
     <lastmod>2018-09-04T07:45:45+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/modules/</loc>
+    <lastmod>2018-09-17T13:34:26+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -173,6 +218,12 @@
   <url>
     <loc>https://hajsong.github.io/ATM4110/tags/</loc>
     <lastmod>2018-09-07T12:36:51+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/tuple/</loc>
+    <lastmod>2018-09-17T12:38:31+09:00</lastmod>
     <priority>0</priority>
   </url>
   
