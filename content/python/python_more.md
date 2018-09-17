@@ -6,8 +6,8 @@ creatordisplayname = "Hajoon Song"
 creatoremail = "hajsong@yonsei.ac.kr"
 lastmodifierdisplayname = "Hajoon Song"
 lastmodifieremail = "hajsong@yonsei.ac.kr"
-tags = ["functions","modules","Loop"]
-weight = 100
+tags = ["do","if","def"]
+weight = 102
 #pre ="<i class='fa fa-edit' ></i> "
 #alwaysopen = true
 +++
