@@ -52,8 +52,10 @@ give us
 0.8999999999999999
 # a/c
 1.1666666666666667
-# c/d
+# c/d (in Python2)
 0
+# c/d (in Python3)
+0.75
 ```
 We did not specify the data type, but Python automatically decides what type a variable based on the value/operation. For example, ```c/d``` returns integer because ```c``` and ```d``` are integers.
 Python will generally make the output type the type that retains the most information, so ```a/c``` returns float.
