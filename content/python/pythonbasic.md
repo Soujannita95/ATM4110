@@ -136,7 +136,7 @@ Although "```a == None```" also works, the better syntax for comparing to ```Non
 This NoneType variables can be useful to safely initialize a parameter. After initialize a parameter with ```None```, you need to assign a value before doing an operation. Otherwise, Python will give an error. This is a simple way to make sure that the variable is set to a real value.
 
 #### 6. Lists and tuples
-Lists are ordered sequences. The items in the list do not have be of the same type. You can define a list with both numbers and strings, and even another list.
+Lists are ordered sequences. The items in the list do not have to be of the same type. You can define a list with both numbers and strings, and even another list.
 
 To define a list, you use square brackets and commas.
 ```

@@ -101,7 +101,7 @@ $ cat filename  This command dump all the contents on the screen, so large files
     </item>
     
     <item>
-      <title>Functions, logical constructs and loops </title>
+      <title>Functions, if statement and loops</title>
       <link>https://hajsong.github.io/ATM4110/python/python_more/</link>
       <pubDate>Mon, 17 Sep 2018 13:34:26 +0900</pubDate>
       
@@ -118,6 +118,15 @@ $ cat filename  This command dump all the contents on the screen, so large files
       <description>The Jupyter Notebook supports over 40 different programming languages, and Python is just one of them. That means that once you know how to use the Jupyter Notebook, you can use it for other languages.
 The Jupyter Notebook is making one of the most significant advances in the scientific computing. Here is what Nature says about the Jupyter Notebook in 2014
   The free IPython notebook makes data analysis easier to record, understand and reproduce.</description>
+    </item>
+    
+    <item>
+      <title>Module</title>
+      <link>https://hajsong.github.io/ATM4110/python/module/</link>
+      <pubDate>Tue, 18 Sep 2018 08:45:40 +0900</pubDate>
+      
+      <guid>https://hajsong.github.io/ATM4110/python/module/</guid>
+      <description>When you write a script, the moment may come when you think there must be functions that can do what you want to do. Python calls &amp;ldquo;modules&amp;rdquo;, and &amp;ldquo;packages&amp;rdquo; which is the collection of modules to assist users to do their job easily and quickly. (They are used interchangeably from time to time.) Unlike compiled languages like Fortran, these modules are not collections of object files but rather regular Python source code files.</description>
     </item>
     
     <item>

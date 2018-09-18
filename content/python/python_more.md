@@ -1,5 +1,5 @@
 +++
-title= "Functions, logical constructs and loops "
+title= "Functions, if statement and loops"
 date= 2018-09-17T13:34:26+09:00
 description = ""
 creatordisplayname = "Hajoon Song"
@@ -98,7 +98,7 @@ for <index> in <list>:
 ```
 Do not forget the colon at the end of the syntax.
 
-As the ```if``` statement, the contents of the loop is defines with indentation. That means that the loop does not require the line with ```enddo``` or something like that.
+As the ```if``` statement, the contents of the loop is defined with indentation. That means that the loop does not require the line with ```enddo``` or something like that.
 
 The ```for``` loop is little different compared to the Fortran do loops.
 In Fortran, you specify a beginning value and an ending value (often 1 and an integer n) for an index, and the loop runs through all integers from that beginning value to that ending value, setting the index to that value.

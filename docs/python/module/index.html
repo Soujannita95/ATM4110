@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="generator" content="Hugo 0.37.1" />
-<title>Rm :: ATM4110</title>
+<title>Module :: ATM4110</title>
 <link rel="shortcut icon" href="/ATM4110/images/favicon.png" type="image/x-icon" />
 <link href="/ATM4110/css/font-awesome.min.css" rel="stylesheet">
 <link href="/ATM4110/css/nucleus.css" rel="stylesheet">
@@ -23,7 +23,7 @@
 
     
   </head>
-  <body data-url="/ATM4110/tags/rm/">
+  <body data-url="/ATM4110/python/module/">
     
       <header>
   <div class="logo">
@@ -129,10 +129,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ATM4110/python/" class="dd-item haschildren
+    <li data-nav-id="/ATM4110/python/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ATM4110/python/">Python</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ATM4110/python/">Python</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ATM4110/python/pythonbasic/" class="dd-item">
@@ -149,7 +150,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/ATM4110/python/module/" class="dd-item">
+      <li data-nav-id="/ATM4110/python/module/" class="dd-item active">
         <div>
           <a href="/ATM4110/python/module/">
             Module
@@ -209,7 +210,11 @@
     <option value="/ATM4110/environment/" >
    Computing Environment</option>
     <option value="/ATM4110/python/" >
-   Python</option>
+   Python</option> 
+      <option value="/ATM4110/python/pythonbasic/" >- Basic Data and Control Structures</option>
+      <option value="/ATM4110/python/python_more/" >- Functions, if statement and loops</option>
+      <option value="/ATM4110/python/module/"  selected>- Module</option>
+  
     <option value="/ATM4110/homework/" >
     Homework</option> 
       <option value="/ATM4110/homework/homework3/" >- Homework 3</option>
@@ -238,70 +243,97 @@
       </div>
     
 
-    <h1>Rm</h1>
+    <h1>Module</h1>
 
     
     
     
+    <p>When you write a script, the moment may come when you think there must be functions that can do what you want to do.
+Python calls &ldquo;modules&rdquo;, and &ldquo;packages&rdquo; which is the collection of modules to assist users to do their job easily and quickly. (They are used interchangeably from time to time.)
+Unlike compiled languages like Fortran, these modules are not collections of object files but rather regular Python source code files.
+A module is a single source code file and a package is a directory containing
+source code files (and possibly subdirectories of source code files).</p>
 
+<p>To use a module, users can call it with <code>import</code> command.</p>
 
+<pre><code>import &lt;module name&gt;
+</code></pre>
 
-<div class="extra-pagination inner">
-<nav class="pagination" role="navigation">
-	
-	<span class="page-number">Page 1 of 1</span>
-	
-</nav>
+<p>For example, you can call NumPy module for the computation regarding arrays.</p>
 
-</div>
+<pre><code>&gt;&gt;&gt; import numpy
+&gt;&gt;&gt; dir()
+['__annotations__', '__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__', 'numpy']
+</code></pre>
 
+<p>or in IPython,</p>
 
-   <article class="post linux">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/ATM4110/linux/fileoperation/">File Operation</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>Once we arrive the working directory, the next thing we want to do might be manipulating files: copying, renaming, deleting and so forth. This page introduces a few things that can be useful in handling files in a Linux system.
-If you need a short guide for the command, try with --help option. The content on this page mostly comes from Linux pocket guide by Daniel J. Barrett.
- ls [options] [files] The ls command lists attributes of files and directories. <a class="read-more" href="/ATM4110/linux/fileoperation/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-            <i class='fa fa-user'></i> <a href="mailto:hajsong@yonsei.ac.kr">Hajoon Song</a>  <i class='fa fa-calendar'></i> 04/09/2018
-        
+<pre><code>In [1]: import numpy
 
-        
-          
-            
-                <a class="label label-default" href="https://hajsong.github.io/ATM4110/tags/ls/">ls</a>
-            
-                <a class="label label-default" href="https://hajsong.github.io/ATM4110/tags/cp/">cp</a>
-            
-                <a class="label label-default" href="https://hajsong.github.io/ATM4110/tags/rm/">rm</a>
-            
-        
+In [2]: whos
+Variable   Type      Data/Info
+------------------------------
+numpy      module    &lt;module 'numpy' from '/Us&lt;...&gt;kages/numpy/__init__.py'&gt;
+</code></pre>
 
-    </footer>
-</article>
+<p>To use functions in the NumPy module, you can first write the module name, followed by dot and the function name. For example,</p>
 
+<pre><code>a = numpy.sin(4)
+</code></pre>
 
-<div style="margin-bottom:2rem"></div>
+<p>assign <code>sin(4)</code> to <code>a</code>.</p>
 
-<nav class="pagination" role="navigation">
-	
-	<span class="page-number">Page 1 of 1</span>
-	
-</nav>
+<p>Calling <code>&lt;module name&gt;</code> with <code>import</code> is essentially the same as running the python file <code>&lt;module name&gt;.py</code>. As an example, let&rsquo;s suppose that <code>ctof.py</code> has</p>
 
+<pre><code>TinC = int(input(&quot;Enter a temperature in Celsius: &quot;))
 
+TinF = 9.0/5.0 * TinC + 32
+print(&quot;Temperature:&quot;, TinC, &quot;degC = &quot;, TinF, &quot;degF&quot;)
+</code></pre>
+
+<p>In Python, we can run this script with the command of <code>exec(open('ctof.py').read())</code>.</p>
+
+<p>Now, let&rsquo;s try</p>
+
+<pre><code>&gt;&gt;&gt; import ctof
+</code></pre>
+
+<p>What do you get?</p>
+
+<p>For <code>import numpy</code>, however, Python loads many functions that NumPy has because it is technically a package of many files, not a module of a single file.
+If all the module file does is define functions, variables, etc., then nothing will be output.
+But you have access to everything that is defined by typing the module name, a period, then the name of the module function, variable, etc. you want (hence, <code>numpy.sin</code>, etc.).
+Just as in a regular Python session you have access to all the variables, functions, etc. you define in that regular session, with an imported module, all the variables, functions, etc. that the module
+created and used are also sitting inside the module&rsquo;s namespace, ready for you to access, using the syntax just mentioned.</p>
+
+<p>Submodules (which are subdirectories inside the package directory) are also specified with the periods.
+For instance, NumPy has a submodule called <code>ma</code>, which in turn has special functions defined in it.
+The submodule then is referred to as <code>numpy.ma</code> and the array function in the submodule as <code>numpy.ma.array</code>.</p>
+
+<p>When importing modules, shorter name can be assigned. For example,</p>
+
+<pre><code>import numpy as np
+</code></pre>
+
+<p>Once you assign the shorter name, you can call the function with it, e.g. <code>np.sin</code>.</p>
+
+<p>If you are interested only one function in the module, you can call it as the following.</p>
+
+<pre><code>from numpy import sin
+</code></pre>
+
+<p>Finally, remember, modules can contain data in addition to functions.
+The syntax to refer to those module data variables is exactly the same as for functions. Thus, <code>numpy.pi</code> gives the value of the mathematical constant .</p>
+
+<p>You can create your own module and it will be explained later.</p>
 
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-next" href="/ATM4110/syllabus/" title="Syllabus" style="margin-right: 0px;"><label>Syllabus</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/ATM4110/python/python_more/" title="Functions, if statement and loops"> <i class="fa fa-chevron-left"></i><label>Functions, if statement and loops</label></a>
+    <a class="nav nav-next" href="/ATM4110/homework/" title=" Homework" style="margin-right: 0px;"><label> Homework</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>
@@ -311,17 +343,27 @@ If you need a short guide for the command, try with --help option. The content o
 
 <div class="footline">
     
+    <div class="tags"> 
+      
+        <a class="label label-default" href="https://hajsong.github.io/ATM4110/tags/module">module</a>
+      
+    </div>
+    
 
+    
+    <div class="author">
+        <i class='fa fa-user'></i> <a href="mailto:hajsong@yonsei.ac.kr">Hajoon Song</a>
+    </div>
     
 
   
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 04/09/2018
+        <i class='fa fa-calendar'></i> Last update on 18/09/2018
     </div>
     
 
     <div class="github-link">
-      <a href="https://github.com/hajsong/ATM4110/content/" target="blank"><i class="fa fa-code-fork"></i>
+      <a href="https://github.com/hajsong/ATM4110/content/python/module.md" target="blank"><i class="fa fa-code-fork"></i>
         Improve this page</a>
     </div>
   </div>
