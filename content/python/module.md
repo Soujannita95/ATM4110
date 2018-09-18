@@ -9,7 +9,6 @@ lastmodifieremail = "hajsong@yonsei.ac.kr"
 tags = ["module"]
 weight = 103
 #pre ="<i class='fa fa-edit' ></i> "
-alwaysopen = true
 +++
 
 When you write a script, the moment may come when you think there must be functions that can do what you want to do.
@@ -80,6 +79,6 @@ from numpy import sin
 ```
 
 Finally, remember, modules can contain data in addition to functions.
-The syntax to refer to those module data variables is exactly the same as for functions. Thus, ```numpy.pi``` gives the value of the mathematical constant .
+The syntax to refer to those module data variables is exactly the same as for functions. Thus, ```numpy.pi``` gives the value of the mathematical constant. 
 
 You can create your own module and it will be explained later.
