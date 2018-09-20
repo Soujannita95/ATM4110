@@ -139,6 +139,17 @@ The Jupyter Notebook is making one of the most significant advances in the scien
     </item>
     
     <item>
+      <title>Object</title>
+      <link>https://hajsong.github.io/ATM4110/python/object/</link>
+      <pubDate>Wed, 19 Sep 2018 09:59:47 +0900</pubDate>
+      
+      <guid>https://hajsong.github.io/ATM4110/python/object/</guid>
+      <description>Python is an object oriented programming language. In fact, almost everything in Python is an object. Then what is an object?
+An object is a variable that has attached to it both data (attributes) and functions designed to act on that data (methods). So what does this mean?
+The key idea of objects is that variables shouldn&amp;rsquo;t be thought of as having only values (and type), but rather they should be thought of entities that can have any number of other things &amp;ldquo;attached&amp;rdquo; to them.</description>
+    </item>
+    
+    <item>
       <title>Start Python / Jupyter Notebook</title>
       <link>https://hajsong.github.io/ATM4110/environment/howtouse/</link>
       <pubDate>Thu, 13 Sep 2018 07:57:43 +0900</pubDate>

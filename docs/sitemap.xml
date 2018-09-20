@@ -92,6 +92,11 @@
   </url>
   
   <url>
+    <loc>https://hajsong.github.io/ATM4110/python/object/</loc>
+    <lastmod>2018-09-19T09:59:47+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://hajsong.github.io/ATM4110/environment/howtouse/</loc>
     <lastmod>2018-09-13T07:57:43+09:00</lastmod>
   </url>
@@ -121,6 +126,12 @@
   <url>
     <loc>https://hajsong.github.io/ATM4110/tags/cd/</loc>
     <lastmod>2018-09-04T07:45:45+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/class/</loc>
+    <lastmod>2018-09-19T09:59:47+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -199,6 +210,12 @@
   <url>
     <loc>https://hajsong.github.io/ATM4110/tags/module/</loc>
     <lastmod>2018-09-18T08:45:40+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/object/</loc>
+    <lastmod>2018-09-19T09:59:47+09:00</lastmod>
     <priority>0</priority>
   </url>
   
