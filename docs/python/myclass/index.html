@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="generator" content="Hugo 0.37.1" />
-<title>Jupyter Notebook :: ATM4110</title>
+<title>Defining class :: ATM4110</title>
 <link rel="shortcut icon" href="/ATM4110/images/favicon.png" type="image/x-icon" />
 <link href="/ATM4110/css/font-awesome.min.css" rel="stylesheet">
 <link href="/ATM4110/css/nucleus.css" rel="stylesheet">
@@ -23,7 +23,7 @@
 
     
   </head>
-  <body data-url="/ATM4110/tags/jupyter-notebook/">
+  <body data-url="/ATM4110/python/myclass/">
     
       <header>
   <div class="logo">
@@ -129,10 +129,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ATM4110/python/" class="dd-item haschildren
+    <li data-nav-id="/ATM4110/python/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ATM4110/python/">Python</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ATM4110/python/">Python</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ATM4110/python/pythonbasic/" class="dd-item">
@@ -163,7 +164,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/ATM4110/python/myclass/" class="dd-item">
+      <li data-nav-id="/ATM4110/python/myclass/" class="dd-item active">
         <div>
           <a href="/ATM4110/python/myclass/">
             Defining class
@@ -223,7 +224,13 @@
     <option value="/ATM4110/environment/" >
    Computing Environment</option>
     <option value="/ATM4110/python/" >
-   Python</option>
+   Python</option> 
+      <option value="/ATM4110/python/pythonbasic/" >- Basic Data and Control Structures</option>
+      <option value="/ATM4110/python/python_more/" >- Functions, if statement and loops</option>
+      <option value="/ATM4110/python/module/" >- Module</option>
+      <option value="/ATM4110/python/object/" >- Introduction to Object</option>
+      <option value="/ATM4110/python/myclass/"  selected>- Defining class</option>
+  
     <option value="/ATM4110/homework/" >
     Homework</option> 
       <option value="/ATM4110/homework/homework3/" >- Homework 3</option>
@@ -252,151 +259,150 @@
       </div>
     
 
-    <h1>Jupyter Notebook</h1>
+    <h1>Defining class</h1>
 
     
     
     
+    
 
+<h4 id="classes-provide-a-means-of-bundling-data-and-functionality-together"><em>&ldquo;Classes provide a means of bundling data and functionality together.&rdquo;</em></h4>
 
+<p>(from the <a href="https://docs.python.org/3/tutorial/classes.html">Python documentation</a>)</p>
 
-<div class="extra-pagination inner">
-<nav class="pagination" role="navigation">
-	
-	<span class="page-number">Page 1 of 1</span>
-	
-</nav>
+<p>We can define our own type of object by creating a new class that can carry attributes and methods to maintaining and modifying its state.</p>
 
-</div>
+<p>When we define a new variable, we actually create a new instance of a class.
+For example, typing <code>a = 'hello'</code> creates an instance of a predefined string class.
+Likewise, we can create a new class instance that has the format of the class we defined.</p>
 
+<h4 id="class-definition-syntax">Class definition syntax</h4>
 
-   <article class="post environment">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/ATM4110/environment/">Computing Environment</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>The main tools being used in this course is Python and Jupyter Notebook.
-Why are we going to learn python in this course? The scope of this class is to read atmospheric and oceanic datasets, do spatial, temporal and spectral analysis, and present the data graphically. Python provides an environment for us to fulfill those tasks seamlessly without asking too much time and effort to pay. Also, learning Python may open up other possibilities in your future because it is very popular computer languages these days. <a class="read-more" href="/ATM4110/environment/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-            <i class='fa fa-user'></i> <a href="mailto:hajsong@yonsei.ac.kr">Hajoon Song</a>  <i class='fa fa-calendar'></i> 07/09/2018
-        
+<p>The simplest form of class definition looks like this:</p>
 
-        
-          
-            
-                <a class="label label-default" href="https://hajsong.github.io/ATM4110/tags/python/">python</a>
-            
-                <a class="label label-default" href="https://hajsong.github.io/ATM4110/tags/jupyter-notebook/">jupyter notebook</a>
-            
-                <a class="label label-default" href="https://hajsong.github.io/ATM4110/tags/anaconda/">anaconda</a>
-            
-        
+<pre><code>class ClassName:
+    &lt;statement-1&gt;
+    .
+    .
+    .
+    &lt;statement-N&gt;
+</code></pre>
 
-    </footer>
-</article>
+<p>Class definitions start with <code>class</code> statement. The definition of the class follows from the next line with indentations at the beginning of the lines.
+Definition of the class must be done before using it. The <code>&lt;statement-i&gt;</code> in the class definition can be method definitions as well as attribute statements.</p>
 
-   <article class="post environment">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/ATM4110/environment/jupyter/">Jupyter</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>The Jupyter Notebook supports over 40 different programming languages, and Python is just one of them. That means that once you know how to use the Jupyter Notebook, you can use it for other languages.
-The Jupyter Notebook is making one of the most significant advances in the scientific computing. Here is what Nature says about the Jupyter Notebook in 2014
-  The free IPython notebook makes data analysis easier to record, understand and reproduce. <a class="read-more" href="/ATM4110/environment/jupyter/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-            <i class='fa fa-user'></i> <a href="mailto:hajsong@yonsei.ac.kr">Hajoon Song</a>  <i class='fa fa-calendar'></i> 07/09/2018
-        
+<h4 id="class-objects">Class objects</h4>
 
-        
-          
-            
-                <a class="label label-default" href="https://hajsong.github.io/ATM4110/tags/jupyter-notebook/">jupyter notebook</a>
-            
-        
+<p>Class objects support two kinds of operations: attribute references and instantiation.</p>
 
-    </footer>
-</article>
+<p><strong>Attribute references</strong> are defined as <code>obj.name</code>. For example,</p>
 
-   <article class="post python">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/ATM4110/python/">Python</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>The material here is based on the Chapter 3-5 in &ldquo;A Hands-On Introduction to Using Python in the Atmospheric and Oceanic Sciences&rdquo; by Johnny Wei-Bing Lin.  Python, like any other programming language, has variables and all the standard control structures. We will go though Python’s basic data and control structures that support procedural programming. Then we will explore how to use arrays, followed by file input and output. <a class="read-more" href="/ATM4110/python/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-            <i class='fa fa-user'></i> <a href="mailto:hajsong@yonsei.ac.kr">Hajoon Song</a>  <i class='fa fa-calendar'></i> 07/09/2018
-        
+<pre><code>class MyClass:
+    &quot;&quot;&quot; A simple example class &quot;&quot;&quot;
+    i = 100
 
-        
-          
-            
-                <a class="label label-default" href="https://hajsong.github.io/ATM4110/tags/python/">python</a>
-            
-                <a class="label label-default" href="https://hajsong.github.io/ATM4110/tags/jupyter-notebook/">jupyter notebook</a>
-            
-        
+    def f(self):
+        return 'hello'
+</code></pre>
 
-    </footer>
-</article>
+<p>In this example, the class <code>MyClass</code> has attributes, <code>i</code> that returns an integer, and <code>f()</code> that is a function object. These attributes are referred to <code>MyClass.i</code> and <code>MyClass.f</code>, respectively.
+There is another attribute: <code>__doc__</code> returns the docstring enclosed with three double quotation marks.</p>
 
-   <article class="post environment">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/ATM4110/environment/howtouse/">Start Python / Jupyter Notebook</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>This page guides you how to use Python and Jupyter Notebook using the example, Celsius and Fahrenheit converter.
-When you want to convert the unit from Fahrenheit to Celsius, the formula is:
+<p>Class <strong>instantiation</strong> uses function notation. To create an instance <code>x</code> in the class <code>MyClass</code>, you can simply type as the following:</p>
 
-From Celsius to Fahrenheit, the formula is:
+<pre><code>x = MyClass()
+</code></pre>
 
-Python To start Python, you can type python in the terminal.
-$ python  Then you may see that the prompt has been changed as
-Python 3.6.3 |Anaconda, Inc. <a class="read-more" href="/ATM4110/environment/howtouse/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-            <i class='fa fa-user'></i> <a href="mailto:hajsong@yonsei.ac.kr">Hajoon Song</a>  <i class='fa fa-calendar'></i> 13/09/2018
-        
+<p>When you create an instance of your own object, you may want to customize the initialization of the instance.
+This method is called whenever you create an instance of the class, and so you usually put code that handles the arguments present when you create (or instantiate) an instance of a class and conducts any kind of initialization for the object instance.</p>
 
-        
-          
-            
-                <a class="label label-default" href="https://hajsong.github.io/ATM4110/tags/python/">python</a>
-            
-                <a class="label label-default" href="https://hajsong.github.io/ATM4110/tags/jupyter-notebook/">jupyter notebook</a>
-            
-        
+<pre><code>class MyClass:
+    &quot;&quot;&quot; A simple example class &quot;&quot;&quot;
+    def __init__(self)
+        self.data =[]
 
-    </footer>
-</article>
+    i = 100
 
+    def f(self):
+        return 'hello'
+</code></pre>
 
-<div style="margin-bottom:2rem"></div>
+<p>Within the definition, you refer to the instance of the class as <code>self</code>.
+So, you can refer to the attribute defined earlier as <code>self.&lt;attribute name&gt;</code>, and the method (or function) as <code>self.&lt;method name&gt;</code> (e.g. <code>self.data</code> or <code>self.calculate</code>).</p>
 
-<nav class="pagination" role="navigation">
-	
-	<span class="page-number">Page 1 of 1</span>
-	
-</nav>
+<p>Methods are defined using the <code>def</code> statement.
+The first argument in any method is <code>self</code>; this syntax is how Python tells a method &ldquo;make use of all the previously defined attributes and methods in this instance.&rdquo;
+<strong>However, you never type self when you call the method.</strong></p>
 
+<h4 id="example">Example</h4>
 
+<p>This class provides a template for holding and manipulating information about a book.
+The class definition provides a single method (besides the initialization method) that returns a formatted bibliographic reference for the book.
+The code below gives the class definition and then creates two instances of the class (note line continuations are added to fit the code on the page):</p>
+
+<pre><code>class Book:
+    def __init__(self, authorlast, authorfirst, \
+        title, place, publisher, year):
+        self.authorlast = authorlast
+        self.authorfirst = authorfirst
+        self.title = title
+        self.place = place
+        self.publisher = publisher
+        self.year = year
+
+    def write_bib_entry(self):
+        return self.authorlast \
+            + ', ' + self.authorfirst \
+            + ', ' + self.title \
+            + ', ' + self.place \
+            + ': ' + self.publisher + ', ' \
+            + self.year + '.'
+</code></pre>
+
+<p>The arguments list of <code>__init__</code> is the list of arguments passed in to the constructor of the class, which is called when you use the class name with calling syntax.</p>
+
+<pre><code>beauty = Book( &quot;Dubay&quot;, &quot;Thomas&quot; \
+             , &quot;The Evidential Power of Beauty&quot; \
+             , &quot;San Francisco&quot; \
+             , &quot;Ignatius Press&quot;, &quot;1999&quot; )
+pynut = Book( &quot;Martelli&quot;, &quot;Alex&quot; \
+            , &quot;Python in a Nutshell&quot; \
+            , &quot;Sebastopol, CA&quot; \
+            , &quot;O'Reilly Media, Inc.&quot;, &quot;2003&quot; )
+</code></pre>
+
+<p>In defining the class, you need to be consistent with indentation.
+Try the following example.</p>
+
+<pre><code>class Book(object):
+    def __init__(self, authorlast, authorfirst, \
+        title, place, publisher, year):
+        self.authorlast = authorlast
+        self.authorfirst = authorfirst
+        self.title = title
+        self.place = place
+        self.publisher = publisher
+        self.year = year
+
+def write_bib_entry(self):
+    return self.authorlast \
+        + ', ' + self.authorfirst \
+        + ', ' + self.title \
+        + ', ' + self.place \
+        + ': ' + self.publisher + ', ' \
+        + self.year + '.'
+</code></pre>
+
+<p>Does the <code>Book</code> class have the method <code>write_bib_entry</code>?
+What is the role of <code>self</code> in <code>write_bib_entry</code>?</p>
 
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-next" href="/ATM4110/syllabus/" title="Syllabus" style="margin-right: 0px;"><label>Syllabus</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/ATM4110/python/object/" title="Introduction to Object"> <i class="fa fa-chevron-left"></i><label>Introduction to Object</label></a>
+    <a class="nav nav-next" href="/ATM4110/homework/" title=" Homework" style="margin-right: 0px;"><label> Homework</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>
@@ -406,17 +412,29 @@ Python 3.6.3 |Anaconda, Inc. <a class="read-more" href="/ATM4110/environment/how
 
 <div class="footline">
     
+    <div class="tags"> 
+      
+        <a class="label label-default" href="https://hajsong.github.io/ATM4110/tags/class">class</a>
+      
+        <a class="label label-default" href="https://hajsong.github.io/ATM4110/tags/object">object</a>
+      
+    </div>
+    
 
+    
+    <div class="author">
+        <i class='fa fa-user'></i> <a href="mailto:hajsong@yonsei.ac.kr">Hajoon Song</a>
+    </div>
     
 
   
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 07/09/2018
+        <i class='fa fa-calendar'></i> Last update on 20/09/2018
     </div>
     
 
     <div class="github-link">
-      <a href="https://github.com/hajsong/ATM4110/content/" target="blank"><i class="fa fa-code-fork"></i>
+      <a href="https://github.com/hajsong/ATM4110/content/python/myclass.md" target="blank"><i class="fa fa-code-fork"></i>
         Improve this page</a>
     </div>
   </div>

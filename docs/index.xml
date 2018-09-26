@@ -139,7 +139,7 @@ The Jupyter Notebook is making one of the most significant advances in the scien
     </item>
     
     <item>
-      <title>Object</title>
+      <title>Introduction to Object</title>
       <link>https://hajsong.github.io/ATM4110/python/object/</link>
       <pubDate>Wed, 19 Sep 2018 09:59:47 +0900</pubDate>
       
@@ -147,6 +147,17 @@ The Jupyter Notebook is making one of the most significant advances in the scien
       <description>Python is an object oriented programming language. In fact, almost everything in Python is an object. Then what is an object?
 An object is a variable that has attached to it both data (attributes) and functions designed to act on that data (methods). So what does this mean?
 The key idea of objects is that variables shouldn&amp;rsquo;t be thought of as having only values (and type), but rather they should be thought of entities that can have any number of other things &amp;ldquo;attached&amp;rdquo; to them.</description>
+    </item>
+    
+    <item>
+      <title>Defining class</title>
+      <link>https://hajsong.github.io/ATM4110/python/myclass/</link>
+      <pubDate>Thu, 20 Sep 2018 17:35:05 +0900</pubDate>
+      
+      <guid>https://hajsong.github.io/ATM4110/python/myclass/</guid>
+      <description>&amp;ldquo;Classes provide a means of bundling data and functionality together.&amp;rdquo; (from the Python documentation)
+We can define our own type of object by creating a new class that can carry attributes and methods to maintaining and modifying its state.
+When we define a new variable, we actually create a new instance of a class. For example, typing a = &#39;hello&#39; creates an instance of a predefined string class. Likewise, we can create a new class instance that has the format of the class we defined.</description>
     </item>
     
     <item>
