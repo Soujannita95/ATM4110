@@ -277,6 +277,18 @@ control structures. We will go though Python’s basic data and
 control structures that support procedural programming.
 Then we will explore how to use arrays, followed by file input and output.</p>
 
+<p><em>A few list of changes in Python 3.x that differs from Python 2.x</em></p>
+
+<ul>
+<li>The <code>print</code> function syntax now looks like any other function, e.g., <code>print(&quot;Hello&quot;)</code>.</li>
+<li>The division operator uses floating point division, even when both the numerator and denominator are integers.</li>
+<li>Using <code>raise</code> to raise an exception has a new syntax.</li>
+<li>Dictionary methods <code>keys</code> and <code>values</code> no longer return lists. Neither does range. To make lists out of the return values, use the <code>list</code> function.</li>
+<li>Dictionaries no longer have the <code>has_key</code> method. Test instead for <code>key</code> in <code>dict</code> (where <code>key</code> is the key of interest and <code>dict</code> is your dictionary object). Note that if a value in your dictionary is the same as <code>key</code>, the membership testing will not return <code>True</code>.</li>
+<li>Relative imports (i.e., importing a module in the current directory) require the use of . in front of the module name.</li>
+<li>The version of NumPy generally installed with Python 3.x has a function <code>ndim</code> that gives the number of dimensions of an array, rather than <code>rank</code>.</li>
+</ul>
+
 
 
     

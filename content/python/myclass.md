@@ -283,3 +283,6 @@ john.name = 'John Doe'
 john.dept = 'computer lab'
 john.salary = 1000
 ```
+
+#### Object-Oriented programming
+We are using the example script that can be downloaded from [here](images/bibliog.py)
