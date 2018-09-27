@@ -1,3 +1,3 @@
 [To encrypt all material]
-$ staticrypt docs/index.html 50yonseiroatm4110 -f passwd_template.html -o docs/index.html
+$ staticrypt docs/index.html yonseiatm4110 -f passwd_template.html -o docs/index.html
 

@@ -284,7 +284,7 @@ john.dept = 'computer lab'
 john.salary = 1000
 ```
 
-#### More complicated Example
++ You can use its own class in the definition.
 ```
 from math import sqrt
 
@@ -309,6 +309,7 @@ class Rocket():
         distance = sqrt((self.x-other_rocket.x)**2+(self.y-other_rocket.y)**2)
         return distance
 ```
+The method ```get_distance``` takes the positional argument ```other_rocket``` which is also ```Rocket``` class.
 
 ```
 # Make two rockets, at different places.
