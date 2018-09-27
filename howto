@@ -1,4 +1,3 @@
 [To encrypt all material]
-in "docs" directory
 $ staticrypt docs/index.html 50yonseiroatm4110 -f passwd_template.html -o docs/index.html
 
