@@ -1,4 +1,4 @@
 [To encrypt all material]
 in "docs" directory
-$ find . -type f -name "*.html" -exec staticrypt {} mypassword -o encrypt \; 
+$ staticrypt index.html 50yonseiroatm4110 -o index.html
 

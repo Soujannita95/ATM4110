@@ -305,6 +305,9 @@ Definition of the class must be done before using it. The <code>&lt;statement-i&
         return 'hello'
 </code></pre>
 
+<p>Within the definition, you refer to the instance of the class as <code>self</code>.
+So, you can refer to the attribute defined earlier as <code>self.&lt;attribute name&gt;</code>, and the method (or function) as <code>self.&lt;method name&gt;</code> (e.g. <code>self.data</code> or <code>self.calculate</code>).</p>
+
 <p>In this example, the class <code>MyClass</code> has attributes, <code>i</code> that returns an integer, and <code>f()</code> that is a function object. These attributes are referred to <code>MyClass.i</code> and <code>MyClass.f</code>, respectively.
 There is another attribute: <code>__doc__</code> returns the docstring enclosed with three double quotation marks.</p>
 
@@ -313,13 +316,27 @@ There is another attribute: <code>__doc__</code> returns the docstring enclosed 
 <pre><code>x = MyClass()
 </code></pre>
 
+<p>Then, you can access the attributes as the following:</p>
+
+<pre><code>x.i
+x.f()
+</code></pre>
+
+<p>Or you can also get attributes with</p>
+
+<pre><code>MyClass.i
+MyClass.f(x)
+</code></pre>
+
+<p>The expression is consistent with the <code>f()</code> definition.</p>
+
 <p>When you create an instance of your own object, you may want to customize the initialization of the instance.
 This method is called whenever you create an instance of the class, and so you usually put code that handles the arguments present when you create (or instantiate) an instance of a class and conducts any kind of initialization for the object instance.</p>
 
 <pre><code>class MyClass:
     &quot;&quot;&quot; A simple example class &quot;&quot;&quot;
-    def __init__(self)
-        self.data =[]
+    def __init__(self):
+        self.data = []
 
     i = 100
 
@@ -327,20 +344,51 @@ This method is called whenever you create an instance of the class, and so you u
         return 'hello'
 </code></pre>
 
-<p>Within the definition, you refer to the instance of the class as <code>self</code>.
-So, you can refer to the attribute defined earlier as <code>self.&lt;attribute name&gt;</code>, and the method (or function) as <code>self.&lt;method name&gt;</code> (e.g. <code>self.data</code> or <code>self.calculate</code>).</p>
+<p>If you create a variable with this class, you can see additional attribute, <code>data</code>.</p>
 
-<p>Methods are defined using the <code>def</code> statement.
-The first argument in any method is <code>self</code>; this syntax is how Python tells a method &ldquo;make use of all the previously defined attributes and methods in this instance.&rdquo;
-<strong>However, you never type self when you call the method.</strong></p>
+<pre><code>x = MyClass()
+print(x.data)
+</code></pre>
 
-<h4 id="example">Example</h4>
+<p>The example above does not take any inputs and the initialization of <code>x</code> doesn&rsquo;t do anything but creating a space called <code>data</code>.
+The following example now takes an input to initialize the instant <code>x</code>.</p>
+
+<pre><code>class MyClass:
+    &quot;&quot;&quot; A simple example class &quot;&quot;&quot;
+    def __init__(self, data):
+        self.data = data
+
+    i = 100
+
+    def f(self):
+        return 'hello'
+</code></pre>
+
+<p>If you try to create a new variable <code>x</code> as above, you will get an error.</p>
+
+<pre><code>&gt;&gt;&gt; x = MyClass()
+Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+TypeError: __init__() missing 1 required positional argument: 'data'
+</code></pre>
+
+<p>Instead, you can create <code>x</code> by providing the initial value.</p>
+
+<pre><code>&gt;&gt;&gt; x = MyClass(10)
+&gt;&gt;&gt; print(x.data)
+10
+</code></pre>
+
+<h4 id="a-practical-example">A Practical Example</h4>
 
 <p>This class provides a template for holding and manipulating information about a book.
 The class definition provides a single method (besides the initialization method) that returns a formatted bibliographic reference for the book.
 The code below gives the class definition and then creates two instances of the class (note line continuations are added to fit the code on the page):</p>
 
-<pre><code>class Book:
+<pre><code>class Book(object):
+    &quot;&quot;&quot;
+    Objective : This class organizes the information of books
+    &quot;&quot;&quot;
     def __init__(self, authorlast, authorfirst, \
         title, place, publisher, year):
         self.authorlast = authorlast
@@ -359,7 +407,22 @@ The code below gives the class definition and then creates two instances of the 
             + self.year + '.'
 </code></pre>
 
+<p>Line 1 begins the class definition.
+By convention, class names follow the CapWords convention (capitalize the first letter of every word).
+The argument in the class statement is a special object called <code>object</code>.
+This has to do with the objective-oriented project idea, which is a topic beyond the scope of this class. In Python3, you can skip <code>object</code> as in the <code>MyClass</code> example, but please read <a href="https://stackoverflow.com/questions/4015417/python-class-inherits-object">this page</a> for more information.</p>
+
+<p>Line 2-4 contains docstring. In IPython, after defining <code>Book</code> class, you can check the docstring with</p>
+
+<pre><code>In [2]: Book?
+Init signature: Book(authorlast, authorfirst, title, place, publisher, year)
+Docstring:      Objective : This class organizes the information of books
+Type:           type
+</code></pre>
+
 <p>The arguments list of <code>__init__</code> is the list of arguments passed in to the constructor of the class, which is called when you use the class name with calling syntax.</p>
+
+<p>You can define instances as the following.</p>
 
 <pre><code>beauty = Book( &quot;Dubay&quot;, &quot;Thomas&quot; \
              , &quot;The Evidential Power of Beauty&quot; \
@@ -370,6 +433,15 @@ pynut = Book( &quot;Martelli&quot;, &quot;Alex&quot; \
             , &quot;Sebastopol, CA&quot; \
             , &quot;O'Reilly Media, Inc.&quot;, &quot;2003&quot; )
 </code></pre>
+
+<p>Then, you can get the formatted output of the book information.</p>
+
+<pre><code>In [4]: pynut.write_bib_entry()
+Out[4]: &quot;Martelli, Alex, Python in a Nutshell, Sebastopol, CA: O'Reilly Media, Inc., 2003.&quot;
+</code></pre>
+
+<p>It is noted that the <code>write_bib_entry</code> method is called with no input parameters, but in the class definition, I still need to provide it with <code>self</code> as an input.
+That way, the method definition is able to make use of all the attributes and methods attached to <code>self</code>.</p>
 
 <p>In defining the class, you need to be consistent with indentation.
 Try the following example.</p>
@@ -393,8 +465,102 @@ def write_bib_entry(self):
         + self.year + '.'
 </code></pre>
 
-<p>Does the <code>Book</code> class have the method <code>write_bib_entry</code>?
+<p>Does the <code>Book</code> class have the method <code>write_bib_entry</code>?</p>
+
+<p>In the example above, we defined a function, <code>write_bib_entry</code>. It is not a part of <code>Book</code>, so that when you try</p>
+
+<pre><code>In [5]: pynut.write_bib_entry()
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+&lt;ipython-input-10-de7a795a67da&gt; in &lt;module&gt;()
+----&gt; 1 pynut.write_bib_entry()
+
+AttributeError: 'Book' object has no attribute 'write_bib_entry'
+</code></pre>
+
+<p>But,</p>
+
+<pre><code>In [6]: write_bib_entry(pynut)
+Out[6]: &quot;Martelli, Alex, Python in a Nutshell, Sebastopol, CA: O'Reilly Media, Inc., 2003.&quot;
+</code></pre>
+
+<p>Why does this work?
 What is the role of <code>self</code> in <code>write_bib_entry</code>?</p>
+
+<h5 id="exercise">exercise</h5>
+
+<ol>
+<li>How would you print out the author attribute of the <code>pynut</code> instance (at the interpreter, after running the file)?</li>
+<li>If you type print <code>beauty.write_bib_entry()</code> at the interpreter (after running the file), what will happen?</li>
+<li>How would you change the publication year for the beauty book to <code>&quot;2010&quot;</code>?</li>
+</ol>
+
+<h4 id="remarks-on-class">Remarks on class</h4>
+
+<ul>
+<li>It is not necessary that the function definition is textually enclosed in the class definition: assigning a function object to a local variable in the class is also ok. For example:</li>
+</ul>
+
+<pre><code># Function defined outside the class
+def f1(self, x, y):
+    return min(x, x+y)
+
+class C:
+    f = f1
+
+    def g(self):
+        return 'hello world'
+
+    h = g
+</code></pre>
+
+<p>Then <code>C</code> has three attributes, <code>f</code>, <code>g</code>, and <code>h</code>. <code>f</code> requires two inputs to determine the minimum number, but <code>g</code> and <code>h</code> need no input (and they are identical).</p>
+
+<ul>
+<li>Methods may call other methods by using method attributes of the <code>self</code> argument:</li>
+</ul>
+
+<pre><code>class Bag:
+    def __init__(self):
+        self.data = []
+
+    def add(self, x):
+        self.data.append(x)
+
+    def addtwice(self, x):
+        self.add(x)
+        self.add(x)
+</code></pre>
+
+<p>In the method <code>addtwice</code>, the method <code>add</code> was called.</p>
+
+<pre><code>In [12]: y = Bag()
+
+In [13]: y.add(3)
+
+In [14]: y.data
+Out[14]: [3]
+
+In [15]: y.addtwice(4)
+
+In [16]: y.data
+Out[16]: [3, 4, 4]
+</code></pre>
+
+<ul>
+<li>Defining empty class can be done.</li>
+</ul>
+
+<pre><code>class Employee:
+    pass
+
+john = Employee()  # Create an empty employee record
+
+# Fill the fields of the record
+john.name = 'John Doe'
+john.dept = 'computer lab'
+john.salary = 1000
+</code></pre>
 
 
     
