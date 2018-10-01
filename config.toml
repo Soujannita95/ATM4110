@@ -9,6 +9,8 @@ pygmentsStyle = "monokailight"
 
 publishDir = "docs"
 
+googleAnalytics = "UA-113704256-3"
+
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir= false
 enableMissingTranslationPlaceholders = false
