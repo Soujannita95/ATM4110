@@ -112,6 +112,11 @@
   </url>
   
   <url>
+    <loc>https://hajsong.github.io/ATM4110/python/array1/</loc>
+    <lastmod>2018-10-01T13:51:55+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://hajsong.github.io/ATM4110/</loc>
     <lastmod>2018-09-04T07:45:45+09:00</lastmod>
   </url>
@@ -119,6 +124,12 @@
   <url>
     <loc>https://hajsong.github.io/ATM4110/tags/anaconda/</loc>
     <lastmod>2018-09-07T12:36:51+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/array/</loc>
+    <lastmod>2018-10-01T13:51:55+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -220,6 +231,12 @@
   <url>
     <loc>https://hajsong.github.io/ATM4110/tags/module/</loc>
     <lastmod>2018-09-18T08:45:40+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/numpy/</loc>
+    <lastmod>2018-10-01T13:51:55+09:00</lastmod>
     <priority>0</priority>
   </url>
   

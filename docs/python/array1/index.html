@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ATM4110</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.37.1" />
+<title>Array operation 1 :: ATM4110</title>
+<link rel="shortcut icon" href="/ATM4110/images/favicon.png" type="image/x-icon" />
+<link href="/ATM4110/css/font-awesome.min.css" rel="stylesheet">
+<link href="/ATM4110/css/nucleus.css" rel="stylesheet">
+<link href="/ATM4110/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/ATM4110/css/bootstrap.min.css">
+<script src="/ATM4110/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/hajsong.github.io\/ATM4110\/";
+</script>
+<meta name="description" content="">
+
+
+
+    
+  </head>
+  <body data-url="/ATM4110/python/array1/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <a class="baselink" href="https://hajsong.github.io/ATM4110/">ATM4110</a>
+  
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://github.com/hajsong/ATM4110" target="_blank" rel="noopener">
+                  <i class='fa fa-github'></i> <label>Github repo</label>
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/ATM4110/" class="dd-item">
+          <a href="/ATM4110/">
+            <i class="fa fa-fw fa-home"></i> Home
+          </a>
+          </li>
+    <li data-nav-id="/ATM4110/syllabus/" class="dd-item
+        ">
+      <div>
+      <a href="/ATM4110/syllabus/">Syllabus</a>
+      </div>
+    </li>
+    <li data-nav-id="/ATM4110/linux/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ATM4110/linux/">Unix/Linux system</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ATM4110/linux/shell/" class="dd-item">
+        <div>
+          <a href="/ATM4110/linux/shell/">
+            Installation
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/linux/diroperation/" class="dd-item">
+        <div>
+          <a href="/ATM4110/linux/diroperation/">
+            Directory operation
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/linux/fileoperation/" class="dd-item">
+        <div>
+          <a href="/ATM4110/linux/fileoperation/">
+            File Operation
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/linux/filehandling/" class="dd-item">
+        <div>
+          <a href="/ATM4110/linux/filehandling/">
+            File Handling
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ATM4110/environment/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ATM4110/environment/">Computing Environment</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ATM4110/environment/python/" class="dd-item">
+        <div>
+          <a href="/ATM4110/environment/python/">
+            Python
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/environment/jupyter/" class="dd-item">
+        <div>
+          <a href="/ATM4110/environment/jupyter/">
+            Jupyter
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/environment/setup/" class="dd-item">
+        <div>
+          <a href="/ATM4110/environment/setup/">
+            Set up
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/environment/howtouse/" class="dd-item">
+        <div>
+          <a href="/ATM4110/environment/howtouse/">
+            Start Python / Jupyter Notebook
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ATM4110/python/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/ATM4110/python/">Python</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ATM4110/python/pythonbasic/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/pythonbasic/">
+            Basic Data and Control Structures
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/python_more/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/python_more/">
+            Functions, if statement and loops
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/module/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/module/">
+            Module
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/object/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/object/">
+            Introduction to Object
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/myclass/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/myclass/">
+            Defining class
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/array1/" class="dd-item active">
+        <div>
+          <a href="/ATM4110/python/array1/">
+            Array operation 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ATM4110/homework/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="/ATM4110/homework/"> Homework</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ATM4110/homework/homework4/" class="dd-item">
+        <div>
+          <a href="/ATM4110/homework/homework4/">
+            Homework 4
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/homework/homework3/" class="dd-item">
+        <div>
+          <a href="/ATM4110/homework/homework3/">
+            Homework 3
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/homework/homework2/" class="dd-item">
+        <div>
+          <a href="/ATM4110/homework/homework2/">
+            Homework 2
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/homework/homework1/" class="dd-item">
+        <div>
+          <a href="/ATM4110/homework/homework1/">
+            Homework 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/ATM4110/syllabus/" >
+   Syllabus</option>
+    <option value="/ATM4110/linux/" >
+   Unix/Linux system</option>
+    <option value="/ATM4110/environment/" >
+   Computing Environment</option>
+    <option value="/ATM4110/python/" >
+   Python</option> 
+      <option value="/ATM4110/python/pythonbasic/" >- Basic Data and Control Structures</option>
+      <option value="/ATM4110/python/python_more/" >- Functions, if statement and loops</option>
+      <option value="/ATM4110/python/module/" >- Module</option>
+      <option value="/ATM4110/python/object/" >- Introduction to Object</option>
+      <option value="/ATM4110/python/myclass/" >- Defining class</option>
+      <option value="/ATM4110/python/array1/"  selected>- Array operation 1</option>
+  
+    <option value="/ATM4110/homework/" >
+    Homework</option> 
+      <option value="/ATM4110/homework/homework4/" >- Homework 4</option>
+      <option value="/ATM4110/homework/homework3/" >- Homework 3</option>
+      <option value="/ATM4110/homework/homework2/" >- Homework 2</option>
+      <option value="/ATM4110/homework/homework1/" >- Homework 1</option>
+  
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Search...">
+        </div>
+        <script type="text/javascript" src="/ATM4110/js/lunr.min.js"></script>
+        <script type="text/javascript" src="/ATM4110/js/auto-complete.js"></script>
+        <link href="/ATM4110/css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "https:\/\/hajsong.github.io\/ATM4110\/";
+          
+        </script>
+        <script type="text/javascript" src="/ATM4110/js/search.js"></script>
+      </div>
+    
+
+    <h1>Array operation 1</h1>
+
+    
+    
+    
+    
+
+<p>We handled  list variables in the previous chapter, and we can add any types of data to the list, even another list!
+The computational overhead to support that flexibility, however, is non-trivial, and so lists are not practical to use for most scientific computing problems.</p>
+
+<p>In other words, lists are too slow.</p>
+
+<p>To solve this problem, Python has a package called <code>NumPy</code> which defines an array data type that in many ways is like the array data type in Fortran.</p>
+
+<p>An array is like a list except: All elements are of the same type, so operations with arrays are much faster; multi-dimensional arrays are more clearly supported; and array operations are supported.
+To utilize <code>NumPy</code>’s functions and attributes, you import the package <code>numpy</code>.
+Because NumPy functions are often used in scientific computing, you usually import NumPy as an alias, e.g., <code>import numpy as N</code> or <code>import numpy as np</code>, to save yourself some typing.
+In the following context, it is assumed that the NumPy package is imported as <code>np</code>.</p>
+
+<h4 id="creating-arrays">Creating arrays</h4>
+
+<p>The most basic way of creating an array is to take an existing list and convert it into an array using the <code>array</code> function in NumPy.</p>
+
+<pre><code>mylist = [[2, 3, -5],[21, -2, 1]]
+myarray = np.array(mylist)
+</code></pre>
+
+<ul>
+<li>What is the length of the list <code>mylist</code>?</li>
+<li>How do you see the size of <code>myarray</code>?</li>
+<li>How do they differ?</li>
+<li>What does it happen when you try to convert the list <code>[[2, 3, -5],[21, -2]]</code>?</li>
+</ul>
+
+<p>Sometimes you will want to make sure your NumPy array elements are of a specific type. To force a certain numerical type for the array, set the <code>dtype</code> keyword to a type code:</p>
+
+<pre><code>a = np.array(mylist, dtype='d')
+</code></pre>
+
+<p>where the string &ldquo;<code>d</code>&rdquo; is the typecode for double-precision floating point. Other options you have are</p>
+
+<ul>
+<li><code>f</code> : single precision floating</li>
+<li><code>i</code> : short integer</li>
+<li><code>l</code> : long integer</li>
+</ul>
+
+<p>To see the difference between single precision and double precision, let&rsquo;s try</p>
+
+<pre><code>&gt;&gt;&gt; b = np.array(10./3., dtype = 'd')
+&gt;&gt;&gt; c = np.array(10./3., dtype = 'f')
+&gt;&gt;&gt; print(b)
+&gt;&gt;&gt; print(c)
+</code></pre>
+
+<div class="panel panel-primary">
+	
+	<div class="panel-body"><p><code>np.array</code> is the function that create a variable with the array object called <code>ndarray</code>.</p>
+</div>
+	
+</div>
+
+
+<p>Often you will find the moment when you want to create an array of a specific size but with unknown or undetermined values. In this case, you can use either <code>zeros</code> or <code>empty</code> functions.</p>
+
+<pre><code>a = np.zeros((3, 2), dtype = 'd')
+</code></pre>
+
+<p>or</p>
+
+<pre><code>a = np.zeros([3, 2], dtype = 'd')
+</code></pre>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+        <span>
+        
+        
+        How do np.zeros and np.empty differ?
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<p>Here is the answer <a href="https://stackoverflow.com/questions/43145332/numpy-array-of-zeros-or-empty">from stackoverflow</a>:</p>
+
+<ul>
+<li><code>empty()</code> does not initialize the memory, therefore your array will be filled with garbage and you will have to initialize all cells.</li>
+<li><code>zeros()</code> initializes everything to 0. Therefore, if your final result includes lots of zeros, this will save you the time to set all those array cells to zero manually.</li>
+</ul>
+
+    </div>
+</div>
+
+<p>Another array you will commonly create is the array that has the increments increasing or decreasing monotonically. In this case, you can use the <code>arange</code> function.</p>
+
+<pre><code>&gt;&gt;&gt; a = np.arange(10)
+&gt;&gt;&gt; print(a)
+[0 1 2 3 4 5 6 7 8 9]
+</code></pre>
+
+<p>The array <code>a</code> has 10 integer elements.
+What if you want to create an array with floating numbers?</p>
+
+<pre><code>In [10]: a = np.arange(10.0)
+
+In [11]: b = np.arange(10, dtype = 'f')
+
+In [12]: print(a)
+[0. 1. 2. 3. 4. 5. 6. 7. 8. 9.]
+
+In [13]: print(b)
+[0. 1. 2. 3. 4. 5. 6. 7. 8. 9.]
+
+In [14]: whos
+Variable   Type       Data/Info
+-------------------------------
+a          ndarray    10: 10 elems, type `float64`, 80 bytes
+b          ndarray    10: 10 elems, type `float32`, 40 bytes
+np         module     &lt;module 'numpy' from '/Us&lt;...&gt;kages/numpy/__init__.py'&gt;
+</code></pre>
+
+<p>In case you want to create an 3 by 4 array with random numbers,</p>
+
+<pre><code>In [22]: np.random.random((3,4))
+Out[22]:
+array([[0.59544951, 0.38485189, 0.42626703, 0.38313338],
+       [0.51624656, 0.04025792, 0.65402374, 0.70589402],
+       [0.1984409 , 0.8254778 , 0.25162249, 0.89099201]])
+</code></pre>
+
+<p>It is noted that <code>np.random</code> is a submodule and it has a method called <code>random</code>.</p>
+
+<h4 id="array-indexing">Array indexing</h4>
+
+<p>Like lists, element addresses start with zero, so the first element of a 1-D array <code>a</code> is <code>a[0]</code>, the second is <code>a[1]</code>, etc.
+You can also reference elements starting from the end, e.g., element <code>a[-1]</code> is the last element in a 1-D array <code>a</code>.</p>
+
+<p>Array slicing follows rules very similar to list slicing:</p>
+
+<ul>
+<li>Element addresses in a range are separated by a colon.</li>
+<li>The lower limit is inclusive, and the upper limit is exclusive.</li>
+<li>If one of the limits is left out, the range is extended to the end of the
+range (e.g., if the lower limit is left out, the range extends to the very
+beginning of the array).</li>
+<li>Thus, to specify all elements, use a colon by itself.</li>
+</ul>
+
+<pre><code>In [14]: a = np.array([2, 3.2, 5.5, -6.4, -2.2, 2.4])
+
+In [15]: print(a[1])
+3.2
+
+In [16]: print(a[1:4])
+[ 3.2  5.5 -6.4]
+
+In [17]: print(a[2:])
+[ 5.5 -6.4 -2.2  2.4]
+
+In [18]: print(a[-2:])
+[-2.2  2.4]
+</code></pre>
+
+<p>For multi-dimensional arrays, indexing between different dimensions is separated by commas.
+Note that the fastest varying dimension is always the last index, the next fastest varying dimension is the next to last index, and so forth (this follows C convention).
+Thus, a 2-D array is indexed [row, col].
+Slicing rules also work as applied for each dimension (e.g., a colon selects all elements in that dimension). Here’s an example:</p>
+
+<pre><code>&gt;&gt;&gt; a = np.array([[2, 3.2, 5.5, -6.4, -2.2, 2.4],
+                 [1, 22, 4, 0.1, 5.3, -9],
+                 [3, 1, 2.1, 21, 1.1, -2]])
+&gt;&gt;&gt; print(a)
+[[ 2.   3.2  5.5 -6.4 -2.2  2.4]
+ [ 1.  22.   4.   0.1  5.3 -9. ]
+ [ 3.   1.   2.1 21.   1.1 -2. ]]
+</code></pre>
+
+<p>Then, what is <code>a[1,2]</code>? How about <code>a[:,3]</code>? <code>a[1,:]</code>? <code>a[1,1:4]</code>?</p>
+
+<pre><code>&gt;&gt;&gt; print(a[1,2])
+4.0
+&gt;&gt;&gt; print(a[:,3])
+[-6.4  0.1 21. ]
+&gt;&gt;&gt; print(a[1,:])
+[ 1.  22.   4.   0.1  5.3 -9. ]
+&gt;&gt;&gt; print(a[1,1:4])
+[22.   4.   0.1]
+</code></pre>
+
+<p>The extraction of the element can be possible by passing the list of index.</p>
+
+<pre><code>In [84]: i = [1, 3, 4]
+
+In [85]: a[2,i]
+Out[85]: array([ 1. , 21. ,  1.1])
+</code></pre>
+
+<p>It is also possible to get, for example, every other elements or every third elements.</p>
+
+<pre><code>In [13]: a[1,::2]
+Out[13]: array([1. , 4. , 5.3])
+</code></pre>
+
+<p>Python reverses the order if we give a negative number after two colons.</p>
+
+<pre><code>In [14]: a[1,::-1]
+Out[14]: array([-9. ,  5.3,  0.1,  4. , 22. ,  1. ])
+</code></pre>
+
+<h4 id="array-inquiry">Array inquiry</h4>
+
+<p>Arrays in Python are eventually object to which a list of attributes and methods are attached.
+Here are some of functions for the array inquiry.</p>
+
+<p>For the 2-D array <code>a</code> where</p>
+
+<pre><code>a = np.array([[2, 3.2, 5.5, -6.4, -2.2, 2.4],
+             [1, 22, 4, 0.1, 5.3, -9],
+             [3, 1, 2.1, 21, 1.1, -2]])
+</code></pre>
+
+<p>To get the size of the array, one can use <code>np.shape(a)</code> that gives <code>(3, 6)</code> in this example.
+If we want to know the total number of elements in the array, <code>np.size(a)</code> gives <code>18</code>.
+It is noted that <code>len(a)</code> function that was used for list variables will return <code>3</code>.
+To find out the data type, try <code>a.dtype.char</code>.</p>
+
+<h4 id="array-manipulation">Array manipulation</h4>
+
+<p>In addition to finding things about an array, NumPy includes many functions to manipulate arrays.
+Some, like <code>transpose</code>, come from linear algebra, but NumPy also includes a variety of array manipulation functions that enable you to modify arrays into the form you need to do the calculations you want.</p>
+
+<h5 id="copying">Copying</h5>
+
+<p>Let&rsquo;s suppose we want to copy the array <code>a</code> to <code>b</code> as <code>b = a</code>.
+Then change the element <code>b[0,0] = -2.0</code>. What happens to <code>a</code>?</p>
+
+<pre><code>In [13]: b = a
+
+In [14]: b[0,0] = -2.0
+
+In [15]: print(b)
+[[-2.   3.2  5.5 -6.4 -2.2  2.4]
+ [ 1.  22.   4.   0.1  5.3 -9. ]
+ [ 3.   1.   2.1 21.   1.1 -2. ]]
+
+In [16]: print(a)
+[[-2.   3.2  5.5 -6.4 -2.2  2.4]
+ [ 1.  22.   4.   0.1  5.3 -9. ]
+ [ 3.   1.   2.1 21.   1.1 -2. ]]
+</code></pre>
+
+<p>Interestingly, the array <code>a</code> is also changed and <code>a</code> and <code>b</code> are the same!
+In Python, the equal sign is not copying variables.</p>
+
+<p>To copy the array, we can use the function, <code>np.copy</code>.</p>
+
+<pre><code>In [3]: b = a.copy()
+
+In [4]: b[0,0] = -2.0
+
+In [5]: print(b)
+[[-2.   3.2  5.5 -6.4 -2.2  2.4]
+ [ 1.  22.   4.   0.1  5.3 -9. ]
+ [ 3.   1.   2.1 21.   1.1 -2. ]]
+
+In [6]: print(a)
+[[ 2.   3.2  5.5 -6.4 -2.2  2.4]
+ [ 1.  22.   4.   0.1  5.3 -9. ]
+ [ 3.   1.   2.1 21.   1.1 -2. ]]
+</code></pre>
+
+<h5 id="transpose">Transpose</h5>
+
+<p>The transpose of an array <code>a</code> can be done with <code>np.transpose(a)</code> or <code>a.T</code>:</p>
+
+<pre><code>In [44]: np.transpose(a)
+Out[44]:
+array([[ 2. ,  1. ,  3. ],
+       [ 3.2, 22. ,  1. ],
+       [ 5.5,  4. ,  2.1],
+       [-6.4,  0.1, 21. ],
+       [-2.2,  5.3,  1.1],
+       [ 2.4, -9. , -2. ]])
+
+In [45]: a.T
+Out[45]:
+array([[ 2. ,  1. ,  3. ],
+       [ 3.2, 22. ,  1. ],
+       [ 5.5,  4. ,  2.1],
+       [-6.4,  0.1, 21. ],
+       [-2.2,  5.3,  1.1],
+       [ 2.4, -9. , -2. ]])
+</code></pre>
+
+<h5 id="convert-from-n-d-to-1-d-array">Convert from N-D to 1-D array</h5>
+
+<p>We can make a N-dimensional array to a 1-D array or a vector.
+There are two functions that make this happen : <code>ravel</code> and <code>flatten</code>.</p>
+
+<pre><code>In [5]: np.ravel(a)
+Out[5]:
+array([ 2. ,  3.2,  5.5, -6.4, -2.2,  2.4,  1. , 22. ,  4. ,  0.1,  5.3,
+       -9. ,  3. ,  1. ,  2.1, 21. ,  1.1, -2. ])
+
+In [6]: a.ravel()
+Out[6]:
+array([ 2. ,  3.2,  5.5, -6.4, -2.2,  2.4,  1. , 22. ,  4. ,  0.1,  5.3,
+       -9. ,  3. ,  1. ,  2.1, 21. ,  1.1, -2. ])
+
+In [7]: a.flatten()
+Out[7]:
+array([ 2. ,  3.2,  5.5, -6.4, -2.2,  2.4,  1. , 22. ,  4. ,  0.1,  5.3,
+       -9. ,  3. ,  1. ,  2.1, 21. ,  1.1, -2. ])
+</code></pre>
+
+<p>The function <code>flatten</code> is built-in in the NumPy array class, and it is not possible to use as <code>np.flatten(a)</code>.</p>
+
+<p>Another important difference between two is that while <code>flatten</code> copies the array, <code>ravel</code> doesn&rsquo;t.</p>
+
+<pre><code>In [34]: a_r = a.ravel()
+
+In [35]: a_f = a.flatten()
+
+In [36]: a_f = a.flatten()
+
+In [37]: a_f[3] = 10
+
+In [38]: print(a_f)
+[ 2.   3.2  5.5 10.  -2.2  2.4  1.  22.   4.   0.1  5.3 -9.   3.   1.
+  2.1 21.   1.1 -2. ]
+
+In [39]: print(a)
+[[ 2.   3.2  5.5 -6.4 -2.2  2.4]
+ [ 1.  22.   4.   0.1  5.3 -9. ]
+ [ 3.   1.   2.1 21.   1.1 -2. ]]
+
+ In [40]: a_r = a.ravel()
+
+In [41]: a_r[3] = 10
+
+In [43]: print(a_r)
+[ 2.   3.2  5.5 10.  -2.2  2.4  1.  22.   4.   0.1  5.3 -9.   3.   1.
+  2.1 21.   1.1 -2. ]
+
+In [44]: print(a)
+[[ 2.   3.2  5.5 10.  -2.2  2.4]
+ [ 1.  22.   4.   0.1  5.3 -9. ]
+ [ 3.   1.   2.1 21.   1.1 -2. ]]
+
+</code></pre>
+
+<h5 id="reshaping">Reshaping</h5>
+
+<p>We can convert the shape of the array as long as we keep the size the same.</p>
+
+<pre><code>Out[50]:
+array([[ 2. ,  3.2],
+       [ 5.5, -6.4],
+       [-2.2,  2.4],
+       [ 1. , 22. ],
+       [ 4. ,  0.1],
+       [ 5.3, -9. ],
+       [ 3. ,  1. ],
+       [ 2.1, 21. ],
+       [ 1.1, -2. ]])
+
+In [51]: a.reshape(9,2)
+Out[51]:
+array([[ 2. ,  3.2],
+       [ 5.5, -6.4],
+       [-2.2,  2.4],
+       [ 1. , 22. ],
+       [ 4. ,  0.1],
+       [ 5.3, -9. ],
+       [ 3. ,  1. ],
+       [ 2.1, 21. ],
+       [ 1.1, -2. ]])
+</code></pre>
+
+<h5 id="concatenation">Concatenation</h5>
+
+<p>Concatenation, or joining of two arrays in NumPy, is primarily accomplished using the routines <code>np.concatenate</code>, <code>np.vstack</code>, and <code>np.hstack</code>.
+<code>np.concatenate</code> takes a tuple or list of arrays as its first argument, as we can see here:</p>
+
+<pre><code>In [46]: x = np.array([1, 2, 3])
+
+In [47]: y = np.array([3, 2, 1])
+
+In [48]: np.concatenate([x, y])
+Out[48]: array([1, 2, 3, 3, 2, 1])
+</code></pre>
+
+<p>You can concatenate more than two arrays.</p>
+
+<pre><code>In [49]: np.concatenate([x, y, x])
+Out[49]: array([1, 2, 3, 3, 2, 1, 1, 2, 3])
+</code></pre>
+
+<p>And even 2-D arrays.</p>
+
+<pre><code>In [60]: a = np.arange(6).reshape(2,3)
+
+In [61]: print(a)
+[[0 1 2]
+ [3 4 5]]
+
+In [62]: np.concatenate((a, a))
+Out[62]:
+array([[0, 1, 2],
+       [3, 4, 5],
+       [0, 1, 2],
+       [3, 4, 5]])
+</code></pre>
+
+<p>We can control the axis along which the arrays are concatenated.</p>
+
+<pre><code>In [63]: np.concatenate((a, a), axis=1)
+Out[63]:
+array([[0, 1, 2, 0, 1, 2],
+       [3, 4, 5, 3, 4, 5]])
+</code></pre>
+
+<p>In some cases, <code>vstack</code> and <code>hstack</code> functions are more intuitive.</p>
+
+<pre><code>In [64]: np.vstack((a, a))
+Out[64]:
+array([[0, 1, 2],
+       [3, 4, 5],
+       [0, 1, 2],
+       [3, 4, 5]])
+
+In [65]: np.hstack((a, a))
+Out[65]:
+array([[0, 1, 2, 0, 1, 2],
+       [3, 4, 5, 3, 4, 5]])
+</code></pre>
+
+<h5 id="repetition">Repetition</h5>
+
+<p>When repeating each element is desired, <code>repeat</code> function is the right choice.</p>
+
+<pre><code>In [66]: print(d)
+[[0. 1. 2.]
+ [3. 4. 5.]]
+
+In [67]: np.repeat(a,3)
+Out[67]: array([0, 0, 0, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5])
+</code></pre>
+
+<p>By default, it use the flattened input array, and return a flat output array.
+We can specify the axis along which to repeat values.</p>
+
+<pre><code>In [76]: np.repeat(a,3, axis=0)
+Out[76]:
+array([[0, 1, 2],
+       [0, 1, 2],
+       [0, 1, 2],
+       [3, 4, 5],
+       [3, 4, 5],
+       [3, 4, 5]])
+
+In [77]: np.repeat(a,3, axis=1)
+Out[77]:
+array([[0, 0, 0, 1, 1, 1, 2, 2, 2],
+       [3, 3, 3, 4, 4, 4, 5, 5, 5]])
+</code></pre>
+
+<h5 id="convert-type">Convert type</h5>
+
+<p>The type of elements of the array can be converted using <code>astype</code> function.</p>
+
+<pre><code>In [69]: d = a.astype('f')
+
+In [70]: print(d)
+[[0. 1. 2.]
+ [3. 4. 5.]]
+</code></pre>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/ATM4110/python/myclass/" title="Defining class"> <i class="fa fa-chevron-left"></i><label>Defining class</label></a>
+    <a class="nav nav-next" href="/ATM4110/homework/" title=" Homework" style="margin-right: 0px;"><label> Homework</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+    <div class="tags"> 
+      
+        <a class="label label-default" href="https://hajsong.github.io/ATM4110/tags/array">array</a>
+      
+        <a class="label label-default" href="https://hajsong.github.io/ATM4110/tags/numpy">numpy</a>
+      
+    </div>
+    
+
+    
+    <div class="author">
+        <i class='fa fa-user'></i> <a href="mailto:hajsong@yonsei.ac.kr">Hajoon Song</a>
+    </div>
+    
+
+  
+    <div class="date">
+        <i class='fa fa-calendar'></i> Last update on 01/10/2018
+    </div>
+    
+
+    <div class="github-link">
+      <a href="https://github.com/hajsong/ATM4110/content/python/array1.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
+  </div>
+
+
+</footer>
+
+<script src="/ATM4110/js/clipboard.min.js"></script>
+
+<link href="/ATM4110/css/featherlight.min.css" rel="stylesheet">
+<script src="/ATM4110/js/featherlight.min.js"></script>
+
+
+
+<script src="/ATM4110/theme-flex/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

@@ -186,5 +186,16 @@ $ python  Then you may see that the prompt has been changed as
 Python 3.6.3 |Anaconda, Inc.</description>
     </item>
     
+    <item>
+      <title>Array operation 1</title>
+      <link>https://hajsong.github.io/ATM4110/python/array1/</link>
+      <pubDate>Mon, 01 Oct 2018 13:51:55 +0900</pubDate>
+      
+      <guid>https://hajsong.github.io/ATM4110/python/array1/</guid>
+      <description>We handled list variables in the previous chapter, and we can add any types of data to the list, even another list! The computational overhead to support that flexibility, however, is non-trivial, and so lists are not practical to use for most scientific computing problems.
+In other words, lists are too slow.
+To solve this problem, Python has a package called NumPy which defines an array data type that in many ways is like the array data type in Fortran.</description>
+    </item>
+    
   </channel>
 </rss>

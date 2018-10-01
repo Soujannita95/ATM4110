@@ -20,3 +20,5 @@ Using weather data from [KMA](http://www.weather.go.kr/weather/forecast/mid-term
 + In addition to max/min temperature, please add a statement that compares it with the climatological values.
 + Try to create your own class to do this job.
 + Turn in the python file or jupyter notebook file by next Thursday.
+
+Try to include everything in the class definition so that you can get the forecast statement with ```<Classname>.<printfunction>```.
