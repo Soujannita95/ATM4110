@@ -19,7 +19,7 @@ In other words, lists are too slow.
 To solve this problem, Python has a package called ```NumPy``` which defines an array data type that in many ways is like the array data type in Fortran.
 
 An array is like a list except: All elements are of the same type, so operations with arrays are much faster; multi-dimensional arrays are more clearly supported; and array operations are supported.
-To utilize ```NumPy```’s functions and attributes, you import the package ```numpy```.
+To utilize ```NumPy```’s functions and attributes, you import the package ```numpy.```
 Because NumPy functions are often used in scientific computing, you usually import NumPy as an alias, e.g., ```import numpy as N``` or ```import numpy as np```, to save yourself some typing.
 In the following context, it is assumed that the NumPy package is imported as ```np```.
 
@@ -29,10 +29,14 @@ The most basic way of creating an array is to take an existing list and convert 
 mylist = [[2, 3, -5],[21, -2, 1]]
 myarray = np.array(mylist)
 ```
-- What is the length of the list ```mylist```?
-- How do you see the size of ```myarray```?
-- How do they differ?
 - What does it happen when you try to convert the list ```[[2, 3, -5],[21, -2]]```?
+
+A row vector and a column vector can be made differently.
+```
+a = np.array([2, 3, 4])          # an array with three element
+b = np.array([[2, 3, 4]])        # a 1x3 row vector
+c = np.array([[2], [3], [4]])    # a 3x1 column vector
+```
 
 Sometimes you will want to make sure your NumPy array elements are of a specific type. To force a certain numerical type for the array, set the ```dtype``` keyword to a type code:
 ```
@@ -52,9 +56,7 @@ To see the difference between single precision and double precision, let's try
 >>> print(c)
 ```
 
-{{% panel %}}
-```np.array``` is the function that create a variable with the array object called ```ndarray```.
-{{% /panel %}}
+{{% panel %}}```np.array``` is the function that create a variable with the array object called ```ndarray```.{{% /panel %}}
 
 Often you will find the moment when you want to create an array of a specific size but with unknown or undetermined values. In this case, you can use either ```zeros``` or ```empty``` functions.
 ```
@@ -71,7 +73,7 @@ Here is the answer [from stackoverflow](https://stackoverflow.com/questions/4314
 - ```zeros()``` initializes everything to 0. Therefore, if your final result includes lots of zeros, this will save you the time to set all those array cells to zero manually.
 {{% /expand%}}
 
-Another array you will commonly create is the array that has the increments increasing or decreasing monotonically. In this case, you can use the ```arange``` function.
+Another array you will commonly create is the array whose elements increase or decrease monotonically. In this case, you can use the ```arange``` function.
 ```
 >>> a = np.arange(10)
 >>> print(a)
@@ -162,14 +164,6 @@ Then, what is ```a[1,2]```? How about ```a[:,3]```? ```a[1,:]```? ```a[1,1:4]```
 [22.   4.   0.1]
 ```
 
-The extraction of the element can be possible by passing the list of index.
-```
-In [84]: i = [1, 3, 4]
-
-In [85]: a[2,i]
-Out[85]: array([ 1. , 21. ,  1.1])
-```
-
 It is also possible to get, for example, every other elements or every third elements.
 ```
 In [13]: a[1,::2]
@@ -179,6 +173,40 @@ Python reverses the order if we give a negative number after two colons.
 ```
 In [14]: a[1,::-1]
 Out[14]: array([-9. ,  5.3,  0.1,  4. , 22. ,  1. ])
+```
+
+
+The extraction of the element can be possible by passing the list of the index.
+```
+In [84]: i = [1, 3, 4]
+
+In [85]: a[2,i]
+Out[85]: array([ 1. , 21. ,  1.1])
+```
+
+How about this?
+```
+In [7]: j = [0,1]
+
+In [8]: i = [2,4]
+
+In [9]: a[j,i]
+```
+This will give you the elements at the index (0,2) and (1,4) so that
+```
+Out[9]: array([5.5, 5.3])
+```
+Suppose you want to extract all elements that are at the first two rows and the third and fifth columns.
+```
+In [11]: a[j,:]
+Out[11]:
+array([[ 2. ,  3.2,  5.5, -6.4, -2.2,  2.4],
+       [ 1. , 22. ,  4. ,  0.1,  5.3, -9. ]])
+
+In [12]: a[j][:,i]
+Out[12]:
+array([[ 5.5, -2.2],
+       [ 4. ,  5.3]])
 ```
 
 #### Array inquiry
@@ -237,6 +265,7 @@ In [6]: print(a)
  [ 1.  22.   4.   0.1  5.3 -9. ]
  [ 3.   1.   2.1 21.   1.1 -2. ]]
 ```
+{{% alert theme="danger" %}}This also applies to the list. To copy the list variable ```a``` to ```b```, do ```b = a.copy()```.{{% /alert %}}
 
 ##### Transpose
 The transpose of an array ```a``` can be done with ```np.transpose(a)``` or ```a.T```:
@@ -259,6 +288,41 @@ array([[ 2. ,  1. ,  3. ],
        [-2.2,  5.3,  1.1],
        [ 2.4, -9. , -2. ]])
 ```
+
+If we define an array as in the first example and transpose it, there is no change.
+```
+In [59]: a = np.arange(5)
+
+In [60]: print(a)
+[0 1 2 3 4]
+
+In [61]: print(a.T)
+[0 1 2 3 4]
+```
+
+To make the transpose effective, the array has to be a vector or a multi-dimensional array.
+```
+In [62]: b = np.array([[2, 3, 4]])          # a row vector
+
+In [63]: print(b)
+[[2 3 4]]
+
+In [64]: print(b.T)
+[[2]
+ [3]
+ [4]]
+
+In [65]: c = np.array([[2], [3], [4]])    # a column vector
+
+In [66]: print(c)
+[[2]
+ [3]
+ [4]]
+
+In [67]: print(c.T)
+[[2 3 4]]
+```
+
 ##### Convert from N-D to 1-D array
 We can make a N-dimensional array to a 1-D array or a vector.
 There are two functions that make this happen : ```ravel``` and ```flatten```.
@@ -360,7 +424,7 @@ Out[49]: array([1, 2, 3, 3, 2, 1, 1, 2, 3])
 ```
 And even 2-D arrays.
 ```
-In [60]: a = np.arange(6).reshape(2,3)
+In [60]: a = np.arange(6).re(2,3)
 
 In [61]: print(a)
 [[0 1 2]
@@ -433,3 +497,86 @@ In [70]: print(d)
 [[0. 1. 2.]
  [3. 4. 5.]]
 ```
+
+#### Creating arrays representing the grid information of data
+In the atmospheric and oceanic sciences, we often find ourselves using 2-D regularly gridded slices of data where the *x*-and *y*-locations of each array element is given by the corresponding elements
+of the *x* and *y* vectors.
+Wouldn't it be nice to get a 2-D array whose elements are the x-values for each column and a 2-D array whose elements are the y-values for each row? The ```meshgrid``` function does just that.
+
+Let's first create vectors for longitude and latitude with the space of 5 degrees.
+```
+In [2]: lon = np.arange(-180, 180, 5)
+
+In [3]: lat = np.arange(-90, 91, 5)
+```
+According to the indexing rule in Python, ```lon``` starts from -180 with the increment of 5 but stops just before 180. That means that 180 is not a part of the array ```lon```.
+On the other hand, ```lat``` stops at 91, so it includes 90.
+
+To create 2-D arrays for longitude and latitude,
+```
+In [4]: [X, Y] = np.meshgrid(lon, lat)    # or X, Y = np.meshgrid(lon, lat)
+
+In [5]: print(X)
+[[-180 -175 -170 ...  165  170  175]
+ [-180 -175 -170 ...  165  170  175]
+ [-180 -175 -170 ...  165  170  175]
+ ...
+ [-180 -175 -170 ...  165  170  175]
+ [-180 -175 -170 ...  165  170  175]
+ [-180 -175 -170 ...  165  170  175]]
+
+In [6]: print(Y)
+[[-90 -90 -90 ... -90 -90 -90]
+ [-85 -85 -85 ... -85 -85 -85]
+ [-80 -80 -80 ... -80 -80 -80]
+ ...
+ [ 80  80  80 ...  80  80  80]
+ [ 85  85  85 ...  85  85  85]
+ [ 90  90  90 ...  90  90  90]]
+```
+
+You may have just one output
+```
+In [7]: G = np.meshgrid(lon, lat)
+
+In [8]: G?
+Type:        list
+String form:
+[array([[-180, -175, -170, ...,  165,  170,  175],
+           [-180, -175, -170, ...,  165,  170,  17 <...> ,  80],
+           [ 85,  85,  85, ...,  85,  85,  85],
+           [ 90,  90,  90, ...,  90,  90,  90]])]
+Length:      2
+Docstring:
+list() -> new empty list
+list(iterable) -> new list initialized from iterable's items
+```
+As you can see, ```meshgrid``` returns the list variable ```G```, and ```G[0]``` is equivalent to ```X``` and ```G[1]``` to ```Y```.
+
+When dealing with a 3-D data set, you need to include the third axis which is usually either height or depth.
+```
+In [9]: lev = np.array([0, 250, 500, 850, 1000])
+```
+Here, we want to replicate ```lev``` for each horizontal grid point. NumPy provides a function called ```tile``` to make this happen.
+
+For ```X``` and ```Y```,
+```
+In [71]: nz = len(lev)
+
+In [72]: XX = np.tile(X, [nz, 1, 1])
+
+In [73]: YY = np.tile(Y, [nz, 1, 1])
+```
+
+For ```Z```,
+```
+In [10]: ny, nx = X.shape
+
+In [11]: Z = np.tile(lev, [ny, nx, 1])
+
+In [12]: print(Z.shape)
+(37, 72, 5)
+```
+Although we were able to create a 3-D array, ```Z```, the location of the axis is little different from the convention we use (usually [t,z,y,x]). Using ```transpose``` function in NumPy, we can easily permute the order of axis.
+
+{{% panel %}}Why on earth do we have to go through the transpose of the array? According to the docstring of ```tile```, if the number of the dimension of the array is smaller than the length of the list in the second argument, NumPy prepends new axes to match the number of dimension. So a shape (3,) array is promoted to (1, 1, 3) for 3-D replication. {{% /panel %}}

@@ -302,7 +302,7 @@ The computational overhead to support that flexibility, however, is non-trivial,
 <p>To solve this problem, Python has a package called <code>NumPy</code> which defines an array data type that in many ways is like the array data type in Fortran.</p>
 
 <p>An array is like a list except: All elements are of the same type, so operations with arrays are much faster; multi-dimensional arrays are more clearly supported; and array operations are supported.
-To utilize <code>NumPy</code>’s functions and attributes, you import the package <code>numpy</code>.
+To utilize <code>NumPy</code>’s functions and attributes, you import the package <code>numpy.</code>
 Because NumPy functions are often used in scientific computing, you usually import NumPy as an alias, e.g., <code>import numpy as N</code> or <code>import numpy as np</code>, to save yourself some typing.
 In the following context, it is assumed that the NumPy package is imported as <code>np</code>.</p>
 
@@ -315,11 +315,15 @@ myarray = np.array(mylist)
 </code></pre>
 
 <ul>
-<li>What is the length of the list <code>mylist</code>?</li>
-<li>How do you see the size of <code>myarray</code>?</li>
-<li>How do they differ?</li>
 <li>What does it happen when you try to convert the list <code>[[2, 3, -5],[21, -2]]</code>?</li>
 </ul>
+
+<p>A row vector and a column vector can be made differently.</p>
+
+<pre><code>a = np.array([2, 3, 4])          # an array with three element
+b = np.array([[2, 3, 4]])        # a 1x3 row vector
+c = np.array([[2], [3], [4]])    # a 3x1 column vector
+</code></pre>
 
 <p>Sometimes you will want to make sure your NumPy array elements are of a specific type. To force a certain numerical type for the array, set the <code>dtype</code> keyword to a type code:</p>
 
@@ -344,8 +348,7 @@ myarray = np.array(mylist)
 
 <div class="panel panel-primary">
 	
-	<div class="panel-body"><p><code>np.array</code> is the function that create a variable with the array object called <code>ndarray</code>.</p>
-</div>
+	<div class="panel-body"><code>np.array</code> is the function that create a variable with the array object called <code>ndarray</code>.</div>
 	
 </div>
 
@@ -381,7 +384,7 @@ myarray = np.array(mylist)
     </div>
 </div>
 
-<p>Another array you will commonly create is the array that has the increments increasing or decreasing monotonically. In this case, you can use the <code>arange</code> function.</p>
+<p>Another array you will commonly create is the array whose elements increase or decrease monotonically. In this case, you can use the <code>arange</code> function.</p>
 
 <pre><code>&gt;&gt;&gt; a = np.arange(10)
 &gt;&gt;&gt; print(a)
@@ -477,14 +480,6 @@ Slicing rules also work as applied for each dimension (e.g., a colon selects all
 [22.   4.   0.1]
 </code></pre>
 
-<p>The extraction of the element can be possible by passing the list of index.</p>
-
-<pre><code>In [84]: i = [1, 3, 4]
-
-In [85]: a[2,i]
-Out[85]: array([ 1. , 21. ,  1.1])
-</code></pre>
-
 <p>It is also possible to get, for example, every other elements or every third elements.</p>
 
 <pre><code>In [13]: a[1,::2]
@@ -495,6 +490,41 @@ Out[13]: array([1. , 4. , 5.3])
 
 <pre><code>In [14]: a[1,::-1]
 Out[14]: array([-9. ,  5.3,  0.1,  4. , 22. ,  1. ])
+</code></pre>
+
+<p>The extraction of the element can be possible by passing the list of the index.</p>
+
+<pre><code>In [84]: i = [1, 3, 4]
+
+In [85]: a[2,i]
+Out[85]: array([ 1. , 21. ,  1.1])
+</code></pre>
+
+<p>How about this?</p>
+
+<pre><code>In [7]: j = [0,1]
+
+In [8]: i = [2,4]
+
+In [9]: a[j,i]
+</code></pre>
+
+<p>This will give you the elements at the index (0,2) and (1,4) so that</p>
+
+<pre><code>Out[9]: array([5.5, 5.3])
+</code></pre>
+
+<p>Suppose you want to extract all elements that are at the first two rows and the third and fifth columns.</p>
+
+<pre><code>In [11]: a[j,:]
+Out[11]:
+array([[ 2. ,  3.2,  5.5, -6.4, -2.2,  2.4],
+       [ 1. , 22. ,  4. ,  0.1,  5.3, -9. ]])
+
+In [12]: a[j][:,i]
+Out[12]:
+array([[ 5.5, -2.2],
+       [ 4. ,  5.3]])
 </code></pre>
 
 <h4 id="array-inquiry">Array inquiry</h4>
@@ -559,6 +589,12 @@ In [6]: print(a)
  [ 3.   1.   2.1 21.   1.1 -2. ]]
 </code></pre>
 
+<div class="alert 
+alert-danger"
+ 
+role="alert">This also applies to the list. To copy the list variable <code>a</code> to <code>b</code>, do <code>b = a.copy()</code>.</div>
+
+
 <h5 id="transpose">Transpose</h5>
 
 <p>The transpose of an array <code>a</code> can be done with <code>np.transpose(a)</code> or <code>a.T</code>:</p>
@@ -580,6 +616,40 @@ array([[ 2. ,  1. ,  3. ],
        [-6.4,  0.1, 21. ],
        [-2.2,  5.3,  1.1],
        [ 2.4, -9. , -2. ]])
+</code></pre>
+
+<p>If we define an array as in the first example and transpose it, there is no change.</p>
+
+<pre><code>In [59]: a = np.arange(5)
+
+In [60]: print(a)
+[0 1 2 3 4]
+
+In [61]: print(a.T)
+[0 1 2 3 4]
+</code></pre>
+
+<p>To make the transpose effective, the array has to be a vector or a multi-dimensional array.</p>
+
+<pre><code>In [62]: b = np.array([[2, 3, 4]])          # a row vector
+
+In [63]: print(b)
+[[2 3 4]]
+
+In [64]: print(b.T)
+[[2]
+ [3]
+ [4]]
+
+In [65]: c = np.array([[2], [3], [4]])    # a column vector
+
+In [66]: print(c)
+[[2]
+ [3]
+ [4]]
+
+In [67]: print(c.T)
+[[2 3 4]]
 </code></pre>
 
 <h5 id="convert-from-n-d-to-1-d-array">Convert from N-D to 1-D array</h5>
@@ -688,7 +758,7 @@ Out[49]: array([1, 2, 3, 3, 2, 1, 1, 2, 3])
 
 <p>And even 2-D arrays.</p>
 
-<pre><code>In [60]: a = np.arange(6).reshape(2,3)
+<pre><code>In [60]: a = np.arange(6).re(2,3)
 
 In [61]: print(a)
 [[0 1 2]
@@ -765,6 +835,99 @@ In [70]: print(d)
 [[0. 1. 2.]
  [3. 4. 5.]]
 </code></pre>
+
+<h4 id="creating-arrays-representing-the-grid-information-of-data">Creating arrays representing the grid information of data</h4>
+
+<p>In the atmospheric and oceanic sciences, we often find ourselves using 2-D regularly gridded slices of data where the <em>x</em>-and <em>y</em>-locations of each array element is given by the corresponding elements
+of the <em>x</em> and <em>y</em> vectors.
+Wouldn&rsquo;t it be nice to get a 2-D array whose elements are the x-values for each column and a 2-D array whose elements are the y-values for each row? The <code>meshgrid</code> function does just that.</p>
+
+<p>Let&rsquo;s first create vectors for longitude and latitude with the space of 5 degrees.</p>
+
+<pre><code>In [2]: lon = np.arange(-180, 180, 5)
+
+In [3]: lat = np.arange(-90, 91, 5)
+</code></pre>
+
+<p>According to the indexing rule in Python, <code>lon</code> starts from -180 with the increment of 5 but stops just before 180. That means that 180 is not a part of the array <code>lon</code>.
+On the other hand, <code>lat</code> stops at 91, so it includes 90.</p>
+
+<p>To create 2-D arrays for longitude and latitude,</p>
+
+<pre><code>In [4]: [X, Y] = np.meshgrid(lon, lat)    # or X, Y = np.meshgrid(lon, lat)
+
+In [5]: print(X)
+[[-180 -175 -170 ...  165  170  175]
+ [-180 -175 -170 ...  165  170  175]
+ [-180 -175 -170 ...  165  170  175]
+ ...
+ [-180 -175 -170 ...  165  170  175]
+ [-180 -175 -170 ...  165  170  175]
+ [-180 -175 -170 ...  165  170  175]]
+
+In [6]: print(Y)
+[[-90 -90 -90 ... -90 -90 -90]
+ [-85 -85 -85 ... -85 -85 -85]
+ [-80 -80 -80 ... -80 -80 -80]
+ ...
+ [ 80  80  80 ...  80  80  80]
+ [ 85  85  85 ...  85  85  85]
+ [ 90  90  90 ...  90  90  90]]
+</code></pre>
+
+<p>You may have just one output</p>
+
+<pre><code>In [7]: G = np.meshgrid(lon, lat)
+
+In [8]: G?
+Type:        list
+String form:
+[array([[-180, -175, -170, ...,  165,  170,  175],
+           [-180, -175, -170, ...,  165,  170,  17 &lt;...&gt; ,  80],
+           [ 85,  85,  85, ...,  85,  85,  85],
+           [ 90,  90,  90, ...,  90,  90,  90]])]
+Length:      2
+Docstring:
+list() -&gt; new empty list
+list(iterable) -&gt; new list initialized from iterable's items
+</code></pre>
+
+<p>As you can see, <code>meshgrid</code> returns the list variable <code>G</code>, and <code>G[0]</code> is equivalent to <code>X</code> and <code>G[1]</code> to <code>Y</code>.</p>
+
+<p>When dealing with a 3-D data set, you need to include the third axis which is usually either height or depth.</p>
+
+<pre><code>In [9]: lev = np.array([0, 250, 500, 850, 1000])
+</code></pre>
+
+<p>Here, we want to replicate <code>lev</code> for each horizontal grid point. NumPy provides a function called <code>tile</code> to make this happen.</p>
+
+<p>For <code>X</code> and <code>Y</code>,</p>
+
+<pre><code>In [71]: nz = len(lev)
+
+In [72]: XX = np.tile(X, [nz, 1, 1])
+
+In [73]: YY = np.tile(Y, [nz, 1, 1])
+</code></pre>
+
+<p>For <code>Z</code>,</p>
+
+<pre><code>In [10]: ny, nx = X.shape
+
+In [11]: Z = np.tile(lev, [ny, nx, 1])
+
+In [12]: print(Z.shape)
+(37, 72, 5)
+</code></pre>
+
+<p>Although we were able to create a 3-D array, <code>Z</code>, the location of the axis is little different from the convention we use (usually [t,z,y,x]). Using <code>transpose</code> function in NumPy, we can easily permute the order of axis.</p>
+
+<div class="panel panel-primary">
+	
+	<div class="panel-body">Why on earth do we have to go through the transpose of the array? According to the docstring of <code>tile</code>, if the number of the dimension of the array is smaller than the length of the list in the second argument, NumPy prepends new axes to match the number of dimension. So a shape (3,) array is promoted to (1, 1, 3) for 3-D replication.</div>
+	
+</div>
+
 
 
     
