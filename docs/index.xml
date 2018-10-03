@@ -197,5 +197,14 @@ In other words, lists are too slow.
 To solve this problem, Python has a package called NumPy which defines an array data type that in many ways is like the array data type in Fortran.</description>
     </item>
     
+    <item>
+      <title>Array operation 2</title>
+      <link>https://hajsong.github.io/ATM4110/python/array2/</link>
+      <pubDate>Tue, 02 Oct 2018 17:51:32 +0900</pubDate>
+      
+      <guid>https://hajsong.github.io/ATM4110/python/array2/</guid>
+      <description>So far we&amp;rsquo;ve learned how to make arrays, ask arrays to tell us about themselves, and manipulate arrays. But what scientists really want to do with arrays is make calculations with them. As a start, we discuss two ways to do exactly that. Method 1 uses for loops, in analogue to the use of loops in traditional Fortran programming, to do element-wise array calculations. Method 2 uses array syntax, where looping over array elements happens implicitly (this syntax is also found in Fortran 90 and later versions, IDL, etc.</description>
+    </item>
+    
   </channel>
 </rss>

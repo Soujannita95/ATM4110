@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ATM4110</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.37.1" />
+<title>Array operation 2 :: ATM4110</title>
+<link rel="shortcut icon" href="/ATM4110/images/favicon.png" type="image/x-icon" />
+<link href="/ATM4110/css/font-awesome.min.css" rel="stylesheet">
+<link href="/ATM4110/css/nucleus.css" rel="stylesheet">
+<link href="/ATM4110/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/ATM4110/css/bootstrap.min.css">
+<script src="/ATM4110/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/hajsong.github.io\/ATM4110\/";
+</script>
+<meta name="description" content="">
+
+
+
+    
+  </head>
+  <body data-url="/ATM4110/python/array2/">
+    
+      <header>
+  <div class="logo">
+    
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-113704256-3', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+</script>
+<script type="text/javascript" async
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+	
+  
+    <a class="baselink" href="https://hajsong.github.io/ATM4110/">ATM4110</a>
+  
+
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://github.com/hajsong/ATM4110" target="_blank" rel="noopener">
+                  <i class='fa fa-github'></i> <label>Github repo</label>
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/ATM4110/" class="dd-item">
+          <a href="/ATM4110/">
+            <i class="fa fa-fw fa-home"></i> Home
+          </a>
+          </li>
+    <li data-nav-id="/ATM4110/syllabus/" class="dd-item
+        ">
+      <div>
+      <a href="/ATM4110/syllabus/">Syllabus</a>
+      </div>
+    </li>
+    <li data-nav-id="/ATM4110/linux/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ATM4110/linux/">Unix/Linux system</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ATM4110/linux/shell/" class="dd-item">
+        <div>
+          <a href="/ATM4110/linux/shell/">
+            Installation
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/linux/diroperation/" class="dd-item">
+        <div>
+          <a href="/ATM4110/linux/diroperation/">
+            Directory operation
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/linux/fileoperation/" class="dd-item">
+        <div>
+          <a href="/ATM4110/linux/fileoperation/">
+            File Operation
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/linux/filehandling/" class="dd-item">
+        <div>
+          <a href="/ATM4110/linux/filehandling/">
+            File Handling
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ATM4110/environment/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ATM4110/environment/">Computing Environment</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ATM4110/environment/python/" class="dd-item">
+        <div>
+          <a href="/ATM4110/environment/python/">
+            Python
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/environment/jupyter/" class="dd-item">
+        <div>
+          <a href="/ATM4110/environment/jupyter/">
+            Jupyter
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/environment/setup/" class="dd-item">
+        <div>
+          <a href="/ATM4110/environment/setup/">
+            Set up
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/environment/howtouse/" class="dd-item">
+        <div>
+          <a href="/ATM4110/environment/howtouse/">
+            Start Python / Jupyter Notebook
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ATM4110/python/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/ATM4110/python/">Python</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ATM4110/python/pythonbasic/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/pythonbasic/">
+            Basic Data and Control Structures
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/python_more/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/python_more/">
+            Functions, if statement and loops
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/module/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/module/">
+            Module
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/object/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/object/">
+            Introduction to Object
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/myclass/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/myclass/">
+            Defining class
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/array1/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/array1/">
+            Array operation 1
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/array2/" class="dd-item active">
+        <div>
+          <a href="/ATM4110/python/array2/">
+            Array operation 2
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ATM4110/homework/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="/ATM4110/homework/"> Homework</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ATM4110/homework/homework4/" class="dd-item">
+        <div>
+          <a href="/ATM4110/homework/homework4/">
+            Homework 4
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/homework/homework3/" class="dd-item">
+        <div>
+          <a href="/ATM4110/homework/homework3/">
+            Homework 3
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/homework/homework2/" class="dd-item">
+        <div>
+          <a href="/ATM4110/homework/homework2/">
+            Homework 2
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/homework/homework1/" class="dd-item">
+        <div>
+          <a href="/ATM4110/homework/homework1/">
+            Homework 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/ATM4110/syllabus/" >
+   Syllabus</option>
+    <option value="/ATM4110/linux/" >
+   Unix/Linux system</option>
+    <option value="/ATM4110/environment/" >
+   Computing Environment</option>
+    <option value="/ATM4110/python/" >
+   Python</option> 
+      <option value="/ATM4110/python/pythonbasic/" >- Basic Data and Control Structures</option>
+      <option value="/ATM4110/python/python_more/" >- Functions, if statement and loops</option>
+      <option value="/ATM4110/python/module/" >- Module</option>
+      <option value="/ATM4110/python/object/" >- Introduction to Object</option>
+      <option value="/ATM4110/python/myclass/" >- Defining class</option>
+      <option value="/ATM4110/python/array1/" >- Array operation 1</option>
+      <option value="/ATM4110/python/array2/"  selected>- Array operation 2</option>
+  
+    <option value="/ATM4110/homework/" >
+    Homework</option> 
+      <option value="/ATM4110/homework/homework4/" >- Homework 4</option>
+      <option value="/ATM4110/homework/homework3/" >- Homework 3</option>
+      <option value="/ATM4110/homework/homework2/" >- Homework 2</option>
+      <option value="/ATM4110/homework/homework1/" >- Homework 1</option>
+  
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Search...">
+        </div>
+        <script type="text/javascript" src="/ATM4110/js/lunr.min.js"></script>
+        <script type="text/javascript" src="/ATM4110/js/auto-complete.js"></script>
+        <link href="/ATM4110/css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "https:\/\/hajsong.github.io\/ATM4110\/";
+          
+        </script>
+        <script type="text/javascript" src="/ATM4110/js/search.js"></script>
+      </div>
+    
+
+    <h1>Array operation 2</h1>
+
+    
+    
+    
+    
+
+<p>So far we&rsquo;ve learned how to make arrays, ask arrays to tell us about themselves, and manipulate arrays.
+But what scientists really want to do with arrays is make calculations with them.
+As a start, we discuss two ways to do exactly that.
+Method 1 uses <code>for</code> loops, in analogue to the use of loops in traditional Fortran programming, to do element-wise array calculations.
+Method 2 uses array syntax, where looping over array elements happens implicitly (this syntax is also found in Fortran 90 and later versions, IDL, etc.).</p>
+
+<h4 id="general-array-operation-method-1-loops">General array operation method 1: loops</h4>
+
+<p>It may be straightforward to use iteration for the array operation looping through each element.
+Let&rsquo;s look at the following example.</p>
+
+<pre><code>import numpy as np
+a = np.array([[2, 3.2, 5.5, -6.4],
+              [3, 1, 2.1, 21]])
+b = np.array([[4, 1.2, -4, 9.1],
+              [6, 21, 1.5, -27]])
+shape_a = np.shape(a)
+product_ab = np.zeros(shape_a, dtype='f')
+for i in range(shape_a[0]):
+    for j in range(shape_a[1]):
+        product_ab[i,j] = a[i,j] * b[i,j]
+</code></pre>
+
+<p>The flow of idea is</p>
+
+<ol>
+<li>Create an array with the same size of <code>a</code> or <code>b</code>.</li>
+<li>Iterate the slow varying direction</li>
+<li>Iterate the fast varying direction</li>
+<li>At each point, compute the multiplication</li>
+</ol>
+
+<p>Now, let&rsquo;s time how long the iteration takes to be done. Timing the process is quite simple in IPython because it provides magic functions: <code>%timeit</code> and <code>%%timeit</code>.</p>
+
+<p><code>%timeit</code> takes the command in the following position. So it is useful to check how long(slow) the function is.</p>
+
+<p>On the other hand, <code>%%timeit</code> takes multiple lines of code from the following line. So this is useful when we want to test the speed of the block of the code.</p>
+
+<p>In this example, <code>%%timeit</code> is appropriate to measure the time.</p>
+
+<pre><code>In [1]: %%timeit
+   ...: import numpy as np
+   ...: a = np.array([[2, 3.2, 5.5, -6.4],
+   ...:               [3, 1, 2.1, 21]])
+   ...: b = np.array([[4, 1.2, -4, 9.1],
+   ...:               [6, 21, 1.5, -27]])
+   ...: shape_a = np.shape(a)
+   ...: product_ab = np.zeros(shape_a, dtype='f')
+   ...: for i in range(shape_a[0]):
+   ...:     for j in range(shape_a[1]):
+   ...:         product_ab[i,j] = a[i,j] * b[i,j]
+   ...:
+
+8.76 µs ± 47.8 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+</code></pre>
+
+<p>Try to time the iteration when we need to compute large arrays.</p>
+
+<pre><code>np.random.seed(0)                 # to initialize the random number generation
+a = np.random.randn(1000, 1000)
+b = np.random.randn(1000, 1000)
+shape_a = np.shape(a)
+product_ab = np.zeros(shape_a, dtype='f')
+for i in range(shape_a[0]):
+    for j in range(shape_a[1]):
+        product_ab[i,j] = a[i,j] * b[i,j]
+</code></pre>
+
+<p>In my machine, this takes 501 ms ± 7.83 ms per loop (mean ± std. dev. of 7 runs, 1 loop each).</p>
+
+<h4 id="general-array-operation-method-2-array-syntax">General array operation method 2: array syntax</h4>
+
+<p>The basic idea behind array syntax is that, much of the time, arrays interact with each other on a corresponding element basis, and so instead of requiring the user to write out the nested <code>for</code> loops explicitly, the loops and elementwise operations are done implicitly in the operator.</p>
+
+<p>Consider the first example. We can get <code>product_ab</code> using the multiplication operator.</p>
+
+<pre><code>a = np.array([[2, 3.2, 5.5, -6.4],
+             [3, 1, 2.1, 21]])
+b = np.array([[4, 1.2, -4, 9.1],
+             [6, 21, 1.5, -27]])
+product_ab = a * b
+</code></pre>
+
+<p>You can see that <code>product_ab</code> is exactly the same as above.</p>
+
+<p>Using <code>%%timeit</code>, let&rsquo;s measure the speed.</p>
+
+<pre><code>In [4]: %%timeit
+    ...: a = np.array([[2, 3.2, 5.5, -6.4],
+    ...:              [3, 1, 2.1, 21]])
+    ...: b = np.array([[4, 1.2, -4, 9.1],
+    ...:              [6, 21, 1.5, -27]])
+    ...: product_ab = a * b
+    ...:
+3.75 µs ± 235 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+</code></pre>
+
+<p>How about the elementwise multiplication for large arrays?</p>
+
+<pre><code>In [5]: %%timeit
+    ...: np.random.seed(0)
+    ...: a = np.random.randn(1000, 1000)
+    ...: b = np.random.randn(1000, 1000)
+    ...: product_ab = a * b
+    ...:
+50 ms ± 375 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
+</code></pre>
+
+<p>Avoiding iteration makes the calculation about 10 times faster! (And you have fewer lines of the code.)</p>
+
+<p>In this example, we see that arithmetic operators are automatically defined to act elementwise when operands are NumPy arrays or scalars. (Operators do have function equivalents in NumPy, e.g., product, add, etc., for the situations where you want to do the operation using function syntax.)
+Additionally, the output array c is automatically created on assignment; there is no need to initialize the output array using zeros.</p>
+
+<p>Here is the table of arithmetic operator implemented in NumPy.</p>
+
+<table>
+<thead>
+<tr>
+<th align="center">Operator</th>
+<th align="center">Equivalent function</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">+</td>
+<td align="center"><code>np.add</code></td>
+<td>Addition (e.g., 1 + 1 = 2)</td>
+</tr>
+
+<tr>
+<td align="center">-</td>
+<td align="center"><code>np.subtract</code></td>
+<td>Subtraction (e.g., 3 - 2 = 1)</td>
+</tr>
+
+<tr>
+<td align="center">-</td>
+<td align="center"><code>np.negative</code></td>
+<td>Unary negation (e.g., -2)</td>
+</tr>
+
+<tr>
+<td align="center">*</td>
+<td align="center"><code>np.multiply</code></td>
+<td>Multiplication (e.g., 2 * 3 = 6)</td>
+</tr>
+
+<tr>
+<td align="center">/</td>
+<td align="center"><code>np.divide</code></td>
+<td>Division (e.g., 3 / 2 = 1.5)</td>
+</tr>
+
+<tr>
+<td align="center">//</td>
+<td align="center"><code>np.floor_divide</code></td>
+<td>Floor division (e.g., 3 // 2 = 1)</td>
+</tr>
+
+<tr>
+<td align="center">**</td>
+<td align="center"><code>np.power</code></td>
+<td>Exponentiation (e.g., 2 ** 3 = 8)</td>
+</tr>
+
+<tr>
+<td align="center">%</td>
+<td align="center"><code>np.mod</code></td>
+<td>Modulus/remainder (e.g., 9 % 4 = 1)</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="exercise-compute-the-potential-temperature">Exercise: Compute the potential temperature</h4>
+
+<p>Write a function that takes a 2-D array of pressures ($p$, in mbar) and a 2-D array of temperatures ($T$, in K) and returns the corresponding potential temperature, assuming a reference pressure ($p_0$) of 1000 mbar.
+Thus, the function’s return value is an array of the same shape and type as the input arrays.
+Recall that potential temperature is given by:
+$$
+\theta = T\left(\frac{p_0}{p}\right)^{\kappa},
+$$
+where $\kappa$ = $R/cp$ = <sup>2</sup>&frasl;<sub>7</sub> for a perfect diatomic gas like the atmosphere.</p>
+
+<p>If you go with iteration, you might come up with the following.</p>
+
+<pre><code>def theta(p, T, p0 = 1000, kappa = 2./7.):
+    ny, nx = p.shape
+    output = np.zeros((ny, nx))
+    for j in range(ny):
+        for i in range(nx):
+            output[j,i] = T[j,i] * (p0 / p[j,i])**kappa
+    return output
+</code></pre>
+
+<p>Using array operation,</p>
+
+<pre><code>def theta(p, T, p0 = 1000, kappa = 2./7.):
+    return T * (p0 / p)**kappa
+</code></pre>
+
+<p>Now, let&rsquo;s use the real atmospheric data which is the climatological air temperature at 500 mbar and compute the potential temperature.</p>
+
+<p>After getting the data from <a href="/ATM4110/images/T_p.npz">this link</a>, let&rsquo;s read it in IPython.</p>
+
+<pre><code>import numpy as np
+data = np.load('T_p.npz')
+T = data['T']+273.15    # convert the unit from degC to K
+p = data['P']
+</code></pre>
+
+<p>As the code becomes long, It is convenient to write a script to include all the functions and scripts.</p>
+
+<pre><code>import numpy as np
+    &quot;&quot;&quot;
+    Compute the potential temperature
+    using pressure (mbar) and Temperature (K)
+    &quot;&quot;&quot;
+def theta1(p, T, p0 = 1000, kappa = 2./7.):
+    ny, nx = p.shape
+    output = np.zeros((ny, nx))
+    for j in range(ny):
+        for i in range(nx):
+            output[j,i] = T[j,i] * (p0 / p[j,i])**kappa
+    return output
+
+def theta2(p, T, p0 = 1000, kappa = 2./7.):
+    return T * (p0 / p)**kappa
+
+data = np.load('T_p.npz')
+T = data['T']+273.15    # convert the unit from degC to K
+p = data['P']
+
+potT1 = theta1(p, T)
+potT2 = theta2(p, T)
+
+print(np.array_equal(potT1, potT2))
+</code></pre>
+
+<p>The command in the <code>print</code> function determines whether two arrays are identical.
+The output is <code>True</code>, which is what we expect.</p>
+
+<p>If you time the speed of <code>theta1</code> and <code>theta2</code>, you can see that <code>theta2</code> is much faster.</p>
+
+<pre><code>In [11]: %timeit pt1 = theta1(p, T)
+27.3 ms ± 91.1 µs per loop (mean ± std. dev. of 7 runs, 10 loops each)
+
+In [12]: %timeit pt2 = theta2(p, T)
+109 µs ± 817 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+</code></pre>
+
+<p>Using array operator is 250 times faster!</p>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/ATM4110/python/array1/" title="Array operation 1"> <i class="fa fa-chevron-left"></i><label>Array operation 1</label></a>
+    <a class="nav nav-next" href="/ATM4110/homework/" title=" Homework" style="margin-right: 0px;"><label> Homework</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+    <div class="tags"> 
+      
+        <a class="label label-default" href="https://hajsong.github.io/ATM4110/tags/array">array</a>
+      
+        <a class="label label-default" href="https://hajsong.github.io/ATM4110/tags/numpy">numpy</a>
+      
+    </div>
+    
+
+    
+    <div class="author">
+        <i class='fa fa-user'></i> <a href="mailto:hajsong@yonsei.ac.kr">Hajoon Song</a>
+    </div>
+    
+
+  
+    <div class="date">
+        <i class='fa fa-calendar'></i> Last update on 02/10/2018
+    </div>
+    
+
+    <div class="github-link">
+      <a href="https://github.com/hajsong/ATM4110/content/python/array2.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
+  </div>
+
+
+</footer>
+
+<script src="/ATM4110/js/clipboard.min.js"></script>
+
+<link href="/ATM4110/css/featherlight.min.css" rel="stylesheet">
+<script src="/ATM4110/js/featherlight.min.js"></script>
+
+
+
+<script src="/ATM4110/theme-flex/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>
