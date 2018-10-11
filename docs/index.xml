@@ -206,5 +206,16 @@ To solve this problem, Python has a package called NumPy which defines an array 
       <description>So far we&amp;rsquo;ve learned how to make arrays, ask arrays to tell us about themselves, and manipulate arrays. But what scientists really want to do with arrays is make calculations with them. As a start, we discuss two ways to do exactly that. Method 1 uses for loops, in analogue to the use of loops in traditional Fortran programming, to do element-wise array calculations. Method 2 uses array syntax, where looping over array elements happens implicitly (this syntax is also found in Fortran 90 and later versions, IDL, etc.</description>
     </item>
     
+    <item>
+      <title>Array operation 3</title>
+      <link>https://hajsong.github.io/ATM4110/python/array3/</link>
+      <pubDate>Wed, 10 Oct 2018 09:39:11 +0900</pubDate>
+      
+      <guid>https://hajsong.github.io/ATM4110/python/array3/</guid>
+      <description>We are going to look at more array operations using Numpy before diving into the linear algebra.
+Fancy indexing NumPy offers more indexing facilities than regular Python sequences. In addition to indexing by integers and slices, as we saw before, arrays can be indexed by arrays of integers and arrays of booleans.
+&amp;gt;&amp;gt;&amp;gt; a = np.arange(12)**2 # the first 12 square numbers &amp;gt;&amp;gt;&amp;gt; i = np.array( [ 1,1,3,8,5 ] ) # an array of indices &amp;gt;&amp;gt;&amp;gt; a[i] # the elements of a at the positions i array([ 1, 1, 9, 64, 25]) &amp;gt;&amp;gt;&amp;gt; &amp;gt;&amp;gt;&amp;gt; j = np.</description>
+    </item>
+    
   </channel>
 </rss>

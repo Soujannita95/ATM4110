@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ATM4110</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.37.1" />
+<title>Array operation 3 :: ATM4110</title>
+<link rel="shortcut icon" href="/ATM4110/images/favicon.png" type="image/x-icon" />
+<link href="/ATM4110/css/font-awesome.min.css" rel="stylesheet">
+<link href="/ATM4110/css/nucleus.css" rel="stylesheet">
+<link href="/ATM4110/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/ATM4110/css/bootstrap.min.css">
+<script src="/ATM4110/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/hajsong.github.io\/ATM4110\/";
+</script>
+<meta name="description" content="">
+
+<link rel="stylesheet" href="/ATM4110/css/mathjax-style.css">
+
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+
+
+
+    
+  </head>
+  <body data-url="/ATM4110/python/array3/">
+    
+      <header>
+  <div class="logo">
+    
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-113704256-3', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+	
+  
+    <a class="baselink" href="https://hajsong.github.io/ATM4110/">ATM4110</a>
+  
+
+<meta name="description" content="">
+
+<link rel="stylesheet" href="/ATM4110/css/mathjax-style.css">
+
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+
+
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://github.com/hajsong/ATM4110" target="_blank" rel="noopener">
+                  <i class='fa fa-github'></i> <label>Github repo</label>
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/ATM4110/" class="dd-item">
+          <a href="/ATM4110/">
+            <i class="fa fa-fw fa-home"></i> Home
+          </a>
+          </li>
+    <li data-nav-id="/ATM4110/syllabus/" class="dd-item
+        ">
+      <div>
+      <a href="/ATM4110/syllabus/">Syllabus</a>
+      </div>
+    </li>
+    <li data-nav-id="/ATM4110/linux/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ATM4110/linux/">Unix/Linux system</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ATM4110/linux/shell/" class="dd-item">
+        <div>
+          <a href="/ATM4110/linux/shell/">
+            Installation
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/linux/diroperation/" class="dd-item">
+        <div>
+          <a href="/ATM4110/linux/diroperation/">
+            Directory operation
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/linux/fileoperation/" class="dd-item">
+        <div>
+          <a href="/ATM4110/linux/fileoperation/">
+            File Operation
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/linux/filehandling/" class="dd-item">
+        <div>
+          <a href="/ATM4110/linux/filehandling/">
+            File Handling
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ATM4110/environment/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ATM4110/environment/">Computing Environment</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ATM4110/environment/python/" class="dd-item">
+        <div>
+          <a href="/ATM4110/environment/python/">
+            Python
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/environment/jupyter/" class="dd-item">
+        <div>
+          <a href="/ATM4110/environment/jupyter/">
+            Jupyter
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/environment/setup/" class="dd-item">
+        <div>
+          <a href="/ATM4110/environment/setup/">
+            Set up
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/environment/howtouse/" class="dd-item">
+        <div>
+          <a href="/ATM4110/environment/howtouse/">
+            Start Python / Jupyter Notebook
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ATM4110/python/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/ATM4110/python/">Python</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ATM4110/python/pythonbasic/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/pythonbasic/">
+            Basic Data and Control Structures
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/python_more/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/python_more/">
+            Functions, if statement and loops
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/module/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/module/">
+            Module
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/object/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/object/">
+            Introduction to Object
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/myclass/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/myclass/">
+            Defining class
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/array1/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/array1/">
+            Array operation 1
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/array2/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/array2/">
+            Array operation 2
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/array3/" class="dd-item active">
+        <div>
+          <a href="/ATM4110/python/array3/">
+            Array operation 3
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ATM4110/homework/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="/ATM4110/homework/"> Homework</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ATM4110/homework/homework4/" class="dd-item">
+        <div>
+          <a href="/ATM4110/homework/homework4/">
+            Homework 4
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/homework/homework3/" class="dd-item">
+        <div>
+          <a href="/ATM4110/homework/homework3/">
+            Homework 3
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/homework/homework2/" class="dd-item">
+        <div>
+          <a href="/ATM4110/homework/homework2/">
+            Homework 2
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/homework/homework1/" class="dd-item">
+        <div>
+          <a href="/ATM4110/homework/homework1/">
+            Homework 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/ATM4110/syllabus/" >
+   Syllabus</option>
+    <option value="/ATM4110/linux/" >
+   Unix/Linux system</option>
+    <option value="/ATM4110/environment/" >
+   Computing Environment</option>
+    <option value="/ATM4110/python/" >
+   Python</option> 
+      <option value="/ATM4110/python/pythonbasic/" >- Basic Data and Control Structures</option>
+      <option value="/ATM4110/python/python_more/" >- Functions, if statement and loops</option>
+      <option value="/ATM4110/python/module/" >- Module</option>
+      <option value="/ATM4110/python/object/" >- Introduction to Object</option>
+      <option value="/ATM4110/python/myclass/" >- Defining class</option>
+      <option value="/ATM4110/python/array1/" >- Array operation 1</option>
+      <option value="/ATM4110/python/array2/" >- Array operation 2</option>
+      <option value="/ATM4110/python/array3/"  selected>- Array operation 3</option>
+  
+    <option value="/ATM4110/homework/" >
+    Homework</option> 
+      <option value="/ATM4110/homework/homework4/" >- Homework 4</option>
+      <option value="/ATM4110/homework/homework3/" >- Homework 3</option>
+      <option value="/ATM4110/homework/homework2/" >- Homework 2</option>
+      <option value="/ATM4110/homework/homework1/" >- Homework 1</option>
+  
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Search...">
+        </div>
+        <script type="text/javascript" src="/ATM4110/js/lunr.min.js"></script>
+        <script type="text/javascript" src="/ATM4110/js/auto-complete.js"></script>
+        <link href="/ATM4110/css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "https:\/\/hajsong.github.io\/ATM4110\/";
+          
+        </script>
+        <script type="text/javascript" src="/ATM4110/js/search.js"></script>
+      </div>
+    
+
+    <h1>Array operation 3</h1>
+
+    
+    
+    
+    
+
+<p>We are going to look at more array operations using Numpy before diving into the linear algebra.</p>
+
+<h4 id="fancy-indexing">Fancy indexing</h4>
+
+<p>NumPy offers more indexing facilities than regular Python sequences. In addition to indexing by integers and slices, as we saw before, arrays can be indexed by arrays of integers and arrays of booleans.</p>
+
+<pre><code>&gt;&gt;&gt; a = np.arange(12)**2                       # the first 12 square numbers
+&gt;&gt;&gt; i = np.array( [ 1,1,3,8,5 ] )              # an array of indices
+&gt;&gt;&gt; a[i]                                       # the elements of a at the positions i
+array([ 1,  1,  9, 64, 25])
+&gt;&gt;&gt;
+&gt;&gt;&gt; j = np.array( [ [ 3, 4], [ 9, 7 ] ] )      # a bidimensional array of indices
+&gt;&gt;&gt; a[j]                                       # the same shape as j
+array([[ 9, 16],
+       [81, 49]])
+</code></pre>
+
+<p>The second example shows that Numpy returns the result in the same format of the input.</p>
+
+<p>When the indexed array a is multidimensional, a single array of indices refers to the first dimension of a. The following example shows this behavior by converting an image of labels into a color image using a palette.</p>
+
+<pre><code>&gt;&gt;&gt; palette = np.array( [ [0,0,0],                # black
+...                       [255,0,0],              # red
+...                       [0,255,0],              # green
+...                       [0,0,255],              # blue
+...                       [255,255,255] ] )       # white
+&gt;&gt;&gt; image = np.array( [ [ 0, 1, 2, 0 ],           # each value corresponds to a color in the palette
+...                     [ 0, 3, 4, 0 ]  ] )
+&gt;&gt;&gt; palette[image]                            # the (2,4,3) color image
+array([[[  0,   0,   0],
+        [255,   0,   0],
+        [  0, 255,   0],
+        [  0,   0,   0]],
+       [[  0,   0,   0],
+        [  0,   0, 255],
+        [255, 255, 255],
+        [  0,   0,   0]]])
+</code></pre>
+
+<p>We can also give indexes for more than one dimension. The arrays of indices for each dimension must have the same shape.</p>
+
+<pre><code>&gt;&gt;&gt; a = np.arange(12).reshape(3,4)
+&gt;&gt;&gt; a
+array([[ 0,  1,  2,  3],
+       [ 4,  5,  6,  7],
+       [ 8,  9, 10, 11]])
+&gt;&gt;&gt; i = np.array( [ [0,1],                        # indices for the first dim of a
+...                 [1,2] ] )
+&gt;&gt;&gt; j = np.array( [ [2,1],                        # indices for the second dim
+...                 [3,3] ] )
+&gt;&gt;&gt;
+&gt;&gt;&gt; a[i,j]                                     # i and j must have equal shape
+array([[ 2,  5],
+       [ 7, 11]])
+&gt;&gt;&gt;
+&gt;&gt;&gt; a[i,2]
+array([[ 2,  6],
+       [ 6, 10]])
+&gt;&gt;&gt;
+&gt;&gt;&gt; a[:,j]                                     # i.e., a[ : , j]
+array([[[ 2,  1],
+        [ 3,  3]],
+       [[ 6,  5],
+        [ 7,  7]],
+       [[10,  9],
+        [11, 11]]])
+</code></pre>
+
+<p>Another common use of indexing with arrays is the search of the maximum value of time-dependent series:</p>
+
+<pre><code>&gt;&gt;&gt; time = np.linspace(20, 145, 5)                 # time scale
+&gt;&gt;&gt; data = np.sin(np.arange(20)).reshape(5,4)      # 4 time-dependent series
+&gt;&gt;&gt; time
+array([  20.  ,   51.25,   82.5 ,  113.75,  145.  ])
+&gt;&gt;&gt; data
+array([[ 0.        ,  0.84147098,  0.90929743,  0.14112001],
+       [-0.7568025 , -0.95892427, -0.2794155 ,  0.6569866 ],
+       [ 0.98935825,  0.41211849, -0.54402111, -0.99999021],
+       [-0.53657292,  0.42016704,  0.99060736,  0.65028784],
+       [-0.28790332, -0.96139749, -0.75098725,  0.14987721]])
+&gt;&gt;&gt;
+&gt;&gt;&gt; ind = data.argmax(axis=0)                  # index of the maxima for each series
+&gt;&gt;&gt; ind
+array([2, 0, 3, 1])
+&gt;&gt;&gt;
+&gt;&gt;&gt; time_max = time[ind]                       # times corresponding to the maxima
+&gt;&gt;&gt;
+&gt;&gt;&gt; data_max = data[ind, range(data.shape[1])] # =&gt; data[ind[0],0], data[ind[1],1]...
+&gt;&gt;&gt;
+&gt;&gt;&gt; time_max
+array([  82.5 ,   20.  ,  113.75,   51.25])
+&gt;&gt;&gt; data_max
+array([ 0.98935825,  0.84147098,  0.99060736,  0.6569866 ])
+&gt;&gt;&gt;
+&gt;&gt;&gt; np.all(data_max == data.max(axis=0))
+True
+</code></pre>
+
+<p><code>np.argmax</code> or <code>np.argmin</code> finds the index with the maximum or minimum values in the array, respectively.
+In case when you want to find the indices that satisfy the condition, <code>np.where</code> or <code>np.nonzero</code> can be useful.</p>
+
+<pre><code>&gt;&gt;&gt; x = np.arange(9.).reshape(3, 3)
+&gt;&gt;&gt; np.where( x &gt; 5 )
+(array([2, 2, 2]), array([0, 1, 2]))
+&gt;&gt;&gt; np.nonzero( x &gt; 5 )
+(array([2, 2, 2]), array([0, 1, 2]))
+&gt;&gt;&gt; x[np.where( x &gt; 3.0 )]               # Note: result is 1D.
+array([ 4.,  5.,  6.,  7.,  8.])
+&gt;&gt;&gt; np.where(x &lt; 5, x, -1)               # Note: broadcasting.
+array([[ 0.,  1.,  2.],
+       [ 3.,  4., -1.],
+       [-1., -1., -1.]])
+&gt;&gt;&gt; np.nonzero( x &gt; 5 )
+</code></pre>
+
+<p>When three arguments are provided, <code>np.where</code> considers them as
+<code>np.where(mask, a, b)</code> which can be roughly thought of as <code>a[i] if mask[i] else b[i]</code>.
+This is what happened in the last example.</p>
+
+<h4 id="linear-algebra">Linear Algebra</h4>
+
+<h5 id="vectors">Vectors</h5>
+
+<p>Before starting, let me claify the notation of vectors first.
+A vector of length <em>n</em> is just a sequence (or array, or tuple) of <em>n</em> numbers, which we write as $\mathbf{x}=[x_1,\dots,x_n]$. Then the sum of two vectors, $\mathbf{x}$ and $\mathbf{y}$, is
+$$
+\mathbf{x} + \mathbf{y} = \begin{bmatrix}
+         x_1  \newline
+         x_2 \newline
+         \vdots \newline
+         x_n
+        \end{bmatrix}
+        +
+        \begin{bmatrix}
+         y_1  \newline
+         y_2 \newline
+         \vdots \newline
+         y_n
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+         x_1+y_1  \newline
+         x_2+y_2 \newline
+         \vdots \newline
+         x_n+y_n
+        \end{bmatrix}
+$$
+Scalar multiplication is expressed as
+$$
+\gamma \mathbf{x} = \begin{bmatrix}
+                    \gamma x_1 \newline
+                    \gamma x_2 \newline
+                    \vdots \newline
+                    \gamma x_n
+                    \end{bmatrix}
+$$</p>
+
+<p>As we did last time, these operations can be done easily.</p>
+
+<pre><code>x = np.ones(3)            # Vector of three ones
+y = np.array((2, 4, 6))   # Converts tuple (2, 4, 6) into array
+print(x + y)
+print(4 * x)
+</code></pre>
+
+<p>Another way to do summation of two vector is</p>
+
+<pre><code>def add_vectors(v, w):
+    return [vi + wi for vi, wi in zip(v, w)]
+
+add_vectors(x, y)
+</code></pre>
+
+<p>Similarly, the subtraction of vectors can be done using <code>-</code> or</p>
+
+<pre><code>def subtract_vectors(v, w):
+    return [vi - wi for vi, wi in zip(v, w)]
+subtract_vectors(x, y)
+</code></pre>
+
+<p>The inner product of vectors $\mathbf{x}$ and $\mathbf{y}$ is defined as
+$$
+\mathbf{x}^T\mathbf{y} = \Sigma_{i=1}^{n}x_i y_i
+$$
+Two vectors are called orthogonal if their inner product is zero.</p>
+
+<p>The norm of a vector $\mathbf{x}$ represents its &ldquo;length&rdquo; (i.e., its distance from the zero vector) and is defined as
+$$
+||\mathbf{x}|| = \sqrt{\mathbf{x}^T\mathbf{x}}
+$$</p>
+
+<p>In Python, the inner product of $\mathbf{x}$ and $\mathbf{y}$ is</p>
+
+<pre><code>np.sum(x * y)          # Inner product of x and y
+</code></pre>
+
+<p>and the norm of it is</p>
+
+<pre><code>np.sqrt(np.sum(x**2))
+</code></pre>
+
+<p>or</p>
+
+<pre><code>np.linalg.norm(x)
+</code></pre>
+
+<p>Can you write a short function for the inner product operation using a single line <code>for</code>
+iteration?
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+        <span>
+        
+        
+        How about the norm calculation?
+        
+        </span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<pre><code>def sq_sum_of_squares(v):
+    &quot;&quot;&quot; sqrt(v1 * v1 + v2 * v2 ... + vn * vn)&quot;&quot;&quot;
+    return sum(vi ** 2 for vi in v)**(0.5)
+</code></pre>
+
+    </div>
+</div></p>
+
+<h5 id="matrices">Matrices</h5>
+
+<p>Matrices are a neat way of organizing data for use in linear operations.
+For notation, an $n\times k$ matrix $\mathbf{A}$ is expressed as
+$$
+\mathbf{A} = \begin{bmatrix}
+                a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1k} \newline
+                a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2k} \newline
+                \vdots  &amp; \vdots  &amp;        &amp; \vdots  \newline
+                a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nk} \newline
+            \end{bmatrix}
+$$
+If $n=k$, it is a square matrix. If $\mathbf{A} = \mathbf{A}^T$, it is a symmetric matrix.</p>
+
+<p>Here are some basic operations for matrices.</p>
+
+<pre><code>&gt;&gt;&gt; import numpy as np
+&gt;&gt;&gt; a = np.array([[1.0, 2.0], [3.0, 4.0]])
+&gt;&gt;&gt; print(a)
+[[ 1.  2.]
+ [ 3.  4.]]
+
+&gt;&gt;&gt; a.transpose()
+array([[ 1.,  3.],
+       [ 2.,  4.]])
+
+&gt;&gt;&gt; np.linalg.inv(a)
+array([[-2. ,  1. ],
+       [ 1.5, -0.5]])
+
+&gt;&gt;&gt; u = np.eye(2) # unit 2x2 matrix; &quot;eye&quot; represents &quot;I&quot;
+&gt;&gt;&gt; u
+array([[ 1.,  0.],
+       [ 0.,  1.]])
+&gt;&gt;&gt; j = np.array([[0.0, -1.0], [1.0, 0.0]])
+
+&gt;&gt;&gt; j @ j        # matrix product
+array([[-1.,  0.],
+       [ 0., -1.]])
+
+&gt;&gt;&gt; np.trace(u)  # trace
+2.0
+&gt;&gt;&gt; np.diag(u)   # Extract a diagonal
+array([1., 1.])
+</code></pre>
+
+<h5 id="linear-problems">Linear problems</h5>
+
+<p>One of the more common problems in linear algebra is solving a matrix-vector equation. Here is an example. We seek the vector $\mathbf{x}$ that solves the equation
+$$
+\mathbf{y} = \mathbf{A}\mathbf{x},
+$$
+where $\mathbf{y}$ is the observations and $\mathbf{A}$ is the matrix containing explanatory variables).
+This problem imposes a set of linear equations, so the $i^{th}$ observation is written as
+$$
+y_i = a_{i,1} x_1 + a_{i,2} x_2 + \cdots + a_{i,k} x_k.
+$$</p>
+
+<h6 id="1-when-n-k">1. When $n = k$</h6>
+
+<p>This problem has the same numbers of equations and unknowns. It means that there is a unique solution.</p>
+
+<p>A number called the determinant of the matrix tells us whether this matrix can be inverted or not.
+If the determinant of $\mathbf{A}$ is not zero, then we say that $\mathbf{A}$ is nonsingular.
+Perhaps the most important fact about determinants is that $\mathbf{A}$ is nonsingular if and only if $\mathbf{A}$ is of full column rank.</p>
+
+<p>Then the solution is just $\mathbf{x} = \mathbf{A}^{-1}\mathbf{y}$.</p>
+
+<p>In IPython,</p>
+
+<pre><code>In [2]: A = np.arange(9).reshape(3,3)
+
+In [3]: np.linalg.det(A)
+Out[3]: 0.0
+
+In [4]: A = np.arange(9).reshape(3,3) + np.random.rand(3,3)
+
+In [5]: y = np.arange(3)
+
+In [6]: np.linalg.inv(A) @ y
+Out[6]: array([ 0.05905976,  0.79934638, -0.50158537])
+
+In [7]: np.dot(np.linalg.inv(A),y)
+Out[7]: array([ 0.05905976,  0.79934638, -0.50158537])
+</code></pre>
+
+<h6 id="2-when-n-gt-k">2. When $n \gt k$</h6>
+
+<p>In this case, there is no unique solution, but we can still seek a best approximation for $\mathbf{x}$.
+After admitting that there must be errors associated with this linear problem, let&rsquo;s introduce a vector $\mathbf{n}$ that represents the error. Now the linear problem can be written as the following.
+$$
+\mathbf{y} = \mathbf{A}\mathbf{x} + \mathbf{n}.
+$$
+That the best estimate for the solution should lead to the smallest error.
+In other words, we want to pick $\mathbf{x}$ that minimizes
+$$
+J = \mathbf{n}^T \mathbf{n} = (\mathbf{A}\mathbf{x} - \mathbf{y})^T(\mathbf{A}\mathbf{x} - \mathbf{y}).
+$$
+That $\mathbf{x}$ satisfies
+$$
+\frac{\partial J}{\partial \mathbf{x}} = 0
+$$
+Using<br />
+$$
+\frac{\partial \left( \mathbf{q}^T \mathbf{r} \right)}{\partial \mathbf{q}}
+= \frac{\partial \left( \mathbf{r}^T \mathbf{q} \right)}{\partial \mathbf{q}}
+= \mathbf{r},
+$$
+$$
+\frac{\partial \left( \mathbf{q}^T \mathbf{q} \right)}{\partial \mathbf{q}}
+=2\mathbf{q},
+$$
+and
+$$
+\frac{\partial\left(\mathbf{q}^T\mathbf{A}\mathbf{q}\right)}{\partial \mathbf{q}}
+= \left(\mathbf{A} + \mathbf{A}^T \right)\mathbf{q},
+$$
+we can obtain the solution as
+$$
+\mathbf{x} = \left(\mathbf{A}^T\mathbf{A}\right)\mathbf{A}^T\mathbf{y}
+$$</p>
+
+<h6 id="3-when-n-lt-k">3. When $n \lt k$</h6>
+
+<p>This is the case when there are fewer equations than unknowns, suggesting there is an infinite number of solutions.</p>
+
+<h6 id="4-how-to-solve-the-linear-problem-in-python">4. How to solve the linear problem in Python</h6>
+
+<p>If you choose to compute the inverse of the matrix,</p>
+
+<pre><code>x = np.linalg.inv(A.T @ A) @ A.T @ y
+</code></pre>
+
+<p>or</p>
+
+<pre><code>x = np.dot(np.dot(np.linalg.inv(np.dot(A.T, A)), A.T), y).
+</code></pre>
+
+<p>It is generally not recommended to directly compute the inverse matrix. Numpy has a function to solve the linear problem.</p>
+
+<pre><code>x = np.linalg.lstsq(A, y)
+</code></pre>
+
+<h5 id="exercise">Exercise</h5>
+
+<p>We did the exercise to compute the potential temperature using
+$$
+\theta = T \left(\frac{p_0}{p}\right)^k
+$$
+when the temperature, pressure and the reference pressure are given.</p>
+
+<p>At this time, let&rsquo;s to find the linear expression of $T$ and $p$ for the potential temperature.
+You can get the data from <a href="/ATM4110/images/T_p.npz">this link</a>.</p>
+
+<h4 id="file-i-o">File I/O</h4>
+
+<p>For Numpy&rsquo;s native file format, one can use <code>np.save</code> and <code>np.load</code>.
+These functions were used in our previous exercise.</p>
+
+<p>When you want to save the array in the text file, <code>np.savetxt</code> does it for you.
+When you need to read the text file, you can use <code>np.loadtxt</code>.</p>
+
+<pre><code>a = np.array([1,2,3,4,5])
+np.savetxt('out.txt',a)
+b = np.loadtxt('out.txt')
+print b
+</code></pre>
+
+<p>If the data are somehow formatted with either comma or space, you can use <code>np.getfromtxt</code>.
+When <code>example.dat</code> has</p>
+
+<pre><code>1800  1  1    -6.1    -6.1    -6.1 1
+1800  1  2   -15.4   -15.4   -15.4 1
+1800  1  3   -15.0   -15.0   -15.0 1
+1800  1  4   -19.3   -19.3   -19.3 1
+1800  1  5   -16.8   -16.8   -16.8 1
+1800  1  6   -11.4   -11.4   -11.4 1
+1800  1  7    -7.6    -7.6    -7.6 1
+1800  1  8    -7.1    -7.1    -7.1 1
+1800  1  9   -10.1   -10.1   -10.1 1
+1800  1 10    -9.5    -9.5    -9.5 1
+</code></pre>
+
+<p>in Python, <code>data</code> will be 10 by 7 ndarray if is created by <code>np.genfromtxt</code></p>
+
+<pre><code>data = np.genfromtxt('example.dat')
+</code></pre>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/ATM4110/python/array2/" title="Array operation 2"> <i class="fa fa-chevron-left"></i><label>Array operation 2</label></a>
+    <a class="nav nav-next" href="/ATM4110/homework/" title=" Homework" style="margin-right: 0px;"><label> Homework</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+    <div class="tags"> 
+      
+        <a class="label label-default" href="https://hajsong.github.io/ATM4110/tags/numpy">Numpy</a>
+      
+        <a class="label label-default" href="https://hajsong.github.io/ATM4110/tags/array">array</a>
+      
+    </div>
+    
+
+    
+    <div class="author">
+        <i class='fa fa-user'></i> <a href="mailto:hajsong@yonsei.ac.kr">Hajoon Song</a>
+    </div>
+    
+
+  
+    <div class="date">
+        <i class='fa fa-calendar'></i> Last update on 10/10/2018
+    </div>
+    
+
+    <div class="github-link">
+      <a href="https://github.com/hajsong/ATM4110/content/python/array3.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
+  </div>
+
+
+</footer>
+
+<script src="/ATM4110/js/clipboard.min.js"></script>
+
+<link href="/ATM4110/css/featherlight.min.css" rel="stylesheet">
+<script src="/ATM4110/js/featherlight.min.js"></script>
+
+
+
+<script src="/ATM4110/theme-flex/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>
