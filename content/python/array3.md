@@ -338,7 +338,7 @@ $$
 $$
 we can obtain the solution as
 $$
-\mathbf{x} = \left(\mathbf{A}^T\mathbf{A}\right)\mathbf{A}^T\mathbf{y}
+\mathbf{x} = \left(\mathbf{A}^T\mathbf{A}\right)^{-1}\mathbf{A}^T\mathbf{y}
 $$
 
 ###### 3. When $n \lt k$
