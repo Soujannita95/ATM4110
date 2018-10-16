@@ -147,7 +147,7 @@ As an example, I extracted the car accident statistics in 2017 where the inciden
 
 Let's follow the steps in the previous example.
 ```
-f = open('car_accident.csv','r')
+f = open('caraccident_data.csv','r')
 contents = f.readlines()
 f.close()
 ```
@@ -196,7 +196,7 @@ with open('caraccident_data.csv', 'r') as csvfile:
         print(f'Total number of {row["type"]} is {row["total"]}')
 ```
 
-#### Reading the CSV-type data using Panda
+#### Reading the CSV-type data using Pandas
 [*pandas*](https://pandas.pydata.org) is an open source, BSD-licensed library providing high-performance, easy-to-use data structures and data analysis tools for the Python programming language.
 This package makes it even easier to handle cvs-type data files.
 ```
