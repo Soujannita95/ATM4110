@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ATM4110</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.37.1" />
+<title>Dealing with real data :: ATM4110</title>
+<link rel="shortcut icon" href="/ATM4110/images/favicon.png" type="image/x-icon" />
+<link href="/ATM4110/css/font-awesome.min.css" rel="stylesheet">
+<link href="/ATM4110/css/nucleus.css" rel="stylesheet">
+<link href="/ATM4110/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/ATM4110/css/bootstrap.min.css">
+<script src="/ATM4110/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/hajsong.github.io\/ATM4110\/";
+</script>
+<meta name="description" content="">
+
+<link rel="stylesheet" href="/ATM4110/css/mathjax-style.css">
+
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+
+
+
+    
+  </head>
+  <body data-url="/ATM4110/python/fileio/">
+    
+      <header>
+  <div class="logo">
+    
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-113704256-3', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+	
+  
+    <a class="baselink" href="https://hajsong.github.io/ATM4110/">ATM4110</a>
+  
+
+<meta name="description" content="">
+
+<link rel="stylesheet" href="/ATM4110/css/mathjax-style.css">
+
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+
+
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://github.com/hajsong/ATM4110" target="_blank" rel="noopener">
+                  <i class='fa fa-github'></i> <label>Github repo</label>
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/ATM4110/" class="dd-item">
+          <a href="/ATM4110/">
+            <i class="fa fa-fw fa-home"></i> Home
+          </a>
+          </li>
+    <li data-nav-id="/ATM4110/syllabus/" class="dd-item
+        ">
+      <div>
+      <a href="/ATM4110/syllabus/">Syllabus</a>
+      </div>
+    </li>
+    <li data-nav-id="/ATM4110/linux/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ATM4110/linux/">Unix/Linux system</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ATM4110/linux/shell/" class="dd-item">
+        <div>
+          <a href="/ATM4110/linux/shell/">
+            Installation
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/linux/diroperation/" class="dd-item">
+        <div>
+          <a href="/ATM4110/linux/diroperation/">
+            Directory operation
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/linux/fileoperation/" class="dd-item">
+        <div>
+          <a href="/ATM4110/linux/fileoperation/">
+            File Operation
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/linux/filehandling/" class="dd-item">
+        <div>
+          <a href="/ATM4110/linux/filehandling/">
+            File Handling
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ATM4110/environment/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ATM4110/environment/">Computing Environment</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ATM4110/environment/python/" class="dd-item">
+        <div>
+          <a href="/ATM4110/environment/python/">
+            Python
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/environment/jupyter/" class="dd-item">
+        <div>
+          <a href="/ATM4110/environment/jupyter/">
+            Jupyter
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/environment/setup/" class="dd-item">
+        <div>
+          <a href="/ATM4110/environment/setup/">
+            Set up
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/environment/howtouse/" class="dd-item">
+        <div>
+          <a href="/ATM4110/environment/howtouse/">
+            Start Python / Jupyter Notebook
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ATM4110/python/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/ATM4110/python/">Python</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ATM4110/python/pythonbasic/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/pythonbasic/">
+            Basic Data and Control Structures
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/python_more/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/python_more/">
+            Functions, if statement and loops
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/module/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/module/">
+            Module
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/object/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/object/">
+            Introduction to Object
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/myclass/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/myclass/">
+            Defining class
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/array1/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/array1/">
+            Array operation 1
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/array2/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/array2/">
+            Array operation 2
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/array3/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/array3/">
+            Array operation 3
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/fileio/" class="dd-item active">
+        <div>
+          <a href="/ATM4110/python/fileio/">
+            Dealing with real data
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ATM4110/homework/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="/ATM4110/homework/"> Homework</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ATM4110/homework/homework5/" class="dd-item">
+        <div>
+          <a href="/ATM4110/homework/homework5/">
+            Homework 5
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/homework/homework4/" class="dd-item">
+        <div>
+          <a href="/ATM4110/homework/homework4/">
+            Homework 4
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/homework/homework3/" class="dd-item">
+        <div>
+          <a href="/ATM4110/homework/homework3/">
+            Homework 3
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/homework/homework2/" class="dd-item">
+        <div>
+          <a href="/ATM4110/homework/homework2/">
+            Homework 2
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/homework/homework1/" class="dd-item">
+        <div>
+          <a href="/ATM4110/homework/homework1/">
+            Homework 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/ATM4110/syllabus/" >
+   Syllabus</option>
+    <option value="/ATM4110/linux/" >
+   Unix/Linux system</option>
+    <option value="/ATM4110/environment/" >
+   Computing Environment</option>
+    <option value="/ATM4110/python/" >
+   Python</option> 
+      <option value="/ATM4110/python/pythonbasic/" >- Basic Data and Control Structures</option>
+      <option value="/ATM4110/python/python_more/" >- Functions, if statement and loops</option>
+      <option value="/ATM4110/python/module/" >- Module</option>
+      <option value="/ATM4110/python/object/" >- Introduction to Object</option>
+      <option value="/ATM4110/python/myclass/" >- Defining class</option>
+      <option value="/ATM4110/python/array1/" >- Array operation 1</option>
+      <option value="/ATM4110/python/array2/" >- Array operation 2</option>
+      <option value="/ATM4110/python/array3/" >- Array operation 3</option>
+      <option value="/ATM4110/python/fileio/"  selected>- Dealing with real data</option>
+  
+    <option value="/ATM4110/homework/" >
+    Homework</option> 
+      <option value="/ATM4110/homework/homework5/" >- Homework 5</option>
+      <option value="/ATM4110/homework/homework4/" >- Homework 4</option>
+      <option value="/ATM4110/homework/homework3/" >- Homework 3</option>
+      <option value="/ATM4110/homework/homework2/" >- Homework 2</option>
+      <option value="/ATM4110/homework/homework1/" >- Homework 1</option>
+  
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Search...">
+        </div>
+        <script type="text/javascript" src="/ATM4110/js/lunr.min.js"></script>
+        <script type="text/javascript" src="/ATM4110/js/auto-complete.js"></script>
+        <link href="/ATM4110/css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "https:\/\/hajsong.github.io\/ATM4110\/";
+          
+        </script>
+        <script type="text/javascript" src="/ATM4110/js/search.js"></script>
+      </div>
+    
+
+    <h1>Dealing with real data</h1>
+
+    
+    
+    
+    
+
+<p>The atmospheric and oceanic sciences (AOS) are &ldquo;data&rdquo; intensive fields, whether data refers to observations or model output.
+Most of the analysis we do involve datasets, and so facilities for file input/output (i/o) are critical.
+Fortunately, Python has very robust facilities for file i/o, and we will be dealing with realistic datasets using Python.</p>
+
+<h4 id="data-in-the-text-file">Data in the text file</h4>
+
+<p>Some data is not too big and stored in the text file. A good example is the <a href="/ATM4110/images/co2_mm_mlo.txt">CO$_2$ concentration in the atmosphere</a>.
+In fact this is the famous &ldquo;KEELING CURVE&rdquo;
+Reading the text file is possible using the built-in function, <code>open</code> statement:</p>
+
+<pre><code>f = open('co2_mm_mlo.txt','r')
+contents = f.readlines()
+f.close()
+</code></pre>
+
+<p>As you might guess, <code>f</code> is an object that many methods are attached. Do you remember how to list all available methods and attributes?</p>
+
+<pre><code>dir(f)
+</code></pre>
+
+<p>You can see that <code>close</code> we used above is one of the methods. It is to flush and close the IO object. Once the file IO is closed, you can grab a handle on it. (You can not do anything with <code>f</code> unless you <code>open</code> the text file again.)</p>
+
+<p>The method <code>readlines</code> goes through each line and save it as an element of the list, <code>contents</code>.</p>
+
+<pre><code>In [4]: contents[:10]
+Out[4]:
+['# --------------------------------------------------------------------\n',
+ '# USE OF NOAA ESRL DATA\n',
+ '# \n',
+ '# These data are made freely available to the public and the\n',
+ '# scientific community in the belief that their wide dissemination\n',
+ '# will lead to greater understanding and new scientific insights.\n',
+ '# The availability of these data does not constitute publication\n',
+ '# of the data.  NOAA relies on the ethics and integrity of the user to\n',
+ '# ensure that ESRL receives fair credit for their work.  If the data \n',
+ '# are obtained for potential use in a publication or presentation, \n']
+ .
+ .
+ .
+ '# NOTE: In general, the data presented for the last year are subject to change, \n',
+ '# depending on recalibration of the reference gas mixtures used, and other quality\n',
+ '# control procedures. Occasionally, earlier years may also be changed for the same\n',
+ '# reasons.  Usually these changes are minor.\n',
+ '#\n',
+ '# CO2 expressed as a mole fraction in dry air, micromol/mol, abbreviated as ppm\n',
+
+ '#  (-99.99 missing data;  -1 no data for #daily means in month)\n',
+ '#\n',
+ '#            decimal     average   interpolated    trend    #days\n',
+ '#             date                             (season corr)\n',
+ '1958   3    1958.208      315.71      315.71      314.62     -1\n',
+ '1958   4    1958.292      317.45      317.45      315.29     -1\n',
+ .
+ .
+ .
+</code></pre>
+
+<p>Well, this dataset has quite a few numbers of lines that are not values, and we want to exclude this header. Good news is that lines in the header start a special characters &ldquo;#&rdquo;. So we can determine whether the line is in the header or not by evaluating the first letter.</p>
+
+<p>The string object has a method for this. It is called <code>startswith</code>.</p>
+
+<pre><code>CO2 = []
+for line in contents:
+    if line.startswith('#') is False:
+        print(line)
+</code></pre>
+
+<p>We can see that <code>line</code> is a string variable containing all the characters of each line.
+(Try <code>type(line)</code> to see the type of <code>line</code>.)</p>
+
+<p>We are interested in the CO$_2$ concentration that is in the middle of the string <code>line</code>.
+So we need to somehow break this long string into pieces to extract the CO$_2$ concentration.</p>
+
+<p>Python has a host of string manipulation methods, built-in to string variables (a.k.a., objects), which are ideal for dealing with contents from text files.
+We will mention only a few of these methods.
+The <code>split</code> method of a string object takes a string and breaks it into a list using a separator. For instance:</p>
+
+<pre><code>In [9]: print(line)
+2018   9    2018.708      405.51      405.51      409.02     29
+
+In [10]: type(line)
+Out[10]: str
+
+In [11]: print(line.split())
+['2018', '9', '2018.708', '405.51', '405.51', '409.02', '29']
+</code></pre>
+
+<p>Finally, once we have the strings we desire, we can convert them to numerical types in order to make calculations.</p>
+
+<p>If you loop through a list of strings, you can use the <code>float</code> and <code>int</code> functions on the string to get a number. For instance</p>
+
+<pre><code>CO2 = []
+for line in contents:
+    if line.startswith('#') is False:
+        values = line.split()
+        CO2.append(float(values[3]))
+</code></pre>
+
+<p>For future purpose, we may want to save this array as another text file.
+To write a string to the file that is defined by the file object <code>f</code>, use the <code>write</code> method attached to the file object:</p>
+
+<pre><code>f.write(astr)
+</code></pre>
+
+<p>Here, <code>astr</code> is the string you want to write to the file. Note that a newline character is not automatically written to the file after the string is written.</p>
+
+<p>To write a list of strings to the file, use the <code>writelines</code> method:</p>
+
+<pre><code>f.writelines(contents)
+</code></pre>
+
+<p>Here, <code>contents</code> is a list of strings.</p>
+
+<p>In this example, we want to write CO$_2$ concentration to a new file, <code>co2_keeling.txt</code>.</p>
+
+<pre><code>fileout = open('co2_keeling.txt', 'w')    # open the text file to write
+fileout.writelines(str(CO2))
+fileout.close()
+</code></pre>
+
+<p>If you view the text file, the values are stored in one line.
+We can save one value in each line as the following.</p>
+
+<pre><code>outputstr = ['\n'] * len(CO2)
+for i in range(len(CO2)):
+    outputstr[i] = str(CO2[i]) + outputstr[i]
+
+fileout = open('co2_keeling.txt', 'w')    # open the text file to write
+fileout.writelines(outputstr)
+fileout.close()
+</code></pre>
+
+<h4 id="data-in-the-csv-comma-separated-values-file">Data in the csv (comma-separated values) file</h4>
+
+<p>You often find data in csv format. It is not very different from text files, but data values are separated with comma as the name infers. You can read csv format data as above, but slightly different.</p>
+
+<p>As an example, I extracted the car accident statistics in 2017 where the incidents are sorted by the age of the drivers who caused the accident. Get the data from <a href="/ATM4110/images/caraccident_data.csv">here</a>.</p>
+
+<p>Let&rsquo;s follow the steps in the previous example.</p>
+
+<pre><code>f = open('car_accident.csv','r')
+contents = f.readlines()
+f.close()
+</code></pre>
+
+<p>The list variable <code>contents</code> has each line as its element. The first line that is saved in  <code>contents[0]</code> contains the name of each column, but it is not the data values. So, I would do the following to read the total number of accident that is in the second column.</p>
+
+<pre><code>tot = []
+for line in contents[1:]:
+    val = line.split(',')
+    tot.append(float(val[1]))
+</code></pre>
+
+<p>When using the <code>split</code> method, we specified that the line could be separated by the comma.</p>
+
+<p>Python carries the module called <code>csv</code> to read and write csv files. That allows us to avoid doing tedious work of counting columns and rows.</p>
+
+<p>Let&rsquo;s use the <code>csv</code> module.</p>
+
+<pre><code>import csv
+
+with open('caraccident_data.csv', 'r') as csvfile:
+    csv_reader = csv.reader(csvfile)
+    cnt = 0
+    for row in csv_reader:
+        if cnt == 0:
+            print(f'Column names are {&quot;, &quot;.join(row)}')
+        else:
+            print(f'Values are {&quot;, &quot;.join(row)}')
+        cnt += 1
+</code></pre>
+
+<p>Rather than deal with a list of individual String elements, you can read CSV data directly into a dictionary. The <code>csv</code> module provides a method <code>DictReader</code> for us to organize the data as a dictionary variable.</p>
+
+<pre><code>import csv
+
+# Option 1
+f = open('caraccident_data.csv', 'r')
+csv_reader = csv.DictReader(f)
+print(csv_reader.fieldnames)
+for row in csv_reader:
+    print(f'Total number of {row[&quot;type&quot;]} is {row[&quot;total&quot;]}')
+f.close()
+
+# Option 2
+with open('caraccident_data.csv', 'r') as csvfile:
+    csv_reader = csv.DictReader(csvfile)
+    for row in csv_reader:
+        print(f'Total number of {row[&quot;type&quot;]} is {row[&quot;total&quot;]}')
+</code></pre>
+
+<h4 id="reading-the-csv-type-data-using-panda">Reading the CSV-type data using Panda</h4>
+
+<p><a href="https://pandas.pydata.org"><em>pandas</em></a> is an open source, BSD-licensed library providing high-performance, easy-to-use data structures and data analysis tools for the Python programming language.
+This package makes it even easier to handle cvs-type data files.</p>
+
+<pre><code>import pandas as pd
+data = pd.read_csv('caraccident_data.csv')
+print(data)
+</code></pre>
+
+<p>In IPython,</p>
+
+<pre><code>In [4]: whos
+Variable   Type         Data/Info
+---------------------------------
+data       DataFrame                 type    tota&lt;...&gt;\n\n[6 rows x 10 columns]
+pd         module       &lt;module 'pandas' from '/U&lt;...&gt;ages/pandas/__init__.py'&gt;
+
+In [5]: print(data)
+             type    total  less than 20   ...     61-64  greater than 65  unknown
+0        accident  1143175         44501   ...     62373           115674    75485
+1      death toll     4185           125   ...       313              838        2
+2   casualty toll  1803325         65622   ...     93589           172330   148784
+3  major casualty    96810          3605   ...      7353            14565     1687
+4  minor casualty   581589         19729   ...     35310            55037    50046
+5  other casualty  1124926         42288   ...     50926           102728    97051
+
+[6 rows x 10 columns]
+</code></pre>
+
+<p>To see the name of columns, you can try</p>
+
+<pre><code>data.columns
+</code></pre>
+
+<p>There are two different ways to print out a column.</p>
+
+<pre><code>data.type
+data[&quot;type&quot;]
+</code></pre>
+
+<p>This is how you can grab the rows.</p>
+
+<pre><code>data.head(2)        # prints the first 2 rows
+data.tail(1)        # prints the last low
+</code></pre>
+
+<p>If you access the element, you can combine the name of the column and the number of the row.</p>
+
+<pre><code>print(data.type[3], data.total[3])
+</code></pre>
+
+<p>Using the indexing, we can get more than one rows.</p>
+
+<pre><code>print(data.total[1:3])
+</code></pre>
+
+<p>Selecting elements in a specific location is very similar to extracting elements from the array.
+There are two ways of doing it.
+When using <code>loc</code> method, you can specify the name of the columns.</p>
+
+<pre><code>data.loc[:2, ['61-64','greater than 65']]
+</code></pre>
+
+<p>Or you can use <code>iloc</code> for the location of the columns.</p>
+
+<pre><code>data.iloc[:1, 7:]
+</code></pre>
+
+<p>If you want to switch columns and rows,</p>
+
+<pre><code>data.T
+</code></pre>
+
+<p><code>pandas</code> package provides a simple statistical tools attached to the variable.</p>
+
+<pre><code>data.describe()
+</code></pre>
+
+<h5 id="exercise-extract-statistical-information-from-the-dataset">Exercise: Extract statistical information from the dataset.</h5>
+
+<p>One of the current issues is whether we regulate the permit for the senior drivers for the safety reasons.
+Let&rsquo;s evaluate the data of the car accident in 2017 and see whether there is a statistical background for the regulation.
+Possible questions to be evalueated are.</p>
+
+<ol>
+<li>Are there more car accident caused by the drivers older than 60 than those with the age between 20-40?</li>
+<li>Do the accidents tend to be major by the drivers older than 60?</li>
+</ol>
+
+<h4 id="popular-data-type-in-atmospheric-and-oceanic-sciences">Popular data type in atmospheric and oceanic sciences</h4>
+
+<p>NetCDF is a platform-independent binary file format that facilitates the storage and sharing of data along with its metadata.
+Versions of the tools needed to read and write the format are available on practically every operating system and in every major language used in the atmospheric and oceanic sciences.</p>
+
+<p>Before discussing how to do netCDF i/o in Python, let&rsquo;s briefly review the structure of netCDF.
+There are four general types of parameters in a netCDF file: global attributes, variables, variable attributes, and dimensions.</p>
+
+<p>Global attributes are usually strings that describe the file as a whole, e.g., a title, who
+created it, what standards it follows, etc.
+Variables are the entities that hold data. These include both the data-proper (e.g., temperature, meridional wind, etc.), the domain the data is defined on (delineated by the dimensions), and
+metadata about the data (e.g., units).
+Variable attributes store the metadata associated with a variable.
+Dimensions define a domain for the data-proper, but they also have values of their own (e.g., latitude values, longitude values, etc.), and thus you usually create variables for each dimension that are the
+same name as the dimension.</p>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/ATM4110/python/array3/" title="Array operation 3"> <i class="fa fa-chevron-left"></i><label>Array operation 3</label></a>
+    <a class="nav nav-next" href="/ATM4110/homework/" title=" Homework" style="margin-right: 0px;"><label> Homework</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+    <div class="tags"> 
+      
+        <a class="label label-default" href="https://hajsong.github.io/ATM4110/tags/python">python</a>
+      
+        <a class="label label-default" href="https://hajsong.github.io/ATM4110/tags/file-io">File IO</a>
+      
+    </div>
+    
+
+    
+    <div class="author">
+        <i class='fa fa-user'></i> <a href="mailto:hajsong@yonsei.ac.kr">Hajoon Song</a>
+    </div>
+    
+
+  
+    <div class="date">
+        <i class='fa fa-calendar'></i> Last update on 15/10/2018
+    </div>
+    
+
+    <div class="github-link">
+      <a href="https://github.com/hajsong/ATM4110/content/python/fileio.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
+  </div>
+
+
+</footer>
+
+<script src="/ATM4110/js/clipboard.min.js"></script>
+
+<link href="/ATM4110/css/featherlight.min.css" rel="stylesheet">
+<script src="/ATM4110/js/featherlight.min.js"></script>
+
+
+
+<script src="/ATM4110/theme-flex/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

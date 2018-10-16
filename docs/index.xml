@@ -54,6 +54,16 @@ $ cat filename  This command dump all the contents on the screen, so large files
     </item>
     
     <item>
+      <title>Homework 5</title>
+      <link>https://hajsong.github.io/ATM4110/homework/homework5/</link>
+      <pubDate>Tue, 16 Oct 2018 08:39:05 +0900</pubDate>
+      
+      <guid>https://hajsong.github.io/ATM4110/homework/homework5/</guid>
+      <description>A close look at the Keeling Curve Accurately measuring CO$_2$ in the atmosphere requires lots of effort and support. It is unfortunate that there were years without financial support in the early period of this program and David Keeling couldn&amp;rsquo;t make measurements.
+This is shown in the dataset! You can see that some of the entries of CO$_2$ concentration are $-99.99$. Considering that this dataset contains concentration values, the negative entry doesn&amp;rsquo;t make sense.</description>
+    </item>
+    
+    <item>
       <title>Homework 4</title>
       <link>https://hajsong.github.io/ATM4110/homework/homework4/</link>
       <pubDate>Thu, 27 Sep 2018 11:36:34 +0900</pubDate>
@@ -215,6 +225,16 @@ To solve this problem, Python has a package called NumPy which defines an array 
       <description>We are going to look at more array operations using Numpy before diving into the linear algebra.
 Fancy indexing NumPy offers more indexing facilities than regular Python sequences. In addition to indexing by integers and slices, as we saw before, arrays can be indexed by arrays of integers and arrays of booleans.
 &amp;gt;&amp;gt;&amp;gt; a = np.arange(12)**2 # the first 12 square numbers &amp;gt;&amp;gt;&amp;gt; i = np.array( [ 1,1,3,8,5 ] ) # an array of indices &amp;gt;&amp;gt;&amp;gt; a[i] # the elements of a at the positions i array([ 1, 1, 9, 64, 25]) &amp;gt;&amp;gt;&amp;gt; &amp;gt;&amp;gt;&amp;gt; j = np.</description>
+    </item>
+    
+    <item>
+      <title>Dealing with real data</title>
+      <link>https://hajsong.github.io/ATM4110/python/fileio/</link>
+      <pubDate>Mon, 15 Oct 2018 20:02:05 +0900</pubDate>
+      
+      <guid>https://hajsong.github.io/ATM4110/python/fileio/</guid>
+      <description>The atmospheric and oceanic sciences (AOS) are &amp;ldquo;data&amp;rdquo; intensive fields, whether data refers to observations or model output. Most of the analysis we do involve datasets, and so facilities for file input/output (i/o) are critical. Fortunately, Python has very robust facilities for file i/o, and we will be dealing with realistic datasets using Python.
+Data in the text file Some data is not too big and stored in the text file.</description>
     </item>
     
   </channel>
