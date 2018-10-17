@@ -195,6 +195,7 @@ Python allows you to modify the list by providing build-in functions. When ```a 
 >>> a.remove(2)
 >>> print(a)
 [3.2, 'everyone', 'hello', [-1.2, 'there', 5.5]]
+>>> a.append(4.5)
 >>> print(a)
 [3.2, 'everyone', 'hello', [-1.2, 'there', 5.5], 4.5]
 ```
