@@ -8,6 +8,8 @@ lastmodifierdisplayname = "Hajoon Song"
 lastmodifieremail = "hajsong@yonsei.ac.kr"
 +++
 
+{{% alert theme="danger" %}}**The midterm will be held at 12pm on 10/23 in the Science Hall 523.**{{% /alert %}}
+
 # Programming in Meteorology
 
 **This webpage is designed to serve the students enrolled for ATM4110, Programming in Meteorology.**
@@ -19,7 +21,6 @@ Upon the completion of this course, the students will be capable of analyzing th
 
 <br>
 
-## The midterm will be held at 12pm on 10/23 in Science Hall 523
 
 #### Objective of this course
 + **Introduce the programming environment for meteorology**
