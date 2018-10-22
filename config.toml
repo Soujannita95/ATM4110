@@ -9,8 +9,6 @@ pygmentsStyle = "monokailight"
 
 publishDir = "docs"
 
-future = true
-
 googleAnalytics = "UA-113704256-3"
 
 defaultContentLanguage = "en"
