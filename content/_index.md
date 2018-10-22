@@ -19,6 +19,8 @@ Upon the completion of this course, the students will be capable of analyzing th
 
 <br>
 
+## The midterm will be held at 12pm on 10/23 in Science Hall 523
+
 #### Objective of this course
 + **Introduce the programming environment for meteorology**
 + **Handle the atmospheric data using programming language such as python**
