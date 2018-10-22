@@ -54,15 +54,6 @@ $ cat filename  This command dump all the contents on the screen, so large files
     </item>
     
     <item>
-      <title>Netcdf</title>
-      <link>https://hajsong.github.io/ATM4110/python/netcdf/</link>
-      <pubDate>Mon, 22 Oct 2018 22:00:20 +0900</pubDate>
-      
-      <guid>https://hajsong.github.io/ATM4110/python/netcdf/</guid>
-      <description>Lorem Ipsum. Notice draft is set to true.</description>
-    </item>
-    
-    <item>
       <title>Homework 5</title>
       <link>https://hajsong.github.io/ATM4110/homework/homework5/</link>
       <pubDate>Tue, 16 Oct 2018 08:39:05 +0900</pubDate>
