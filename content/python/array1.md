@@ -576,6 +576,11 @@ In [11]: Z = np.tile(lev, [ny, nx, 1])
 
 In [12]: print(Z.shape)
 (37, 72, 5)
+
+In [13]: Z = Z.transpose(2, 0, 1)
+
+In [14]: print(Z.shape)
+(5, 37, 72)
 ```
 Although we were able to create a 3-D array, ```Z```, the location of the axis is little different from the convention we use (usually [t,z,y,x]). Using ```transpose``` function in NumPy, we can easily permute the order of axis.
 
