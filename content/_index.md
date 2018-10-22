@@ -8,6 +8,8 @@ lastmodifierdisplayname = "Hajoon Song"
 lastmodifieremail = "hajsong@yonsei.ac.kr"
 +++
 
+MIDTERM : Science Hall 523
+
 # Programming in Meteorology
 
 **This webpage is designed to serve the students enrolled for ATM4110, Programming in Meteorology.**
