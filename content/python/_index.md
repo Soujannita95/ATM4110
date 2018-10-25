@@ -7,7 +7,7 @@ creatoremail = "hajsong@yonsei.ac.kr"
 lastmodifierdisplayname = "Hajoon Song"
 lastmodifieremail = "hajsong@yonsei.ac.kr"
 tags = ["python","jupyter notebook"]
-weight = 100
+weight = 4
 #pre ="<i class='fa fa-edit' ></i> "
 #alwaysopen = true
 +++

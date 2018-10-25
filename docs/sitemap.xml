@@ -32,8 +32,18 @@
   </url>
   
   <url>
+    <loc>https://hajsong.github.io/ATM4110/python/</loc>
+    <lastmod>2018-09-07T12:36:51+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://hajsong.github.io/ATM4110/linux/filehandling/</loc>
     <lastmod>2018-09-05T16:06:36+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/aodata/</loc>
+    <lastmod>2018-10-24T09:11:24+09:00</lastmod>
   </url>
   
   <url>
@@ -49,11 +59,6 @@
   <url>
     <loc>https://hajsong.github.io/ATM4110/homework/homework3/</loc>
     <lastmod>2018-09-17T12:38:31+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hajsong.github.io/ATM4110/python/</loc>
-    <lastmod>2018-09-07T12:36:51+09:00</lastmod>
   </url>
   
   <url>
@@ -292,13 +297,13 @@
   
   <url>
     <loc>https://hajsong.github.io/ATM4110/tags/tag1/</loc>
-    <lastmod>2018-09-04T07:45:45+09:00</lastmod>
+    <lastmod>2018-10-24T09:11:24+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://hajsong.github.io/ATM4110/tags/tag2/</loc>
-    <lastmod>2018-09-04T07:45:45+09:00</lastmod>
+    <lastmod>2018-10-24T09:11:24+09:00</lastmod>
     <priority>0</priority>
   </url>
   

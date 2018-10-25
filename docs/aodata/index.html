@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ATM4110</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.37.1" />
+<title>Atmos. &amp; Ocean Data :: ATM4110</title>
+<link rel="shortcut icon" href="/ATM4110/images/favicon.png" type="image/x-icon" />
+<link href="/ATM4110/css/font-awesome.min.css" rel="stylesheet">
+<link href="/ATM4110/css/nucleus.css" rel="stylesheet">
+<link href="/ATM4110/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/ATM4110/css/bootstrap.min.css">
+<script src="/ATM4110/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/hajsong.github.io\/ATM4110\/";
+</script>
+<meta name="description" content="">
+
+<link rel="stylesheet" href="/ATM4110/css/mathjax-style.css">
+
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+
+
+
+    
+  </head>
+  <body data-url="/ATM4110/aodata/">
+    
+      <header>
+  <div class="logo">
+    
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-113704256-3', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+	
+  
+    <a class="baselink" href="https://hajsong.github.io/ATM4110/">ATM4110</a>
+  
+
+<meta name="description" content="">
+
+<link rel="stylesheet" href="/ATM4110/css/mathjax-style.css">
+
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+
+
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://github.com/hajsong/ATM4110" target="_blank" rel="noopener">
+                  <i class='fa fa-github'></i> <label>Github repo</label>
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/ATM4110/" class="dd-item">
+          <a href="/ATM4110/">
+            <i class="fa fa-fw fa-home"></i> Home
+          </a>
+          </li>
+    <li data-nav-id="/ATM4110/syllabus/" class="dd-item
+        ">
+      <div>
+      <a href="/ATM4110/syllabus/">Syllabus</a>
+      </div>
+    </li>
+    <li data-nav-id="/ATM4110/linux/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ATM4110/linux/">Unix/Linux system</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ATM4110/linux/shell/" class="dd-item">
+        <div>
+          <a href="/ATM4110/linux/shell/">
+            Installation
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/linux/diroperation/" class="dd-item">
+        <div>
+          <a href="/ATM4110/linux/diroperation/">
+            Directory operation
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/linux/fileoperation/" class="dd-item">
+        <div>
+          <a href="/ATM4110/linux/fileoperation/">
+            File Operation
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/linux/filehandling/" class="dd-item">
+        <div>
+          <a href="/ATM4110/linux/filehandling/">
+            File Handling
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ATM4110/environment/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ATM4110/environment/">Computing Environment</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ATM4110/environment/python/" class="dd-item">
+        <div>
+          <a href="/ATM4110/environment/python/">
+            Python
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/environment/jupyter/" class="dd-item">
+        <div>
+          <a href="/ATM4110/environment/jupyter/">
+            Jupyter
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/environment/setup/" class="dd-item">
+        <div>
+          <a href="/ATM4110/environment/setup/">
+            Set up
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/environment/howtouse/" class="dd-item">
+        <div>
+          <a href="/ATM4110/environment/howtouse/">
+            Start Python / Jupyter Notebook
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ATM4110/python/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ATM4110/python/">Python</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ATM4110/python/pythonbasic/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/pythonbasic/">
+            Basic Data and Control Structures
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/python_more/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/python_more/">
+            Functions, if statement and loops
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/module/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/module/">
+            Module
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/object/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/object/">
+            Introduction to Object
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/myclass/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/myclass/">
+            Defining class
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/array1/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/array1/">
+            Array operation 1
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/array2/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/array2/">
+            Array operation 2
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/array3/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/array3/">
+            Array operation 3
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/fileio/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/fileio/">
+            Dealing with real data
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ATM4110/aodata/" class="dd-item parent active alwaysopen
+        ">
+      <div>
+      <a href="/ATM4110/aodata/">Atmos. &amp; Ocean Data</a>
+      </div>
+    </li>
+    <li data-nav-id="/ATM4110/homework/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="/ATM4110/homework/"> Homework</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ATM4110/homework/homework5/" class="dd-item">
+        <div>
+          <a href="/ATM4110/homework/homework5/">
+            Homework 5
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/homework/homework4/" class="dd-item">
+        <div>
+          <a href="/ATM4110/homework/homework4/">
+            Homework 4
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/homework/homework3/" class="dd-item">
+        <div>
+          <a href="/ATM4110/homework/homework3/">
+            Homework 3
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/homework/homework2/" class="dd-item">
+        <div>
+          <a href="/ATM4110/homework/homework2/">
+            Homework 2
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/homework/homework1/" class="dd-item">
+        <div>
+          <a href="/ATM4110/homework/homework1/">
+            Homework 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/ATM4110/syllabus/" >
+   Syllabus</option>
+    <option value="/ATM4110/linux/" >
+   Unix/Linux system</option>
+    <option value="/ATM4110/environment/" >
+   Computing Environment</option>
+    <option value="/ATM4110/python/" >
+   Python</option>
+    <option value="/ATM4110/aodata/"  selected>
+   Atmos. &amp; Ocean Data</option> 
+  
+    <option value="/ATM4110/homework/" >
+    Homework</option> 
+      <option value="/ATM4110/homework/homework5/" >- Homework 5</option>
+      <option value="/ATM4110/homework/homework4/" >- Homework 4</option>
+      <option value="/ATM4110/homework/homework3/" >- Homework 3</option>
+      <option value="/ATM4110/homework/homework2/" >- Homework 2</option>
+      <option value="/ATM4110/homework/homework1/" >- Homework 1</option>
+  
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Search...">
+        </div>
+        <script type="text/javascript" src="/ATM4110/js/lunr.min.js"></script>
+        <script type="text/javascript" src="/ATM4110/js/auto-complete.js"></script>
+        <link href="/ATM4110/css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "https:\/\/hajsong.github.io\/ATM4110\/";
+          
+        </script>
+        <script type="text/javascript" src="/ATM4110/js/search.js"></script>
+      </div>
+    
+
+    <h1>Atmos. &amp; Ocean Data</h1>
+
+    
+    
+    
+
+
+
+<p>We will explore how to load the atmospheric and oceanic data and read variables for the analysis and visualization of the data.</p>
+
+<h3 id="netcdf-network-common-data-form-netcdf">NetCDF (Network Common Data Form (NetCDF)</h3>
+
+<h4 id="introduction">Introduction</h4>
+
+<p>NetCDF is a platform-independent binary file format that facilitates the storage and sharing of data along with its metadata.
+Versions of the tools needed to read and write the format are available on practically every operating system and in every major language used in the atmospheric and oceanic sciences.</p>
+
+<p>Before discussing how to do netCDF i/o in Python, let&rsquo;s briefly review the structure of netCDF.
+There are four general types of parameters in a netCDF file: global attributes, variables, variable attributes, and dimensions.</p>
+
+<p>Global attributes are usually strings that describe the file as a whole, e.g., a title, who
+created it, what standards it follows, etc.
+Variables are the entities that hold data. These include both the data-proper (e.g., temperature, meridional wind, etc.), the domain the data is defined on (delineated by the dimensions), and
+metadata about the data (e.g., units).
+Variable attributes store the metadata associated with a variable.
+Dimensions define a domain for the data-proper, but they also have values of their own (e.g., latitude values, longitude values, etc.), and thus you usually create variables for each dimension that are the
+same name as the dimension.</p>
+
+<h4 id="a-module-for-netcdf-files">A module for NetCDF files</h4>
+
+<p>There are a few number of modules that deal with netcdf files in python.
+We are going to use the <a href="https://unidata.github.io/netcdf4-python"><code>NetCDF4</code> module</a> by <a href="https://www.unidata.ucar.edu">unidata</a>.</p>
+
+<p>First, let&rsquo;s install the module using anaconda.</p>
+
+<pre><code>conda install -c anaconda netcdf4
+</code></pre>
+
+<p>We will explore how to handle the netCDF file using the <a href="/ATM4110/images/SST_Reyn_Smith.nc">climatological SST data by Reynolds and Smith</a>.</p>
+
+<h4 id="reading-netcdf-files">Reading NetCDF files</h4>
+
+<p>In Python, we use the <code>Dataset</code> constructor in <code>netCDF4</code> to load the netcdf file.</p>
+
+<pre><code>from netCDF4 import Dataset
+f = Dataset('SST_Reyn_Smith.nc', 'r')
+</code></pre>
+
+<p>Then, check the structure of the file with the <code>print</code> statement</p>
+
+<pre><code>In [2]: print(f)
+&lt;class 'netCDF4._netCDF4.Dataset'&gt;
+root group (NETCDF3_CLASSIC data model, file format NETCDF3):
+    dimensions(sizes): X(360), T(12), Y(180)
+    variables(dimensions): float32 X(X), float32 T(T), float32 Y(Y), float32 sst(T,Y,X)
+    groups:
+</code></pre>
+
+<p>This particular file does not have long description. But you may see a long list of information attached to the netcdf file.</p>
+
+<pre><code>In [2]: f = Dataset('ascat_20160728_000600_metopa_50709_eps_o_coa_2401_ovw.l2.nc','r')
+
+In [3]: print(f)
+&lt;class 'netCDF4._netCDF4.Dataset'&gt;
+root group (NETCDF3_CLASSIC data model, file format NETCDF3):
+    title: MetOp-A ASCAT Level 2 Coastal Ocean Surface Wind Vector Product
+    title_short_name: ASCATA-L2-Coastal
+    Conventions: CF-1.4
+    institution: EUMETSAT/OSI SAF/KNMI
+    source: MetOp-A ASCAT
+    software_identification_level_1: 1000
+    instrument_calibration_version: 0
+    software_identification_wind: 2401
+    pixel_size_on_horizontal: 12.5 km
+    service_type: eps
+    processing_type: O
+    contents: ovw
+    granule_name: ascat_20160728_000600_metopa_50709_eps_o_coa_2401_ovw.l2.nc
+    processing_level: L2
+    orbit_number: 50709
+    start_date: 2016-07-28
+    start_time: 00:06:00
+    stop_date: 2016-07-28
+    stop_time: 01:47:58
+    equator_crossing_longitude:  321.384
+    equator_crossing_date: 2016-07-28
+    equator_crossing_time: 00:03:41
+    rev_orbit_period: 6081.7
+    orbit_inclination: 98.7
+    history: N/A
+    references: ASCAT Wind Product User Manual, http://www.osi-saf.org/, http://www.knmi.nl/scatterometer/
+    comment: Orbit period and inclination are constant values. All wind directions in oceanographic convention (0 deg. flowing North)
+    creation_date: 2016-07-28
+    creation_time: 02:50:02
+    dimensions(sizes): NUMROWS(3264), NUMCELLS(82)
+    variables(dimensions): int32 time(NUMROWS,NUMCELLS), int32 lat(NUMROWS,NUMCELLS), int32 lon(NUMROWS,NUMCELLS), int16 wvc_index(NUMROWS,NUMCELLS), int16 model_speed(NUMROWS,NUMCELLS), int16 model_dir(NUMROWS,NUMCELLS), int16 ice_prob(NUMROWS,NUMCELLS), int16 ice_age(NUMROWS,NUMCELLS), int32 wvc_quality_flag(NUMROWS,NUMCELLS), int16 wind_speed(NUMROWS,NUMCELLS), int16 wind_dir(NUMROWS,NUMCELLS), int16 bs_distance(NUMROWS,NUMCELLS)
+    groups:
+</code></pre>
+
+<p>Again, variables in python are in fact objects. Since we loaded the netcdf as <code>f</code>, we can see all methods and attributes with <code>dir(f)</code>.</p>
+
+<pre><code>In [9]: dir(f)
+Out[9]:
+['__class__',
+ '__delattr__',
+ '__dir__',
+ .
+ .
+ .
+ 'variables',
+ 'vltypes']
+</code></pre>
+
+<p>Among them, <code>dimensions</code> and <code>variables</code> are used the most in reading the data.
+As you can guess from the name of the method, <code>dimensions</code> shows the dimensions in the data.</p>
+
+<pre><code>In [13]: f.dimensions
+Out[13]:
+OrderedDict([('X',
+              &lt;class 'netCDF4._netCDF4.Dimension'&gt;: name = 'X', size = 360),
+             ('T',
+              &lt;class 'netCDF4._netCDF4.Dimension'&gt;: name = 'T', size = 12),
+             ('Y',
+              &lt;class 'netCDF4._netCDF4.Dimension'&gt;: name = 'Y', size = 180)])
+</code></pre>
+
+<p>This means that variables have dimensions that are defined as <code>X</code>, <code>Y</code> and <code>T</code>.</p>
+
+<p>To get the list of variables,</p>
+
+<pre><code>In [3]: f.variables.keys()
+Out[3]: odict_keys(['X', 'T', 'Y', 'sst'])
+</code></pre>
+
+<p>To get the details of the variable, for example, <code>T</code>,</p>
+
+<pre><code>In [5]: print(f.variables['T'])
+&lt;class 'netCDF4._netCDF4.Variable'&gt;
+float32 T(T)
+    standard_name: time
+    pointwidth: 1.0
+    calendar: 360
+    modulus: 12.0
+    modulo: 12.0
+    gridtype: 1
+    units: months since 1960-01-01
+unlimited dimensions:
+current shape = (12,)
+filling on, default _FillValue of 9.969209968386869e+36 used
+</code></pre>
+
+<p>You get the list of information associated with this variable. Following the notation of object, we can access these information. For example, the unit of <code>T</code> can be obtained by</p>
+
+<pre><code>In [7]: f.variables['T'].units
+Out[7]: 'months since 1960-01-01'
+</code></pre>
+
+<p>The data can be obtained as the following.</p>
+
+<pre><code>In [10]: time = f.variables['T'][:]
+
+In [11]: time
+Out[11]:
+masked_array(data=[ 0.5,  1.5,  2.5,  3.5,  4.5,  5.5,  6.5,  7.5,  8.5,
+                    9.5, 10.5, 11.5],
+             mask=False,
+       fill_value=1e+20,
+            dtype=float32)
+
+In [12]: print(time)
+[ 0.5  1.5  2.5  3.5  4.5  5.5  6.5  7.5  8.5  9.5 10.5 11.5]
+</code></pre>
+
+<p>The variable, <code>time</code> is MaskedArray.</p>
+
+<p>All datasets of real-world phenomena will have missing data: instruments will malfunction, people will make measurement errors, etc.
+Traditionally, missing data has been handled by assigning a value as the &ldquo;missing value&rdquo; and setting all elements of the dataset that are &ldquo;bad&rdquo; to that value. (Usually, the missing value is a value entirely out of the range of the expected values, e.g., -99999.)</p>
+
+<p>As an object-oriented program, python thinks that variables are actually one type of objects carrying attributes and methods.
+In the atmospheric and oceanic sciences (AOS) applications, this means that data and metadata (e.g., grid type, missing values, etc.) can both be attached to the &ldquo;variable.&rdquo;
+Using this capability, we can define array-like variables: masked arrays.
+These array-like variables incorporate metadata attached to the arrays and define how that metadata can be used as part of analysis, visualization, etc.</p>
+
+<p>Recall that arrays are n-dimensional vectors or grids that hold numbers (or characters).
+Masked arrays, then, are arrays that also have a “mask” attributem which tells you which elements are bad, and masked variables are masked arrays that also give domain information and other metadata information.</p>
+
+<p>The properties of MaskedArray type become clearer with <code>sst</code> variable. Let&rsquo;s read it.</p>
+
+<pre><code>In [15]: sst = f.variables['sst'][:]
+
+In [16]: sst
+Out[16]:
+masked_array(
+  data=[[[--, --, --, ..., --, --, --],
+         [--, --, --, ..., --, --, --],
+         [--, --, --, ..., --, --, --],
+         ...,
+         [-1.7999999523162842, -1.7999999523162842, -1.7999999523162842,
+          ..., -1.7999999523162842, -1.7999999523162842,
+          -1.7999999523162842],
+          .
+          .
+          .
+  mask=[[[ True,  True,  True, ...,  True,  True,  True],
+       [ True,  True,  True, ...,  True,  True,  True],
+       [ True,  True,  True, ...,  True,  True,  True],
+       ...,
+       [False, False, False, ..., False, False, False],
+       [False, False, False, ..., False, False, False],
+       [False, False, False, ..., False, False, False]],
+       .
+       .
+       .
+       [False, False, False, ..., False, False, False]]],
+  fill_value=-999.9,
+  dtype=float32)
+</code></pre>
+
+<p>As you can see, there are attributes attached to <code>sst</code> and they are <code>data</code>, <code>mask</code>, <code>fill_value</code> and <code>dtype</code>.</p>
+
+<p>The <code>mask</code> is a boolean array whose elements are set to <code>True</code> if the value in the corresponding array is considered &ldquo;bad&rdquo;.
+Thus, in the masked array <code>sst</code>, the first row has mask values set to <code>True</code>, and when the data for the masked array is printed out for a human viewer, those elements display &ldquo;&ndash;&rdquo; instead of a number.</p>
+
+<p>We also note that the masked array <code>sst</code> has an attribute called <code>fill_value</code> that is set to <code>-999.0</code>.
+This is the value used to fill-in all the &ldquo;bad&rdquo; elements when we &ldquo;deconstruct&rdquo; the masked array.
+That is to say, when we convert a masked array to a normal NumPy array, we need to put something in for all the &ldquo;bad&rdquo; elements (i.e., where the mask is <code>True</code>): the value of <code>fill_value</code> is what we put in for the &ldquo;bad&rdquo; elements.</p>
+
+<p>For masked arrays, operations using elements whose mask value is set to <code>True</code> will create results that also have a mask value set to <code>True</code>.
+For example,</p>
+
+<pre><code>In [24]: sst[0,10,10]
+Out[24]: masked
+
+In [25]: sst[0,20,10]
+Out[25]: -0.59
+
+In [26]: sst[0,10,10] + sst[0,20,10]
+Out[26]: masked
+</code></pre>
+
+<p>Thus, the addition of a &ldquo;good&rdquo; value and a &ldquo;bad&rdquo; value yields a “bad” value.
+Product of these two values also results in a &ldquo;bad&rdquo; value.</p>
+
+<pre><code>In [27]: sst[0,10,10] * sst[0,20,10]
+Out[27]: masked
+</code></pre>
+
+<p>However, masked values are not considered in the statistical calculation.
+For example, if you want to compute the climatological mean sea surface temperature in January,</p>
+
+<pre><code>In [46]: print(sst[0,:,:].mean())
+13.551309957258193
+</code></pre>
+
+<p>In some cases, you can assign <code>np.nan</code> that represents &ldquo;not a number&rdquo; for &ldquo;bad&rdquo; values.
+Assigning a specific value for a masked array can be done easily with the method <code>filled</code>.</p>
+
+<pre><code>In [53]: sst.filled?
+Signature: sst.filled(fill_value=None)
+Docstring:
+Return a copy of self, with masked values filled with a given value.
+**However**, if there are no masked values to fill, self will be
+returned instead as an ndarray.
+
+Parameters
+----------
+fill_value : scalar, optional
+    The value to use for invalid entries (None by default).
+    If None, the `fill_value` attribute of the array is used instead.
+
+Returns
+-------
+filled_array : ndarray
+    A copy of ``self`` with invalid entries replaced by *fill_value*
+    (be it the function argument or the attribute of ``self``), or
+    ``self`` itself as an ndarray if there are no invalid entries to
+    be replaced.
+
+Notes
+-----
+The result is **not** a MaskedArray!
+.
+.
+.
+
+In [54]: jansst = sst[0,...]
+
+In [55]: jansst
+Out[55]:
+masked_array(
+  data=[[--, --, --, ..., --, --, --],
+        [--, --, --, ..., --, --, --],
+        [--, --, --, ..., --, --, --],
+        ...,
+        [-1.7999999523162842, -1.7999999523162842, -1.7999999523162842,
+         ..., -1.7999999523162842, -1.7999999523162842,
+         -1.7999999523162842],
+        [-1.7999999523162842, -1.7999999523162842, -1.7999999523162842,
+         ..., -1.7999999523162842, -1.7999999523162842,
+         -1.7999999523162842],
+        [-1.7999999523162842, -1.7999999523162842, -1.7999999523162842,
+         ..., -1.7999999523162842, -1.7999999523162842,
+         -1.7999999523162842]],
+  mask=[[ True,  True,  True, ...,  True,  True,  True],
+        [ True,  True,  True, ...,  True,  True,  True],
+        [ True,  True,  True, ...,  True,  True,  True],
+        ...,
+        [False, False, False, ..., False, False, False],
+        [False, False, False, ..., False, False, False],
+        [False, False, False, ..., False, False, False]],
+  fill_value=-999.9,
+  dtype=float32)
+
+In [56]: jansst.filled()    # fill masked spaces with &quot;fill_value&quot;
+Out[56]:
+array([[-999.9, -999.9, -999.9, ..., -999.9, -999.9, -999.9],
+       [-999.9, -999.9, -999.9, ..., -999.9, -999.9, -999.9],
+       [-999.9, -999.9, -999.9, ..., -999.9, -999.9, -999.9],
+       ...,
+       [  -1.8,   -1.8,   -1.8, ...,   -1.8,   -1.8,   -1.8],
+       [  -1.8,   -1.8,   -1.8, ...,   -1.8,   -1.8,   -1.8],
+       [  -1.8,   -1.8,   -1.8, ...,   -1.8,   -1.8,   -1.8]],
+      dtype=float32)
+
+In [57]: jansst.filled(np.nan)    # assign a specific value for the masked space
+Out[57]:
+array([[ nan,  nan,  nan, ...,  nan,  nan,  nan],
+       [ nan,  nan,  nan, ...,  nan,  nan,  nan],
+       [ nan,  nan,  nan, ...,  nan,  nan,  nan],
+       ...,
+       [-1.8, -1.8, -1.8, ..., -1.8, -1.8, -1.8],
+       [-1.8, -1.8, -1.8, ..., -1.8, -1.8, -1.8],
+       [-1.8, -1.8, -1.8, ..., -1.8, -1.8, -1.8]], dtype=float32)
+
+In [58]: jansstfill = jansst.filled(np.nan)
+
+In [59]: jansstfill.mean()
+Out[59]: nan
+
+In [70]: np.nanmean(jansstfill)
+Out[70]: 13.55131
+</code></pre>
+
+<p>As you can see from this example, having <code>np.nan</code> as an element results in <code>nan</code> in the statistical calculation. Numpy provides functions for statistical calculations of arrays with <code>np.nan</code>, and <code>np.nanmean</code> is one of them.</p>
+
+<p>When you are done with reading the data, close the file with <code>f.close()</code>.</p>
+
+<h4 id="masked-array">Masked array</h4>
+
+<p>I think it will be useful to discuss more about the masked array.
+We saw that the variables from NetCDF files are in masked array, and it has advantages in processing and visualizing the data (we will see this).</p>
+
+<p>Then you may wonder whether we can create masked arrays. Yes, we can using Numpy module.
+The <code>numpy.ma</code> module is available to work with data arrays with masks.</p>
+
+<pre><code>import numpy as np
+import numpy.ma as ma
+a = np.array([[1,2,3],[4,5,6]])
+b = ma.masked_array(data=[1,2,3], mask=[True, False, False], fill_value=-999)
+</code></pre>
+
+<p>In IPython,</p>
+
+<pre><code>In [9]: b
+Out[9]:
+masked_array(data=[--, 2, 3],
+             mask=[ True, False, False],
+       fill_value=-999)
+</code></pre>
+
+<p>When dealing with the real data set where we cannot specify individual values for the array, other methods may be more useful to create masked arrays. For example,</p>
+
+<table>
+<thead>
+<tr>
+<th align="center">function</th>
+<th align="center">description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">masked_equal(x, value[, copy])</td>
+<td align="center">Mask an array where equal to a given value.</td>
+</tr>
+
+<tr>
+<td align="center">masked_greater(x, value[, copy])</td>
+<td align="center">Mask an array where greater than a given integer value.</td>
+</tr>
+
+<tr>
+<td align="center">masked_less(x, value[, copy])</td>
+<td align="center">Mask an array where less than a given value.</td>
+</tr>
+
+<tr>
+<td align="center">masked_invalid(a[, copy])</td>
+<td align="center">Mask an array where invalid values occur (NaNs or infs).</td>
+</tr>
+
+<tr>
+<td align="center">masked_values(x, value[, copy, …])</td>
+<td align="center">Mask using floating point equality.</td>
+</tr>
+
+<tr>
+<td align="center">masked_where(condition, a[, copy])</td>
+<td align="center">Mask an array where a condition is met.</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="hierarchical-data-format-hdf">Hierarchical Data Format (HDF)</h3>
+
+<p>Data managed by NASA are usually in HDF type format (HDF4, HDF5, HDF EOS 5)</p>
+
+<h3 id="grib">GRIB</h3>
+
+<h3 id="binary-file">Binary file</h3>
+
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/ATM4110/python/fileio/" title="Dealing with real data"> <i class="fa fa-chevron-left"></i><label>Dealing with real data</label></a>
+    <a class="nav nav-next" href="/ATM4110/homework/" title=" Homework" style="margin-right: 0px;"><label> Homework</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+    <div class="tags"> 
+      
+        <a class="label label-default" href="https://hajsong.github.io/ATM4110/tags/tag1">tag1</a>
+      
+        <a class="label label-default" href="https://hajsong.github.io/ATM4110/tags/tag2">tag2</a>
+      
+    </div>
+    
+
+    
+    <div class="author">
+        <i class='fa fa-user'></i> <a href="mailto:hajsong@yonsei.ac.kr">Hajoon Song</a>
+    </div>
+    
+
+  
+    <div class="date">
+        <i class='fa fa-calendar'></i> Last update on 24/10/2018
+    </div>
+    
+
+    <div class="github-link">
+      <a href="https://github.com/hajsong/ATM4110/content/aodata/_index.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
+  </div>
+
+
+</footer>
+
+<script src="/ATM4110/js/clipboard.min.js"></script>
+
+<link href="/ATM4110/css/featherlight.min.css" rel="stylesheet">
+<script src="/ATM4110/js/featherlight.min.js"></script>
+
+
+
+<script src="/ATM4110/theme-flex/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

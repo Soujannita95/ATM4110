@@ -273,22 +273,7 @@ data.describe()
 ##### Exercise: Extract statistical information from the dataset.
 One of the current issues is whether we regulate the permit for the senior drivers for the safety reasons.
 Let's evaluate the data of the car accident in 2017 and see whether there is a statistical background for the regulation.
-Possible questions to be evalueated are.
+Possible questions to be evaluated are.
 
 1. Are there more car accident caused by the drivers older than 60 than those with the age between 20-40?
 2. Do the accidents tend to be major by the drivers older than 60?
-
-#### Popular data type in atmospheric and oceanic sciences
-NetCDF is a platform-independent binary file format that facilitates the storage and sharing of data along with its metadata.
-Versions of the tools needed to read and write the format are available on practically every operating system and in every major language used in the atmospheric and oceanic sciences.
-
-Before discussing how to do netCDF i/o in Python, let's briefly review the structure of netCDF.
-There are four general types of parameters in a netCDF file: global attributes, variables, variable attributes, and dimensions.
-
-Global attributes are usually strings that describe the file as a whole, e.g., a title, who
-created it, what standards it follows, etc.
-Variables are the entities that hold data. These include both the data-proper (e.g., temperature, meridional wind, etc.), the domain the data is defined on (delineated by the dimensions), and
-metadata about the data (e.g., units).
-Variable attributes store the metadata associated with a variable.
-Dimensions define a domain for the data-proper, but they also have values of their own (e.g., latitude values, longitude values, etc.), and thus you usually create variables for each dimension that are the
-same name as the dimension.
