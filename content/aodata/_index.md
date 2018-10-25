@@ -372,6 +372,16 @@ When dealing with the real data set where we cannot specify individual values fo
 
 ### Hierarchical Data Format (HDF)
 Data managed by NASA are usually in HDF type format (HDF4, HDF5, HDF EOS 5)
+Since I do not heavily use this data type, it may be better to quote what Dennis Shea (NCAR) says through [https://climatedataguide.ucar.edu/climate-data-tools-and-analysis/hdf](https://climatedataguide.ucar.edu/climate-data-tools-and-analysis/hdf).
+
+"The Hierarchial Data Format is available in two  versions: the original HDF4 and the more recent HDF5. Unfortunately, HDF4 and HDF5 interfaces and data models are completely incompatible.  The HDF5 data model is more flexible and is a "a true hierarchical file structure, similar to the Unix file system." HDF5 does have some new features that are appealing to climate research, such as, parallel I/O and variable compression.  (Note: Our experience is that any compression level greater that '1' is not worth the additional time required for the increased compression.)
+
+The HDF{4/5}-EOS format extension defines three additional data types based on HDF objects: grid, point, and swath. These data types allow the file contents to be referenced to Earth coordinates, such as latitude and longitude, and to time. An irritating issue is that standard HDF library calls cannot readily access geolocation or time data or metadata. Users must use the HDF{4/5}-EOS interfaces.The converse is also true. Certain information can only be accessed via standard HDF4 interfaces. Hence, both interfaces may be required to get at all the information on the file.
+
+The netCDF user communities have numerous conventions for creating the contents of netCDF files, in particular, the commonly used COARDS and CF conventions. Unfortunately, the HDF communities do not seem to have any generally adopted conventions for HDF files. Perhaps, the variety of data sources, particularly satellites, inhibits the creation of common conventions?"
+
+Reading HDF5 type file can be done using ```netCDF4``` package. In the class, I will show this.
+
 
 ### GRIB
 

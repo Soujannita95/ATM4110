@@ -798,7 +798,16 @@ masked_array(data=[--, 2, 3],
 
 <h3 id="hierarchical-data-format-hdf">Hierarchical Data Format (HDF)</h3>
 
-<p>Data managed by NASA are usually in HDF type format (HDF4, HDF5, HDF EOS 5)</p>
+<p>Data managed by NASA are usually in HDF type format (HDF4, HDF5, HDF EOS 5)
+Since I do not heavily use this data type, it may be better to quote what Dennis Shea (NCAR) says through <a href="https://climatedataguide.ucar.edu/climate-data-tools-and-analysis/hdf">https://climatedataguide.ucar.edu/climate-data-tools-and-analysis/hdf</a>.</p>
+
+<p>&ldquo;The Hierarchial Data Format is available in two  versions: the original HDF4 and the more recent HDF5. Unfortunately, HDF4 and HDF5 interfaces and data models are completely incompatible.  The HDF5 data model is more flexible and is a &ldquo;a true hierarchical file structure, similar to the Unix file system.&rdquo; HDF5 does have some new features that are appealing to climate research, such as, parallel I/O and variable compression.  (Note: Our experience is that any compression level greater that &lsquo;1&rsquo; is not worth the additional time required for the increased compression.)</p>
+
+<p>The HDF{<sup>4</sup>&frasl;<sub>5</sub>}-EOS format extension defines three additional data types based on HDF objects: grid, point, and swath. These data types allow the file contents to be referenced to Earth coordinates, such as latitude and longitude, and to time. An irritating issue is that standard HDF library calls cannot readily access geolocation or time data or metadata. Users must use the HDF{<sup>4</sup>&frasl;<sub>5</sub>}-EOS interfaces.The converse is also true. Certain information can only be accessed via standard HDF4 interfaces. Hence, both interfaces may be required to get at all the information on the file.</p>
+
+<p>The netCDF user communities have numerous conventions for creating the contents of netCDF files, in particular, the commonly used COARDS and CF conventions. Unfortunately, the HDF communities do not seem to have any generally adopted conventions for HDF files. Perhaps, the variety of data sources, particularly satellites, inhibits the creation of common conventions?&rdquo;</p>
+
+<p>Reading HDF5 type file can be done using <code>netCDF4</code> package. In the class, I will show this.</p>
 
 <h3 id="grib">GRIB</h3>
 
