@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>Lines</title>
+      <link>https://hajsong.github.io/ATM4110/visual/lines/</link>
+      <pubDate>Mon, 29 Oct 2018 16:57:56 +0900</pubDate>
+      
+      <guid>https://hajsong.github.io/ATM4110/visual/lines/</guid>
+      <description>Line plots are created by the pyplot plot function. I think it is helpful to use the example to explore the matplotlib&amp;rsquo;s plot command. Let&amp;rsquo;s imagine we want to see the trend of global air temperature. Then one of the best way to show the trend is a line plot against the time.
+Draw lines using the data In this example, we will plot the time series of air temperature using the dataset from HadCRUT4</description>
+    </item>
+    
+    <item>
       <title>Installation</title>
       <link>https://hajsong.github.io/ATM4110/linux/shell/</link>
       <pubDate>Tue, 04 Sep 2018 07:45:45 +0900</pubDate>

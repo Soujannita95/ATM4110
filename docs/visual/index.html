@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ATM4110</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.37.1" />
+<title>Visualization :: ATM4110</title>
+<link rel="shortcut icon" href="/ATM4110/images/favicon.png" type="image/x-icon" />
+<link href="/ATM4110/css/font-awesome.min.css" rel="stylesheet">
+<link href="/ATM4110/css/nucleus.css" rel="stylesheet">
+<link href="/ATM4110/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/ATM4110/css/bootstrap.min.css">
+<script src="/ATM4110/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/hajsong.github.io\/ATM4110\/";
+</script>
+<meta name="description" content="">
+
+<link rel="stylesheet" href="/ATM4110/css/mathjax-style.css">
+
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+
+
+
+    
+  </head>
+  <body data-url="/ATM4110/visual/">
+    
+      <header>
+  <div class="logo">
+    
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-113704256-3', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+	
+  
+    <a class="baselink" href="https://hajsong.github.io/ATM4110/">ATM4110</a>
+  
+
+<meta name="description" content="">
+
+<link rel="stylesheet" href="/ATM4110/css/mathjax-style.css">
+
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+
+
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://github.com/hajsong/ATM4110" target="_blank" rel="noopener">
+                  <i class='fa fa-github'></i> <label>Github repo</label>
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/ATM4110/" class="dd-item">
+          <a href="/ATM4110/">
+            <i class="fa fa-fw fa-home"></i> Home
+          </a>
+          </li>
+    <li data-nav-id="/ATM4110/syllabus/" class="dd-item
+        ">
+      <div>
+      <a href="/ATM4110/syllabus/">Syllabus</a>
+      </div>
+    </li>
+    <li data-nav-id="/ATM4110/linux/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ATM4110/linux/">Unix/Linux system</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ATM4110/linux/shell/" class="dd-item">
+        <div>
+          <a href="/ATM4110/linux/shell/">
+            Installation
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/linux/diroperation/" class="dd-item">
+        <div>
+          <a href="/ATM4110/linux/diroperation/">
+            Directory operation
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/linux/fileoperation/" class="dd-item">
+        <div>
+          <a href="/ATM4110/linux/fileoperation/">
+            File Operation
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/linux/filehandling/" class="dd-item">
+        <div>
+          <a href="/ATM4110/linux/filehandling/">
+            File Handling
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ATM4110/environment/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ATM4110/environment/">Computing Environment</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ATM4110/environment/python/" class="dd-item">
+        <div>
+          <a href="/ATM4110/environment/python/">
+            Python
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/environment/jupyter/" class="dd-item">
+        <div>
+          <a href="/ATM4110/environment/jupyter/">
+            Jupyter
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/environment/setup/" class="dd-item">
+        <div>
+          <a href="/ATM4110/environment/setup/">
+            Set up
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/environment/howtouse/" class="dd-item">
+        <div>
+          <a href="/ATM4110/environment/howtouse/">
+            Start Python / Jupyter Notebook
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ATM4110/python/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ATM4110/python/">Python</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ATM4110/python/pythonbasic/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/pythonbasic/">
+            Basic Data and Control Structures
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/python_more/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/python_more/">
+            Functions, if statement and loops
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/module/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/module/">
+            Module
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/object/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/object/">
+            Introduction to Object
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/myclass/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/myclass/">
+            Defining class
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/array1/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/array1/">
+            Array operation 1
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/array2/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/array2/">
+            Array operation 2
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/array3/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/array3/">
+            Array operation 3
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/python/fileio/" class="dd-item">
+        <div>
+          <a href="/ATM4110/python/fileio/">
+            Dealing with real data
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ATM4110/aodata/" class="dd-item alwaysopen
+        ">
+      <div>
+      <a href="/ATM4110/aodata/">Atmos. &amp; Ocean Data</a>
+      </div>
+    </li>
+    <li data-nav-id="/ATM4110/visual/" class="dd-item parent active haschildren
+        ">
+      <div>
+      <a href="/ATM4110/visual/">Visualization</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ATM4110/visual/lines/" class="dd-item">
+        <div>
+          <a href="/ATM4110/visual/lines/">
+            Lines
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ATM4110/homework/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="/ATM4110/homework/"> Homework</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ATM4110/homework/homework5/" class="dd-item">
+        <div>
+          <a href="/ATM4110/homework/homework5/">
+            Homework 5
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/homework/homework4/" class="dd-item">
+        <div>
+          <a href="/ATM4110/homework/homework4/">
+            Homework 4
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/homework/homework3/" class="dd-item">
+        <div>
+          <a href="/ATM4110/homework/homework3/">
+            Homework 3
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/homework/homework2/" class="dd-item">
+        <div>
+          <a href="/ATM4110/homework/homework2/">
+            Homework 2
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ATM4110/homework/homework1/" class="dd-item">
+        <div>
+          <a href="/ATM4110/homework/homework1/">
+            Homework 1
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/ATM4110/syllabus/" >
+   Syllabus</option>
+    <option value="/ATM4110/linux/" >
+   Unix/Linux system</option>
+    <option value="/ATM4110/environment/" >
+   Computing Environment</option>
+    <option value="/ATM4110/python/" >
+   Python</option>
+    <option value="/ATM4110/aodata/" >
+   Atmos. &amp; Ocean Data</option> 
+  
+    <option value="/ATM4110/visual/"  selected>
+   Visualization</option> 
+      <option value="/ATM4110/visual/lines/" >- Lines</option>
+  
+    <option value="/ATM4110/homework/" >
+    Homework</option> 
+      <option value="/ATM4110/homework/homework5/" >- Homework 5</option>
+      <option value="/ATM4110/homework/homework4/" >- Homework 4</option>
+      <option value="/ATM4110/homework/homework3/" >- Homework 3</option>
+      <option value="/ATM4110/homework/homework2/" >- Homework 2</option>
+      <option value="/ATM4110/homework/homework1/" >- Homework 1</option>
+  
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Search...">
+        </div>
+        <script type="text/javascript" src="/ATM4110/js/lunr.min.js"></script>
+        <script type="text/javascript" src="/ATM4110/js/auto-complete.js"></script>
+        <link href="/ATM4110/css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "https:\/\/hajsong.github.io\/ATM4110\/";
+          
+        </script>
+        <script type="text/javascript" src="/ATM4110/js/search.js"></script>
+      </div>
+    
+
+    <h1>Visualization</h1>
+
+    
+    
+    
+
+
+
+<p>Visualizing the results is the key process of the atmospheric and oceanic data analysis.
+Since Python is an open-source programming language, there are more than one options for visualizing the result.
+Those include PyNGL by NCAR, Visualization Control System by UV-CDAT and Matplotlib.
+In the class, we will focus on Matplotlib.</p>
+
+<h4 id="matplotlib">Matplotlib</h4>
+
+<p><a href="https://matplotlib.org/">Matplotlib</a> is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms.
+Matplotlib can be used in Python scripts, the Python and IPython shells, the Jupyter notebook, web application servers, and four graphical user interface toolkits.
+The visualization work you can do with Matplotlib has a wide range of spectrum. To see examples, visit the <a href="https://matplotlib.org/gallery/index.html">gallery page</a>.</p>
+
+<p><code>Matplotlib</code> is the whole package, and most plotting tasks can be done with <code>matplotlib.pyplot</code>, a module in matplotlib.</p>
+
+<p>To use this module, we can <code>import</code> it using the same command we used for <code>numpy</code>.</p>
+
+<pre><code>import matplotlib.pyplot as plt
+</code></pre>
+
+<p>Unless otherwise stated, you may assume in the examples in this chapter that the above import has been done prior to any matplotlib calls being run.</p>
+
+<h4 id="parts-of-a-figure">Parts of a Figure</h4>
+
+<h5 id="figure">Figure</h5>
+
+<p>The figure represents the whole space where plots are shown. A figure can have any number of axes where the actual drawing are happening.</p>
+
+<h5 id="axes">Axes</h5>
+
+<p>This is a area where &lsquo;a plot&rsquo; is going to be drawn using the data. There can be more than one axes in a single figure. The Axes contains two (or three in the case of 3D) Axis objects.</p>
+
+<h5 id="axis">Axis</h5>
+
+<p>These are the number-line-like objects. They take care of setting the graph limits and generating the ticks and ticklabels. There are 2 axis along each direction in 2D figures, but can be three for 3D figures.</p>
+
+<h5 id="artist">Artist</h5>
+
+<p>Basically everything you can see on the figure is an artist (even the Figure, Axes, and Axis objects). This includes Text objects, Line2D objects, collection objects, Patch objects &hellip; (you get the idea). When the figure is rendered, all of the artists are drawn to the canvas. Most Artists are tied to an Axes; such an Artist cannot be shared by multiple Axes, or moved from one to another.</p>
+
+<p>The sample of matplotlib can clarify these concepts.
+<img src="/ATM4110/images/matplotlib_components.jpg" alt="" /></p>
+
+<h4 id="interactive-mode">Interactive mode</h4>
+
+<p>When you make plots, you can choose to make them interactively, meaning deciding the next step after getting the intermediate results. Or, you can write down all the commands once and let matplotlib interprete them to the plot, which is non-interactive.</p>
+
+<p>To turn on the interactive mode, you can use <code>plt.ion()</code>. To turn it off and come back to the non-interactive mode (which is the default), type <code>plt.ioff()</code>.</p>
+
+<p>For example,</p>
+
+<pre><code>import matplotlib.pyplot as plt
+plt.ion()
+plt.plot([1.6, 2.7])
+</code></pre>
+
+<p>Then we can keep adding more texts because the interactive mode is on.</p>
+
+<pre><code>plt.title(&quot;interactive test&quot;)
+plt.xlabel(&quot;index&quot;)
+</code></pre>
+
+<p>and you will see the plot being updated after each line.</p>
+
+<p>To go back to the non-interactive mode,</p>
+
+<pre><code>plt.ioff()
+plt.plot([1.6, 2.7])
+</code></pre>
+
+<p>As you can see, nothing happends in contrast to the previous example. To have the figure, we need to say <code>plt.show()</code>.
+Now you see the plot, but your terminal command line is unresponsive; the <code>show()</code> command blocks the input of additional commands until you manually kill the plot window.</p>
+
+<p>What good is this&ndash;being forced to use a blocking function? Suppose you need a script that plots the contents of a file to the screen. You want to look at that plot, and then end the script. Without some blocking command such as show(), the script would flash up the plot and then end immediately, leaving nothing on the screen.</p>
+
+<p>In addition, non-interactive mode delays all drawing until show() is called; this is more efficient than redrawing the plot each time a line in the script adds a new feature.</p>
+
+<p>Obviously, we cannot cover all the functions of Matplotlib in the class.
+Instead, we will explore basic plotting functions such as plot, imshow, contour and pcolormesh.</p>
+
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/ATM4110/aodata/" title="Atmos. &amp; Ocean Data"> <i class="fa fa-chevron-left"></i><label>Atmos. &amp; Ocean Data</label></a>
+    <a class="nav nav-next" href="/ATM4110/visual/lines/" title="Lines" style="margin-right: 0px;"><label>Lines</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+    <div class="tags"> 
+      
+        <a class="label label-default" href="https://hajsong.github.io/ATM4110/tags/visualization">visualization</a>
+      
+        <a class="label label-default" href="https://hajsong.github.io/ATM4110/tags/matplotlib">matplotlib</a>
+      
+    </div>
+    
+
+    
+    <div class="author">
+        <i class='fa fa-user'></i> <a href="mailto:hajsong@yonsei.ac.kr">Hajoon Song</a>
+    </div>
+    
+
+  
+    <div class="date">
+        <i class='fa fa-calendar'></i> Last update on 29/10/2018
+    </div>
+    
+
+    <div class="github-link">
+      <a href="https://github.com/hajsong/ATM4110/content/visual/_index.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
+  </div>
+
+
+</footer>
+
+<script src="/ATM4110/js/clipboard.min.js"></script>
+
+<link href="/ATM4110/css/featherlight.min.css" rel="stylesheet">
+<script src="/ATM4110/js/featherlight.min.js"></script>
+
+
+
+<script src="/ATM4110/theme-flex/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>
