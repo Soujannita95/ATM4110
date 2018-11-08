@@ -11,7 +11,7 @@ weight = 2
 #pre ="<i class='fa fa-edit' ></i> "
 +++
 
-{{% panel %}}You can download the [jupyter notebook file.](https://github.com/hajsong/ATM4110/blob/master/static/plot_2d.ipynb){{% /panel %}}
+{{% panel %}}You can download the [jupyter notebook file.](https://github.com/hajsong/ATM4110/blob/master/static/images/plot_2d.ipynb){{% /panel %}}
 
 # Drawing 2D figures
 
@@ -1014,44 +1014,6 @@ m.drawparallels(np.arange(-90.,120.,30.))
 m.drawmeridians(np.arange(0.,360.,60.))
 m.quiver(X[::intv, ::intv], Y[::intv, ::intv], uwind[-1, ::intv, ::intv], vwind[-1, ::intv, ::intv], latlon=True)
 ```
-
-
-    -----------------------------------
-
-    AttributeErrorTraceback (most recent call last)
-
-    <ipython-input-138-5b6242124279> in <module>()
-          7 m.drawparallels(np.arange(-90.,120.,30.))
-          8 m.drawmeridians(np.arange(0.,360.,60.))
-    ----> 9 m.quiver(X[::intv, ::intv], Y[::intv, ::intv], uwind[-1, ::intv, ::intv], vwind[-1, ::intv, ::intv], latlon=True)
-
-
-    ~/miniconda2/envs/py36/lib/python3.6/site-packages/mpl_toolkits/basemap/__init__.py in with_transform(self, x, y, u, v, *args, **kwargs)
-        583             # convert lat/lon coords to map projection coords.
-        584             x, y = self(x,y)
-    --> 585         return plotfunc(self,x,y,u,v,*args,**kwargs)
-        586     return with_transform
-        587
-
-
-    ~/miniconda2/envs/py36/lib/python3.6/site-packages/mpl_toolkits/basemap/__init__.py in quiver(self, x, y, u, v, *args, **kwargs)
-       3706             ret =  ax.quiver(x,y,u,v,*args,**kwargs)
-       3707         finally:
-    -> 3708             self._restore_hold(ax)
-       3709         if plt is not None and ret.get_array() is not None:
-       3710             plt.sci(ret)
-
-
-    ~/miniconda2/envs/py36/lib/python3.6/site-packages/mpl_toolkits/basemap/__init__.py in _restore_hold(self, ax)
-       3236     def _restore_hold(self, ax):
-       3237         if hasattr(ax, '_hold'):
-    -> 3238             ax._hold = self._tmp_hold
-       3239
-       3240     @_transform1d
-
-
-    AttributeError: can't set attribute
-
 
 
 ![png](/ATM4110/images/output_36_1.png)
