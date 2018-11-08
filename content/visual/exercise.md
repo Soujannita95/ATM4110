@@ -66,3 +66,6 @@ Using the ```contour``` function
 #### 4-2 Using arrows with the same size on the background of wind speed
 
 ### 5. Find the hurricane track (using either cartopy or Basemap)
+
+
+The solution can be found [here](https://github.com/hajsong/ATM4110/blob/master/static/plot_exercise_answer.ipynb)
