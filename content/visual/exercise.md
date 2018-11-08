@@ -12,9 +12,9 @@ weight = 100
 +++
 
 We learned how to make 2D plots, and touched a little bit of ```cartopy``` and ```Basemap```.
-(I prepared example jupyter notebooks for [```cartopy```](/ATM4110/images/plot_map_cartopy.ipynb) and [```Basemap```](/ATM4110/images/plot_map_basemap.ipynb).)
+(I prepared example jupyter notebooks for [```cartopy```](https://github.com/hajsong/ATM4110/raw/master/static/images/plot_map_cartopy.ipynb) and [```Basemap```](https://github.com/hajsong/ATM4110/raw/master/static/images/plot_map_basemap.ipynb).)
 
-Based on these lessons, we will finalize python lectures with [this exercise](/ATM4110/images/plot_exercise.ipynb)!
+Based on these lessons, we will finalize python lectures with [this exercise](https://github.com/hajsong/ATM4110/raw/master/static/images/plot_exercise.ipynb)!
 
 
 
