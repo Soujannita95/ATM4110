@@ -11,7 +11,7 @@ weight = 2
 #pre ="<i class='fa fa-edit' ></i> "
 +++
 
-{{% panel %}}You can download the [jupyter notebook file.](https://github.com/hajsong/ATM4110/raw/master/static/images/plot_2d.ipynb){{% /panel %}}
+{{% panel %}}You can download the [jupyter notebook file.](https://github.com/hajsong/ATM4110/blob/master/static/plot_2d.ipynb){{% /panel %}}
 
 # Drawing 2D figures
 
