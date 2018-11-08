@@ -17,6 +17,11 @@
   </url>
   
   <url>
+    <loc>https://hajsong.github.io/ATM4110/visual/2dplot/</loc>
+    <lastmod>2018-11-08T06:54:19+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://hajsong.github.io/ATM4110/linux/diroperation/</loc>
     <lastmod>2018-09-04T07:45:45+09:00</lastmod>
   </url>
@@ -54,6 +59,26 @@
   <url>
     <loc>https://hajsong.github.io/ATM4110/visual/</loc>
     <lastmod>2018-10-29T15:35:27+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/statistic/</loc>
+    <lastmod>2018-11-06T17:00:28+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/spatial/</loc>
+    <lastmod>2018-11-06T17:00:50+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/temporal/</loc>
+    <lastmod>2018-11-06T17:00:43+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/visual/exercise/</loc>
+    <lastmod>2018-11-08T11:50:53+09:00</lastmod>
   </url>
   
   <url>
@@ -152,6 +177,11 @@
   </url>
   
   <url>
+    <loc>https://hajsong.github.io/ATM4110/visual/seminar_nims/</loc>
+    <lastmod>2018-10-17T23:03:07+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://hajsong.github.io/ATM4110/</loc>
     <lastmod>2018-09-04T07:45:45+09:00</lastmod>
   </url>
@@ -165,6 +195,18 @@
   <url>
     <loc>https://hajsong.github.io/ATM4110/tags/array/</loc>
     <lastmod>2018-10-01T13:51:55+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/basemap/</loc>
+    <lastmod>2018-11-08T11:50:53+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/cartopy/</loc>
+    <lastmod>2018-11-08T11:50:53+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -188,6 +230,12 @@
   <url>
     <loc>https://hajsong.github.io/ATM4110/tags/class/</loc>
     <lastmod>2018-09-27T11:36:34+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/contour/</loc>
+    <lastmod>2018-11-08T06:54:19+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -236,6 +284,12 @@
   <url>
     <loc>https://hajsong.github.io/ATM4110/tags/if/</loc>
     <lastmod>2018-09-17T13:34:26+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/imshow/</loc>
+    <lastmod>2018-11-08T06:54:19+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -300,6 +354,18 @@
   </url>
   
   <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/objective/</loc>
+    <lastmod>2018-11-06T17:00:50+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/pcolormesh/</loc>
+    <lastmod>2018-11-08T06:54:19+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://hajsong.github.io/ATM4110/tags/plot/</loc>
     <lastmod>2018-10-29T16:57:56+09:00</lastmod>
     <priority>0</priority>
@@ -318,6 +384,24 @@
   </url>
   
   <url>
+    <loc>https://hajsong.github.io/ATM4110/categories/seminar/</loc>
+    <lastmod>2018-10-17T23:03:07+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/spatial/</loc>
+    <lastmod>2018-11-06T17:00:50+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/statistics/</loc>
+    <lastmod>2018-11-06T17:00:28+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://hajsong.github.io/ATM4110/tags/tag1/</loc>
     <lastmod>2018-10-24T09:11:24+09:00</lastmod>
     <priority>0</priority>
@@ -332,6 +416,12 @@
   <url>
     <loc>https://hajsong.github.io/ATM4110/tags/</loc>
     <lastmod>2018-09-07T12:36:51+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/temporal/</loc>
+    <lastmod>2018-11-06T17:00:43+09:00</lastmod>
     <priority>0</priority>
   </url>
   

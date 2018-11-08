@@ -32,6 +32,16 @@ How to run a shell If you have Linux, running a shell is just opening Terminal o
     </item>
     
     <item>
+      <title>2D Plots</title>
+      <link>https://hajsong.github.io/ATM4110/visual/2dplot/</link>
+      <pubDate>Thu, 08 Nov 2018 06:54:19 +0900</pubDate>
+      
+      <guid>https://hajsong.github.io/ATM4110/visual/2dplot/</guid>
+      <description>You can download the jupyter notebook file.  Drawing 2D figures In this lecture, we will make 2D figures
+import numpy as np import matplotlib.pyplot as plt from netCDF4 import Dataset, num2date import matplotlib # %matplotlib qt # Figures in a separate window # %matplotlib inline # Figures in this browser  Read the temperature data We are going to read two datasets: one for the mean temperature (absolute.nc) and the other one for the time series of temperature anomaly (HadCRUT.</description>
+    </item>
+    
+    <item>
       <title>Directory operation</title>
       <link>https://hajsong.github.io/ATM4110/linux/diroperation/</link>
       <pubDate>Tue, 04 Sep 2018 07:45:45 +0900</pubDate>
@@ -61,6 +71,19 @@ If you need a short guide for the command, try with --help option. The content o
       <description>1. File viewing In Linux, you are going to handle files with lots of different types, and want to see what&amp;rsquo;s in there. On this page, we will explore how to view the file contents if they are in text in the Linux system.
 cat [options] [files] The simplest viewer is cat, which just copies its files to standard output, concatenating them.
 $ cat filename  This command dump all the contents on the screen, so large files will likely scroll off screen.</description>
+    </item>
+    
+    <item>
+      <title>Exercise</title>
+      <link>https://hajsong.github.io/ATM4110/visual/exercise/</link>
+      <pubDate>Thu, 08 Nov 2018 11:50:53 +0900</pubDate>
+      
+      <guid>https://hajsong.github.io/ATM4110/visual/exercise/</guid>
+      <description>We learned how to make 2D plots, and touched a little bit of cartopy and Basemap. (I prepared example jupyter notebooks for cartopy and Basemap.)
+Based on these lessons, we will finalize python lectures with this exercise!
+Plotting exercise We will practice what we learned about plotting data on a 2D space.
+First, let&amp;rsquo;s get the data.
+import numpy as np import numpy.ma as ma import matplotlib.pyplot as plt from mpl_toolkits.</description>
     </item>
     
     <item>
@@ -245,6 +268,15 @@ Fancy indexing NumPy offers more indexing facilities than regular Python sequenc
       <guid>https://hajsong.github.io/ATM4110/python/fileio/</guid>
       <description>The atmospheric and oceanic sciences (AOS) are &amp;ldquo;data&amp;rdquo; intensive fields, whether data refers to observations or model output. Most of the analysis we do involve datasets, and so facilities for file input/output (i/o) are critical. Fortunately, Python has very robust facilities for file i/o, and we will be dealing with realistic datasets using Python.
 Data in the text file Some data is not too big and stored in the text file.</description>
+    </item>
+    
+    <item>
+      <title>Seminar at NIMS</title>
+      <link>https://hajsong.github.io/ATM4110/visual/seminar_nims/</link>
+      <pubDate>Wed, 17 Oct 2018 23:03:07 +0900</pubDate>
+      
+      <guid>https://hajsong.github.io/ATM4110/visual/seminar_nims/</guid>
+      <description>A Visit to National Institute of Meteorological Sciences Hajoon visited National Institute of Meteorological Sciences in Seoguipo, Jeju Island, and gave a talk with the title of global and regional physical ocean data assimilation and a strongly coupled data assimilation.</description>
     </item>
     
   </channel>
