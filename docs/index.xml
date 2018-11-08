@@ -270,14 +270,5 @@ Fancy indexing NumPy offers more indexing facilities than regular Python sequenc
 Data in the text file Some data is not too big and stored in the text file.</description>
     </item>
     
-    <item>
-      <title>Seminar at NIMS</title>
-      <link>https://hajsong.github.io/ATM4110/visual/seminar_nims/</link>
-      <pubDate>Wed, 17 Oct 2018 23:03:07 +0900</pubDate>
-      
-      <guid>https://hajsong.github.io/ATM4110/visual/seminar_nims/</guid>
-      <description>A Visit to National Institute of Meteorological Sciences Hajoon visited National Institute of Meteorological Sciences in Seoguipo, Jeju Island, and gave a talk with the title of global and regional physical ocean data assimilation and a strongly coupled data assimilation.</description>
-    </item>
-    
   </channel>
 </rss>
