@@ -445,11 +445,138 @@ ga('send', 'pageview');
     
     
 
+
+
 <ul>
 <li>Confidence intervals</li>
 <li>Linear Regression</li>
 <li>Correlation</li>
 </ul>
+
+<p>This lecture is based on the Chapter 3 in <em>Data analysis methods in Physical Oceanography</em> by Thomson and Emery.</p>
+
+<h3 id="sample-distribution">Sample distribution</h3>
+
+<p>Fundamental to any form of data analysis is the realization that we are usually working with a limited set (or sample) of random events drawn from a much larger population. To describe the sample, we often use the concept of the <strong>sample mean</strong>. If the sample has $N$ data values, $x_1, x_2, \cdots, x_N$, the sample mean can be expressed as</p>
+
+<p>$$
+\bar{x} = \frac{1}{N} \sum^N_{i=1} x_i.
+$$</p>
+
+<p>The sample mean is an unbiased estimate of the true population mean, $\mu$.
+An &ldquo;unbiased&rdquo; estimator means that it is equal to the expected value, $E[x]$ so that $E[x] = \mu$. We will come back to this concept later.</p>
+
+<p>The sample mean locates the center of mass of the data distribution such that</p>
+
+<p>$$
+\sum^N_{i=1}(x_i - \bar{x}) = 0,
+$$</p>
+
+<p>that is, the sample mean splits the data so that there is an equal weighting of negative and positive values.</p>
+
+<p>You may give weight, $f_i$, on each sample. Then the weighted sample mean is defined as</p>
+
+<p>$$
+\bar{x} = \frac{1}{N} \sum^N_{i=1} f_i x_i.
+$$</p>
+
+<p>It is clear that the sample mean is recovered with the weights all equal to 1 in the weighted sample mean.</p>
+
+<p>The sample mean values give us the center of mass of a data distribution. How about the spread of the data?
+To determine it, we need a measure of the sample variability or <em>sample standard deviation</em>, $s&rsquo;$, which is expressed in terms of the positive square root of the sample variance, the average of the square of the <em>sample deviation</em>.</p>
+
+<p>$$
+s&rsquo;^2 = \frac{1}{N} \sum^N_{i=1} (x_i - \bar{x})^2.
+$$</p>
+
+<p>This measure expresses the typical difference of a data value from the mean value of all the data points.
+In general, it differs from the true <em>population variance</em>, $\sigma^2$, and the <em>population standard deviation</em>, $\sigma$, indicating that $s&rsquo;$ is <em>biased</em>. An unbiased estimator of the population variance, $s$, is obtained from</p>
+
+<p>$$
+s^2 = \frac{1}{(N-1)} \sum^N_{i=1} (x_i - \bar{x})^2.
+$$</p>
+
+<p>Again, we will come back to this concept later.</p>
+
+<p>The difference between the sample standard deviation and population standard deviation becomes significant when the sample size is small ($N&lt;30$).</p>
+
+<p>Other statistical values of importance are the range, mode, and median of a data distribution. The <em>range</em> is another measure for the spread and represents the difference between two extreme points. The <em>mode</em> is the value that occurs the most, while the <em>median</em> is the value at the middle of the distribution.</p>
+
+<h3 id="moments-and-expected-values">Moments and expected values</h3>
+
+<p>To describe the distribution and the related probability, we often compute parameters called &ldquo;moments&rdquo;.
+The first two moments are already introduced: the population mean and standard deviation.
+In general, these two moments are not enough to completely describe the distribution, except the normal (Gaussian) distribution.</p>
+
+<p>When discussing moments, it is useful to introduce the concept of expected values. This concept is analogous to the notion of weighted functions. If we know the probability function, $P(x)$, for the event $x$, the expected value for a discrete PDF is</p>
+
+<p>$$
+E[X] = \sum^N_{i=1} x_iP(x_i) = \mu,
+$$</p>
+
+<p>where $\mu$ is the population mean introduced earlier. As you can notice, this has very similar form to the weighted average. The difference is that the weighted average consider a single set of experimental samples whereas $P(x)$ is the expected relative frequency for an infinite number of samples from repeated trials of the experiment.</p>
+
+<p>The variance of the random variable $X$ is the expected value of $(X-\mu)^2$, or</p>
+
+<p>$$
+V[X] = E[(X-\mu)^2] = \sum^N_{i=1}(x_i-\mu)^2P(x_i) = \sigma^2.
+$$</p>
+
+<p>Here are some properties of expected values for random variables:</p>
+
+<ul>
+<li>For $c=constant$, $E[c] = c, V[c] = 0$.</li>
+<li>$E[cg(X)] = cE[g(X)], V[cg(X)] = c^2V[g(X)]$</li>
+<li>$E[g_1(X) \pm g_x(X) \pm \dots] = E[g_1(X)] \pm E[g_1(X)] \pm \dots$</li>
+<li>$V[g(X)] = E[(g(X) - \mu)^2] = E[g(X)^2]-\mu^2$</li>
+<li>$E[g_1g_2] = E[g_1]E[g_2]$</li>
+<li>$V[g_1\pm g_2] = V[g_1] + V{g_2} \pm 2C[g_1, g_2]$ (where $C[g_1,g_2] = E[g_1g_2] - E[g_1]E[g_2]$)</li>
+</ul>
+
+<p>The covariance function, $C[g_1, g_2]$ is zero when $g_1$ and $g_2$ are independent random variables.</p>
+
+<p>Using the properties above, we can get the first and second moments of $Y = a + bX$ as</p>
+
+<p>$$
+E[Y] = E[a+bX] = a+bE[x]
+$$</p>
+
+<p>and</p>
+
+<p>$$
+V[Y] = V[a+bX] = b^2V[x].
+$$</p>
+
+<h4 id="the-normal-distribution">The normal distribution</h4>
+
+<p>Perhaps the most familiar and widely used probability density function is the normal (Gaussian) density function:</p>
+
+<p>The standardized normal variable, $Z$ for the normal distribution gives the distance of points measured from the mean of the normal random variable in terms of the standard deviation of the normal random variable, $X$.</p>
+
+<p>$$
+f(x) = \frac{1}{\sqrt{2\pi\sigma^2}}exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
+$$
+<img src="/ATM4110/images/Empirical_Rule.png" alt="" /></p>
+
+<p>The probability between in the interval $a$ and $b$ is given by the integral of $f(x)$.</p>
+
+<p>$$
+P(a \le X \le b) = \int^b_a \frac{1}{\sqrt{2\pi\sigma^2}}exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)dx
+$$</p>
+
+<p>For normal distribution, we can come up with the distribution for the normalized variable, $Z$,</p>
+
+<p>$$
+Z = \frac{X-\mu}{\sum}
+$$</p>
+
+<p>This is called the standardized normal variable. It gives the distance of points measured from the mean of the normal random variable in terms of the standard deviation of the normal random variable, $X$.</p>
+
+<p><img src="/ATM4110/images/normal-distribution-standardized.png" alt="" /></p>
+
+<h3 id="central-limit-theorem">Central limit theorem</h3>
+
+<p>Please see the <a href="https://github.com/hajsong/ATM4110/blob/master/static/images/statistics.pdf">link</a>, and <a href="https://github.com/hajsong/ATM4110/blob/master/static/images/central_limit.ipynb">jupyter notebook</a>.</p>
 
 
 
