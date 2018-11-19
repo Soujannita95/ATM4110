@@ -74,6 +74,16 @@ $ cat filename  This command dump all the contents on the screen, so large files
     </item>
     
     <item>
+      <title>Homework 6</title>
+      <link>https://hajsong.github.io/ATM4110/homework/homework6/</link>
+      <pubDate>Sat, 17 Nov 2018 23:36:23 +0900</pubDate>
+      
+      <guid>https://hajsong.github.io/ATM4110/homework/homework6/</guid>
+      <description>A confidence interval of monthly mean precipitation In the class, we learned how to compute the 95% confidence interval for a population mean. Using this method, try to estimate the 95% confidence interval for the monthly mean precipitation.
+Since we do not know the population standard deviation of the monthly mean precipitation, we have to use the sample standard deviation. In this case, the confidence interval can be estimated using t-distribution.</description>
+    </item>
+    
+    <item>
       <title>Exercise</title>
       <link>https://hajsong.github.io/ATM4110/visual/exercise/</link>
       <pubDate>Thu, 08 Nov 2018 11:50:53 +0900</pubDate>

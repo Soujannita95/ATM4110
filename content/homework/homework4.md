@@ -9,7 +9,7 @@ lastmodifieremail = "hajsong@yonsei.ac.kr"
 tags = ["class"]
 weight = 100
 #pre ="<i class='fa fa-edit' ></i> "
-#alwaysopen = true
+alwaysopen = true
 +++
 
 #### Create weather forecast

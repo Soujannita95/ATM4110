@@ -105,6 +105,13 @@
 	"content": " Lag Correlation Spectral analysis  "
 },
 {
+	"uri": "https://hajsong.github.io/ATM4110/homework/homework6/",
+	"title": "Homework 6",
+	"tags": ["confidence interval", "precipitation"],
+	"description": "",
+	"content": " A confidence interval of monthly mean precipitation In the class, we learned how to compute the 95% confidence interval for a population mean. Using this method, try to estimate the 95% confidence interval for the monthly mean precipitation.\nSince we do not know the population standard deviation of the monthly mean precipitation, we have to use the sample standard deviation. In this case, the confidence interval can be estimated using t-distribution.\n$$ \\bar{x} - t \\frac{s}{\\sqrt{N}} \u0026lt; \\mu \u0026lt;\\bar{x} + t \\frac{s}{\\sqrt{N}} $$\nwhere $t$ is a critical value determined from the $t_{n-1}$ distribution in such a way that there is area 0.95 (95%) between t and -t.\nThe value $n-1$ is called degrees of freedom , or df for short ($n$ is the size of the sample), or $\\nu$. It is a parameter of the t-curve and changes the shape of the t-curve, though usually not by much. You can use this table to find out an appropriate $t$ critical values for selected $1 - \\alpha$ and n-1.\nBy the way, the example we did in the lecture has 20 samplings so that the degrees of freedom is 19. From the table, the $t$ values for $1-\\alpha = 0.95$ is 2.093. So we used this value.\nYou do not have to turn this homework in, but you can get extra points up to 5 if you turn in by 11\u0026frasl;23 (Friday).\n"
+},
+{
 	"uri": "https://hajsong.github.io/ATM4110/visual/exercise/",
 	"title": "Exercise",
 	"tags": ["cartopy", "Basemap"],
@@ -308,6 +315,13 @@
 	"content": ""
 },
 {
+	"uri": "https://hajsong.github.io/ATM4110/tags/confidence-interval/",
+	"title": "Confidence Interval",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://hajsong.github.io/ATM4110/tags/contour/",
 	"title": "Contour",
 	"tags": [],
@@ -464,6 +478,13 @@
 {
 	"uri": "https://hajsong.github.io/ATM4110/tags/plot/",
 	"title": "Plot",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://hajsong.github.io/ATM4110/tags/precipitation/",
+	"title": "Precipitation",
 	"tags": [],
 	"description": "",
 	"content": ""
