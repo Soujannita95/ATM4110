@@ -15,3 +15,11 @@ weight = 9
 + Empirical orthogonal functions
 + Normal mode analysis
 + Kalman filter
+
+
+### Optimal interpolation
+
+In the class, we ran the code that optimally interpolate the pseudo observations onto the regularly gridded space.
+The dataset can be downloaded from [this link](/ATM4110/images/mercator_temperature.mat).
+
+And the jupyter notebook for this exercise is [here.](/ATM4110/images/optimal_interpolation.ipynb)
