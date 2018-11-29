@@ -29,4 +29,5 @@ As an exercise, we will compute the EOFs of the Pacific SST following the code b
 
 The dataset can be downloaded from [this link](/ATM4110/images/cac.mat) and [this link](/ATM4110/images/soi.mat).
 
-And the python code for this exercise is [here.](/ATM4110/images/eofs_exercise.py)
+And get the python code for this exercise from [here.](/ATM4110/images/eofs_exercise.py)
+The jupyter notebook file we did in the class is [this.](/ATM4110/images/eofs_exercise.ipynb)
