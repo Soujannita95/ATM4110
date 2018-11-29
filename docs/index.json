@@ -95,7 +95,7 @@
 	"title": "Spatial analysis",
 	"tags": ["spatial", "objective"],
 	"description": "",
-	"content": "  Objective analysis Empirical orthogonal functions Normal mode analysis Kalman filter  Optimal interpolation In the class, we ran the code that optimally interpolate the pseudo observations onto the regularly gridded space. The dataset can be downloaded from this link.\nAnd the jupyter notebook for this exercise is here.\n"
+	"content": "  Objective analysis Empirical orthogonal functions Normal mode analysis Kalman filter  Optimal interpolation In the class, we ran the code that optimally interpolate the pseudo observations onto the regularly gridded space. The dataset can be downloaded from this link.\nAnd the jupyter notebook for this exercise is here.\nEmpirical orthogonal functions (EOFs) As an exercise, we will compute the EOFs of the Pacific SST following the code by John Wilkin (Rutgers Univ.).\nThe dataset can be downloaded from this link and this link.\nAnd the python code for this exercise is here.\n"
 },
 {
 	"uri": "https://hajsong.github.io/ATM4110/temporal/",
