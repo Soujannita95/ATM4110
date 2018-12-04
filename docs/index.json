@@ -105,6 +105,13 @@
 	"content": " Lag Correlation Spectral analysis  "
 },
 {
+	"uri": "https://hajsong.github.io/ATM4110/final/",
+	"title": "Final project",
+	"tags": ["final", "eofs", "OI"],
+	"description": "",
+	"content": "Please see the jupyter notebook for the final project.\nYou need two datasets.\n Aerosol optical depth data : link A grid file you need for optimal interpolation : link  Please let me and TA know if you have questions. Due date is 12\u0026frasl;21. Good luck!\n"
+},
+{
 	"uri": "https://hajsong.github.io/ATM4110/homework/homework6/",
 	"title": "Homework 6",
 	"tags": ["confidence interval", "precipitation"],
@@ -357,8 +364,22 @@
 	"content": ""
 },
 {
+	"uri": "https://hajsong.github.io/ATM4110/tags/eofs/",
+	"title": "Eofs",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://hajsong.github.io/ATM4110/tags/file-io/",
 	"title": "File Io",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://hajsong.github.io/ATM4110/tags/final/",
+	"title": "Final",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -464,6 +485,13 @@
 {
 	"uri": "https://hajsong.github.io/ATM4110/tags/objective/",
 	"title": "Objective",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://hajsong.github.io/ATM4110/tags/oi/",
+	"title": "Oi",
 	"tags": [],
 	"description": "",
 	"content": ""

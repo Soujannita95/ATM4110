@@ -77,6 +77,11 @@
   </url>
   
   <url>
+    <loc>https://hajsong.github.io/ATM4110/final/</loc>
+    <lastmod>2018-12-04T22:02:43+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://hajsong.github.io/ATM4110/homework/homework6/</loc>
     <lastmod>2018-11-17T23:36:23+09:00</lastmod>
   </url>
@@ -270,8 +275,20 @@
   </url>
   
   <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/eofs/</loc>
+    <lastmod>2018-12-04T22:02:43+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://hajsong.github.io/ATM4110/tags/file-io/</loc>
     <lastmod>2018-10-16T08:39:05+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/final/</loc>
+    <lastmod>2018-12-04T22:02:43+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -362,6 +379,12 @@
   <url>
     <loc>https://hajsong.github.io/ATM4110/tags/objective/</loc>
     <lastmod>2018-11-06T17:00:50+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/oi/</loc>
+    <lastmod>2018-12-04T22:02:43+09:00</lastmod>
     <priority>0</priority>
   </url>
   
