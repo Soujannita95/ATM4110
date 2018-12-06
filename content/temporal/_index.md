@@ -13,5 +13,5 @@ weight = 10
 
 + Spectral analysis
 
-The jupyter notebook file 1 :[this](/ATM4110/images/fft_exercise.ipynb)
+The jupyter notebook file 1 :[this](/ATM4110/images/fft_example.ipynb)
 The jupyter notebook file 2 :[this.](/ATM4110/images/fft_exercise.ipynb)
