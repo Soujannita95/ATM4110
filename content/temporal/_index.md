@@ -11,5 +11,7 @@ weight = 10
 #pre ="<i class='fa fa-edit' ></i> "
 +++
 
-+ Lag Correlation
 + Spectral analysis
+
+The jupyter notebook file 1 :[this](/ATM4110/images/fft_exercise.ipynb)
+The jupyter notebook file 2 :[this.](/ATM4110/images/fft_exercise.ipynb)
