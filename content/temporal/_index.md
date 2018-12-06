@@ -11,7 +11,8 @@ weight = 10
 #pre ="<i class='fa fa-edit' ></i> "
 +++
 
-+ Spectral analysis
+### Power spectral density function using Fourier transform
 
-The jupyter notebook file 1 :[this](/ATM4110/images/fft_example.ipynb)
-The jupyter notebook file 2 :[this.](/ATM4110/images/fft_exercise.ipynb)
+- The jupyter notebook file 1 :[this](/ATM4110/images/fft_example.ipynb)
+
+- The jupyter notebook file 2 :[this.](/ATM4110/images/fft_exercise.ipynb)

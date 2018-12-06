@@ -74,6 +74,16 @@ $ cat filename  This command dump all the contents on the screen, so large files
     </item>
     
     <item>
+      <title>Homework7</title>
+      <link>https://hajsong.github.io/ATM4110/homework/homework7/</link>
+      <pubDate>Thu, 06 Dec 2018 13:06:26 +0900</pubDate>
+      
+      <guid>https://hajsong.github.io/ATM4110/homework/homework7/</guid>
+      <description>We computed the EOFs using the equatorial sea surface temperature and saw that the first mode looks similar to the pattern we are familiar with. This first mode has its own time series, and we wonder what frequency contributes to the data the most.
+Apply the procedure for the power spectrum to the time series of the first mode.</description>
+    </item>
+    
+    <item>
       <title>Homework 6</title>
       <link>https://hajsong.github.io/ATM4110/homework/homework6/</link>
       <pubDate>Sat, 17 Nov 2018 23:36:23 +0900</pubDate>

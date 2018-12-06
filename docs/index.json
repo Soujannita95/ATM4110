@@ -102,7 +102,14 @@
 	"title": "Temporal analysis",
 	"tags": ["temporal", "python"],
 	"description": "",
-	"content": " Spectral analysis  The jupyter notebook file 1 :this The jupyter notebook file 2 :this.\n"
+	"content": " Power spectral density function using Fourier transform  The jupyter notebook file 1 :this\n The jupyter notebook file 2 :this.\n  "
+},
+{
+	"uri": "https://hajsong.github.io/ATM4110/homework/homework7/",
+	"title": "Homework7",
+	"tags": ["Fourier transform", "Power spectrum"],
+	"description": "",
+	"content": "We computed the EOFs using the equatorial sea surface temperature and saw that the first mode looks similar to the pattern we are familiar with. This first mode has its own time series, and we wonder what frequency contributes to the data the most.\nApply the procedure for the power spectrum to the time series of the first mode.\n"
 },
 {
 	"uri": "https://hajsong.github.io/ATM4110/homework/homework6/",
@@ -385,6 +392,13 @@
 	"content": ""
 },
 {
+	"uri": "https://hajsong.github.io/ATM4110/tags/fourier-transform/",
+	"title": "Fourier Transform",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://hajsong.github.io/ATM4110/tags/grep/",
 	"title": "Grep",
 	"tags": [],
@@ -506,6 +520,13 @@
 {
 	"uri": "https://hajsong.github.io/ATM4110/tags/plot/",
 	"title": "Plot",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://hajsong.github.io/ATM4110/tags/power-spectrum/",
+	"title": "Power Spectrum",
 	"tags": [],
 	"description": "",
 	"content": ""

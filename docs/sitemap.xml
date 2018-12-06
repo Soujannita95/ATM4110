@@ -77,6 +77,11 @@
   </url>
   
   <url>
+    <loc>https://hajsong.github.io/ATM4110/homework/homework7/</loc>
+    <lastmod>2018-12-06T13:06:26+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://hajsong.github.io/ATM4110/homework/homework6/</loc>
     <lastmod>2018-11-17T23:36:23+09:00</lastmod>
   </url>
@@ -293,6 +298,12 @@
   </url>
   
   <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/fourier-transform/</loc>
+    <lastmod>2018-12-06T13:06:26+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://hajsong.github.io/ATM4110/tags/grep/</loc>
     <lastmod>2018-09-05T16:06:36+09:00</lastmod>
     <priority>0</priority>
@@ -397,6 +408,12 @@
   <url>
     <loc>https://hajsong.github.io/ATM4110/tags/plot/</loc>
     <lastmod>2018-10-29T16:57:56+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://hajsong.github.io/ATM4110/tags/power-spectrum/</loc>
+    <lastmod>2018-12-06T13:06:26+09:00</lastmod>
     <priority>0</priority>
   </url>
   
